@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Travel Spark — Customised Holidays, Group Tours & Corporate Travel. Your trusted travel partner for unforgettable experiences." />
+  <title>The Travel Spark — Ignite Your Journey</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+
+  <style>
+    /* ── Promo Banner ── */
+    #promoBanner { background: linear-gradient(90deg, var(--pink) 0%, #9b0058 100%); text-align:center; padding:10px 40px; font-size:0.82rem; font-weight:600; color:white; position:relative; z-index:1001; }
+    #promoBanner a { color:white; text-decoration:underline; margin-left:8px; }
+    #promoBanner .cls { position:absolute; right:16px; top:50%; transform:translateY(-50%); background:none; border:none; color:white; font-size:1.2rem; cursor:pointer; opacity:0.7; line-height:1; }
+
+    /* ── Hero ── */
+    .hero { min-height:100vh; position:relative; display:flex; align-items:center; overflow:hidden; background:var(--navy); }
+    .hero-bg { position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1800&q=80') center/cover no-repeat; opacity:0.28; }
+    .hero-overlay { position:absolute; inset:0; background:linear-gradient(135deg,rgba(26,42,108,0.96) 0%,rgba(26,42,108,0.7) 55%,rgba(26,42,108,0.35) 100%); }
+    /* Pink spark accent */
+    .hero-spark { position:absolute; top:15%; right:8%; width:360px; height:360px; background:radial-gradient(circle,rgba(233,30,140,0.18) 0%,transparent 70%); pointer-events:none; }
+    .hero-spark2 { position:absolute; bottom:20%; right:25%; width:200px; height:200px; background:radial-gradient(circle,rgba(91,200,216,0.12) 0%,transparent 70%); pointer-events:none; }
+    .hero-content { position:relative; z-index:2; padding:130px 0 80px; max-width:700px; }
+    .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(233,30,140,0.15); border:1px solid rgba(233,30,140,0.35); color:var(--pink); font-size:0.76rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:8px 16px; border-radius:100px; margin-bottom:24px; }
+    .hero-badge .dot { width:7px;height:7px;background:var(--pink);border-radius:50%;animation:pulse 2s infinite; }
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+    .hero h1 { font-family:var(--font-display); font-size:clamp(2.8rem,6vw,4.8rem); font-weight:700; color:var(--white); line-height:1.08; margin-bottom:24px; }
+    .hero h1 .accent { color:var(--pink); font-style:italic; }
+    .hero-sub { font-size:1.1rem; color:rgba(255,255,255,0.72); line-height:1.75; margin-bottom:40px; max-width:520px; }
+    .hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:56px; }
+    .hero-stats { display:flex; gap:44px; flex-wrap:wrap; }
+    .hero-stat .num { font-family:var(--font-display); font-size:2.1rem; font-weight:700; color:var(--pink); line-height:1; }
+    .hero-stat .lbl { font-size:0.78rem; color:rgba(255,255,255,0.55); margin-top:4px; }
+    /* Search bar */
+    .hero-search { position:absolute; bottom:-36px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow-lg); padding:22px 28px; z-index:10; display:grid; grid-template-columns:1fr 1fr 1fr auto; gap:16px; align-items:end; }
+    .search-field label { display:block; font-size:0.7rem; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--gray-600); margin-bottom:6px; }
+    .search-field select,.search-field input { width:100%; padding:11px 13px; border:1.5px solid var(--gray-300); border-radius:var(--radius-sm); font-family:var(--font-body); font-size:0.9rem; color:var(--text); background:var(--white); transition:border-color 0.2s; appearance:none; }
+    .search-field select:focus,.search-field input:focus { outline:none; border-color:var(--pink); box-shadow:0 0 0 3px rgba(233,30,140,0.1); }
+    .search-btn { background:var(--pink); color:white; border:none; padding:12px 26px; border-radius:var(--radius-sm); font-weight:700; font-size:0.9rem; cursor:pointer; transition:var(--transition); white-space:nowrap; display:flex; align-items:center; gap:8px; }
+    .search-btn:hover { background:var(--pink-dark); transform:translateY(-2px); box-shadow:var(--shadow-pink); }
+    @media(max-width:768px){.hero-search{grid-template-columns:1fr;position:relative;bottom:auto;left:auto;transform:none;margin:32px auto 0;width:92%;} }
+
+    /* ── Stats Strip ── */
+    .stats-strip { background:var(--navy); padding:70px 0 40px; margin-top:36px; }
+    .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center; }
+    .stat-item { padding:28px 16px; border-right:1px solid rgba(255,255,255,0.07); }
+    .stat-item:last-child { border-right:none; }
+    .stat-icon { font-size:2rem; margin-bottom:10px; }
+    .stat-num { font-family:var(--font-display); font-size:2.4rem; font-weight:700; color:var(--pink); line-height:1; margin-bottom:6px; }
+    .stat-lbl { font-size:0.82rem; color:rgba(255,255,255,0.55); }
+    @media(max-width:640px){.stats-grid{grid-template-columns:repeat(2,1fr);}.stat-item:nth-child(2){border-right:none;}}
+
+    /* ── Summer Special Banner ── */
+    .summer-banner { background:linear-gradient(135deg,var(--navy) 0%,#0d1a47 100%); padding:60px 0; position:relative; overflow:hidden; }
+    .summer-banner::after { content:''; position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1400&q=70') center/cover; opacity:0.15; }
+    .summer-inner { position:relative; z-index:1; display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+    .summer-tag { display:inline-block; background:var(--pink); color:white; font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:18px; }
+    .summer-inner h2 { font-family:var(--font-display); font-size:clamp(1.8rem,3.5vw,3rem); color:white; font-weight:700; line-height:1.1; margin-bottom:14px; }
+    .summer-inner p { color:rgba(255,255,255,0.65); font-size:0.95rem; margin-bottom:28px; }
+    .summer-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.85); font-size:0.8rem; font-weight:600; padding:8px 16px; border-radius:100px; margin-bottom:28px; }
+    .summer-cards { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .mini-tour-card { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius); overflow:hidden; transition:var(--transition); }
+    .mini-tour-card:hover { background:rgba(255,255,255,0.14); transform:translateY(-3px); }
+    .mini-tour-card img { width:100%; height:130px; object-fit:cover; }
+    .mini-tour-card .mc-body { padding:14px; }
+    .mini-tour-card h4 { font-family:var(--font-display); font-size:0.95rem; color:white; margin-bottom:4px; }
+    .mini-tour-card .mc-dur { font-size:0.72rem; color:var(--pink); font-weight:600; margin-bottom:6px; }
+    .mini-tour-card .mc-dest { font-size:0.72rem; color:rgba(255,255,255,0.5); line-height:1.4; }
+    @media(max-width:768px){.summer-inner{grid-template-columns:1fr;}.summer-cards{display:none;}}
+
+    /* ── Featured Tours ── */
+    .featured-tours { background:var(--off-white); }
+    .section-header { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:44px; flex-wrap:wrap; gap:16px; }
+    .tour-card { background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-sm); transition:var(--transition); }
+    .tour-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .tour-img { position:relative; height:220px; overflow:hidden; }
+    .tour-img img { width:100%;height:100%;object-fit:cover;transition:transform 0.5s; }
+    .tour-card:hover .tour-img img { transform:scale(1.08); }
+    .tour-img-overlay { position:absolute;inset:0;background:linear-gradient(to top,rgba(26,42,108,0.65) 0%,transparent 55%); }
+    .tour-duration { position:absolute;top:14px;left:14px;background:var(--pink);color:white;font-size:0.72rem;font-weight:700;padding:5px 12px;border-radius:100px;letter-spacing:0.05em; }
+    .tour-inclusive { position:absolute;top:14px;right:14px;background:rgba(26,42,108,0.85);color:white;font-size:0.65rem;font-weight:600;padding:4px 10px;border-radius:100px;letter-spacing:0.06em;text-transform:uppercase; }
+    .tour-body { padding:20px; }
+    .tour-body h3 { font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:8px; }
+    .tour-destinations { font-size:0.78rem;color:var(--text-light);line-height:1.5;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden; }
+    .tour-footer { display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--gray-100); }
+    .tour-price-label { font-size:0.72rem;color:var(--gray-600); }
+    .tour-price { font-family:var(--font-display);font-size:1.28rem;font-weight:700;color:var(--navy); }
+    .tour-book-btn { background:var(--navy);color:white;padding:8px 18px;border-radius:var(--radius-sm);font-size:0.82rem;font-weight:600;transition:var(--transition); }
+    .tour-book-btn:hover { background:var(--pink); }
+    .swiper-nav { display:flex;align-items:center;gap:10px; }
+    .swiper-btn { width:44px;height:44px;border-radius:50%;background:var(--white);border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;color:var(--navy);transition:var(--transition); }
+    .swiper-btn:hover { background:var(--navy);color:white; }
+
+    /* ── Year Round Destinations ── */
+    .yr-destinations { background:var(--white); }
+    .dest-pills { display:flex;flex-wrap:wrap;gap:12px;margin-bottom:44px; }
+    .dest-pill { display:flex;align-items:center;gap:8px;padding:10px 20px;border-radius:100px;border:2px solid var(--gray-300);background:transparent;font-size:0.88rem;font-weight:600;color:var(--text-light);cursor:pointer;transition:var(--transition); }
+    .dest-pill:hover,.dest-pill.active { background:var(--navy);border-color:var(--navy);color:white; }
+    .dest-pill .flag { font-size:1.1rem; }
+    .dest-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:20px; }
+    .dest-card { position:relative;border-radius:var(--radius);overflow:hidden;height:260px;cursor:pointer;text-decoration:none; }
+    .dest-card:first-child { grid-column:span 2;height:300px; }
+    .dest-card img { width:100%;height:100%;object-fit:cover;transition:transform 0.5s; }
+    .dest-card:hover img { transform:scale(1.08); }
+    .dest-overlay { position:absolute;inset:0;background:linear-gradient(to top,rgba(26,42,108,0.85) 0%,transparent 55%); }
+    .dest-info { position:absolute;bottom:20px;left:20px;right:20px; }
+    .dest-info h3 { font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:white;margin-bottom:4px; }
+    .dest-info p { font-size:0.76rem;color:rgba(255,255,255,0.68); }
+    .dest-info .exp-btn { display:inline-flex;align-items:center;gap:6px;margin-top:10px;background:var(--pink);color:white;padding:6px 14px;border-radius:100px;font-size:0.74rem;font-weight:700;opacity:0;transform:translateY(8px);transition:all 0.3s; }
+    .dest-card:hover .exp-btn { opacity:1;transform:translateY(0); }
+    @media(max-width:900px){.dest-grid{grid-template-columns:repeat(2,1fr);}.dest-card:first-child{grid-column:span 1;height:260px;}}
+
+    /* ── Group Tours Feature ── */
+    .group-feature { background:var(--navy); position:relative; overflow:hidden; }
+    .group-feature::before { content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(233,30,140,0.1) 0%,transparent 70%); }
+    .group-feature-inner { display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:center;position:relative;z-index:1; }
+    .group-feature-left .section-label { color:var(--pink); }
+    .group-feature-left .section-title { color:white; }
+    .group-feature-left p { color:rgba(255,255,255,0.6);font-size:0.95rem;line-height:1.75;margin-bottom:32px; }
+    .group-perks { display:flex;flex-direction:column;gap:16px;margin-bottom:36px; }
+    .perk-item { display:flex;align-items:center;gap:14px; }
+    .perk-icon { width:44px;height:44px;background:rgba(233,30,140,0.15);border:1px solid rgba(233,30,140,0.25);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0; }
+    .perk-text h4 { font-size:0.92rem;font-weight:600;color:white;margin-bottom:2px; }
+    .perk-text p { font-size:0.8rem;color:rgba(255,255,255,0.5); }
+    .group-cards-mini { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
+    .gcm { background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);overflow:hidden;transition:var(--transition); }
+    .gcm:hover { background:rgba(255,255,255,0.1);transform:translateY(-4px); }
+    .gcm img { width:100%;height:150px;object-fit:cover; }
+    .gcm-body { padding:16px; }
+    .gcm-body h4 { font-family:var(--font-display);font-size:1rem;color:white;margin-bottom:4px; }
+    .gcm-dur { font-size:0.72rem;color:var(--pink);font-weight:600;margin-bottom:6px; }
+    .gcm-dest { font-size:0.72rem;color:rgba(255,255,255,0.45);line-height:1.4; }
+    .gcm-badge { display:inline-block;background:rgba(233,30,140,0.2);color:var(--pink);font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:3px 8px;border-radius:4px;margin-top:10px; }
+    @media(max-width:900px){.group-feature-inner{grid-template-columns:1fr;}.group-cards-mini{display:none;}}
+
+    /* ── How It Works ── */
+    .how-it-works { background:var(--off-white); }
+    .steps-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:40px;position:relative; }
+    .steps-grid::before { content:'';position:absolute;top:44px;left:16.67%;width:66.66%;height:2px;background:linear-gradient(90deg,var(--pink),rgba(233,30,140,0.1));z-index:0; }
+    .step-item { text-align:center;position:relative;z-index:1;background:var(--white);border-radius:var(--radius);padding:36px 28px;box-shadow:var(--shadow-sm); }
+    .step-num { width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--pink) 0%,var(--pink-dark) 100%);color:white;font-family:var(--font-display);font-size:1.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;position:relative;box-shadow:var(--shadow-pink); }
+    .step-num::after { content:'';position:absolute;inset:-6px;border-radius:50%;border:2px dashed rgba(233,30,140,0.3); }
+    .step-item h3 { font-family:var(--font-display);font-size:1.1rem;color:var(--navy);margin-bottom:12px; }
+    .step-item p { font-size:0.87rem;color:var(--text-light);line-height:1.7; }
+
+    /* ── Travel Styles ── */
+    .travel-styles { background:var(--white); }
+    .styles-grid { display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:48px; }
+    .style-item { display:flex;flex-direction:column;align-items:center;gap:12px;padding:24px 12px;border-radius:var(--radius);border:2px solid var(--gray-100);cursor:pointer;transition:var(--transition);text-align:center;text-decoration:none; }
+    .style-item:hover { border-color:var(--pink);background:rgba(233,30,140,0.04);transform:translateY(-4px);box-shadow:var(--shadow-sm); }
+    .style-icon { width:58px;height:58px;border-radius:14px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:1.6rem;transition:var(--transition); }
+    .style-item:hover .style-icon { background:var(--pink); }
+    .style-item span { font-size:0.8rem;font-weight:600;color:var(--text); }
+    @media(max-width:900px){.styles-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:540px){.styles-grid{grid-template-columns:repeat(2,1fr);}}
+
+    /* ── Enquiry Section ── */
+    .enquiry-section { background:var(--off-white); }
+    .enquiry-wrapper { display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center; }
+    .enquiry-left h2 { font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:20px; }
+    .enquiry-left h2 .ac { color:var(--pink);font-style:italic; }
+    .enquiry-left > p { color:var(--text-light);line-height:1.75;margin-bottom:32px; }
+    .enquiry-benefits { display:flex;flex-direction:column;gap:14px; }
+    .benefit-item { display:flex;align-items:center;gap:12px;font-size:0.9rem;color:var(--text);font-weight:500; }
+    .benefit-item .check { width:26px;height:26px;background:var(--pink);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:white;flex-shrink:0; }
+    .enquiry-form-box { background:var(--white);border-radius:16px;padding:40px;box-shadow:var(--shadow-md); }
+    .enquiry-form-box h3 { font-family:var(--font-display);font-size:1.4rem;color:var(--navy);margin-bottom:6px; }
+    .enquiry-form-box .sub { font-size:0.84rem;color:var(--text-light);margin-bottom:28px; }
+    .form-row { display:grid;grid-template-columns:1fr 1fr;gap:16px; }
+    .form-group { margin-bottom:14px; }
+    .form-group label { display:block;font-size:0.78rem;font-weight:600;color:var(--text);margin-bottom:6px; }
+    .form-group input,.form-group select,.form-group textarea { width:100%;padding:12px 14px;border:1.5px solid var(--gray-300);border-radius:var(--radius-sm);font-family:var(--font-body);font-size:0.9rem;color:var(--text);background:var(--white);transition:border-color 0.2s;resize:vertical; }
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus { outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(233,30,140,0.08); }
+    .form-submit { width:100%;padding:14px;background:var(--navy);color:white;border:none;border-radius:var(--radius-sm);font-family:var(--font-body);font-size:1rem;font-weight:600;cursor:pointer;transition:var(--transition);margin-top:8px; }
+    .form-submit:hover { background:var(--pink);transform:translateY(-2px);box-shadow:var(--shadow-pink); }
+    @media(max-width:900px){.enquiry-wrapper{grid-template-columns:1fr;gap:40px;}.form-row{grid-template-columns:1fr;}}
+
+    /* ── Testimonials ── */
+    .testimonials-section { background:var(--white); }
+    .testi-card { background:var(--off-white);border-radius:var(--radius);padding:28px;height:100%;border:1px solid var(--gray-100); }
+    .testi-stars { color:var(--pink);font-size:0.95rem;margin-bottom:14px;letter-spacing:2px; }
+    .testi-card p { font-size:0.9rem;color:var(--text-light);line-height:1.75;margin-bottom:20px;font-style:italic; }
+    .testi-author { display:flex;align-items:center;gap:12px; }
+    .testi-avatar { width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--navy));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:1rem;flex-shrink:0; }
+    .testi-name { font-weight:600;font-size:0.9rem;color:var(--navy); }
+    .testi-trip { font-size:0.75rem;color:var(--text-light); }
+
+    /* ── Blog ── */
+    .blog-section { background:var(--off-white); }
+    .blog-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:28px; }
+    .blog-card { background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid var(--gray-100);transition:var(--transition); }
+    .blog-card:hover { transform:translateY(-5px);box-shadow:var(--shadow-md); }
+    .blog-img { height:200px;overflow:hidden; }
+    .blog-img img { width:100%;height:100%;object-fit:cover;transition:transform 0.5s; }
+    .blog-card:hover .blog-img img { transform:scale(1.06); }
+    .blog-body { padding:22px; }
+    .blog-tag { display:inline-block;background:rgba(233,30,140,0.1);color:var(--pink);font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:4px 10px;border-radius:4px;margin-bottom:12px; }
+    .blog-body h3 { font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--navy);line-height:1.4;margin-bottom:10px; }
+    .blog-body p { font-size:0.84rem;color:var(--text-light);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden; }
+    .blog-meta { display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:16px;border-top:1px solid var(--gray-100); }
+    .blog-meta .date { font-size:0.77rem;color:var(--gray-600); }
+    .blog-meta .read-more { font-size:0.82rem;font-weight:600;color:var(--pink);display:flex;align-items:center;gap:4px;transition:gap 0.2s; }
+    .blog-card:hover .read-more { gap:8px; }
+    @media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
+
+    /* ── Partners ── */
+    .partners-section { background:var(--white);overflow:hidden; }
+    .partners-scroll { overflow:hidden;position:relative;mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%); }
+    .partners-track { display:flex;gap:48px;width:max-content;animation:marquee 28s linear infinite; }
+    .partners-track:hover { animation-play-state:paused; }
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .partner-item { display:flex;align-items:center;justify-content:center;height:60px;min-width:140px;filter:grayscale(1) opacity(.45);transition:filter 0.3s; }
+    .partner-item:hover { filter:grayscale(0) opacity(1); }
+    .partner-item span { font-family:var(--font-display);font-size:0.9rem;font-weight:600;color:var(--navy);white-space:nowrap; }
+  </style>
+</head>
+<body>
+
+<!-- Promo Banner -->
+<div id="promoBanner">
+  ✈️ Summer Group Tours 2025 Now Open — GST Included! Limited Seats.
+  <a href="packages/group-tours.html">View Tours →</a>
+  <button class="cls" onclick="this.parentElement.style.display='none'">×</button>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="assets/images/logo.jpeg" alt="The Travel Spark" />
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li>
+          <span>Holiday Packages <span class="chevron">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="packages/international.html">🌍 International Holidays</a></li>
+            <li><a href="packages/group-tours.html">👥 Group Tours</a></li>
+            <li><a href="packages/domestic.html">🇮🇳 Explore India</a></li>
+          </ul>
+        </li>
+        <li><a href="corporate-travel.html">Corporate Travel</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
+        <a href="contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="menu-overlay" id="menuOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <div class="m-parent">Holiday Packages</div>
+  <div class="sub-links">
+    <a href="packages/international.html">🌍 International Holidays</a>
+    <a href="packages/group-tours.html">👥 Group Tours</a>
+    <a href="packages/domestic.html">🇮🇳 Explore India</a>
+  </div>
+  <a href="corporate-travel.html">Corporate Travel</a>
+  <a href="blog.html">Blog</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <br/>
+  <a href="tel:+910000000000" style="color:var(--pink);font-weight:700;">📞 +91 00000 00000</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-spark"></div>
+  <div class="hero-spark2"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span> Summer 2025 Departures Now Open</div>
+      <h1>Ignite Your<br/><span class="accent">Journey</span> with Us</h1>
+      <p class="hero-sub">Customised holidays, premium group tours & seamless corporate travel. Every trip crafted with passion — just for you.</p>
+      <div class="hero-actions">
+        <a href="packages/group-tours.html" class="btn btn-primary">Explore Group Tours ✈️</a>
+        <a href="contact.html" class="btn btn-outline">Plan My Trip</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num" data-counter data-target="30000" data-suffix="+">30,000+</span><span class="lbl">Happy Travellers</span></div>
+        <div class="hero-stat"><span class="num" data-counter data-target="1000" data-suffix="+">1,000+</span><span class="lbl">5★ Reviews</span></div>
+        <div class="hero-stat"><span class="num" data-counter data-target="50" data-suffix="+">50+</span><span class="lbl">Destinations</span></div>
+        <div class="hero-stat"><span class="num" data-counter data-target="12" data-suffix="">12</span><span class="lbl">Years Experience</span></div>
+      </div>
+    </div>
+  </div>
+  <!-- Search Bar -->
+  <div class="hero-search container">
+    <div class="search-field">
+      <label>Destination</label>
+      <select>
+        <option value="">Where to?</option>
+        <option>Europe</option><option>Japan</option><option>Dubai</option>
+        <option>Thailand</option><option>Bali</option><option>Singapore</option>
+        <option>Maldives</option><option>Kashmir</option><option>Kerala</option>
+      </select>
+    </div>
+    <div class="search-field">
+      <label>Travel Month</label>
+      <select>
+        <option value="">Select Month</option>
+        <option>April 2025</option><option>May 2025</option><option>June 2025</option>
+        <option>July 2025</option><option>August 2025</option><option>September 2025</option>
+      </select>
+    </div>
+    <div class="search-field">
+      <label>Travellers</label>
+      <select>
+        <option value="">How many?</option>
+        <option>1 – 2</option><option>3 – 5</option><option>6 – 10</option><option>10+</option>
+      </select>
+    </div>
+    <button class="search-btn">🔍 Search</button>
+  </div>
+</section>
+
+<!-- Stats Strip -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-num" data-counter data-target="1000" data-suffix="+">1000+</div>
+        <div class="stat-lbl">Google Reviews</div>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-icon">🌍</div>
+        <div class="stat-num" data-counter data-target="30000" data-suffix="+">30K+</div>
+        <div class="stat-lbl">Happy Travellers</div>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-icon">✈️</div>
+        <div class="stat-num" data-counter data-target="50" data-suffix="+">50+</div>
+        <div class="stat-lbl">Destinations Covered</div>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-num" data-counter data-target="12" data-suffix=" Yrs">12</div>
+        <div class="stat-lbl">Years of Excellence</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Summer Special Tours Banner -->
+<section class="summer-banner">
+  <div class="container">
+    <div class="summer-inner">
+      <div data-aos="fade-right">
+        <span class="summer-tag">☀️ Summer Special 2025</span>
+        <h2>Europe Group Tours<br/>Starting This Summer</h2>
+        <div class="summer-badge">🎉 GST Included · All Inclusive Package</div>
+        <p>Experience the best of Europe with our fully curated group departures. Flights, hotels, sightseeing, meals — all covered. T&C apply.</p>
+        <a href="packages/group-tours.html" class="btn btn-primary">Join Group Tour →</a>
+      </div>
+      <div class="summer-cards" data-aos="fade-left">
+        <div class="mini-tour-card">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&q=80" alt="Europe" loading="lazy" />
+          <div class="mc-body">
+            <div class="mc-dur">13N / 14D</div>
+            <h4>Magical Europe</h4>
+            <div class="mc-dest">France · Belgium · Switzerland · Italy</div>
+          </div>
+        </div>
+        <div class="mini-tour-card">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&q=80" alt="Japan" loading="lazy" />
+          <div class="mc-body">
+            <div class="mc-dur">07N / 08D</div>
+            <h4>Blooming Japan</h4>
+            <div class="mc-dest">Tokyo · Kyoto · Osaka · Nara</div>
+          </div>
+        </div>
+        <div class="mini-tour-card">
+          <img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?w=400&q=80" alt="Maldives" loading="lazy" />
+          <div class="mc-body">
+            <div class="mc-dur">04N / 05D</div>
+            <h4>Mesmerising Maldives</h4>
+            <div class="mc-dest">North Malé Atoll · Kaafu Atoll</div>
+          </div>
+        </div>
+        <div class="mini-tour-card">
+          <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=400&q=80" alt="Georgia" loading="lazy" />
+          <div class="mc-body">
+            <div class="mc-dur">06N / 07D</div>
+            <h4>Highlights of Georgia</h4>
+            <div class="mc-dest">Tbilisi · Kazbegi · Batumi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Tour Packages Slider -->
+<section class="featured-tours section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Our Packages</div>
+        <h2 class="section-title">Featured <span class="accent">Tour Packages</span></h2>
+        <p class="section-sub">Hand-picked itineraries, all-inclusive pricing, and expert-guided experiences.</p>
+      </div>
+      <div class="swiper-nav">
+        <button class="swiper-btn tours-prev">←</button>
+        <button class="swiper-btn tours-next">→</button>
+      </div>
+    </div>
+    <div class="swiper tours-swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="tour-card">
+            <div class="tour-img">
+              <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Europe" loading="lazy" />
+              <div class="tour-img-overlay"></div>
+              <span class="tour-duration">13N / 14D</span>
+              <span class="tour-inclusive">All Inclusive</span>
+            </div>
+            <div class="tour-body">
+              <h3>Magical Europe</h3>
+              <p class="tour-destinations">France · Belgium · Netherlands · Luxembourg · Germany · Switzerland · Austria · Italy · Vatican</p>
+              <div class="tour-footer">
+                <div><div class="tour-price-label">Starting from</div><div class="tour-price">₹1,89,000</div></div>
+                <a href="destinations/europe.html" class="tour-book-btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="tour-card">
+            <div class="tour-img">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan" loading="lazy" />
+              <div class="tour-img-overlay"></div>
+              <span class="tour-duration">07N / 08D</span>
+              <span class="tour-inclusive">All Inclusive</span>
+            </div>
+            <div class="tour-body">
+              <h3>Blooming Japan</h3>
+              <p class="tour-destinations">Narita · Tokyo · Hakone · Hiroshima · Kyoto · Nara · Osaka</p>
+              <div class="tour-footer">
+                <div><div class="tour-price-label">Starting from</div><div class="tour-price">₹1,45,000</div></div>
+                <a href="destinations/japan.html" class="tour-book-btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="tour-card">
+            <div class="tour-img">
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai" loading="lazy" />
+              <div class="tour-img-overlay"></div>
+              <span class="tour-duration">05N / 06D</span>
+              <span class="tour-inclusive">All Inclusive</span>
+            </div>
+            <div class="tour-body">
+              <h3>Spectacular Dubai</h3>
+              <p class="tour-destinations">Dubai City · Desert Safari · Burj Khalifa · Dhow Cruise · Abu Dhabi</p>
+              <div class="tour-footer">
+                <div><div class="tour-price-label">Starting from</div><div class="tour-price">₹55,000</div></div>
+                <a href="destinations/dubai.html" class="tour-book-btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="tour-card">
+            <div class="tour-img">
+              <img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?w=600&q=80" alt="Maldives" loading="lazy" />
+              <div class="tour-img-overlay"></div>
+              <span class="tour-duration">04N / 05D</span>
+              <span class="tour-inclusive">All Inclusive</span>
+            </div>
+            <div class="tour-body">
+              <h3>Mesmerising Maldives</h3>
+              <p class="tour-destinations">Holiday Inn Kandooma · Water Villa · Snorkelling · Dolphin Cruise</p>
+              <div class="tour-footer">
+                <div><div class="tour-price-label">Starting from</div><div class="tour-price">₹75,000</div></div>
+                <a href="destinations/maldives.html" class="tour-book-btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="tour-card">
+            <div class="tour-img">
+              <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=600&q=80" alt="Georgia" loading="lazy" />
+              <div class="tour-img-overlay"></div>
+              <span class="tour-duration">06N / 07D</span>
+              <span class="tour-inclusive">All Inclusive</span>
+            </div>
+            <div class="tour-body">
+              <h3>Highlights of Georgia</h3>
+              <p class="tour-destinations">Tbilisi · Mtskheta · Kazbegi · Batumi · Borjomi · Kutaisi</p>
+              <div class="tour-footer">
+                <div><div class="tour-price-label">Starting from</div><div class="tour-price">₹65,000</div></div>
+                <a href="destinations/georgia.html" class="tour-book-btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="tour-card">
+            <div class="tour-img">
+              <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?w=600&q=80" alt="Singapore" loading="lazy" />
+              <div class="tour-img-overlay"></div>
+              <span class="tour-duration">05N / 06D</span>
+              <span class="tour-inclusive">All Inclusive</span>
+            </div>
+            <div class="tour-body">
+              <h3>Charming Singapore + Malaysia</h3>
+              <p class="tour-destinations">Singapore · Marina Bay · Sentosa · Kuala Lumpur · Genting Highlands</p>
+              <div class="tour-footer">
+                <div><div class="tour-price-label">Starting from</div><div class="tour-price">₹65,000</div></div>
+                <a href="destinations/singapore.html" class="tour-book-btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="tours-pagination" style="text-align:center;margin-top:28px;"></div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="packages/international.html" class="btn btn-outline-navy">View All International Packages →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Year Round Destinations -->
+<section class="yr-destinations section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" data-aos="fade-up">
+      <div class="section-label" style="justify-content:center;">Popular Destinations</div>
+      <h2 class="section-title">Year Round <span class="accent">Destinations</span></h2>
+      <p class="section-sub" style="margin:0 auto;">Dream destinations — hand-crafted packages ready to go.</p>
+    </div>
+    <div class="dest-pills" data-aos="fade-up">
+      <button class="dest-pill active" data-tab="intl">🌍 International</button>
+      <button class="dest-pill" data-tab="india">🇮🇳 Explore India</button>
+    </div>
+    <div class="dest-panel active" data-panel="intl">
+      <div class="dest-grid">
+        <a href="destinations/europe.html" class="dest-card" data-aos="fade-up">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80" alt="Europe" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info"><h3>Europe</h3><p>14+ Itineraries Available</p><span class="exp-btn">Explore →</span></div>
+        </a>
+        <a href="destinations/japan.html" class="dest-card" data-aos="fade-up" data-aos-delay="50">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info"><h3>Japan</h3><p>Cherry Blossom Specials</p><span class="exp-btn">Explore →</span></div>
+        </a>
+        <a href="destinations/dubai.html" class="dest-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info"><h3>Dubai</h3><p>Luxury Desert Experiences</p><span class="exp-btn">Explore →</span></div>
+        </a>
+        <a href="destinations/thailand.html" class="dest-card" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80" alt="Thailand" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info"><h3>Thailand</h3><p>Bangkok · Phuket · Krabi</p><span class="exp-btn">Explore →</span></div>
+        </a>
+        <a href="destinations/maldives.html" class="dest-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?w=600&q=80" alt="Maldives" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info"><h3>Maldives</h3><p>Overwater Villas & Reefs</p><span class="exp-btn">Explore →</span></div>
+        </a>
+      </div>
+    </div>
+    <div class="dest-panel" data-panel="india">
+      <div class="dest-grid">
+        <a href="packages/domestic.html" class="dest-card" data-aos="fade-up">
+          <img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=800&q=80" alt="Kashmir" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info"><h3>Kashmir</h3><p>Paradise on Earth</p><span class="exp-btn">Explore →</span></div>
+        </a>
+        <a href="packages/domestic.html" class="dest-card" data-aos="fade-up" data-aos-delay="50">
+          <img src="https://images.unsplash.com/photo-1572979909810-a04f2a7da52a?w=600&q=80" alt="Rajasthan" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info"><h3>Rajasthan</h3><p>Royal Heritage Trails</p><span class="exp-btn">Explore →</span></div>
+        </a>
+        <a href="packages/domestic.html" class="dest-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info"><h3>Kerala</h3><p>God's Own Country</p><span class="exp-btn">Explore →</span></div>
+        </a>
+        <a href="packages/domestic.html" class="dest-card" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=600&q=80" alt="Goa" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info"><h3>Goa</h3><p>Beaches & Beyond</p><span class="exp-btn">Explore →</span></div>
+        </a>
+        <a href="packages/domestic.html" class="dest-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80" alt="Ladakh" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info"><h3>Ladakh</h3><p>Land of High Passes</p><span class="exp-btn">Explore →</span></div>
+        </a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;" data-aos="fade-up">
+      <a href="packages/international.html" class="btn btn-primary">Explore All Packages →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Group Tours Feature -->
+<section class="group-feature section">
+  <div class="container">
+    <div class="group-feature-inner">
+      <div data-aos="fade-right">
+        <div class="section-label">Premium Group Departures</div>
+        <h2 class="section-title" style="color:white;">Travel Together,<br/><span class="accent">Memories Forever</span></h2>
+        <p>Join our expertly-curated group tours and experience the joy of travelling with like-minded explorers. Every detail taken care of — you just show up.</p>
+        <div class="group-perks">
+          <div class="perk-item"><div class="perk-icon">🛫</div><div class="perk-text"><h4>Flights + Visa Included</h4><p>Hassle-free, end-to-end arrangements</p></div></div>
+          <div class="perk-item"><div class="perk-icon">🏨</div><div class="perk-text"><h4>Premium Hotels</h4><p>4★ &amp; 5★ stays throughout the tour</p></div></div>
+          <div class="perk-item"><div class="perk-icon">🍽️</div><div class="perk-text"><h4>Indian Meals Included</h4><p>Familiar food, wherever you go</p></div></div>
+          <div class="perk-item"><div class="perk-icon">👨‍✈️</div><div class="perk-text"><h4>Expert Tour Leader</h4><p>Dedicated guide throughout the trip</p></div></div>
+        </div>
+        <a href="packages/group-tours.html" class="btn btn-primary">View All Group Tours →</a>
+      </div>
+      <div class="group-cards-mini" data-aos="fade-left">
+        <div class="gcm">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&q=80" alt="Europe" loading="lazy" />
+          <div class="gcm-body">
+            <div class="gcm-dur">13N / 14D</div>
+            <h4>Magical Europe</h4>
+            <div class="gcm-dest">France · Switzerland · Italy · Vatican</div>
+            <span class="gcm-badge">All Inclusive</span>
+          </div>
+        </div>
+        <div class="gcm">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&q=80" alt="Japan" loading="lazy" />
+          <div class="gcm-body">
+            <div class="gcm-dur">07N / 08D</div>
+            <h4>Blooming Japan</h4>
+            <div class="gcm-dest">Tokyo · Kyoto · Osaka · Nara</div>
+            <span class="gcm-badge">All Inclusive</span>
+          </div>
+        </div>
+        <div class="gcm">
+          <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=400&q=80" alt="Georgia" loading="lazy" />
+          <div class="gcm-body">
+            <div class="gcm-dur">06N / 07D</div>
+            <h4>Highlights of Georgia</h4>
+            <div class="gcm-dest">Tbilisi · Kazbegi · Batumi</div>
+            <span class="gcm-badge">All Inclusive</span>
+          </div>
+        </div>
+        <div class="gcm">
+          <img src="https://images.unsplash.com/photo-1571406252241-db0280bd36cd?w=400&q=80" alt="Vietnam" loading="lazy" />
+          <div class="gcm-body">
+            <div class="gcm-dur">07N / 08D</div>
+            <h4>Classic Vietnam</h4>
+            <div class="gcm-dest">Hanoi · Ha Long Bay · Hoi An · Ho Chi Minh</div>
+            <span class="gcm-badge">All Inclusive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px;" data-aos="fade-up">
+      <div class="section-label" style="justify-content:center;">Simple Process</div>
+      <h2 class="section-title">We Create the Trips <span class="accent">You Love</span></h2>
+    </div>
+    <div class="steps-grid" data-aos="fade-up">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <h3>Search Your Voyage</h3>
+        <p>Tell us where you want to go and we'll find the best options, dates, and packages that match your dream trip.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <h3>Customise at Your Convenience</h3>
+        <p>Our travel experts craft a bespoke itinerary — hotels, sightseeing, meals — tailored exactly to your preferences.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <h3>Pack & Go!</h3>
+        <p>We handle everything from visas to airport transfers. You just pack your bags and enjoy the journey.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px;" data-aos="fade-up">
+      <a href="https://wa.me/910000000000" class="btn btn-primary" target="_blank">💬 Chat With Us on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- Own Your Travel Style -->
+<section class="travel-styles section">
+  <div class="container">
+    <div style="text-align:center;" data-aos="fade-up">
+      <div class="section-label" style="justify-content:center;">Tailored For You</div>
+      <h2 class="section-title">Own Your <span class="accent">Travel Style</span></h2>
+      <p class="section-sub" style="margin:0 auto;">Whatever kind of traveller you are, we have the perfect package.</p>
+    </div>
+    <div class="styles-grid" data-aos="fade-up" data-aos-delay="100">
+      <a href="packages/international.html" class="style-item">
+        <div class="style-icon">👨‍👩‍👧‍👦</div>
+        <span>Family Vacation</span>
+      </a>
+      <a href="packages/domestic.html" class="style-item">
+        <div class="style-icon">🇮🇳</div>
+        <span>Incredible India</span>
+      </a>
+      <a href="contact.html" class="style-item">
+        <div class="style-icon">💑</div>
+        <span>Honeymoon</span>
+      </a>
+      <a href="packages/international.html" class="style-item">
+        <div class="style-icon">🛂</div>
+        <span>Visa on Arrival</span>
+      </a>
+      <a href="corporate-travel.html" class="style-item">
+        <div class="style-icon">💼</div>
+        <span>Corporate Travel</span>
+      </a>
+      <a href="packages/group-tours.html" class="style-item">
+        <div class="style-icon">👥</div>
+        <span>Group Tours</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Enquiry / Callback Form -->
+<section class="enquiry-section section">
+  <div class="container">
+    <div class="enquiry-wrapper">
+      <div data-aos="fade-right">
+        <div class="section-label">Travel Calling?</div>
+        <h2>Allow Us to <span class="ac">Call You Back!</span></h2>
+        <p>Our travel experts are standing by to design your perfect trip. Share your details and we'll get back to you within 2 hours.</p>
+        <div class="enquiry-benefits">
+          <div class="benefit-item"><span class="check">✓</span>Free personalised itinerary consultation</div>
+          <div class="benefit-item"><span class="check">✓</span>Best price guarantee on all packages</div>
+          <div class="benefit-item"><span class="check">✓</span>Dedicated travel manager assigned</div>
+          <div class="benefit-item"><span class="check">✓</span>Visa & documentation assistance</div>
+          <div class="benefit-item"><span class="check">✓</span>24/7 on-trip support</div>
+        </div>
+      </div>
+      <div class="enquiry-form-box" data-aos="fade-left">
+        <h3>Plan Your Dream Trip</h3>
+        <p class="sub">Fill in the form and we'll call you back shortly.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group"><label>First Name *</label><input type="text" name="first_name" required placeholder="Rahul" /></div>
+            <div class="form-group"><label>Last Name *</label><input type="text" name="last_name" required placeholder="Sharma" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone *</label><input type="tel" name="phone" required placeholder="+91 98765 43210" /></div>
+            <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="rahul@email.com" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Destination</label>
+              <select name="destination">
+                <option value="">Where to?</option>
+                <option>Europe</option><option>Japan</option><option>Dubai</option>
+                <option>Thailand</option><option>Maldives</option><option>Singapore</option>
+                <option>Georgia</option><option>Vietnam</option><option>Kashmir</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-group"><label>No. of Travellers</label>
+              <select name="pax">
+                <option value="">Select</option>
+                <option>1 – 2</option><option>3 – 5</option><option>6 – 10</option><option>10+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Message</label><textarea name="message" rows="3" placeholder="Tell us about your dream trip..."></textarea></div>
+          <button type="submit" class="form-submit">🚀 Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px;" data-aos="fade-up">
+      <div class="section-label" style="justify-content:center;">What Our Travellers Say</div>
+      <h2 class="section-title">1000+ <span class="accent">Happy Reviews</span></h2>
+    </div>
+    <div class="swiper testi-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p>"The Europe trip was absolutely flawless. Every hotel was premium, food was amazing, and our tour leader was incredible. Can't wait to book again!"</p><div class="testi-author"><div class="testi-avatar">PS</div><div><div class="testi-name">Priya Sharma</div><div class="testi-trip">Magical Europe · 2024</div></div></div></div></div>
+        <div class="swiper-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p>"Japan was on our bucket list for years. The Travel Spark made it a reality — cherry blossoms, temples, food tours. Literally picture-perfect!"</p><div class="testi-author"><div class="testi-avatar">RK</div><div><div class="testi-name">Rohan Kulkarni</div><div class="testi-trip">Blooming Japan · 2024</div></div></div></div></div>
+        <div class="swiper-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p>"Maldives overwater villa was our honeymoon dream. The package included everything — transfers, water activities, and beautiful candlelight dinners!"</p><div class="testi-author"><div class="testi-avatar">AM</div><div><div class="testi-name">Ananya & Mihir</div><div class="testi-trip">Maldives Honeymoon · 2024</div></div></div></div></div>
+        <div class="swiper-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p>"Georgia was a hidden gem and The Travel Spark showed us every corner of it. The itinerary was balanced perfectly between adventure and culture."</p><div class="testi-author"><div class="testi-avatar">VN</div><div><div class="testi-name">Vikram Nair</div><div class="testi-trip">Georgia Highlights · 2024</div></div></div></div></div>
+        <div class="swiper-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p>"Corporate offsite to Singapore was seamless. From flights to team dinners — everything was handled professionally. Highly recommend for corporate travel!"</p><div class="testi-author"><div class="testi-avatar">SJ</div><div><div class="testi-name">Sneha Joshi</div><div class="testi-trip">Corporate Singapore · 2024</div></div></div></div></div>
+      </div>
+      <div class="testi-pagination" style="text-align:center;margin-top:28px;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog -->
+<section class="blog-section section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div>
+        <div class="section-label">Travel Inspiration</div>
+        <h2 class="section-title">Read Our Virtual <span class="accent">Travel Guide</span></h2>
+      </div>
+      <a href="blog.html" class="btn btn-outline-navy">View All Articles →</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Europe" loading="lazy" /></div>
+        <div class="blog-body">
+          <span class="blog-tag">Europe</span>
+          <h3>Top 10 Things to Do in Paris This Summer</h3>
+          <p>From the Eiffel Tower to hidden bistros in Montmartre — our local guide reveals Paris beyond the tourist trail.</p>
+          <div class="blog-meta"><span class="date">Mar 10, 2025</span><a href="blog.html" class="read-more">Read More →</a></div>
+        </div>
+      </div>
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan" loading="lazy" /></div>
+        <div class="blog-body">
+          <span class="blog-tag">Japan</span>
+          <h3>Best Countries to Visit in April 2025</h3>
+          <p>Cherry blossoms in Japan, tulips in Netherlands, or spring sunshine in Greece? We break down the best April destinations for Indian travellers.</p>
+          <div class="blog-meta"><span class="date">Feb 22, 2025</span><a href="blog.html" class="read-more">Read More →</a></div>
+        </div>
+      </div>
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=600&q=80" alt="Georgia" loading="lazy" /></div>
+        <div class="blog-body">
+          <span class="blog-tag">Georgia</span>
+          <h3>Top 10 Places to Visit in Georgia</h3>
+          <p>Georgia is Europe's best-kept secret. Tbilisi's old town, Kazbegi's mountains and Batumi's beaches — our complete travel guide.</p>
+          <div class="blog-meta"><span class="date">Feb 5, 2025</span><a href="blog.html" class="read-more">Read More →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partners -->
+<section class="partners-section section" style="padding:48px 0;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:36px;" data-aos="fade-up">
+      <div class="section-label" style="justify-content:center;">Our Partners</div>
+    </div>
+    <div class="partners-scroll">
+      <div class="partners-track">
+        <div class="partner-item"><span>Dubai Tourism</span></div>
+        <div class="partner-item"><span>Singapore Airlines</span></div>
+        <div class="partner-item"><span>Visit Maldives</span></div>
+        <div class="partner-item"><span>Emirates</span></div>
+        <div class="partner-item"><span>Tourism Australia</span></div>
+        <div class="partner-item"><span>Incredible India</span></div>
+        <div class="partner-item"><span>Amazing Thailand</span></div>
+        <div class="partner-item"><span>IndiGo Airlines</span></div>
+        <div class="partner-item"><span>Air India</span></div>
+        <div class="partner-item"><span>Qatar Airways</span></div>
+        <!-- Duplicated for infinite scroll -->
+        <div class="partner-item"><span>Dubai Tourism</span></div>
+        <div class="partner-item"><span>Singapore Airlines</span></div>
+        <div class="partner-item"><span>Visit Maldives</span></div>
+        <div class="partner-item"><span>Emirates</span></div>
+        <div class="partner-item"><span>Tourism Australia</span></div>
+        <div class="partner-item"><span>Incredible India</span></div>
+        <div class="partner-item"><span>Amazing Thailand</span></div>
+        <div class="partner-item"><span>IndiGo Airlines</span></div>
+        <div class="partner-item"><span>Air India</span></div>
+        <div class="partner-item"><span>Qatar Airways</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="assets/images/logo.jpeg" alt="The Travel Spark" />
+        </div>
+        <p class="footer-desc">Your trusted travel partner for unforgettable holidays, seamless group tours, and premium corporate travel. Igniting journeys since 2012.</p>
+        <div class="footer-social">
+          <a href="#" title="Instagram">📸</a>
+          <a href="#" title="Facebook">👤</a>
+          <a href="https://wa.me/910000000000" title="WhatsApp">💬</a>
+          <a href="#" title="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="packages/group-tours.html">Group Tours</a></li>
+          <li><a href="corporate-travel.html">Corporate Travel</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Packages</h4>
+        <ul>
+          <li><a href="packages/international.html">International Holidays</a></li>
+          <li><a href="packages/group-tours.html">Group Tours</a></li>
+          <li><a href="packages/domestic.html">Explore India</a></li>
+          <li><a href="contact.html">Honeymoon Packages</a></li>
+          <li><a href="contact.html">Custom Holidays</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <div class="icon">📍</div>
+            <div class="info">Your Office Address<br/>City, State — 000000</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon">📞</div>
+            <div class="info"><a href="tel:+910000000000">+91 00000 00000</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon">✉️</div>
+            <div class="info"><a href="mailto:hello@travelspark.in">hello@travelspark.in</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon">🕐</div>
+            <div class="info">Mon–Sat: 9 AM – 7 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 The Travel Spark. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="legal/privacy-policy.html">Privacy Policy</a>
+        <a href="legal/terms-conditions.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/910000000000" class="whatsapp-float" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<button class="scroll-top" id="scrollTop">↑</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/slider.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  // Mobile menu overlay
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('menuOverlay');
+
+  hamburger?.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu?.classList.toggle('open');
+    overlay?.classList.toggle('visible');
+    document.body.style.overflow = mobileMenu?.classList.contains('open') ? 'hidden' : '';
+  });
+
+  overlay?.addEventListener('click', () => {
+    hamburger?.classList.remove('active');
+    mobileMenu?.classList.remove('open');
+    overlay.classList.remove('visible');
+    document.body.style.overflow = '';
+  });
+
+  // Destination tabs
+  document.querySelectorAll('.dest-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      document.querySelectorAll('.dest-pill').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.dest-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelector(`.dest-panel[data-panel="${target}"]`)?.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

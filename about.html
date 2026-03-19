@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About The Travel Spark — Your trusted travel partner since 2012." />
+  <title>About Us — The Travel Spark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <style>
+    .page-hero { background:linear-gradient(135deg,var(--navy),#0d1a47); padding:150px 0 80px; text-align:center; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1600&q=70') center/cover; opacity:0.15; }
+    .page-hero-inner { position:relative; z-index:1; }
+    .page-hero h1 { font-family:var(--font-display); font-size:clamp(2.2rem,5vw,3.8rem); color:white; margin-bottom:14px; }
+    .page-hero h1 span { color:var(--pink); font-style:italic; }
+    .page-hero p { color:rgba(255,255,255,0.65); font-size:1rem; max-width:520px; margin:0 auto; }
+    .crumb { color:rgba(255,255,255,0.4); font-size:0.82rem; margin-bottom:16px; }
+    .crumb a { color:var(--pink); }
+
+    /* Story */
+    .story-section { background:var(--white); }
+    .story-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+    .story-img { border-radius:var(--radius-lg); overflow:hidden; position:relative; }
+    .story-img img { width:100%; height:480px; object-fit:cover; }
+    .story-img-badge { position:absolute; bottom:24px; left:24px; background:white; border-radius:var(--radius); padding:16px 20px; box-shadow:var(--shadow-lg); }
+    .story-img-badge .num { font-family:var(--font-display); font-size:2rem; font-weight:700; color:var(--pink); line-height:1; }
+    .story-img-badge .lbl { font-size:0.75rem; color:var(--text-light); margin-top:2px; }
+    .story-content .section-label { margin-bottom:12px; }
+    .story-content h2 { font-family:var(--font-display); font-size:clamp(1.8rem,3vw,2.5rem); color:var(--navy); line-height:1.2; margin-bottom:22px; }
+    .story-content h2 span { color:var(--pink); font-style:italic; }
+    .story-content p { color:var(--text-light); line-height:1.8; margin-bottom:16px; font-size:0.95rem; }
+    .story-highlights { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:32px; }
+    .sh-item { display:flex; align-items:center; gap:10px; font-size:0.88rem; font-weight:600; color:var(--navy); }
+    .sh-item .dot { width:8px; height:8px; border-radius:50%; background:var(--pink); flex-shrink:0; }
+
+    /* Stats */
+    .stats-about { background:var(--navy); padding:60px 0; }
+    .stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center; }
+    .sa-item { padding:24px; border-right:1px solid rgba(255,255,255,0.07); }
+    .sa-item:last-child { border-right:none; }
+    .sa-num { font-family:var(--font-display); font-size:2.6rem; font-weight:700; color:var(--pink); line-height:1; margin-bottom:6px; }
+    .sa-lbl { font-size:0.82rem; color:rgba(255,255,255,0.55); }
+
+    /* Values */
+    .values-section { background:var(--off-white); }
+    .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .val-card { background:var(--white); border-radius:var(--radius); padding:32px 26px; box-shadow:var(--shadow-sm); transition:var(--transition); text-align:center; }
+    .val-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+    .val-icon { width:64px; height:64px; border-radius:16px; background:linear-gradient(135deg,var(--pink),var(--pink-dark)); display:flex; align-items:center; justify-content:center; font-size:1.8rem; margin:0 auto 20px; }
+    .val-card h3 { font-family:var(--font-display); font-size:1.1rem; color:var(--navy); margin-bottom:10px; }
+    .val-card p { font-size:0.86rem; color:var(--text-light); line-height:1.7; }
+
+    /* Team */
+    .team-section { background:var(--white); }
+    .team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+    .team-card { text-align:center; }
+    .team-avatar { width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg,var(--navy),var(--pink)); display:flex; align-items:center; justify-content:center; font-size:2rem; font-weight:700; color:white; margin:0 auto 16px; font-family:var(--font-display); box-shadow:0 8px 24px rgba(233,30,140,0.25); }
+    .team-card h3 { font-family:var(--font-display); font-size:1rem; color:var(--navy); margin-bottom:4px; }
+    .team-card .role { font-size:0.8rem; color:var(--pink); font-weight:600; margin-bottom:8px; }
+    .team-card p { font-size:0.8rem; color:var(--text-light); line-height:1.6; }
+
+    /* Associations */
+    .assoc-section { background:var(--off-white); padding:56px 0; }
+    .assoc-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+    .assoc-badge { background:var(--white); border-radius:var(--radius); padding:16px 24px; box-shadow:var(--shadow-sm); font-size:0.85rem; font-weight:600; color:var(--navy); display:flex; align-items:center; gap:10px; border:1px solid var(--gray-100); }
+
+    @media(max-width:960px){.story-grid{grid-template-columns:1fr;gap:40px;}.story-img img{height:320px;}.team-grid{grid-template-columns:repeat(2,1fr);}.values-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:640px){.stats-row{grid-template-columns:repeat(2,1fr);}.values-grid{grid-template-columns:1fr;}.team-grid{grid-template-columns:1fr 1fr;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo"><img src="assets/images/logo.jpeg" alt="The Travel Spark" /></a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><span>Holiday Packages <span class="chevron">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="packages/international.html">🌍 International Holidays</a></li>
+            <li><a href="packages/group-tours.html">👥 Group Tours</a></li>
+            <li><a href="packages/domestic.html">🇮🇳 Explore India</a></li>
+          </ul>
+        </li>
+        <li><a href="corporate-travel.html">Corporate Travel</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
+        <a href="contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="menu-overlay" id="menuOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <div class="m-parent">Holiday Packages</div>
+  <div class="sub-links"><a href="packages/international.html">🌍 International</a><a href="packages/group-tours.html">👥 Group Tours</a><a href="packages/domestic.html">🇮🇳 Explore India</a></div>
+  <a href="corporate-travel.html">Corporate Travel</a>
+  <a href="blog.html">Blog</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <p class="crumb"><a href="index.html">Home</a> / About Us</p>
+    <h1>Our <span>Story</span></h1>
+    <p>Over a decade of crafting unforgettable journeys for 30,000+ happy travellers across India.</p>
+  </div>
+</section>
+
+<!-- Story -->
+<section class="story-section section">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img" data-aos="fade-right">
+        <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=800&q=80" alt="Our Story" loading="lazy" />
+        <div class="story-img-badge"><div class="num">12+</div><div class="lbl">Years of Excellence</div></div>
+      </div>
+      <div class="story-content" data-aos="fade-left">
+        <div class="section-label">Who We Are</div>
+        <h2>We Spark <span>Journeys</span> That Last a Lifetime</h2>
+        <p>The Travel Spark was founded with a single mission: to make extraordinary travel accessible to every Indian family. What started as a boutique travel consultancy in 2012 has grown into one of the region's most trusted travel companies.</p>
+        <p>We specialize in fully customised international holidays, premium group tours with confirmed departures, and seamless corporate travel management. Every itinerary we create is built around your unique preferences, budget, and travel style.</p>
+        <p>From the first enquiry to your safe return home, our team of passionate travel experts is with you every step of the way. That's the Travel Spark promise.</p>
+        <div class="story-highlights">
+          <div class="sh-item"><span class="dot"></span>IATA Accredited Agency</div>
+          <div class="sh-item"><span class="dot"></span>Government Registered</div>
+          <div class="sh-item"><span class="dot"></span>4.8★ Google Rated</div>
+          <div class="sh-item"><span class="dot"></span>50+ Destinations Covered</div>
+          <div class="sh-item"><span class="dot"></span>Expert Tour Leaders</div>
+          <div class="sh-item"><span class="dot"></span>24/7 Trip Support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats-about">
+  <div class="container">
+    <div class="stats-row">
+      <div class="sa-item" data-aos="fade-up"><div class="sa-num" data-counter data-target="30000" data-suffix="+">30,000+</div><div class="sa-lbl">Happy Travellers</div></div>
+      <div class="sa-item" data-aos="fade-up" data-aos-delay="80"><div class="sa-num" data-counter data-target="1000" data-suffix="+">1,000+</div><div class="sa-lbl">5★ Google Reviews</div></div>
+      <div class="sa-item" data-aos="fade-up" data-aos-delay="160"><div class="sa-num" data-counter data-target="50" data-suffix="+">50+</div><div class="sa-lbl">Destinations</div></div>
+      <div class="sa-item" data-aos="fade-up" data-aos-delay="240"><div class="sa-num" data-counter data-target="12" data-suffix=" Yrs">12</div><div class="sa-lbl">Years in Business</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Values -->
+<section class="values-section section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" data-aos="fade-up">
+      <div class="section-label" style="justify-content:center;">What Drives Us</div>
+      <h2 class="section-title">Our Core <span class="accent">Values</span></h2>
+    </div>
+    <div class="values-grid">
+      <div class="val-card" data-aos="fade-up"><div class="val-icon">🌟</div><h3>Trust & Transparency</h3><p>No hidden charges, no surprises. Every quote we share is clear, detailed, and honest. We believe trust is the foundation of every great trip.</p></div>
+      <div class="val-card" data-aos="fade-up" data-aos-delay="80"><div class="val-icon">💡</div><h3>Personalisation</h3><p>Every traveller is different. We take the time to understand your preferences and craft an itinerary that feels made for you — because it is.</p></div>
+      <div class="val-card" data-aos="fade-up" data-aos-delay="160"><div class="val-icon">🏆</div><h3>Excellence in Service</h3><p>From premium hotels to expert guides, we never cut corners. Our commitment to quality shows in every aspect of every trip we plan.</p></div>
+      <div class="val-card" data-aos="fade-up"><div class="val-icon">🌍</div><h3>Responsible Travel</h3><p>We partner with local guides, support community tourism, and encourage responsible travel practices that benefit the destinations we visit.</p></div>
+      <div class="val-card" data-aos="fade-up" data-aos-delay="80"><div class="val-icon">🤝</div><h3>Long-term Relationships</h3><p>More than 60% of our travellers return for another trip. We build relationships, not transactions. Your trust is our greatest achievement.</p></div>
+      <div class="val-card" data-aos="fade-up" data-aos-delay="160"><div class="val-icon">🔐</div><h3>Safe & Secure Travel</h3><p>Your safety is paramount. From travel insurance guidance to on-trip emergency support — we ensure you're protected every step of the way.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="team-section section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" data-aos="fade-up">
+      <div class="section-label" style="justify-content:center;">The People Behind Your Trips</div>
+      <h2 class="section-title">Meet Our <span class="accent">Team</span></h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card" data-aos="fade-up"><div class="team-avatar">RS</div><h3>Rajesh Sharma</h3><div class="role">Founder & CEO</div><p>15+ years in travel. Europe specialist and the visionary behind The Travel Spark.</p></div>
+      <div class="team-card" data-aos="fade-up" data-aos-delay="80"><div class="team-avatar">PD</div><h3>Priya Desai</h3><div class="role">Head of Operations</div><p>Keeps every tour running flawlessly. Known for her meticulous attention to detail.</p></div>
+      <div class="team-card" data-aos="fade-up" data-aos-delay="160"><div class="team-avatar">AM</div><h3>Amit Mehta</h3><div class="role">Asia Pacific Expert</div><p>Japan, Thailand, Vietnam — Amit has visited every destination we sell, multiple times.</p></div>
+      <div class="team-card" data-aos="fade-up" data-aos-delay="240"><div class="team-avatar">SK</div><h3>Sunita Kulkarni</h3><div class="role">Corporate Travel Manager</div><p>Manages all corporate accounts with precision and a personal touch.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Associations -->
+<div class="assoc-section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:32px;" data-aos="fade-up">
+      <div class="section-label" style="justify-content:center;">Accreditations</div>
+      <h2 class="section-title">Trusted & <span class="accent">Accredited</span></h2>
+    </div>
+    <div class="assoc-grid" data-aos="fade-up">
+      <div class="assoc-badge">✈️ IATA Accredited</div>
+      <div class="assoc-badge">🇮🇳 Ministry of Tourism Recognised</div>
+      <div class="assoc-badge">⭐ Google 4.8★ Rated</div>
+      <div class="assoc-badge">🏆 TAAI Member</div>
+      <div class="assoc-badge">🛡️ TAFI Member</div>
+      <div class="assoc-badge">🌍 IATO Member</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,var(--pink),var(--pink-dark));padding:70px 0;text-align:center;">
+  <div class="container" data-aos="fade-up">
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.6rem);color:white;margin-bottom:12px;">Ready to Start Your Journey?</h2>
+    <p style="color:rgba(255,255,255,0.8);margin-bottom:32px;">Let our travel experts craft your perfect holiday.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-outline">📋 Plan My Trip</a>
+      <a href="packages/group-tours.html" class="btn btn-outline">👥 View Group Tours</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo"><img src="assets/images/logo.jpeg" alt="The Travel Spark" /></div><p class="footer-desc">Your trusted travel partner for unforgettable holidays and group tours.</p><div class="footer-social"><a href="#">📸</a><a href="#">👤</a><a href="https://wa.me/910000000000">💬</a><a href="#">▶️</a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="packages/group-tours.html">Group Tours</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Packages</h4><ul><li><a href="packages/international.html">International</a></li><li><a href="packages/domestic.html">Explore India</a></li><li><a href="corporate-travel.html">Corporate</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact"><div class="footer-contact-item"><div class="icon">📞</div><div class="info"><a href="tel:+910000000000">+91 00000 00000</a></div></div><div class="footer-contact-item"><div class="icon">✉️</div><div class="info"><a href="mailto:hello@travelspark.in">hello@travelspark.in</a></div></div></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 The Travel Spark. All rights reserved.</p><div class="footer-bottom-links"><a href="legal/privacy-policy.html">Privacy Policy</a><a href="legal/terms-conditions.html">Terms</a></div></div>
+  </div>
+</footer>
+<a href="https://wa.me/910000000000" class="whatsapp-float" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<button class="scroll-top" id="scrollTop">↑</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  AOS.init({ duration:700, once:true });
+  const overlay = document.getElementById('menuOverlay'), hamburger = document.getElementById('hamburger'), mobileMenu = document.getElementById('mobileMenu');
+  hamburger?.addEventListener('click', () => { hamburger.classList.toggle('active'); mobileMenu?.classList.toggle('open'); overlay?.classList.toggle('visible'); document.body.style.overflow = mobileMenu?.classList.contains('open') ? 'hidden' : ''; });
+  overlay?.addEventListener('click', () => { hamburger?.classList.remove('active'); mobileMenu?.classList.remove('open'); overlay.classList.remove('visible'); document.body.style.overflow = ''; });
+</script>
+</body>
+</html>

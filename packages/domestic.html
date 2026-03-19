@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore India — Holiday Packages by The Travel Spark. Kashmir, Kerala, Rajasthan, Goa & more." />
+  <title>Explore India — The Travel Spark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/navbar.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <style>
+    .page-hero { background:linear-gradient(135deg,var(--navy),#0d1a47); padding:150px 0 80px; text-align:center; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=1600&q=70') center/cover; opacity:0.2; }
+    .page-hero-inner { position:relative; z-index:1; }
+    .page-hero h1 { font-family:var(--font-display); font-size:clamp(2.2rem,5vw,3.8rem); color:white; margin-bottom:14px; }
+    .page-hero h1 span { color:var(--pink); font-style:italic; }
+    .page-hero p { color:rgba(255,255,255,0.65); font-size:1rem; max-width:520px; margin:0 auto; }
+    .crumb { color:rgba(255,255,255,0.4); font-size:0.82rem; margin-bottom:16px; }
+    .crumb a { color:var(--pink); }
+
+    /* Dest Grid Hero */
+    .india-destinations { background:var(--white); }
+    .india-dest-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .idc { position:relative; border-radius:var(--radius); overflow:hidden; height:280px; cursor:pointer; text-decoration:none; }
+    .idc:first-child { grid-column:span 2; height:340px; }
+    .idc img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
+    .idc:hover img { transform:scale(1.07); }
+    .idc-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(26,42,108,0.88) 0%,transparent 55%); }
+    .idc-info { position:absolute; bottom:20px; left:20px; right:20px; }
+    .idc-info h3 { font-family:var(--font-display); font-size:1.3rem; font-weight:700; color:white; margin-bottom:4px; }
+    .idc-info p { font-size:0.76rem; color:rgba(255,255,255,0.65); }
+    .idc-info .exbtn { display:inline-flex; align-items:center; gap:6px; margin-top:10px; background:var(--pink); color:white; padding:6px 14px; border-radius:100px; font-size:0.74rem; font-weight:700; opacity:0; transform:translateY(8px); transition:all 0.3s; }
+    .idc:hover .exbtn { opacity:1; transform:translateY(0); }
+
+    /* Packages */
+    .india-pkgs { background:var(--off-white); }
+    .dest-section { margin-bottom:64px; }
+    .dest-section:last-child { margin-bottom:0; }
+    .ds-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; flex-wrap:wrap; gap:12px; }
+    .ds-head h2 { font-family:var(--font-display); font-size:1.7rem; color:var(--navy); display:flex; align-items:center; gap:12px; }
+    .pkg-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .pkg-card { background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-sm); transition:var(--transition); }
+    .pkg-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+    .pkg-img { height:210px; overflow:hidden; position:relative; }
+    .pkg-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
+    .pkg-card:hover .pkg-img img { transform:scale(1.07); }
+    .pkg-dur { position:absolute; top:12px; left:12px; background:var(--pink); color:white; font-size:0.7rem; font-weight:700; padding:4px 12px; border-radius:100px; }
+    .pkg-body { padding:20px; }
+    .pkg-body h3 { font-family:var(--font-display); font-size:1.1rem; color:var(--navy); margin-bottom:8px; }
+    .pkg-hl { font-size:0.77rem; color:var(--text-light); line-height:1.5; margin-bottom:14px; }
+    .pkg-tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px; }
+    .pkg-tag { background:var(--off-white); color:var(--text-light); font-size:0.7rem; padding:3px 9px; border-radius:100px; }
+    .pkg-footer { display:flex; align-items:center; justify-content:space-between; padding-top:14px; border-top:1px solid var(--gray-100); }
+    .pkg-price { font-family:var(--font-display); font-size:1.22rem; font-weight:700; color:var(--navy); }
+    .pkg-price-lbl { font-size:0.7rem; color:var(--gray-600); }
+    .pkg-btn { background:var(--navy); color:white; padding:8px 18px; border-radius:var(--radius-sm); font-size:0.82rem; font-weight:600; transition:var(--transition); }
+    .pkg-btn:hover { background:var(--pink); }
+
+    @media(max-width:900px){.india-dest-grid{grid-template-columns:1fr 1fr;}.idc:first-child{grid-column:span 1;height:280px;}.pkg-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:580px){.india-dest-grid{grid-template-columns:1fr;}.pkg-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="../index.html" class="navbar-logo"><img src="../assets/images/logo.jpeg" alt="The Travel Spark" /></a>
+      <ul class="navbar-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><span class="active">Holiday Packages <span class="chevron">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="international.html">🌍 International Holidays</a></li>
+            <li><a href="group-tours.html">👥 Group Tours</a></li>
+            <li><a href="domestic.html" class="active">🇮🇳 Explore India</a></li>
+          </ul>
+        </li>
+        <li><a href="../corporate-travel.html">Corporate Travel</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
+        <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="menu-overlay" id="menuOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html">Home</a>
+  <div class="m-parent">Holiday Packages</div>
+  <div class="sub-links"><a href="international.html">🌍 International</a><a href="group-tours.html">👥 Group Tours</a><a href="domestic.html">🇮🇳 Explore India</a></div>
+  <a href="../corporate-travel.html">Corporate Travel</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+</div>
+
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <p class="crumb"><a href="../index.html">Home</a> / Explore India</p>
+    <h1>Incredible <span>India</span></h1>
+    <p>From Kashmir's valleys to Kerala's backwaters — discover the magic that's always been home.</p>
+  </div>
+</section>
+
+<!-- Destination Visual Grid -->
+<section class="india-destinations section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px;" data-aos="fade-up">
+      <div class="section-label" style="justify-content:center;">Travel India</div>
+      <h2 class="section-title">Our Favourite <span class="accent">Indian Destinations</span></h2>
+    </div>
+    <div class="india-dest-grid">
+      <a href="#kashmir" class="idc" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=900&q=80" alt="Kashmir" loading="lazy" />
+        <div class="idc-overlay"></div>
+        <div class="idc-info"><h3>Kashmir</h3><p>Paradise on Earth · Srinagar · Gulmarg · Pahalgam</p><span class="exbtn">Explore →</span></div>
+      </a>
+      <a href="#rajasthan" class="idc" data-aos="fade-up" data-aos-delay="60">
+        <img src="https://images.unsplash.com/photo-1572979909810-a04f2a7da52a?w=600&q=80" alt="Rajasthan" loading="lazy" />
+        <div class="idc-overlay"></div>
+        <div class="idc-info"><h3>Rajasthan</h3><p>Land of Kings · Jaipur · Jodhpur · Udaipur</p><span class="exbtn">Explore →</span></div>
+      </a>
+      <a href="#kerala" class="idc" data-aos="fade-up" data-aos-delay="120">
+        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala" loading="lazy" />
+        <div class="idc-overlay"></div>
+        <div class="idc-info"><h3>Kerala</h3><p>God's Own Country · Munnar · Alleppey · Kovalam</p><span class="exbtn">Explore →</span></div>
+      </a>
+      <a href="#goa" class="idc" data-aos="fade-up" data-aos-delay="60">
+        <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=600&q=80" alt="Goa" loading="lazy" />
+        <div class="idc-overlay"></div>
+        <div class="idc-info"><h3>Goa</h3><p>Sun, Sand & Sea · North Goa · South Goa</p><span class="exbtn">Explore →</span></div>
+      </a>
+      <a href="#ladakh" class="idc" data-aos="fade-up" data-aos-delay="120">
+        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80" alt="Ladakh" loading="lazy" />
+        <div class="idc-overlay"></div>
+        <div class="idc-info"><h3>Ladakh</h3><p>Land of High Passes · Leh · Nubra · Pangong</p><span class="exbtn">Explore →</span></div>
+      </a>
+      <a href="#himachal" class="idc" data-aos="fade-up" data-aos-delay="180">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Himachal" loading="lazy" />
+        <div class="idc-overlay"></div>
+        <div class="idc-info"><h3>Himachal Pradesh</h3><p>Manali · Shimla · Dharamshala · Spiti</p><span class="exbtn">Explore →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Packages -->
+<section class="india-pkgs section">
+  <div class="container">
+
+    <div class="dest-section" id="kashmir" data-aos="fade-up">
+      <div class="ds-head">
+        <h2>🏔️ Kashmir</h2>
+        <a href="../contact.html" style="font-size:0.84rem;font-weight:600;color:var(--pink);">Customise Package →</a>
+      </div>
+      <div class="pkg-grid">
+        <div class="pkg-card">
+          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=600&q=80" alt="Kashmir" loading="lazy" /><span class="pkg-dur">06N / 07D</span></div>
+          <div class="pkg-body"><h3>Kashmir Valley Classic</h3><p class="pkg-hl">Srinagar · Gulmarg · Pahalgam · Dal Lake · Mughal Gardens</p><div class="pkg-tags"><span class="pkg-tag">Hotels Incl.</span><span class="pkg-tag">Breakfast</span><span class="pkg-tag">Transfers</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹22,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
+        </div>
+        <div class="pkg-card">
+          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1570458436416-b8fcccfe883a?w=600&q=80" alt="Gulmarg" loading="lazy" /><span class="pkg-dur">04N / 05D</span></div>
+          <div class="pkg-body"><h3>Kashmir Quick Escape</h3><p class="pkg-hl">Srinagar · Gulmarg · Gondola Ride · Shikara Ride</p><div class="pkg-tags"><span class="pkg-tag">Houseboat</span><span class="pkg-tag">Breakfast</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹14,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
+        </div>
+        <div class="pkg-card">
+          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80" alt="Winter Kashmir" loading="lazy" /><span class="pkg-dur">07N / 08D</span></div>
+          <div class="pkg-body"><h3>Kashmir Winter Wonderland</h3><p class="pkg-hl">Srinagar · Gulmarg Ski · Pahalgam · Betaab Valley</p><div class="pkg-tags"><span class="pkg-tag">Ski Package</span><span class="pkg-tag">All Meals</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹28,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dest-section" id="kerala" data-aos="fade-up">
+      <div class="ds-head">
+        <h2>🌿 Kerala</h2>
+        <a href="../contact.html" style="font-size:0.84rem;font-weight:600;color:var(--pink);">Customise Package →</a>
+      </div>
+      <div class="pkg-grid">
+        <div class="pkg-card">
+          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala" loading="lazy" /><span class="pkg-dur">05N / 06D</span></div>
+          <div class="pkg-body"><h3>Kerala Highlights</h3><p class="pkg-hl">Munnar · Alleppey Houseboat · Kovalam Beach · Thiruvananthapuram</p><div class="pkg-tags"><span class="pkg-tag">Houseboat</span><span class="pkg-tag">Breakfast</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹18,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
+        </div>
+        <div class="pkg-card">
+          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1589197331516-4d84b72ebde3?w=600&q=80" alt="Backwaters" loading="lazy" /><span class="pkg-dur">03N / 04D</span></div>
+          <div class="pkg-body"><h3>Kerala Backwaters Retreat</h3><p class="pkg-hl">Alleppey · Kumarakom · Houseboat · Ayurveda Spa</p><div class="pkg-tags"><span class="pkg-tag">Houseboat</span><span class="pkg-tag">Meals Incl.</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹12,500</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dest-section" id="rajasthan" data-aos="fade-up">
+      <div class="ds-head">
+        <h2>🏰 Rajasthan</h2>
+        <a href="../contact.html" style="font-size:0.84rem;font-weight:600;color:var(--pink);">Customise Package →</a>
+      </div>
+      <div class="pkg-grid">
+        <div class="pkg-card">
+          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1572979909810-a04f2a7da52a?w=600&q=80" alt="Rajasthan" loading="lazy" /><span class="pkg-dur">07N / 08D</span></div>
+          <div class="pkg-body"><h3>Royal Rajasthan</h3><p class="pkg-hl">Jaipur · Jodhpur · Jaisalmer · Udaipur · Pushkar</p><div class="pkg-tags"><span class="pkg-tag">Heritage Hotels</span><span class="pkg-tag">Camel Safari</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹24,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
+        </div>
+        <div class="pkg-card">
+          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1524613032530-449a5d94c285?w=600&q=80" alt="Jaipur" loading="lazy" /><span class="pkg-dur">04N / 05D</span></div>
+          <div class="pkg-body"><h3>Pink City & Blue City</h3><p class="pkg-hl">Jaipur · Ajmer · Pushkar · Jodhpur</p><div class="pkg-tags"><span class="pkg-tag">Heritage Stay</span><span class="pkg-tag">Guided Tours</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹14,500</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo"><img src="../assets/images/logo.jpeg" alt="The Travel Spark" /></div><p class="footer-desc">Your trusted travel partner for unforgettable holidays across India and the world.</p><div class="footer-social"><a href="#">📸</a><a href="#">👤</a><a href="https://wa.me/910000000000">💬</a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="group-tours.html">Group Tours</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Packages</h4><ul><li><a href="international.html">International</a></li><li><a href="domestic.html">Explore India</a></li><li><a href="../corporate-travel.html">Corporate</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact"><div class="footer-contact-item"><div class="icon">📞</div><div class="info"><a href="tel:+910000000000">+91 00000 00000</a></div></div><div class="footer-contact-item"><div class="icon">✉️</div><div class="info"><a href="mailto:hello@travelspark.in">hello@travelspark.in</a></div></div></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 The Travel Spark. All rights reserved.</p><div class="footer-bottom-links"><a href="../legal/privacy-policy.html">Privacy Policy</a><a href="../legal/terms-conditions.html">Terms</a></div></div>
+  </div>
+</footer>
+<a href="https://wa.me/910000000000" class="whatsapp-float" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<button class="scroll-top" id="scrollTop">↑</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+  AOS.init({ duration:700, once:true });
+  const overlay = document.getElementById('menuOverlay'), hamburger = document.getElementById('hamburger'), mobileMenu = document.getElementById('mobileMenu');
+  hamburger?.addEventListener('click', () => { hamburger.classList.toggle('active'); mobileMenu?.classList.toggle('open'); overlay?.classList.toggle('visible'); document.body.style.overflow = mobileMenu?.classList.contains('open') ? 'hidden' : ''; });
+  overlay?.addEventListener('click', () => { hamburger?.classList.remove('active'); mobileMenu?.classList.remove('open'); overlay.classList.remove('visible'); document.body.style.overflow = ''; });
+</script>
+</body>
+</html>

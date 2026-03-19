@@ -1,0 +1,228 @@
+/* =============================================
+   THE TRAVEL SPARK — style.css
+   Brand: Navy #1a2a6c | Pink #e91e8c | Teal #5bc8d8
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..500;9..600&display=swap');
+
+:root {
+  /* Brand Colors */
+  --navy:        #1a2a6c;
+  --navy-mid:    #243580;
+  --navy-light:  #2e4299;
+  --pink:        #e91e8c;
+  --pink-light:  #f04da3;
+  --pink-dark:   #c4176f;
+  --teal:        #5bc8d8;
+  --teal-light:  #a8e4ed;
+
+  /* Neutrals */
+  --white:       #ffffff;
+  --off-white:   #f7f8fc;
+  --gray-50:     #f9fafb;
+  --gray-100:    #f0f1f5;
+  --gray-300:    #d1d5e0;
+  --gray-600:    #6b7280;
+  --text:        #1a1f36;
+  --text-light:  #5a6178;
+
+  /* Legacy aliases for compatibility */
+  --blue:        var(--navy);
+  --blue-mid:    var(--navy-mid);
+  --blue-light:  var(--navy-light);
+  --yellow:      var(--pink);
+  --yellow-dark: var(--pink-dark);
+  --yellow-light: rgba(233,30,140,0.08);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Spacing & Shape */
+  --radius:       14px;
+  --radius-sm:    8px;
+  --radius-lg:    24px;
+
+  /* Shadows */
+  --shadow-sm:  0 2px 12px rgba(26,42,108,0.07);
+  --shadow-md:  0 8px 32px rgba(26,42,108,0.12);
+  --shadow-lg:  0 20px 60px rgba(26,42,108,0.18);
+  --shadow-pink: 0 8px 32px rgba(233,30,140,0.25);
+
+  /* Transition */
+  --transition: all 0.28s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: var(--font-body); cursor: pointer; }
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Section Spacing ── */
+section { padding: 80px 0; }
+
+/* ── Section Labels ── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 14px;
+}
+
+.section-label::before {
+  content: '';
+  width: 24px; height: 2px;
+  background: var(--pink);
+  border-radius: 2px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-title .accent { color: var(--pink); font-style: italic; }
+.section-sub { color: var(--text-light); font-size: 1rem; line-height: 1.7; max-width: 560px; }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--pink);
+  color: var(--white);
+  border-color: var(--pink);
+}
+
+.btn-primary:hover {
+  background: var(--pink-dark);
+  border-color: var(--pink-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-pink);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-navy {
+  background: transparent;
+  color: var(--navy);
+  border-color: var(--navy);
+}
+
+.btn-outline-navy:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ── WhatsApp Float ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 56px; height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+  z-index: 999;
+  transition: var(--transition);
+}
+
+.whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+.whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+/* ── Scroll To Top ── */
+.scroll-top {
+  position: fixed;
+  bottom: 94px; right: 28px;
+  width: 44px; height: 44px;
+  background: var(--navy);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 998;
+}
+
+.scroll-top.visible { opacity: 1; pointer-events: all; }
+.scroll-top:hover { background: var(--pink); transform: translateY(-3px); }
+
+/* ── Promo Banner ── */
+.promo-banner {
+  background: linear-gradient(90deg, var(--pink) 0%, var(--pink-dark) 100%);
+  text-align: center;
+  padding: 11px 24px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1001;
+}
+
+.promo-banner a { color: white; text-decoration: underline; margin-left: 8px; }
+.promo-banner .close-banner { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 1.1rem; cursor: pointer; opacity: 0.7; }
+.promo-banner .close-banner:hover { opacity: 1; }
+
+/* ── Utilities ── */
+.text-pink { color: var(--pink); }
+.text-navy { color: var(--navy); }
+.fw-600 { font-weight: 600; }
+.mt-8 { margin-top: 8px; }
+.swiper-pagination-bullet-active { background: var(--pink) !important; }
