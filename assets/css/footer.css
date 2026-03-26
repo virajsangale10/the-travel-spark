@@ -35,7 +35,7 @@
   margin-bottom: 20px;
 }
 
-.footer-brand .footer-logo img { height: 44px; width: auto; }
+.footer-brand .footer-logo img { height: 64px; width: auto; }
 
 .footer-brand .footer-logo .logo-text .name {
   font-family: var(--font-display);

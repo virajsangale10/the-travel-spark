@@ -33,8 +33,17 @@
 }
 
 .navbar-logo img {
-  height: 48px;
+  height: 72px;
   width: auto;
+  transition: all 0.3s ease;
+}
+
+/* Add contrast to the logo when the navbar is transparent over the hero section */
+.navbar:not(.scrolled) .navbar-logo img {
+  background: var(--white);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .logo-text {
