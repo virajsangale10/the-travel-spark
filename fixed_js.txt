@@ -1,0 +1,10 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        AOS.init({ duration: 700, once: true, offset: 60 });
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => { scrollBtn?.classList.toggle('visible', window.scrollY > 400); });
+        scrollBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        document.querySelector('a[href="#itinerary"]')?.addEventListener('click', e => { e.preventDefault(); document.getElementById('itinerary')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    </script>
+</body>

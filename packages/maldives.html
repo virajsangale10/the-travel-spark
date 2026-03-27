@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mesmerizing Maldives with Holiday Inn Kandooma — 4 Nights / 5 Days Tour Package." />
+    <title>Mesmerizing Maldives — The Travel Spark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <style>
+        :root {
+            --navy: #1a2a6c;
+            --pink: #e91e8c;
+            --off-white: #f5f5f5;
+            --text: #333;
+            --text-light: #666;
+            --gray-100: #e8e8e8;
+            --gray-200: #d4d4d4;
+            --gray-600: #666;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'DM Sans', sans-serif;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text);
+            background: var(--off-white);
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--pink);
+            color: white;
+            border: 2px solid var(--pink);
+        }
+
+        .btn-primary:hover {
+            background: #c91679;
+            border-color: #c91679;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: white;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+            gap: 32px;
+        }
+
+        .navbar-logo img {
+            height: 42px;
+            display: block;
+        }
+
+        .navbar-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .navbar-links a,
+        .navbar-links span {
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .navbar-links a:hover {
+            color: var(--pink);
+        }
+
+        .navbar-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .navbar-phone {
+            font-size: 0.88rem;
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .navbar-enquire {
+            background: var(--pink);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--navy);
+            border-radius: 2px;
+        }
+
+        @media (max-width: 900px) {
+            .navbar-links,
+            .hide-mobile { display: none; }
+            .hamburger { display: flex; }
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 200;
+        }
+
+        .menu-overlay.visible { display: block; }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -280px;
+            width: 280px;
+            height: 100%;
+            background: white;
+            z-index: 201;
+            padding: 80px 28px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.open { right: 0; }
+
+        .mobile-menu a,
+        .mobile-menu .m-parent {
+            display: block;
+            padding: 12px 0;
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .mobile-menu .sub-links a {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .package-hero {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 60px;
+            overflow: hidden;
+            background: var(--navy);
+            margin-top: 68px;
+        }
+
+        .package-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1800&q=80') center/cover;
+            opacity: 0.45;
+        }
+
+        .package-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26, 42, 108, 0.95) 0%, rgba(26, 42, 108, 0.4) 50%, rgba(26, 42, 108, 0.1) 100%);
+        }
+
+        .package-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .crumb {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.82rem;
+            margin-bottom: 16px;
+        }
+
+        .crumb a {
+            color: var(--pink);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .package-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .package-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .meta-item .icon { color: var(--pink); font-size: 1.2rem; }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .package-content {
+            padding: 60px 0;
+            background: var(--off-white);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .detail-section {
+            background: white;
+            border-radius: var(--radius);
+            padding: 36px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 32px;
+            border: 1px solid var(--gray-100);
+        }
+
+        .detail-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--navy);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .detail-section h2 .icon { color: var(--pink); }
+
+        .city-overview {
+            display: flex;
+            gap: 24px;
+            margin-top: 24px;
+            padding: 20px;
+            background: rgba(233, 30, 140, 0.05);
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(233, 30, 140, 0.1);
+        }
+
+        .city-block { flex: 1; text-align: center; }
+        .city-block .emoji { font-size: 2rem; margin-bottom: 8px; }
+        .city-block .name { font-weight: 700; color: var(--navy); font-size: 1.1rem; }
+        .city-block .nights { font-size: 0.85rem; color: var(--text-light); }
+
+        .itinerary-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .itinerary-item { position: relative; padding-left: 36px; }
+        .itinerary-item::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 32px;
+            bottom: -24px;
+            width: 2px;
+            background: var(--gray-200);
+        }
+        .itinerary-item:last-child::before { display: none; }
+
+        .day-marker {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--pink);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px var(--pink);
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .day-title { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin: 0; }
+        .day-dest {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--pink);
+            background: rgba(233, 30, 140, 0.1);
+            padding: 4px 12px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .day-content { font-size: 0.92rem; color: var(--text-light); line-height: 1.7; }
+
+        .incl-grid, .excl-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .incl-item, .excl-item { display: flex; align-items: flex-start; gap: 12px; }
+        .incl-item .check { color: #10b981; font-weight: 700; margin-top: 2px; }
+        .excl-item .cross { color: #ef4444; font-weight: 700; margin-top: 2px; }
+        .incl-item .text, .excl-item .text { font-size: 0.88rem; color: var(--text); line-height: 1.5; }
+
+        .note-box {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            font-size: 0.85rem;
+            color: #795548;
+            line-height: 1.6;
+            margin-top: 16px;
+        }
+        .note-box strong { color: #5d4037; }
+
+        .peak-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+        .peak-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        .peak-list li::before {
+            content: '⚠️';
+            font-size: 0.85rem;
+            color: #f59e0b;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .policy-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+        .policy-table th { background: rgba(26, 42, 108, 0.07); color: var(--navy); font-weight: 700; padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--gray-100); }
+        .policy-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray-100); color: var(--text-light); }
+        .policy-table tr:last-child td { border-bottom: none; }
+
+        .sidebar { position: sticky; top: 88px; }
+        .price-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 32px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border-top: 5px solid var(--pink);
+            margin-bottom: 24px;
+        }
+        .price-card .price-label { font-size: 0.85rem; color: var(--gray-600); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+        .price-card .price-amount { font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; line-height: 1; }
+        .price-card .price-sub { font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; }
+        .price-card .price-tax { font-size: 0.75rem; color: var(--text-light); margin-bottom: 24px; }
+        .price-card .btn { width: 100%; padding: 14px; font-size: 1rem; margin-bottom: 16px; display: block; text-align: center; }
+        .price-card .help-text { font-size: 0.8rem; color: var(--text-light); }
+        .price-card .help-text a { color: var(--pink); font-weight: 600; text-decoration: none; }
+
+        .quick-info {
+            background: white;
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-100);
+        }
+        .quick-info h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--navy); margin-bottom: 16px; border-bottom: 1px solid var(--gray-100); padding-bottom: 10px; }
+        .info-row { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.85rem; }
+        .info-row:last-child { margin-bottom: 0; }
+        .info-lbl { color: var(--gray-600); }
+        .info-val { font-weight: 600; color: var(--navy); text-align: right; }
+
+        .footer { background: var(--navy); color: rgba(255, 255, 255, 0.8); padding: 60px 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; padding-bottom: 40px; }
+        .footer-brand .footer-logo img { height: 40px; filter: brightness(0) invert(1); margin-bottom: 16px; }
+        .footer-desc { font-size: 0.88rem; line-height: 1.6; color: rgba(255, 255, 255, 0.6); margin-bottom: 20px; }
+        .footer-social { display: flex; gap: 12px; font-size: 1.2rem; }
+        .footer-social a { text-decoration: none; }
+        .footer-col h4 { font-size: 0.9rem; font-weight: 700; color: white; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-col ul a { color: rgba(255, 255, 255, 0.65); text-decoration: none; font-size: 0.88rem; }
+        .footer-col ul a:hover { color: white; }
+        .footer-contact { display: flex; flex-direction: column; gap: 12px; }
+        .footer-contact-item { display: flex; gap: 10px; align-items: flex-start; }
+        .footer-contact-item .icon { font-size: 1rem; margin-top: 1px; }
+        .footer-contact-item .info a { color: rgba(255, 255, 255, 0.65); text-decoration: none; font-size: 0.88rem; }
+
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; color: rgba(255, 255, 255, 0.4); }
+        .footer-bottom-links { display: flex; gap: 20px; }
+        .footer-bottom-links a { color: rgba(255, 255, 255, 0.4); text-decoration: none; }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 99;
+            width: 52px;
+            height: 52px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s;
+        }
+        .whatsapp-float:hover { transform: scale(1.08); }
+        .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+        @media (max-width: 900px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: relative; top: 0; }
+            .incl-grid, .excl-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+        @media (max-width: 600px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+        }
+    </style>
+</head>
+
+<body>
+
+                            <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-inner">
+                <a href="../index.html" class="navbar-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></a>
+                <ul class="navbar-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <span>Holiday Packages <span class="chevron">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="international.html">🌍 International Holidays</a></li>
+                            <li><a href="group-tours.html">👥 Group Tours</a></li>
+                            <li><a href="domestic.html">🇮🇳 Explore India</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../corporate-travel.html">Corporate Travel</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <div class="navbar-cta">
+                    <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
+                    <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
+                    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html">Home</a>
+        <div class="m-parent">Holiday Packages</div>
+        <div class="sub-links">
+            <a href="international.html">🌍 International Holidays</a>
+            <a href="group-tours.html">👥 Group Tours</a>
+            <a href="domestic.html">🇮🇳 Explore India</a>
+        </div>
+        <a href="../corporate-travel.html">Corporate Travel</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <br />
+        <a href="tel:+910000000000" style="color:var(--pink);font-weight:700;">📞 +91 00000 00000</a>
+    </div>
+
+
+
+<!-- Hero -->
+    <section class="package-hero">
+        <div class="package-hero-bg"></div>
+        <div class="package-hero-overlay"></div>
+        <div class="container package-hero-content" data-aos="fade-up">
+            <p class="crumb"><a href="../index.html">Home</a> / <a href="international.html">International Packages</a> / Maldives</p>
+            <h1 class="package-title">Mesmerizing Maldives</h1>
+            <div class="package-meta">
+                <div class="meta-item"><span class="icon">🕒</span> 4 Nights / 5 Days</div>
+                <div class="meta-item"><span class="icon">🏝️</span> Holiday Inn Resort Kandooma</div>
+                <div class="meta-item"><span class="icon">💑</span> Honeymoon / Couples</div>
+            </div>
+            <div class="hero-actions">
+                <a href="#itinerary" class="btn btn-primary">View Itinerary ↓</a>
+                <a href="../contact.html" class="btn btn-outline">Enquire Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="package-content">
+        <div class="container">
+            <div class="content-grid">
+
+                <!-- Main Content -->
+                <div class="content-main">
+
+                    <!-- Overview -->
+                    <div class="detail-section" data-aos="fade-up">
+                        <h2><span class="icon">✨</span> Tour Overview</h2>
+                        <p style="color: var(--text-light); line-height: 1.7;">
+                            Escape to a tropical paradise at the Holiday Inn Resort Kandooma, nestled in the pristine South Male Atoll. 
+                            Surrounded by world-class diving sites and superb surfing breaks, this serene island escape features breathtaking 
+                            ocean views, crystal-clear warm waters, and luxurious over-water or beach-facing villas. The perfect getaway to unwind, 
+                            rejuvenate, and forge unforgettable memories under the Maldivian sun.
+                        </p>
+                        <div class="city-overview">
+                            <div class="city-block">
+                                <div class="emoji">🏝️</div>
+                                <div class="name">South Male Atoll</div>
+                                <div class="nights">4 Nights</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Itinerary -->
+                    <div class="detail-section" id="itinerary" data-aos="fade-up">
+                        <h2><span class="icon">📅</span> Detailed Itinerary</h2>
+                        <div class="itinerary-list">
+
+                            <div class="itinerary-item">
+                                <div class="day-marker">1</div>
+                                <div class="day-header">
+                                    <h3 class="day-title">Arrival in Maldives</h3>
+                                    <span class="day-dest">Maldives</span>
+                                </div>
+                                <div class="day-content">
+                                    Arrive at Velana International Airport (Male). Upon clearing immigration, our representative will warmly welcome you 
+                                    and escort you to the speedboat terminal. Enjoy a scenic 45-minute speedboat ride across the azure waters to the 
+                                    beautiful Holiday Inn Resort Kandooma. Check in, settle into your luxurious villa, and spend the rest of the day 
+                                    at leisure exploring the island or relaxing on the white sandy beaches.
+                                </div>
+                            </div>
+
+                            <div class="itinerary-item">
+                                <div class="day-marker">2</div>
+                                <div class="day-header">
+                                    <h3 class="day-title">Day at Leisure — Island Life</h3>
+                                    <span class="day-dest">Maldives</span>
+                                </div>
+                                <div class="day-content">
+                                    After a sumptuous buffet breakfast, the day is entirely yours. You can bask in the sunshine by the spectacular infinity pool, 
+                                    take a refreshing dip in the turquoise lagoon, or explore the vibrant house reef through complimentary snorkeling. For lunch and dinner, 
+                                    enjoy a wide variety of local and international cuisines served at the resort's diverse dining venues.
+                                </div>
+                            </div>
+
+                            <div class="itinerary-item">
+                                <div class="day-marker">3</div>
+                                <div class="day-header">
+                                    <h3 class="day-title">Relaxation or Adventure</h3>
+                                    <span class="day-dest">Maldives</span>
+                                </div>
+                                <div class="day-content">
+                                    Start your day with breakfast overlooking the stunning seascape. You may choose to indulge in a rejuvenating treatment at 
+                                    the Kandooma Spa (at an additional cost) or engage in thrilling water sports like windsurfing, kayaking, or diving. The evening 
+                                    offers a perfect opportunity to chill out at the rooftop bar while witnessing a breathtaking Maldivian sunset.
+                                </div>
+                            </div>
+
+                            <div class="itinerary-item">
+                                <div class="day-marker">4</div>
+                                <div class="day-header">
+                                    <h3 class="day-title">Leisure &amp; Optional Excursions</h3>
+                                    <span class="day-dest">Maldives</span>
+                                </div>
+                                <div class="day-content">
+                                    Enjoy another day in paradise. Relax under a palm tree with your favorite book or opt for exciting excursions organized by 
+                                    the resort, such as a romantic sunset cruise or a dolphin-watching safari (additional charges apply). In the evening, 
+                                    savor a grand farewell dinner with your loved ones, recounting the beautiful memories created over the past few days.
+                                </div>
+                            </div>
+
+                            <div class="itinerary-item">
+                                <div class="day-marker">5</div>
+                                <div class="day-header">
+                                    <h3 class="day-title">Departure</h3>
+                                    <span class="day-dest">Maldives</span>
+                                </div>
+                                <div class="day-content">
+                                    After a delicious final breakfast at the resort, it's time to bid goodbye to this piece of paradise. Check out of your villa 
+                                    and hop onto the speedboat for your return transfer to Velana International Airport, carrying home spectacular memories of 
+                                    your Maldivian holiday.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Inclusions & Exclusions -->
+                    <div class="detail-section" data-aos="fade-up">
+                        <h2><span class="icon">✅</span> Inclusions & Exclusions</h2>
+                        <h3 style="font-size: 1rem; color: var(--navy); margin-bottom: 16px;">What's Included</h3>
+                        <div class="incl-grid">
+                            <div class="incl-item"><span class="check">✔</span><div class="text">4 Nights' Accommodation at Holiday Inn Resort Kandooma Maldives</div></div>
+                            <div class="incl-item"><span class="check">✔</span><div class="text">Welcome Drink on Arrival</div></div>
+                            <div class="incl-item"><span class="check">✔</span><div class="text">Return Speedboat Transfers from/to Male International Airport</div></div>
+                            <div class="incl-item"><span class="check">✔</span><div class="text">Meal Plan as Selected (Half Board / Full Board / All Inclusive)</div></div>
+                            <div class="incl-item"><span class="check">✔</span><div class="text">Complimentary Use of Non-Motorized Water Sports and Snorkeling Equipment</div></div>
+                            <div class="incl-item"><span class="check">✔</span><div class="text">Maldives Green Tax and All Applicable Hotel Taxes</div></div>
+                            <div class="incl-item"><span class="check">✔</span><div class="text">Complimentary Wi-Fi in the Villa and Public Areas</div></div>
+                        </div>
+
+                        <h3 style="font-size: 1rem; color: var(--navy); margin-bottom: 16px; margin-top: 32px; border-top: 1px solid var(--gray-100); padding-top: 24px;">What's Not Included</h3>
+                        <div class="excl-grid">
+                            <div class="excl-item"><span class="cross">✘</span><div class="text">International Airfare</div></div>
+                            <div class="excl-item"><span class="cross">✘</span><div class="text">Travel Insurance</div></div>
+                            <div class="excl-item"><span class="cross">✘</span><div class="text">Early check-in and Late check-out at the resort</div></div>
+                            <div class="excl-item"><span class="cross">✘</span><div class="text">Optional Excursions and Spa Treatments</div></div>
+                            <div class="excl-item"><span class="cross">✘</span><div class="text">Personal expenses (laundry, telephone, tips, etc.)</div></div>
+                            <div class="excl-item"><span class="cross">✘</span><div class="text">Any items not specifically mentioned under 'Inclusions'</div></div>
+                        </div>
+                    </div>
+
+                    <!-- Cancellation Policy -->
+                    <div class="detail-section" data-aos="fade-up">
+                        <h2><span class="icon">📋</span> Cancellation Policy</h2>
+                        <table class="policy-table">
+                            <thead>
+                                <tr>
+                                    <th>Days Before Departure</th>
+                                    <th>Cancellation Charge (Per Person)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>More than 30 days</td><td>30% + Non-Refundable Component</td></tr>
+                                <tr><td>15 to 30 days</td><td>30% + Non-Refundable Component</td></tr>
+                                <tr><td>10 to 15 days</td><td>75% + Non-Refundable Component</td></tr>
+                                <tr><td>Within 10 days</td><td>100%</td></tr>
+                                <tr><td>Hotel (non-refundable periods)</td><td>100% (Strictly applied as per resort policy during Peak Season)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- Sidebar -->
+                <div class="content-sidebar">
+                    <div class="sidebar">
+
+                        <div class="price-card" data-aos="fade-up">
+                            <div class="price-label">Starting From</div>
+                            <div class="price-amount">₹1,25,000</div>
+                            <div class="price-sub">Per Person on Twin Sharing</div>
+                            <div class="price-tax">Excludes Airfare • Subject to Availability</div>
+                            <a href="../contact.html" class="btn btn-primary">Book This Package</a>
+                            <div class="help-text">Need to customize? <a href="tel:+910000000000">Call Us</a></div>
+                        </div>
+
+                        <div class="quick-info" data-aos="fade-up" data-aos-delay="100">
+                            <h3>Resort Details</h3>
+                            <div class="info-row"><span class="info-lbl">Resort</span><span class="info-val">Holiday Inn Kandooma</span></div>
+                            <div class="info-row"><span class="info-lbl">Atoll</span><span class="info-val">South Male Atoll</span></div>
+                            <div class="info-row"><span class="info-lbl">Transfer</span><span class="info-val">45 Min Speedboat</span></div>
+                            <div class="info-row"><span class="info-lbl">Category</span><span class="info-val">Premium (4★)</span></div>
+                        </div>
+
+                        <div class="quick-info" style="margin-top: 24px;" data-aos="fade-up" data-aos-delay="150">
+                            <h3>Room Options</h3>
+                            <div class="info-row"><span class="info-lbl">Beach Villa</span><span class="info-val">Direct Beach Access</span></div>
+                            <div class="info-row"><span class="info-lbl">Overwater Villa</span><span class="info-val">Direct Ocean Access</span></div>
+                            <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 12px; line-height: 1.5;">
+                                Room rates vary largely based on your selection. Split stays (e.g. 2 Nights Beach + 2 Nights Water) are very popular and available upon request.
+                            </p>
+                        </div>
+
+                        <div class="quick-info" style="margin-top: 24px;" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Payment Policy</h3>
+                            <div class="info-row"><span class="info-lbl">At Booking</span><span class="info-val">30% Advance</span></div>
+                            <div class="info-row"><span class="info-lbl">30 Days Prior</span><span class="info-val">100% of Cost</span></div>
+                            <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 12px; line-height: 1.5;">
+                                Maldives resorts have strict cancellation and payment policies, especially during festive periods. Please confirm exact deadlines with your travel advisor.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></div>
+                    <p class="footer-desc">Your trusted travel partner for unforgettable holidays and group tours.</p>
+                    <div class="footer-social">
+                        <a href="#">📸</a><a href="#">👤</a><a href="https://wa.me/910000000000">💬</a><a href="#">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="group-tours.html">Group Tours</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Packages</h4>
+                    <ul>
+                        <li><a href="international.html">International</a></li>
+                        <li><a href="domestic.html">Explore India</a></li>
+                        <li><a href="../corporate-travel.html">Corporate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <div class="icon">📞</div>
+                            <div class="info"><a href="tel:+910000000000">+91 00000 00000</a></div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="icon">✉️</div>
+                            <div class="info"><a href="mailto:hello@travelspark.in">hello@travelspark.in</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© The Travel Spark. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="../legal/privacy-policy.html">Privacy Policy</a>
+                    <a href="../legal/terms-conditions.html">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/910000000000" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        AOS.init({ duration: 700, once: true, offset: 60 });
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => { scrollBtn?.classList.toggle('visible', window.scrollY > 400); });
+        scrollBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        document.querySelector('a[href="#itinerary"]')?.addEventListener('click', e => { e.preventDefault(); document.getElementById('itinerary')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    </script>
+</body>
+
+
+</html>
