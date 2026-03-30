@@ -1,0 +1,424 @@
+/* =============================================
+   THE TRAVEL SPARK — cruises.css
+   Premium Cruises Page Styles
+   ============================================= */
+
+/* ── Hero Section ── */
+.cruise-hero {
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    background: var(--navy);
+    overflow: hidden;
+}
+
+.cruise-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../images/cruises/hero.png') center/cover no-repeat;
+    z-index: 1;
+}
+
+.cruise-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(26, 42, 108, 0.4), rgba(26, 42, 108, 0.7));
+    z-index: 2;
+}
+
+.cruise-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 0 24px;
+}
+
+.cruise-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.cruise-hero p {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    margin-bottom: 40px;
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cruise-hero-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── Why Cruises ── */
+.why-cruises {
+    background: var(--white);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.why-item {
+    text-align: center;
+    padding: 30px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.why-item:hover {
+    background: var(--gray-50);
+    transform: translateY(-5px);
+}
+
+.why-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(233, 30, 140, 0.1);
+    color: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    font-size: 1.8rem;
+}
+
+.why-item h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.why-item p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* ── Cruise Types ── */
+.cruise-types {
+    background: var(--off-white);
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.type-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.type-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.type-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.type-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s;
+}
+
+.type-card:hover .type-img img {
+    transform: scale(1.1);
+}
+
+.type-body {
+    padding: 24px;
+}
+
+.type-body h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.type-body p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ── Destinations ── */
+.cruise-destinations {
+    background: var(--white);
+}
+
+.dest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.dest-item {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 400px;
+}
+
+.dest-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dest-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26, 42, 108, 0.9), transparent 60%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--white);
+}
+
+.dest-overlay h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.dest-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.dest-best {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--pink-light);
+}
+
+/* ── What's Included ── */
+.cruise-included {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.included-item {
+    text-align: center;
+}
+
+.included-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--pink);
+}
+
+.included-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.included-item p {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* ── Sample Packages ── */
+.cruise-packages {
+    background: var(--off-white);
+}
+
+.pkg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pkg-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.pkg-body {
+    padding: 30px;
+}
+
+.pkg-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.pkg-dest {
+    color: var(--pink);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.pkg-price {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 25px;
+    border-top: 1px solid var(--gray-100);
+    padding-top: 20px;
+}
+
+.pkg-price span {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--navy);
+    font-family: var(--font-display);
+}
+
+/* ── Why Book ── */
+.cruise-trust {
+    background: var(--white);
+}
+
+.trust-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.trust-item {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background: var(--gray-50);
+    border-radius: var(--radius);
+}
+
+.trust-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.trust-text h3 {
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.trust-text p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ── FAQ ── */
+.cruise-faq {
+    background: var(--off-white);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 50px auto 0;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    padding: 20px 25px;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background: var(--gray-50);
+}
+
+.faq-answer {
+    padding: 0 25px 25px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ── Final CTA ── */
+.cruise-cta {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cruise-cta h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+.cruise-cta p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .cruise-hero h1 { font-size: 2.5rem; }
+    .cruise-hero p { font-size: 1rem; }
+    .dest-item { height: 350px; }
+}

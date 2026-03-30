@@ -82,141 +82,6 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            background: white;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .navbar-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 68px;
-            gap: 32px;
-        }
-
-        .navbar-logo img {
-            height: 42px;
-            display: block;
-        }
-
-        .navbar-links {
-            display: flex;
-            list-style: none;
-            gap: 28px;
-            align-items: center;
-        }
-
-        .navbar-links a,
-        .navbar-links span {
-            color: var(--navy);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-        }
-
-        .navbar-links a:hover {
-            color: var(--pink);
-        }
-
-        .navbar-cta {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .navbar-phone {
-            font-size: 0.88rem;
-            color: var(--navy);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .navbar-enquire {
-            background: var(--pink);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 100px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 4px;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--navy);
-            border-radius: 2px;
-        }
-
-        @media (max-width: 900px) {
-            .navbar-links,
-            .hide-mobile { display: none; }
-            .hamburger { display: flex; }
-        }
-
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 200;
-        }
-
-        .menu-overlay.visible { display: block; }
-
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            right: -280px;
-            width: 280px;
-            height: 100%;
-            background: white;
-            z-index: 201;
-            padding: 80px 28px 28px;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            transition: right 0.3s ease;
-            overflow-y: auto;
-        }
-
-        .mobile-menu.open { right: 0; }
-
-        .mobile-menu a,
-        .mobile-menu .m-parent {
-            display: block;
-            padding: 12px 0;
-            color: var(--navy);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            border-bottom: 1px solid var(--gray-100);
-        }
-
-        .mobile-menu .sub-links a {
-            padding: 8px 16px;
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
         .package-hero {
             position: relative;
             min-height: 60vh;
@@ -529,33 +394,32 @@
 
 <body>
 
-                            <nav class="navbar scrolled" id="navbar">
-        <div class="container">
-            <div class="navbar-inner">
-                <a href="../index.html" class="navbar-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></a>
-                <ul class="navbar-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li>
-                        <span>Holiday Packages <span class="chevron">▾</span></span>
-                        <ul class="dropdown">
-                            <li><a href="international.html">🌍 International Holidays</a></li>
-                            <li><a href="group-tours.html">👥 Group Tours</a></li>
-                            <li><a href="domestic.html">🇮🇳 Explore India</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../corporate-travel.html">Corporate Travel</a></li>
-                    <li><a href="../blog.html">Blog</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
-                <div class="navbar-cta">
-                    <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
-                    <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
-                    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-                </div>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="../index.html" class="navbar-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></a>
+      <ul class="navbar-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><span class="active">Holiday Packages <span class="chevron">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="international.html">🌍 International Holidays</a></li>
+            <li><a href="group-tours.html">👥 Group Tours</a></li>
+            <li><a href="domestic.html">🇮🇳 Explore India</a></li>
+          </ul>
+        </li>
+        <li><a href="../corporate-travel.html">Corporate Travel</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
+        <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
 
     <div class="menu-overlay" id="menuOverlay"></div>
     <div class="mobile-menu" id="mobileMenu">
@@ -570,8 +434,6 @@
         <a href="../blog.html">Blog</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
-        <br />
-        <a href="tel:+910000000000" style="color:var(--pink);font-weight:700;">📞 +91 00000 00000</a>
     </div>
 
 
@@ -786,7 +648,7 @@
                             <div class="price-sub">Per Person on Twin Sharing</div>
                             <div class="price-tax">Excl. Flights & Visa • Subject to Availability</div>
                             <a href="../contact.html" class="btn btn-primary">Book This Package</a>
-                            <div class="help-text">Need to customize? <a href="tel:+910000000000">Call Us</a></div>
+                            <div class="help-text">Need to customize? <a href="tel:+919421189999">Call Us</a></div>
                         </div>
 
                         <div class="quick-info" data-aos="fade-up" data-aos-delay="100">
@@ -830,7 +692,7 @@
                     <div class="footer-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></div>
                     <p class="footer-desc">Your trusted travel partner for unforgettable holidays and group tours.</p>
                     <div class="footer-social">
-                        <a href="#">📸</a><a href="#">👤</a><a href="https://wa.me/910000000000">💬</a><a href="#">▶️</a>
+                        <a href="#">📸</a><a href="#">👤</a><a href="https://wa.me/919421189999">💬</a><a href="#">▶️</a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -855,11 +717,11 @@
                     <div class="footer-contact">
                         <div class="footer-contact-item">
                             <div class="icon">📞</div>
-                            <div class="info"><a href="tel:+910000000000">+91 00000 00000</a></div>
+                            <div class="info"><a href="tel:+919421189999">+91 9421189999</a></div>
                         </div>
                         <div class="footer-contact-item">
                             <div class="icon">✉️</div>
-                            <div class="info"><a href="mailto:hello@travelspark.in">hello@travelspark.in</a></div>
+                            <div class="info"><a href="mailto:thetravelspark2@gmail.com">thetravelspark2@gmail.com</a></div>
                         </div>
                     </div>
                 </div>
@@ -874,20 +736,16 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/910000000000" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/919421189999" class="whatsapp-float" target="_blank">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="../assets/js/main.js"></script>
     <script>
         AOS.init({ duration: 700, once: true, offset: 60 });
-        const scrollBtn = document.getElementById('scrollTop');
-        window.addEventListener('scroll', () => { scrollBtn?.classList.toggle('visible', window.scrollY > 400); });
-        scrollBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
         document.querySelector('a[href="#itinerary"]')?.addEventListener('click', e => { e.preventDefault(); document.getElementById('itinerary')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
     </script>
 </body>
 
 
 </html>
+

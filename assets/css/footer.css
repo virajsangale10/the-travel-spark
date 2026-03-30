@@ -35,7 +35,14 @@
   margin-bottom: 20px;
 }
 
-.footer-brand .footer-logo img { height: 64px; width: auto; }
+.footer-brand .footer-logo img {
+  height: 60px;
+  width: auto;
+  background: var(--white);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
 .footer-brand .footer-logo .logo-text .name {
   font-family: var(--font-display);
@@ -50,6 +57,24 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.footer-logo-text {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.footer-logo-text i {
+  color: var(--pink);
+  font-style: italic;
+  font-weight: 700;
 }
 
 .footer-desc {

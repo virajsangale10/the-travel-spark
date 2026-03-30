@@ -24,7 +24,7 @@ $subfolderNavbar = @'
                     <li><a href="../contact.html">Contact</a></li>
                 </ul>
                 <div class="navbar-cta">
-                    <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
+                    <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
                     <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
                     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
                 </div>
@@ -46,7 +46,7 @@ $subfolderNavbar = @'
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
         <br />
-        <a href="tel:+910000000000" style="color:var(--pink);font-weight:700;">📞 +91 00000 00000</a>
+        <a href="tel:+919421189999" style="color:var(--pink);font-weight:700;">📞 +91 9421189999</a>
     </div>
 
 '@

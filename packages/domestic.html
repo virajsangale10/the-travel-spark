@@ -59,22 +59,28 @@
     .pkg-btn { background:var(--navy); color:white; padding:8px 18px; border-radius:var(--radius-sm); font-size:0.82rem; font-weight:600; transition:var(--transition); }
     .pkg-btn:hover { background:var(--pink); }
 
-    /* State Cards & Form */
+    /* States Layout & Form */
     .states-section { padding: 80px 0; background: var(--white); }
-    .state-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin-bottom: 60px; }
-    .state-card { border-radius: var(--radius); overflow: hidden; position: relative; height: 160px; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; box-shadow: var(--shadow-sm); }
-    .state-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
-    .state-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .state-card:hover img { transform: scale(1.1); }
-    .state-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); display: flex; align-items: flex-end; padding: 16px; }
-    .state-card-title { color: white; font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin: 0; }
+    .states-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: start; }
     
-    .enquiry-form-section { background: var(--off-white); padding: 80px 0; border-radius: var(--radius-lg); margin-bottom: 80px; }
-    .enquiry-container { max-width: 800px; margin: 0 auto; background: white; border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow-md); }
+    .states-list { display: flex; flex-direction: column; gap: 24px; }
+    .slc { display: flex; background: var(--off-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s, box-shadow 0.3s; }
+    .slc:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .slc-img { width: 280px; flex-shrink: 0; position: relative; }
+    .slc-img img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+    .slc-info { padding: 30px; display: flex; flex-direction: column; justify-content: center; flex-grow: 1; }
+    .slc-info h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--navy); margin-bottom: 6px; }
+    .slc-hl { font-size: 0.85rem; font-weight: 700; color: var(--pink); margin-bottom: 12px; }
+    .slc-desc { font-size: 0.95rem; color: var(--text-light); line-height: 1.6; margin-bottom: 24px; }
+    .slc-btn { align-self: flex-start; background: var(--navy); color: white; border: none; padding: 10px 24px; border-radius: 100px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
+    .slc-btn:hover { background: var(--pink); transform: translateY(-2px); }
+
+    .enquiry-form-section { background: var(--off-white); border-radius: var(--radius-lg); position: sticky; top: 100px; }
+    .enquiry-container { background: white; border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-md); }
     .form-header { text-align: center; margin-bottom: 30px; }
-    .form-header h2 { font-family: var(--font-display); color: var(--navy); font-size: 2rem; margin-bottom: 10px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-    .form-group { margin-bottom: 20px; }
+    .form-header h2 { font-family: var(--font-display); color: var(--navy); font-size: 1.8rem; margin-bottom: 10px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { margin-bottom: 16px; }
     .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
     .form-control { width: 100%; padding: 12px 16px; border: 1px solid var(--gray-200); border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; outline: none; transition: border-color 0.2s; }
     .form-control:focus { border-color: var(--pink); box-shadow: 0 0 0 3px rgba(233,30,140,0.1); }
@@ -82,160 +88,22 @@
     .form-submit { width: 100%; background: var(--pink); color: white; border: none; border-radius: var(--radius-sm); padding: 16px; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
     .form-submit:hover { background: #d01579; }
 
-    @media(max-width:900px){.india-dest-grid{grid-template-columns:1fr 1fr;}.idc:first-child{grid-column:span 1;height:280px;}.pkg-grid{grid-template-columns:1fr 1fr;}}
-    @media(max-width:580px){.india-dest-grid{grid-template-columns:1fr;}.pkg-grid{grid-template-columns:1fr;} .form-row { grid-template-columns: 1fr; }}
+
+    @media(max-width:1080px){
+      .states-layout { grid-template-columns: 1fr; }
+      .enquiry-form-section { position: relative; top: 0; }
+    }
+    @media(max-width:680px){
+      .slc { flex-direction: column; }
+      .slc-img { width: 100%; height: 220px; position: relative; }
+    }
+    @media(max-width:580px){ .form-row { grid-template-columns: 1fr; }}
   </style>
 </head>
 <body>
 
-<nav class="navbar scrolled" id="navbar">
-  <div class="container">
-    <div class="navbar-inner">
-      <a href="../index.html" class="navbar-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></a>
-      <ul class="navbar-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><span class="active">Holiday Packages <span class="chevron">▾</span></span>
-          <ul class="dropdown">
-            <li><a href="international.html">🌍 International Holidays</a></li>
-            <li><a href="group-tours.html">👥 Group Tours</a></li>
-            <li><a href="domestic.html" class="active">🇮🇳 Explore India</a></li>
-          </ul>
-        </li>
-        <li><a href="../corporate-travel.html">Corporate Travel</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-      <div class="navbar-cta">
-        <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
-        <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
-        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </div>
-</nav>
-<div class="menu-overlay" id="menuOverlay"></div>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="../index.html">Home</a>
-  <div class="m-parent">Holiday Packages</div>
-  <div class="sub-links"><a href="international.html">🌍 International</a><a href="group-tours.html">👥 Group Tours</a><a href="domestic.html">🇮🇳 Explore India</a></div>
-  <a href="../corporate-travel.html">Corporate Travel</a>
-  <a href="../blog.html">Blog</a>
-  <a href="../about.html">About</a>
-  <a href="../contact.html">Contact</a>
-</div>
+<div id="navbar-placeholder"></div>
 
-<section class="page-hero">
-  <div class="container page-hero-inner">
-    <p class="crumb"><a href="../index.html">Home</a> / Explore India</p>
-    <h1>Incredible <span>India</span></h1>
-    <p>From Kashmir's valleys to Kerala's backwaters — discover the magic that's always been home.</p>
-  </div>
-</section>
-
-<!-- Destination Visual Grid -->
-<section class="india-destinations section">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:44px;" data-aos="fade-up">
-      <div class="section-label" style="justify-content:center;">Travel India</div>
-      <h2 class="section-title">Our Favourite <span class="accent">Indian Destinations</span></h2>
-    </div>
-    <div class="india-dest-grid">
-      <a href="#kashmir" class="idc" data-aos="fade-up">
-        <img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=900&q=80" alt="Kashmir" loading="lazy" />
-        <div class="idc-overlay"></div>
-        <div class="idc-info"><h3>Kashmir</h3><p>Paradise on Earth · Srinagar · Gulmarg · Pahalgam</p><span class="exbtn">Explore →</span></div>
-      </a>
-      <a href="#rajasthan" class="idc" data-aos="fade-up" data-aos-delay="60">
-        <img src="https://images.unsplash.com/photo-1572979909810-a04f2a7da52a?w=600&q=80" alt="Rajasthan" loading="lazy" />
-        <div class="idc-overlay"></div>
-        <div class="idc-info"><h3>Rajasthan</h3><p>Land of Kings · Jaipur · Jodhpur · Udaipur</p><span class="exbtn">Explore →</span></div>
-      </a>
-      <a href="#kerala" class="idc" data-aos="fade-up" data-aos-delay="120">
-        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala" loading="lazy" />
-        <div class="idc-overlay"></div>
-        <div class="idc-info"><h3>Kerala</h3><p>God's Own Country · Munnar · Alleppey · Kovalam</p><span class="exbtn">Explore →</span></div>
-      </a>
-      <a href="#goa" class="idc" data-aos="fade-up" data-aos-delay="60">
-        <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=600&q=80" alt="Goa" loading="lazy" />
-        <div class="idc-overlay"></div>
-        <div class="idc-info"><h3>Goa</h3><p>Sun, Sand & Sea · North Goa · South Goa</p><span class="exbtn">Explore →</span></div>
-      </a>
-      <a href="#ladakh" class="idc" data-aos="fade-up" data-aos-delay="120">
-        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80" alt="Ladakh" loading="lazy" />
-        <div class="idc-overlay"></div>
-        <div class="idc-info"><h3>Ladakh</h3><p>Land of High Passes · Leh · Nubra · Pangong</p><span class="exbtn">Explore →</span></div>
-      </a>
-      <a href="#himachal" class="idc" data-aos="fade-up" data-aos-delay="180">
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Himachal" loading="lazy" />
-        <div class="idc-overlay"></div>
-        <div class="idc-info"><h3>Himachal Pradesh</h3><p>Manali · Shimla · Dharamshala · Spiti</p><span class="exbtn">Explore →</span></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Packages -->
-<section class="india-pkgs section">
-  <div class="container">
-
-    <div class="dest-section" id="kashmir" data-aos="fade-up">
-      <div class="ds-head">
-        <h2>🏔️ Kashmir</h2>
-        <a href="../contact.html" style="font-size:0.84rem;font-weight:600;color:var(--pink);">Customise Package →</a>
-      </div>
-      <div class="pkg-grid">
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=600&q=80" alt="Kashmir" loading="lazy" /><span class="pkg-dur">06N / 07D</span></div>
-          <div class="pkg-body"><h3>Kashmir Valley Classic</h3><p class="pkg-hl">Srinagar · Gulmarg · Pahalgam · Dal Lake · Mughal Gardens</p><div class="pkg-tags"><span class="pkg-tag">Hotels Incl.</span><span class="pkg-tag">Breakfast</span><span class="pkg-tag">Transfers</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹22,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1570458436416-b8fcccfe883a?w=600&q=80" alt="Gulmarg" loading="lazy" /><span class="pkg-dur">04N / 05D</span></div>
-          <div class="pkg-body"><h3>Kashmir Quick Escape</h3><p class="pkg-hl">Srinagar · Gulmarg · Gondola Ride · Shikara Ride</p><div class="pkg-tags"><span class="pkg-tag">Houseboat</span><span class="pkg-tag">Breakfast</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹14,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80" alt="Winter Kashmir" loading="lazy" /><span class="pkg-dur">07N / 08D</span></div>
-          <div class="pkg-body"><h3>Kashmir Winter Wonderland</h3><p class="pkg-hl">Srinagar · Gulmarg Ski · Pahalgam · Betaab Valley</p><div class="pkg-tags"><span class="pkg-tag">Ski Package</span><span class="pkg-tag">All Meals</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹28,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="dest-section" id="kerala" data-aos="fade-up">
-      <div class="ds-head">
-        <h2>🌿 Kerala</h2>
-        <a href="../contact.html" style="font-size:0.84rem;font-weight:600;color:var(--pink);">Customise Package →</a>
-      </div>
-      <div class="pkg-grid">
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala" loading="lazy" /><span class="pkg-dur">05N / 06D</span></div>
-          <div class="pkg-body"><h3>Kerala Highlights</h3><p class="pkg-hl">Munnar · Alleppey Houseboat · Kovalam Beach · Thiruvananthapuram</p><div class="pkg-tags"><span class="pkg-tag">Houseboat</span><span class="pkg-tag">Breakfast</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹18,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1589197331516-4d84b72ebde3?w=600&q=80" alt="Backwaters" loading="lazy" /><span class="pkg-dur">03N / 04D</span></div>
-          <div class="pkg-body"><h3>Kerala Backwaters Retreat</h3><p class="pkg-hl">Alleppey · Kumarakom · Houseboat · Ayurveda Spa</p><div class="pkg-tags"><span class="pkg-tag">Houseboat</span><span class="pkg-tag">Meals Incl.</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹12,500</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="dest-section" id="rajasthan" data-aos="fade-up">
-      <div class="ds-head">
-        <h2>🏰 Rajasthan</h2>
-        <a href="../contact.html" style="font-size:0.84rem;font-weight:600;color:var(--pink);">Customise Package →</a>
-      </div>
-      <div class="pkg-grid">
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1572979909810-a04f2a7da52a?w=600&q=80" alt="Rajasthan" loading="lazy" /><span class="pkg-dur">07N / 08D</span></div>
-          <div class="pkg-body"><h3>Royal Rajasthan</h3><p class="pkg-hl">Jaipur · Jodhpur · Jaisalmer · Udaipur · Pushkar</p><div class="pkg-tags"><span class="pkg-tag">Heritage Hotels</span><span class="pkg-tag">Camel Safari</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹24,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1524613032530-449a5d94c285?w=600&q=80" alt="Jaipur" loading="lazy" /><span class="pkg-dur">04N / 05D</span></div>
-          <div class="pkg-body"><h3>Pink City & Blue City</h3><p class="pkg-hl">Jaipur · Ajmer · Pushkar · Jodhpur</p><div class="pkg-tags"><span class="pkg-tag">Heritage Stay</span><span class="pkg-tag">Guided Tours</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹14,500</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- Explore by State & Enquiry Form -->
 <section class="states-section">
@@ -246,40 +114,174 @@
       <p style="color: var(--text-light); max-width: 600px; margin: 16px auto 0;">Click on a state below to select it as your destination and inquire with us directly!</p>
     </div>
     
-    <div class="state-grid" data-aos="fade-up">
-      <div class="state-card" data-state="Gujarat">
-        <img src="https://images.unsplash.com/photo-1628186414736-54ef5f9999bf?w=400&q=80" alt="Gujarat" loading="lazy" />
-        <div class="state-card-overlay"><h3 class="state-card-title">Gujarat</h3></div>
+    <div class="states-layout">
+      <!-- Left Column: List -->
+      <div class="states-list" data-aos="fade-up">
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=800&q=80" alt="Kashmir" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Kashmir</h3>
+            <div class="slc-hl">Srinagar · Gulmarg · Pahalgam · Sonamarg & more</div>
+            <div class="slc-desc">Experience the "Paradise on Earth" with its pristine snow-capped mountains, serene Dal Lake, and breathtaking pine valleys.</div>
+            <button class="slc-btn" data-state="Kashmir">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1572979909810-a04f2a7da52a?w=800&q=80" alt="Rajasthan" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Rajasthan</h3>
+            <div class="slc-hl">Jaipur · Udaipur · Jaisalmer · Jodhpur & more</div>
+            <div class="slc-desc">Step into the Land of Kings, featuring magnificent palaces, historic forts, and thrilling golden sand dunes.</div>
+            <button class="slc-btn" data-state="Rajasthan">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80" alt="Kerala" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Kerala</h3>
+            <div class="slc-hl">Munnar · Alleppey · Kochi · Kovalam & more</div>
+            <div class="slc-desc">Unwind in God's Own Country, known for its tranquil emerald backwaters, rolling tea gardens, and lush palm-fringed beaches.</div>
+            <button class="slc-btn" data-state="Kerala">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80" alt="Goa" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Goa</h3>
+            <div class="slc-hl">North Goa · South Goa · Panjim · Dudhsagar & more</div>
+            <div class="slc-desc">India's pocket-sized paradise offering spectacular beaches, vibrant nightlife, and a rich Portuguese heritage.</div>
+            <button class="slc-btn" data-state="Goa">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80" alt="Ladakh" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Ladakh</h3>
+            <div class="slc-hl">Leh · Nubra Valley · Pangong Tso · Kargil & more</div>
+            <div class="slc-desc">A surreal landscape of stark mountains and azure lakes, perfect for adventure seekers and nature enthusiasts.</div>
+            <button class="slc-btn" data-state="Ladakh">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Himachal Pradesh" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Himachal Pradesh</h3>
+            <div class="slc-hl">Manali · Shimla · Dharamshala · Spiti & more</div>
+            <div class="slc-desc">A mountainous wonderland offering everything from peaceful spiritual retreats to thrilling snow sports.</div>
+            <button class="slc-btn" data-state="Himachal">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-15694307cfd17-9195b03513b1?w=800&q=80" alt="Gujarat" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Gujarat</h3>
+            <div class="slc-hl">Ahmedabad · Somnath · Rann of Kutch · Gir & more</div>
+            <div class="slc-desc">Discover vibrant traditions, the pristine white salt desert, and the legendary Asiatic lions in this cultural hub.</div>
+            <button class="slc-btn" data-state="Gujarat">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1514091066471-bc6b82c24e7e?w=800&q=80" alt="Punjab" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Punjab</h3>
+            <div class="slc-hl">Amritsar · Chandigarh · Ludhiana · Jalandhar & more</div>
+            <div class="slc-desc">The land of five rivers, famed for the magnificent Golden Temple, rich history, and incredibly warm hospitality.</div>
+            <button class="slc-btn" data-state="Punjab">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80" alt="Uttarakhand" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Uttarakhand</h3>
+            <div class="slc-hl">Rishikesh · Nainital · Mussoorie · Jim Corbett & more</div>
+            <div class="slc-desc">The 'Devbhoomi' calls out to spiritual seekers, trekkers, and wildlife lovers with its majestic Himalayan peaks.</div>
+            <button class="slc-btn" data-state="Uttarakhand">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&q=80" alt="Maharashtra" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Maharashtra</h3>
+            <div class="slc-hl">Mumbai · Pune · Lonavala · Mahabaleshwar & more</div>
+            <div class="slc-desc">From bustling metropolises to misty Western Ghats hideaways and ancient rock-cut caves.</div>
+            <button class="slc-btn" data-state="Maharashtra">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&q=80" alt="Tamil Nadu" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Tamil Nadu</h3>
+            <div class="slc-hl">Chennai · Ooty · Kodaikanal · Madurai & more</div>
+            <div class="slc-desc">A deep dive into Dravidian culture, towering temple architecture, and cool hill stations of the south.</div>
+            <button class="slc-btn" data-state="Tamil Nadu">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1600661653561-629509216228?w=800&q=80" alt="Karnataka" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Karnataka</h3>
+            <div class="slc-hl">Bengaluru · Mysore · Coorg · Hampi & more</div>
+            <div class="slc-desc">Experience a remarkable blend of IT hubs, ancient royal dynasties, and aromatic coffee plantations.</div>
+            <button class="slc-btn" data-state="Karnataka">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1585642827156-f576e2c3fb66?w=800&q=80" alt="Sikkim" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Sikkim</h3>
+            <div class="slc-hl">Gangtok · Pelling · Lachung · Nathula Pass & more</div>
+            <div class="slc-desc">A pure organic state offering stunning views of Kanchenjunga, serene monasteries, and alpine meadows.</div>
+            <button class="slc-btn" data-state="Sikkim">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=800&q=80" alt="Andaman" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Andaman & Nicobar Islands</h3>
+            <div class="slc-hl">Port Blair · Havelock Island · Neil Island · Radhanagar Beach & more</div>
+            <div class="slc-desc">Crystal-clear turquoise waters, pristine white sand beaches, and some of the best snorkelling and scuba diving in Asia — Andaman is India's best-kept island secret.</div>
+            <button class="slc-btn" data-state="Andaman">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800&q=80" alt="Meghalaya" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Meghalaya</h3>
+            <div class="slc-hl">Shillong · Cherrapunjee · Dawki · Mawlynnong & more</div>
+            <div class="slc-desc">The Scotland of the East — home to living root bridges, the cleanest village in Asia, and the world's wettest place. A dream for nature lovers and offbeat travellers.</div>
+            <button class="slc-btn" data-state="Meghalaya">Book Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Northeast" loading="lazy" /></div>
+          <div class="slc-info">
+            <h3>Northeast Circuit</h3>
+            <div class="slc-hl">Sikkim · Darjeeling · Gangtok · Kalimpong & more</div>
+            <div class="slc-desc">Explore the hidden gems of India's northeast — dramatic mountain backdrops, Buddhist monasteries, and tea gardens stretching to the horizon.</div>
+            <button class="slc-btn" data-state="Northeast">Book Now</button>
+          </div>
+        </div>
+
       </div>
-      <div class="state-card" data-state="Punjab">
-        <img src="https://images.unsplash.com/photo-1589136777351-fdc9c9cb1649?w=400&q=80" alt="Punjab" loading="lazy" />
-        <div class="state-card-overlay"><h3 class="state-card-title">Punjab</h3></div>
-      </div>
-      <div class="state-card" data-state="Uttarakhand">
-        <img src="https://images.unsplash.com/photo-1610715936287-6c2ab20a3bc8?w=400&q=80" alt="Uttarakhand" loading="lazy" />
-        <div class="state-card-overlay"><h3 class="state-card-title">Uttarakhand</h3></div>
-      </div>
-      <div class="state-card" data-state="Maharashtra">
-        <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=80" alt="Maharashtra" loading="lazy" />
-        <div class="state-card-overlay"><h3 class="state-card-title">Maharashtra</h3></div>
-      </div>
-      <div class="state-card" data-state="Tamil Nadu">
-        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&q=80" alt="Tamil Nadu" loading="lazy" />
-        <div class="state-card-overlay"><h3 class="state-card-title">Tamil Nadu</h3></div>
-      </div>
-      <div class="state-card" data-state="Karnataka">
-        <img src="https://images.unsplash.com/photo-1600100397608-f010f41cb8ea?w=400&q=80" alt="Karnataka" loading="lazy" />
-        <div class="state-card-overlay"><h3 class="state-card-title">Karnataka</h3></div>
-      </div>
-      <div class="state-card" data-state="Sikkim">
-        <img src="https://images.unsplash.com/photo-1590786012658-00aeeeecb22c?w=400&q=80" alt="Sikkim" loading="lazy" />
-        <div class="state-card-overlay"><h3 class="state-card-title">Sikkim</h3></div>
-      </div>
-      <div class="state-card" data-state="Assam">
-        <img src="https://images.unsplash.com/photo-1590529944747-0b190c7419e5?w=400&q=80" alt="Assam" loading="lazy" />
-        <div class="state-card-overlay"><h3 class="state-card-title">Assam</h3></div>
-      </div>
-    </div>
+
+      <!-- Right Column: Enquiry Form -->
+      <div class="states-form-col">
 
     <!-- Enquiry Form -->
     <div class="enquiry-form-section" id="enquiry-form" data-aos="fade-up">
@@ -289,7 +291,7 @@
                 <p style="color: var(--text-light);">Let us customize the perfect holiday for you and your family.</p>
             </div>
             <!-- Replaced action with proper Formspree logic or dummy hash -->
-            <form action="https://formspree.io/f/mqkenedv" method="POST">
+            <form action="https://formsubmit.co/thetravelspark2@gmail.com" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label>Full Name</label>
@@ -297,7 +299,7 @@
                     </div>
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input type="tel" class="form-control" name="phone" placeholder="+91 00000 00000" required>
+                        <input type="tel" class="form-control" name="phone" placeholder="+91 9421189999" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -323,6 +325,9 @@
                             <option value="Karnataka">Karnataka</option>
                             <option value="Sikkim">Sikkim</option>
                             <option value="Assam">Assam</option>
+                            <option value="Andaman">Andaman & Nicobar</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Northeast">Northeast Circuit</option>
                         </select>
                     </div>
                 </div>
@@ -333,12 +338,7 @@
                     </div>
                     <div class="form-group">
                         <label>Number of Travelers</label>
-                        <select class="form-control" name="travelers">
-                            <option>1 - 2</option>
-                            <option>3 - 5</option>
-                            <option>6 - 10</option>
-                            <option>10+</option>
-                        </select>
+                        <input type="number" class="form-control" name="travelers" min="1" placeholder="e.g. 2" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -348,35 +348,20 @@
                 <button type="submit" class="form-submit">🚀 Send Enquiry</button>
             </form>
         </div>
+      </div>
     </div>
 
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><div class="footer-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></div><p class="footer-desc">Your trusted travel partner for unforgettable holidays across India and the world.</p><div class="footer-social"><a href="#">📸</a><a href="#">👤</a><a href="https://wa.me/910000000000">💬</a></div></div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="group-tours.html">Group Tours</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Packages</h4><ul><li><a href="international.html">International</a></li><li><a href="domestic.html">Explore India</a></li><li><a href="../corporate-travel.html">Corporate</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><div class="footer-contact"><div class="footer-contact-item"><div class="icon">📞</div><div class="info"><a href="tel:+910000000000">+91 00000 00000</a></div></div><div class="footer-contact-item"><div class="icon">✉️</div><div class="info"><a href="mailto:hello@travelspark.in">hello@travelspark.in</a></div></div></div></div>
-    </div>
-    <div class="footer-bottom"><p>© The Travel Spark. All rights reserved.</p><div class="footer-bottom-links"><a href="../legal/privacy-policy.html">Privacy Policy</a><a href="../legal/terms-conditions.html">Terms</a></div></div>
-  </div>
-</footer>
-<a href="https://wa.me/910000000000" class="whatsapp-float" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-<button class="scroll-top" id="scrollTop">↑</button>
+<div id="footer-placeholder"></div>
+  <script src="../assets/js/components.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="../assets/js/main.js"></script>
 <script>
   AOS.init({ duration: 700, once: true, offset: 60 });
-  const overlay = document.getElementById('menuOverlay'), hamburger = document.getElementById('hamburger'), mobileMenu = document.getElementById('mobileMenu');
-  hamburger?.addEventListener('click', () => { hamburger.classList.toggle('active'); mobileMenu?.classList.toggle('open'); overlay?.classList.toggle('visible'); document.body.style.overflow = mobileMenu?.classList.contains('open') ? 'hidden' : ''; });
-  overlay?.addEventListener('click', () => { hamburger?.classList.remove('active'); mobileMenu?.classList.remove('open'); overlay.classList.remove('visible'); document.body.style.overflow = ''; });
 
   // Logic to link State Cards to the form and pre-select destination
-  const stateCards = document.querySelectorAll('.state-card');
+  const stateCards = document.querySelectorAll('.slc-btn');
   const destSelect = document.getElementById('destination-select');
   const formSection = document.getElementById('enquiry-form');
 
@@ -409,3 +394,5 @@
 </script>
 </body>
 </html>
+
+

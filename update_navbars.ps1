@@ -15,6 +15,7 @@ $rootNavbar = @'
               <li><a href="packages/international.html">🌍 International Holidays</a></li>
               <li><a href="packages/group-tours.html">👥 Group Tours</a></li>
               <li><a href="packages/domestic.html">🇮🇳 Explore India</a></li>
+              <li><a href="cruises.html">🛳️ Luxury Cruises</a></li>
             </ul>
           </li>
           <li><a href="corporate-travel.html">Corporate Travel</a></li>
@@ -23,7 +24,7 @@ $rootNavbar = @'
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="navbar-cta">
-          <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
+          <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
           <a href="contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
           <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
         </div>
@@ -39,13 +40,14 @@ $rootNavbar = @'
       <a href="packages/international.html">🌍 International Holidays</a>
       <a href="packages/group-tours.html">👥 Group Tours</a>
       <a href="packages/domestic.html">🇮🇳 Explore India</a>
+      <a href="cruises.html">🛳️ Luxury Cruises</a>
     </div>
     <a href="corporate-travel.html">Corporate Travel</a>
     <a href="blog.html">Blog</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
     <br />
-    <a href="tel:+910000000000" style="color:var(--pink);font-weight:700;">📞 +91 00000 00000</a>
+    <a href="tel:+919421189999" style="color:var(--pink);font-weight:700;">📞 +91 9421189999</a>
   </div>
 '@
 
@@ -62,6 +64,7 @@ $subfolderNavbar = @'
                             <li><a href="international.html">🌍 International Holidays</a></li>
                             <li><a href="group-tours.html">👥 Group Tours</a></li>
                             <li><a href="domestic.html">🇮🇳 Explore India</a></li>
+                            <li><a href="../cruises.html">🛳️ Luxury Cruises</a></li>
                         </ul>
                     </li>
                     <li><a href="../corporate-travel.html">Corporate Travel</a></li>
@@ -70,7 +73,7 @@ $subfolderNavbar = @'
                     <li><a href="../contact.html">Contact</a></li>
                 </ul>
                 <div class="navbar-cta">
-                    <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
+                    <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
                     <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
                     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
                 </div>
@@ -86,13 +89,14 @@ $subfolderNavbar = @'
             <a href="international.html">🌍 International Holidays</a>
             <a href="group-tours.html">👥 Group Tours</a>
             <a href="domestic.html">🇮🇳 Explore India</a>
+            <a href="../cruises.html">🛳️ Luxury Cruises</a>
         </div>
         <a href="../corporate-travel.html">Corporate Travel</a>
         <a href="../blog.html">Blog</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
         <br />
-        <a href="tel:+910000000000" style="color:var(--pink);font-weight:700;">📞 +91 00000 00000</a>
+        <a href="tel:+919421189999" style="color:var(--pink);font-weight:700;">📞 +91 9421189999</a>
     </div>
 '@
 
@@ -109,6 +113,7 @@ $legalNavbar = @'
                             <li><a href="../packages/international.html">🌍 International Holidays</a></li>
                             <li><a href="../packages/group-tours.html">👥 Group Tours</a></li>
                             <li><a href="../packages/domestic.html">🇮🇳 Explore India</a></li>
+                            <li><a href="../cruises.html">🛳️ Luxury Cruises</a></li>
                         </ul>
                     </li>
                     <li><a href="../corporate-travel.html">Corporate Travel</a></li>
@@ -117,7 +122,7 @@ $legalNavbar = @'
                     <li><a href="../contact.html">Contact</a></li>
                 </ul>
                 <div class="navbar-cta">
-                    <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
+                    <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
                     <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
                     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
                 </div>
@@ -133,13 +138,14 @@ $legalNavbar = @'
             <a href="../packages/international.html">🌍 International Holidays</a>
             <a href="../packages/group-tours.html">👥 Group Tours</a>
             <a href="../packages/domestic.html">🇮🇳 Explore India</a>
+            <a href="../cruises.html">🛳️ Luxury Cruises</a>
         </div>
         <a href="../corporate-travel.html">Corporate Travel</a>
         <a href="../blog.html">Blog</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
         <br />
-        <a href="tel:+910000000000" style="color:var(--pink);font-weight:700;">📞 +91 00000 00000</a>
+        <a href="tel:+919421189999" style="color:var(--pink);font-weight:700;">📞 +91 9421189999</a>
     </div>
 '@
 

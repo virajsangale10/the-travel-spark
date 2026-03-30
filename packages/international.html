@@ -12,276 +12,897 @@
   <link rel="stylesheet" href="../assets/css/navbar.css" />
   <link rel="stylesheet" href="../assets/css/footer.css" />
   <style>
-    .page-hero { background:linear-gradient(135deg,var(--navy) 0%,#0d1a47 100%); padding:150px 0 80px; text-align:center; position:relative; overflow:hidden; }
-    .page-hero::before { content:''; position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=70') center/cover; opacity:0.18; }
-    .page-hero-inner { position:relative; z-index:1; }
-    .page-hero h1 { font-family:var(--font-display); font-size:clamp(2.2rem,5vw,3.8rem); color:white; margin-bottom:14px; }
-    .page-hero h1 span { color:var(--pink); font-style:italic; }
-    .page-hero p { color:rgba(255,255,255,0.65); font-size:1rem; max-width:540px; margin:0 auto; }
-    .crumb { color:rgba(255,255,255,0.4); font-size:0.82rem; margin-bottom:16px; }
-    .crumb a { color:var(--pink); }
+    :root {
+      --card-bg: #fff;
+      --strip-bg: rgba(26, 42, 108, 0.05);
+    }
 
-    /* Destination Nav */
-    .dest-nav { background:var(--white); border-bottom:1px solid var(--gray-100); position:sticky; top:0; z-index:100; padding:0; }
-    .dest-nav-inner { display:flex; gap:0; overflow-x:auto; scrollbar-width:none; }
-    .dest-nav-inner::-webkit-scrollbar { display:none; }
-    .dest-nav-btn { padding:16px 22px; font-size:0.84rem; font-weight:600; color:var(--text-light); border-bottom:2px solid transparent; cursor:pointer; white-space:nowrap; background:none; border-left:none; border-right:none; border-top:none; transition:var(--transition); display:flex; align-items:center; gap:7px; }
-    .dest-nav-btn:hover { color:var(--navy); }
-    .dest-nav-btn.active { color:var(--pink); border-bottom-color:var(--pink); }
+    /* Page Hero */
+    .page-hero { 
+      background: linear-gradient(135deg, var(--navy) 0%, #0d1a47 100%); 
+      padding: 150px 0 80px; 
+      text-align: center; 
+      position: relative; 
+      overflow: hidden; 
+    }
+    .page-hero::before { 
+      content: ''; 
+      position: absolute; 
+      inset: 0; 
+      background: url('https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1600&q=70') center/cover; 
+      opacity: 0.22; 
+    }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.8rem); color: white; margin-bottom: 14px; }
+    .page-hero h1 span { color: var(--pink); font-style: italic; }
+    .page-hero p { color: rgba(255, 255, 255, 0.7); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+    .crumb { color: rgba(255, 255, 255, 0.4); font-size: 0.82rem; margin-bottom: 16px; }
+    .crumb a { color: var(--pink); transition: opacity 0.2s; }
+    .crumb a:hover { opacity: 0.8; }
 
-    /* Packages */
-    .packages-section { background:var(--off-white); }
-    .dest-section { margin-bottom:72px; }
-    .dest-section:last-child { margin-bottom:0; }
-    .dest-heading { display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; flex-wrap:wrap; gap:12px; }
-    .dest-heading h2 { font-family:var(--font-display); font-size:1.7rem; color:var(--navy); display:flex; align-items:center; gap:12px; }
-    .dest-heading h2 .flag { font-size:1.4rem; }
-    .dest-heading .see-all { font-size:0.84rem; font-weight:600; color:var(--pink); display:flex; align-items:center; gap:5px; transition:gap 0.2s; }
-    .dest-heading .see-all:hover { gap:9px; }
+    /* Sticky Filter Bar */
+    .filter-bar { 
+      background: var(--white); 
+      border-bottom: 1px solid var(--gray-100); 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      padding: 0; 
+    }
+    .filter-nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; align-items: center; padding: 4px 0; }
+    .filter-nav::-webkit-scrollbar { display: none; }
+    .filter-btn { 
+      padding: 14px 18px; 
+      font-size: 0.82rem; 
+      font-weight: 600; 
+      color: var(--text-light); 
+      background: none; 
+      border: none; 
+      border-bottom: 3px solid transparent; 
+      cursor: pointer; 
+      white-space: nowrap; 
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .filter-btn:hover { color: var(--navy); }
+    .filter-btn.active { color: var(--pink); border-bottom-color: var(--pink); }
 
-    .pkg-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-    .pkg-card { background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-sm); transition:var(--transition); }
-    .pkg-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
-    .pkg-img { height:215px; overflow:hidden; position:relative; }
-    .pkg-img img { width:100%;height:100%;object-fit:cover;transition:transform 0.5s; }
-    .pkg-card:hover .pkg-img img { transform:scale(1.07); }
-    .pkg-dur { position:absolute;top:12px;left:12px;background:var(--pink);color:white;font-size:0.7rem;font-weight:700;padding:4px 12px;border-radius:100px; }
-    .pkg-inc { position:absolute;top:12px;right:12px;background:rgba(26,42,108,0.85);color:white;font-size:0.62rem;font-weight:700;padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.05em; }
-    .pkg-body { padding:20px; }
-    .pkg-body h3 { font-family:var(--font-display);font-size:1.1rem;color:var(--navy);margin-bottom:8px; }
-    .pkg-dest-list { font-size:0.77rem;color:var(--text-light);line-height:1.5;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden; }
-    .pkg-tags { display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px; }
-    .pkg-tag { background:var(--off-white);color:var(--text-light);font-size:0.7rem;padding:3px 9px;border-radius:100px;font-weight:500; }
-    .pkg-footer { display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--gray-100); }
-    .pkg-price { font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:var(--navy); }
-    .pkg-price-lbl { font-size:0.7rem;color:var(--gray-600); }
-    .pkg-btn { background:var(--navy);color:white;padding:8px 18px;border-radius:var(--radius-sm);font-size:0.82rem;font-weight:600;transition:var(--transition); }
-    .pkg-btn:hover { background:var(--pink); }
+    /* Main Content Layout */
+    .intl-wrap { padding: 60px 0 100px; background: var(--off-white); }
+    .intl-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: start; }
 
-    /* Search bar */
-    .search-section { background:var(--white); padding:32px 0; border-bottom:1px solid var(--gray-100); }
-    .search-row { display:flex; gap:14px; align-items:flex-end; flex-wrap:wrap; }
-    .sf { flex:1; min-width:150px; }
-    .sf label { display:block; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--gray-600); margin-bottom:6px; }
-    .sf select, .sf input { width:100%; padding:11px 13px; border:1.5px solid var(--gray-300); border-radius:var(--radius-sm); font-family:var(--font-body); font-size:0.9rem; color:var(--text); background:white; }
-    .sf select:focus, .sf input:focus { outline:none; border-color:var(--pink); }
-    .sf-btn { background:var(--pink); color:white; border:none; padding:12px 26px; border-radius:var(--radius-sm); font-weight:700; cursor:pointer; white-space:nowrap; transition:var(--transition); }
-    .sf-btn:hover { background:var(--pink-dark); }
+    /* Destination Sections */
+    .dest-section { margin-bottom: 80px; }
+    .dest-section:last-child { margin-bottom: 0; }
+    
+    .dest-head { 
+      border-left: 4px solid var(--pink); 
+      padding-left: 18px; 
+      margin-bottom: 24px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .dest-head h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--navy); }
+    .dest-head .package-link { font-size: 0.85rem; font-weight: 700; color: var(--pink); text-decoration: none; transition: gap 0.2s; display: flex; align-items: center; gap: 5px; }
+    .dest-head .package-link:hover { gap: 10px; }
 
-    @media(max-width:900px){.pkg-grid{grid-template-columns:1fr 1fr;}}
-    @media(max-width:580px){.pkg-grid{grid-template-columns:1fr;}}
+    /* Info Strip */
+    .info-strip { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+    .is-pill { 
+      background: var(--strip-bg); 
+      color: var(--navy); 
+      font-size: 0.76rem; 
+      font-weight: 600; 
+      padding: 5px 12px; 
+      border-radius: 100px; 
+      display: flex; 
+      align-items: center; 
+      gap: 6px;
+      border: 1px solid rgba(26, 42, 108, 0.05);
+    }
+
+    /* Package Cards - 2 Column Grid */
+    .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .card { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+    .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    
+    .card-img { height: 200px; overflow: hidden; position: relative; flex-shrink: 0; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .card:hover .card-img img { transform: scale(1.08); }
+    
+    .badge { position: absolute; top: 12px; padding: 4px 12px; border-radius: 100px; font-size: 0.68rem; font-weight: 600; color: white; z-index: 2; }
+    .badge-dur { left: 12px; background: var(--pink); }
+    .badge-type { right: 12px; background: rgba(26, 42, 108, 0.85); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    .card-body { padding: 22px; flex-grow: 1; display: flex; flex-direction: column; }
+    .card-body h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--navy); margin-bottom: 6px; line-height: 1.3; }
+    .card-cities { font-size: 0.78rem; color: var(--text-light); line-height: 1.5; margin-bottom: 16px; }
+    
+    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; margin-top: auto; }
+    .tag { background: var(--off-white); font-size: 0.68rem; color: var(--text-light); padding: 4px 10px; border-radius: 100px; font-weight: 500; border: 0.5px solid var(--gray-200); }
+    
+    .enquire-btn { 
+      background: var(--navy); 
+      color: white; 
+      width: 100%; 
+      border: none; 
+      padding: 12px; 
+      border-radius: var(--radius-sm); 
+      font-size: 0.85rem; 
+      font-weight: 700; 
+      cursor: pointer; 
+      transition: all 0.3s;
+      text-align: center;
+    }
+    .enquire-btn:hover { background: var(--pink); }
+
+    /* Sticky Enquiry Form (same as domestic) */
+    .enquiry-side { position: sticky; top: 100px; }
+    .enquiry-box { background: white; border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-md); }
+    .enquiry-box h2 { font-family: var(--font-display); font-size: 1.7rem; color: var(--navy); margin-bottom: 8px; text-align: center; }
+    .enquiry-box p.sub { text-align: center; color: var(--text-light); font-size: 0.88rem; margin-bottom: 24px; line-height: 1.5; }
+    
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+    .form-control { 
+      width: 100%; 
+      padding: 11px 14px; 
+      border: 1.5px solid var(--gray-200); 
+      border-radius: var(--radius-sm); 
+      font-size: 0.92rem; 
+      font-family: inherit; 
+      outline: none; 
+      transition: border-color 0.2s; 
+    }
+    .form-control:focus { border-color: var(--pink); }
+    
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .submit-btn { 
+      width: 100%; 
+      background: var(--pink); 
+      color: white; 
+      border: none; 
+      padding: 15px; 
+      border-radius: var(--radius-sm); 
+      font-size: 1rem; 
+      font-weight: 700; 
+      cursor: pointer; 
+      transition: background 0.2s; 
+      margin-top: 10px;
+    }
+    .submit-btn:hover { background: #d01579; }
+
+    /* Mobile Resp */
+    @media(max-width: 1080px) {
+      .intl-grid { grid-template-columns: 1fr; }
+      .enquiry-side { position: relative; top: 0; margin-top: 50px; }
+    }
+    @media(max-width: 680px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .dest-head h2 { font-size: 1.5rem; }
+      .page-hero { padding: 120px 0 60px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
-<nav class="navbar scrolled" id="navbar">
-  <div class="container">
-    <div class="navbar-inner">
-      <a href="../index.html" class="navbar-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></a>
-      <ul class="navbar-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><span class="active">Holiday Packages <span class="chevron">▾</span></span>
-          <ul class="dropdown">
-            <li><a href="international.html" class="active">🌍 International Holidays</a></li>
-            <li><a href="group-tours.html">👥 Group Tours</a></li>
-            <li><a href="domestic.html">🇮🇳 Explore India</a></li>
-          </ul>
-        </li>
-        <li><a href="../corporate-travel.html">Corporate Travel</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-      <div class="navbar-cta">
-        <a href="tel:+910000000000" class="navbar-phone hide-mobile">📞 +91 00000 00000</a>
-        <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
-        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </div>
-</nav>
-<div class="menu-overlay" id="menuOverlay"></div>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="../index.html">Home</a>
-  <div class="m-parent">Holiday Packages</div>
-  <div class="sub-links">
-    <a href="international.html">🌍 International Holidays</a>
-    <a href="group-tours.html">👥 Group Tours</a>
-    <a href="domestic.html">🇮🇳 Explore India</a>
-  </div>
-  <a href="../corporate-travel.html">Corporate Travel</a>
-  <a href="../blog.html">Blog</a>
-  <a href="../about.html">About</a>
-  <a href="../contact.html">Contact</a>
-</div>
+<div id="navbar-placeholder"></div>
 
 <section class="page-hero">
   <div class="container page-hero-inner">
     <p class="crumb"><a href="../index.html">Home</a> / International Holidays</p>
     <h1>International <span>Holiday Packages</span></h1>
-    <p>From the cobblestones of Europe to the beaches of Maldives — find your perfect getaway.</p>
+    <p>Handcrafted itineraries across the world's most extraordinary destinations — flights, hotels, transfers & more, all handled for you.</p>
   </div>
 </section>
 
-<!-- Search -->
-<div class="search-section">
+<!-- Sticky Filter Bar -->
+<div class="filter-bar">
   <div class="container">
-    <div class="search-row">
-      <div class="sf"><label>Destination</label>
-        <select><option value="">All Destinations</option><option>Europe</option><option>Japan</option><option>Dubai</option><option>Thailand</option><option>Maldives</option><option>Singapore</option><option>Georgia</option><option>Vietnam</option><option>Philippines</option></select>
-      </div>
-      <div class="sf"><label>Month</label>
-        <select><option value="">Any Month</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option></select>
-      </div>
-      <div class="sf"><label>Duration</label>
-        <select><option value="">Any Duration</option><option>Under 7 days</option><option>7–10 days</option><option>10–14 days</option><option>14+ days</option></select>
-      </div>
-      <div class="sf"><label>Budget (per person)</label>
-        <select><option value="">Any Budget</option><option>Under ₹50,000</option><option>₹50K – ₹1L</option><option>₹1L – ₹2L</option><option>₹2L+</option></select>
-      </div>
-      <button class="sf-btn">🔍 Search</button>
+    <div class="filter-nav">
+      <button class="filter-btn active" onclick="scrollToSection('all', this)">🌍 All</button>
+      <button class="filter-btn" onclick="scrollToSection('europe', this)">🏰 Europe</button>
+      <button class="filter-btn" onclick="scrollToSection('japan', this)">🗾 Japan</button>
+      <button class="filter-btn" onclick="scrollToSection('dubai', this)">🏙️ Dubai</button>
+      <button class="filter-btn" onclick="scrollToSection('maldives', this)">🏝️ Maldives</button>
+      <button class="filter-btn" onclick="scrollToSection('thailand', this)">🌺 Thailand</button>
+      <button class="filter-btn" onclick="scrollToSection('singapore', this)">🦁 Singapore</button>
+      <button class="filter-btn" onclick="scrollToSection('georgia', this)">🏔️ Georgia</button>
+      <button class="filter-btn" onclick="scrollToSection('vietnam', this)">🌿 Vietnam</button>
+      <button class="filter-btn" onclick="scrollToSection('philippines', this)">🇵🇭 Philippines</button>
+      <button class="filter-btn" onclick="scrollToSection('bali', this)">🌸 Bali</button>
+      <button class="filter-btn" onclick="scrollToSection('turkey', this)">🕌 Turkey</button>
+      <button class="filter-btn" onclick="scrollToSection('kenya', this)">🌍 Kenya & Tanzania</button>
+      <button class="filter-btn" onclick="scrollToSection('nepal', this)">🏔️ Nepal</button>
+      <button class="filter-btn" onclick="scrollToSection('srilanka', this)">🌴 Sri Lanka</button>
     </div>
   </div>
 </div>
 
-<!-- Destination Nav -->
-<div class="dest-nav">
+<section class="intl-wrap">
   <div class="container">
-    <div class="dest-nav-inner">
-      <button class="dest-nav-btn active">🌍 All</button>
-      <button class="dest-nav-btn">🏰 Europe</button>
-      <button class="dest-nav-btn">🗾 Japan</button>
-      <button class="dest-nav-btn">🏙️ Dubai</button>
-      <button class="dest-nav-btn">🏝️ Maldives</button>
-      <button class="dest-nav-btn">🌺 Thailand</button>
-      <button class="dest-nav-btn">🦁 Singapore</button>
-      <button class="dest-nav-btn">🏔️ Georgia</button>
-      <button class="dest-nav-btn">🌿 Vietnam</button>
+    <div class="intl-grid">
+      
+      <!-- Left Column: Destination Content -->
+      <div class="intl-content">
+        
+        <!-- EUROPE -->
+        <div class="dest-section" id="europe" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🏰 Europe</h2>
+            <a href="europe.html" class="package-link">View Full Package →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 8–10 hrs from Mumbai</span>
+            <span class="is-pill">📋 Schengen Visa Required</span>
+            <span class="is-pill">🌤️ Best: Apr – Sep</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Europe" />
+                <span class="badge badge-dur">13N / 14D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Magical Europe</h3>
+                <p class="card-cities">Paris · Brussels · Amsterdam · Frankfurt · Lucerne · Zurich · Innsbruck · Venice · Rome</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Indian Meals</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Europe')">Enquire Now →</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=600&q=80" alt="Swiss" />
+                <span class="badge badge-dur">12N / 13D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>French Swiss Austrian Dreams</h3>
+                <p class="card-cities">Paris · Zurich · Lucerne · Frankfurt · Innsbruck</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Indian Meals</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Europe')">Enquire Now →</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=600&q=80" alt="London" />
+                <span class="badge badge-dur">14N / 15D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>European Jewels with London</h3>
+                <p class="card-cities">London · Paris · Brussels · Amsterdam · Frankfurt · Lucerne · Venice · Rome</p>
+                <div class="card-tags">
+                    <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Indian Meals</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Europe')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JAPAN -->
+        <div class="dest-section" id="japan" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🗾 Japan</h2>
+            <a href="japan.html" class="package-link">View Full Package →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 7–9 hrs from Mumbai</span>
+            <span class="is-pill">📋 Visa Required (Free Processing)</span>
+            <span class="is-pill">🌸 Best: Mar – May & Oct – Nov</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan" />
+                <span class="badge badge-dur">7N / 8D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Flavours of Japan</h3>
+                <p class="card-cities">Tokyo · Hakone · Kyoto · Nara · Osaka</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Indian Meals</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Japan')">Enquire Now →</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Japan" />
+                <span class="badge badge-dur">5N / 6D</span>
+                <span class="badge badge-type">Customised</span>
+              </div>
+              <div class="card-body">
+                <h3>Japan Express</h3>
+                <p class="card-cities">Tokyo · Kyoto · Nara · Osaka</p>
+                <div class="card-tags">
+                  <span class="tag">Custom Holiday</span><span class="tag">Flights Incl.</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Japan')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DUBAI -->
+        <div class="dest-section" id="dubai" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🏙️ Dubai</h2>
+            <a href="packages/dubai.html" class="package-link">View Full Package →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 3 hrs from Mumbai</span>
+            <span class="is-pill">📋 Visa on Arrival for Indians</span>
+            <span class="is-pill">☀️ Best: Oct – Apr</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai" />
+                <span class="badge badge-dur">5N / 6D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Spectacular Dubai</h3>
+                <p class="card-cities">Dubai City Tour · Desert Safari · Burj Khalifa · Dhow Cruise · Abu Dhabi Day Trip</p>
+                <div class="card-tags">
+                  <span class="tag">Visa on Arrival</span><span class="tag">Flights Incl.</span><span class="tag">Family Friendly</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Dubai')">Enquire Now →</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=600&q=80" alt="Dubai" />
+                <span class="badge badge-dur">3N / 4D</span>
+                <span class="badge badge-type">Customised</span>
+              </div>
+              <div class="card-body">
+                <h3>Dubai Long Weekend</h3>
+                <p class="card-cities">Dubai City · Desert Safari · Burj Khalifa · Dubai Mall</p>
+                <div class="card-tags">
+                  <span class="tag">Short Trip</span><span class="tag">Flights Incl.</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Dubai')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MALDIVES -->
+        <div class="dest-section" id="maldives" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🏝️ Maldives</h2>
+            <a href="packages/maldives.html" class="package-link">View Full Package →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 2.5 hrs from Mumbai</span>
+            <span class="is-pill">📋 Visa on Arrival (Free)</span>
+            <span class="is-pill">🌊 Best: Nov – Apr</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?w=600&q=80" alt="Maldives" />
+                <span class="badge badge-dur">4N / 5D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Mesmerizing Maldives</h3>
+                <p class="card-cities">Malé · Holiday Inn Kandooma · Water Villa · Snorkelling · Dolphin Cruise</p>
+                <div class="card-tags">
+                  <span class="tag">Honeymoon</span><span class="tag">Flights Incl.</span><span class="tag">Water Villa</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Maldives')">Enquire Now →</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80" alt="Maldives" />
+                <span class="badge badge-dur">5N / 6D</span>
+                <span class="badge badge-type">Luxury</span>
+              </div>
+              <div class="card-body">
+                <h3>Maldives Luxury Escape</h3>
+                <p class="card-cities">5★ Resort · Overwater Bungalow · Seaplane Transfer · All Meals Included</p>
+                <div class="card-tags">
+                  <span class="tag">Luxury</span><span class="tag">Honeymoon</span><span class="tag">All Inclusive</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Maldives')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- THAILAND -->
+        <div class="dest-section" id="thailand" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🌺 Thailand</h2>
+            <a href="contact.html" class="package-link">Enquire About Thailand →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 4 hrs from Mumbai</span>
+            <span class="is-pill">📋 Visa Free for Indians</span>
+            <span class="is-pill">🌺 Best: Nov – Mar</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&q=80" alt="Thailand" />
+                <span class="badge badge-dur">5N / 6D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Best of Thailand</h3>
+                <p class="card-cities">Bangkok · Pattaya · Coral Island · Floating Market · Safari World</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Family Friendly</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Thailand')">Enquire Now →</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600&q=80" alt="Thailand" />
+                <span class="badge badge-dur">7N / 8D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Thailand with Phuket</h3>
+                <p class="card-cities">Bangkok · Pattaya · Phuket · Phi Phi Islands · James Bond Island</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Beaches</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Thailand')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SINGAPORE -->
+        <div class="dest-section" id="singapore" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🦁 Singapore</h2>
+            <a href="packages/charming-singapore-with-malaysia.html" class="package-link">View Full Package →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 5 hrs from Mumbai</span>
+            <span class="is-pill">📋 Visa Required</span>
+            <span class="is-pill">🦁 Best: Feb – Apr</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=80" alt="Singapore" />
+                <span class="badge badge-dur">7N / 8D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Charming Singapore with Malaysia</h3>
+                <p class="card-cities">Singapore · Kuala Lumpur · Genting Highlands · Batu Caves</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Indian Meals</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Singapore')">Enquire Now →</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=600&q=80" alt="Singapore" />
+                <span class="badge badge-dur">5N / 6D</span>
+                <span class="badge badge-type">Customised</span>
+              </div>
+              <div class="card-body">
+                <h3>Singapore City Explorer</h3>
+                <p class="card-cities">Gardens by the Bay · Universal Studios · Sentosa · Marina Bay Sands · Night Safari</p>
+                <div class="card-tags">
+                  <span class="tag">Family Friendly</span><span class="tag">Flights Incl.</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Singapore')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GEORGIA -->
+        <div class="dest-section" id="georgia" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🏔️ Georgia</h2>
+            <a href="packages/georgia.html" class="package-link">View Full Package →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 4–5 hrs from Mumbai</span>
+            <span class="is-pill">📋 Visa Free for Indians</span>
+            <span class="is-pill">🍂 Best: Apr – Jun & Sep – Oct</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=600&q=80" alt="Georgia" />
+                <span class="badge badge-dur">4N / 5D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Highlights of Georgia</h3>
+                <p class="card-cities">Tbilisi · Mtskheta · Kazbegi (Stepantsminda) · Gudauri</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Visa Free</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Georgia')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIETNAM -->
+        <div class="dest-section" id="vietnam" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🌿 Vietnam</h2>
+            <a href="packages/vietnam.html" class="package-link">View Full Package →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 5–6 hrs from Mumbai</span>
+            <span class="is-pill">📋 E-Visa Required (USD 25)</span>
+            <span class="is-pill">🌿 Best: Oct – Apr</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=600&q=80" alt="Vietnam" />
+                <span class="badge badge-dur">7N / 8D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Classic Vietnam</h3>
+                <p class="card-cities">Hanoi · Halong Bay · Da Nang · Hoi An · Ho Chi Minh City</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Indian Meals</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Vietnam')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHILIPPINES -->
+        <div class="dest-section" id="philippines" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🇵🇭 Philippines</h2>
+            <a href="packages/philippines.html" class="package-link">View Full Package →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 4–5 hrs from Mumbai</span>
+            <span class="is-pill">📋 Visa on Arrival (30 days)</span>
+            <span class="is-pill">🏝️ Best: Nov – May</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=600&q=80" alt="Philippines" />
+                <span class="badge badge-dur">6N / 7D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Vibrant Philippines</h3>
+                <p class="card-cities">Manila · Boracay · White Beach · Island Hopping · Paraw Sailing</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Beaches</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Philippines')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BALI -->
+        <div class="dest-section" id="bali" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🌸 Bali</h2>
+            <a href="contact.html" class="package-link">Enquire About Bali →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 6 hrs from Mumbai</span>
+            <span class="is-pill">📋 Visa on Arrival (USD 35)</span>
+            <span class="is-pill">🌸 Best: Apr – Oct</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80" alt="Bali" />
+                <span class="badge badge-dur">5N / 6D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Beautiful Bali</h3>
+                <p class="card-cities">Kuta · Seminyak · Ubud · Tanah Lot · Uluwatu · Nusa Dua</p>
+                <div class="card-tags">
+                  <span class="tag">Honeymoon</span><span class="tag">Flights Incl.</span><span class="tag">Family Friendly</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Bali')">Enquire Now →</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1604999333679-b86d54738315?w=600&q=80" alt="Bali" />
+                <span class="badge badge-dur">7N / 8D</span>
+                <span class="badge badge-type">Honeymoon Special</span>
+              </div>
+              <div class="card-body">
+                <h3>Bali Honeymoon Escape</h3>
+                <p class="card-cities">Seminyak · Ubud Rice Terraces · Tegallalang · Private Villa · Couples Spa</p>
+                <div class="card-tags">
+                  <span class="tag">Honeymoon</span><span class="tag">Luxury</span><span class="tag">Flights Incl.</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Bali')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TURKEY -->
+        <div class="dest-section" id="turkey" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🕌 Turkey</h2>
+            <a href="contact.html" class="package-link">Enquire About Turkey →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 6–7 hrs from Mumbai</span>
+            <span class="is-pill">📋 E-Visa Required (easy online)</span>
+            <span class="is-pill">🌤️ Best: Apr – Jun & Sep – Nov</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80" alt="Turkey" />
+                <span class="badge badge-dur">7N / 8D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Magical Turkey</h3>
+                <p class="card-cities">Istanbul · Cappadocia · Pamukkale · Ephesus · Antalya</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Halal Food</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Turkey')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KENYA & TANZANIA -->
+        <div class="dest-section" id="kenya" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🦁 Kenya & Tanzania</h2>
+            <a href="contact.html" class="package-link">Enquire About Africa →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 6–8 hrs from Mumbai</span>
+            <span class="is-pill">📋 E-Visa Required</span>
+            <span class="is-pill">🦁 Best: Jul – Oct (Great Migration)</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80" alt="Africa" />
+                <span class="badge badge-dur">8N / 9D</span>
+                <span class="badge badge-type">Safari Special</span>
+              </div>
+              <div class="card-body">
+                <h3>East Africa Safari</h3>
+                <p class="card-cities">Nairobi · Masai Mara · Amboseli · Serengeti · Ngorongoro Crater · Zanzibar</p>
+                <div class="card-tags">
+                  <span class="tag">Safari</span><span class="tag">Flights Incl.</span><span class="tag">Wildlife</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Kenya & Tanzania')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEPAL -->
+        <div class="dest-section" id="nepal" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🏔️ Nepal</h2>
+            <a href="contact.html" class="package-link">Enquire About Nepal →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 2 hrs from Mumbai</span>
+            <span class="is-pill">📋 Visa on Arrival (USD 30)</span>
+            <span class="is-pill">🏔️ Best: Oct – Dec & Mar – May</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80" alt="Nepal" />
+                <span class="badge badge-dur">5N / 6D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Nepal — Land of the Himalayas</h3>
+                <p class="card-cities">Kathmandu · Pashupatinath · Boudhanath · Pokhara · Nagarkot · Chitwan</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Pilgrimage</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Nepal')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SRI LANKA -->
+        <div class="dest-section" id="srilanka" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>🌴 Sri Lanka</h2>
+            <a href="contact.html" class="package-link">Enquire About Sri Lanka →</a>
+          </div>
+          <div class="info-strip">
+            <span class="is-pill">✈️ 2.5 hrs from Mumbai</span>
+            <span class="is-pill">📋 ETA Required (free online)</span>
+            <span class="is-pill">🌴 Best: Dec – Apr</span>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1567306301408-9b74779a11af?w=600&q=80" alt="Sri Lanka" />
+                <span class="badge badge-dur">6N / 7D</span>
+                <span class="badge badge-type">All Inclusive</span>
+              </div>
+              <div class="card-body">
+                <h3>Stunning Sri Lanka</h3>
+                <p class="card-cities">Colombo · Kandy · Sigiriya · Nuwara Eliya · Yala · Mirissa · Galle</p>
+                <div class="card-tags">
+                  <span class="tag">Group Tour</span><span class="tag">Flights Incl.</span><span class="tag">Family Friendly</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Sri Lanka')">Enquire Now →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- End Intl Content -->
+
+      <!-- Right Column: Sticky Enquiry Form -->
+      <div class="enquiry-side">
+        <div class="enquiry-box" id="enquiry-form" data-aos="fade-up">
+          <h2>Plan Your International Trip</h2>
+          <p class="sub">Tell us where you want to go — we'll handle the rest.</p>
+          
+          <form action="https://formsubmit.co/thetravelspark2@gmail.com" method="POST">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" name="name" class="form-control" placeholder="John Doe" required />
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" class="form-control" placeholder="+91 9421189999" required />
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" class="form-control" placeholder="john@example.com" required />
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>Destination</label>
+                <select name="destination" id="dest-select" class="form-control" required>
+                  <option value="" disabled selected>Where to?</option>
+                  <option value="Europe">Europe</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Dubai">Dubai</option>
+                  <option value="Maldives">Maldives</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Philippines">Philippines</option>
+                  <option value="Bali">Bali</option>
+                  <option value="Turkey">Turkey</option>
+                  <option value="Kenya & Tanzania">Kenya & Tanzania</option>
+                  <option value="Nepal">Nepal</option>
+                  <option value="Sri Lanka">Sri Lanka</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Travel Month</label>
+                <input type="month" name="month" class="form-control" />
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>No. of Travellers</label>
+                <input type="number" name="travellers" min="1" class="form-control" placeholder="2" />
+              </div>
+              <div class="form-group">
+                <label>Trip Type</label>
+                <select name="type" class="form-control">
+                  <option value="Leisure Holiday">Leisure Holiday</option>
+                  <option value="Honeymoon">Honeymoon</option>
+                  <option value="Family Trip">Family Trip</option>
+                  <option value="Group Tour">Group Tour</option>
+                  <option value="Corporate / MICE">Corporate / MICE</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Message / Special Requests</label>
+              <textarea name="message" class="form-control" rows="3" placeholder="Tell us about your dream trip..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Enquiry 🚀</button>
+          </form>
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
-
-<!-- Packages -->
-<section class="packages-section section">
-  <div class="container">
-
-    <!-- Europe -->
-    <div class="dest-section" id="europe" data-aos="fade-up">
-      <div class="dest-heading">
-        <h2><span class="flag">🏰</span> Europe</h2>
-        <a href="europe.html" class="see-all">View All Europe Tours →</a>
-      </div>
-      <div class="pkg-grid">
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Europe" loading="lazy" /><span class="pkg-dur">13N / 14D</span><span class="pkg-inc">All Inclusive</span></div>
-          <div class="pkg-body"><h3>Magical Europe</h3><p class="pkg-dest-list">France · Belgium · Netherlands · Germany · Switzerland · Austria · Italy · Vatican</p><div class="pkg-tags"><span class="pkg-tag">Group Tour</span><span class="pkg-tag">Flights Incl.</span><span class="pkg-tag">Indian Meals</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹1,89,000</div></div><a href="europe.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=600&q=80" alt="Swiss" loading="lazy" /><span class="pkg-dur">12N / 13D</span><span class="pkg-inc">All Inclusive</span></div>
-          <div class="pkg-body"><h3>French Swiss Austrian Dreams</h3><p class="pkg-dest-list">France · Switzerland · Germany · Liechtenstein · Austria</p><div class="pkg-tags"><span class="pkg-tag">Group Tour</span><span class="pkg-tag">Flights Incl.</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹1,75,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=600&q=80" alt="London" loading="lazy" /><span class="pkg-dur">14N / 15D</span><span class="pkg-inc">All Inclusive</span></div>
-          <div class="pkg-body"><h3>Highlights of Europe with London</h3><p class="pkg-dest-list">UK · France · Belgium · Netherlands · Germany · Switzerland · Austria · Italy</p><div class="pkg-tags"><span class="pkg-tag">Group Tour</span><span class="pkg-tag">Flights Incl.</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹2,05,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Japan -->
-    <div class="dest-section" id="japan" data-aos="fade-up">
-      <div class="dest-heading">
-        <h2><span class="flag">🗾</span> Japan</h2>
-        <a href="japan.html" class="see-all">View All Japan Tours →</a>
-      </div>
-      <div class="pkg-grid">
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan" loading="lazy" /><span class="pkg-dur">07N / 08D</span><span class="pkg-inc">All Inclusive</span></div>
-          <div class="pkg-body"><h3>Blooming Japan</h3><p class="pkg-dest-list">Tokyo · Hakone · Hiroshima · Kyoto · Nara · Osaka</p><div class="pkg-tags"><span class="pkg-tag">Group Tour</span><span class="pkg-tag">Flights Incl.</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹1,45,000</div></div><a href="japan.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Japan" loading="lazy" /><span class="pkg-dur">05N / 06D</span><span class="pkg-inc">Customised</span></div>
-          <div class="pkg-body"><h3>Japan Express</h3><p class="pkg-dest-list">Tokyo · Kyoto · Osaka · Nara</p><div class="pkg-tags"><span class="pkg-tag">Custom Holiday</span><span class="pkg-tag">Flights Incl.</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹1,10,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Dubai -->
-    <div class="dest-section" id="dubai" data-aos="fade-up">
-      <div class="dest-heading">
-        <h2><span class="flag">🏙️</span> Dubai</h2>
-        <a href="dubai.html" class="see-all">View All Dubai Tours →</a>
-      </div>
-      <div class="pkg-grid">
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai" loading="lazy" /><span class="pkg-dur">05N / 06D</span><span class="pkg-inc">All Inclusive</span></div>
-          <div class="pkg-body"><h3>Spectacular Dubai</h3><p class="pkg-dest-list">Dubai City Tour · Desert Safari · Burj Khalifa · Dhow Cruise · Abu Dhabi Day Trip</p><div class="pkg-tags"><span class="pkg-tag">Visa Free</span><span class="pkg-tag">Flights Incl.</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹55,000</div></div><a href="dubai.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=600&q=80" alt="Dubai" loading="lazy" /><span class="pkg-dur">03N / 04D</span><span class="pkg-inc">Customised</span></div>
-          <div class="pkg-body"><h3>Dubai Long Weekend</h3><p class="pkg-dest-list">Dubai City · Desert Safari · Burj Khalifa · Dubai Mall</p><div class="pkg-tags"><span class="pkg-tag">Short Trip</span><span class="pkg-tag">Flights Incl.</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹38,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Maldives -->
-    <div class="dest-section" id="maldives" data-aos="fade-up">
-      <div class="dest-heading">
-        <h2><span class="flag">🏝️</span> Maldives</h2>
-        <a href="maldives.html" class="see-all">View All Maldives Tours →</a>
-      </div>
-      <div class="pkg-grid">
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?w=600&q=80" alt="Maldives" loading="lazy" /><span class="pkg-dur">04N / 05D</span><span class="pkg-inc">All Inclusive</span></div>
-          <div class="pkg-body"><h3>Mesmerising Maldives</h3><p class="pkg-dest-list">Holiday Inn Kandooma · Water Villa · Snorkelling · Dolphin Cruise · Sunset Fishing</p><div class="pkg-tags"><span class="pkg-tag">Honeymoon</span><span class="pkg-tag">Flights Incl.</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹75,000</div></div><a href="maldives.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80" alt="Maldives" loading="lazy" /><span class="pkg-dur">05N / 06D</span><span class="pkg-inc">Luxury</span></div>
-          <div class="pkg-body"><h3>Maldives Luxury Escape</h3><p class="pkg-dest-list">5★ Resort · Overwater Bungalow · Seaplane Transfer · All Meals</p><div class="pkg-tags"><span class="pkg-tag">Luxury</span><span class="pkg-tag">Honeymoon</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹1,20,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Georgia -->
-    <div class="dest-section" id="georgia" data-aos="fade-up">
-      <div class="dest-heading">
-        <h2><span class="flag">🏔️</span> Georgia</h2>
-        <a href="georgia.html" class="see-all">View All Georgia Tours →</a>
-      </div>
-      <div class="pkg-grid">
-        <div class="pkg-card">
-          <div class="pkg-img"><img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=600&q=80" alt="Georgia" loading="lazy" /><span class="pkg-dur">06N / 07D</span><span class="pkg-inc">All Inclusive</span></div>
-          <div class="pkg-body"><h3>Highlights of Georgia</h3><p class="pkg-dest-list">Tbilisi · Mtskheta · Kazbegi · Batumi · Borjomi · Kutaisi</p><div class="pkg-tags"><span class="pkg-tag">Group Tour</span><span class="pkg-tag">Flights Incl.</span></div><div class="pkg-footer"><div><div class="pkg-price-lbl">From</div><div class="pkg-price">₹65,000</div></div><a href="../contact.html" class="pkg-btn">Book Now</a></div></div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><div class="footer-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></div><p class="footer-desc">Your trusted travel partner for unforgettable holidays and group tours.</p><div class="footer-social"><a href="#">📸</a><a href="#">👤</a><a href="https://wa.me/910000000000">💬</a><a href="#">▶️</a></div></div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="group-tours.html">Group Tours</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Packages</h4><ul><li><a href="international.html">International</a></li><li><a href="domestic.html">Explore India</a></li><li><a href="../corporate-travel.html">Corporate</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><div class="footer-contact"><div class="footer-contact-item"><div class="icon">📞</div><div class="info"><a href="tel:+910000000000">+91 00000 00000</a></div></div><div class="footer-contact-item"><div class="icon">✉️</div><div class="info"><a href="mailto:hello@travelspark.in">hello@travelspark.in</a></div></div></div></div>
-    </div>
-    <div class="footer-bottom"><p>© The Travel Spark. All rights reserved.</p><div class="footer-bottom-links"><a href="../legal/privacy-policy.html">Privacy Policy</a><a href="../legal/terms-conditions.html">Terms</a></div></div>
-  </div>
-</footer>
+<div id="footer-placeholder"></div>
 
-<a href="https://wa.me/910000000000" class="whatsapp-float" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-<button class="scroll-top" id="scrollTop">↑</button>
-
+<script src="../assets/js/components.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="../assets/js/main.js"></script>
 <script>
-  AOS.init({ duration:700, once:true });
-  const overlay = document.getElementById('menuOverlay'), hamburger = document.getElementById('hamburger'), mobileMenu = document.getElementById('mobileMenu');
-  hamburger?.addEventListener('click', () => { hamburger.classList.toggle('active'); mobileMenu?.classList.toggle('open'); overlay?.classList.toggle('visible'); document.body.style.overflow = mobileMenu?.classList.contains('open') ? 'hidden' : ''; });
-  overlay?.addEventListener('click', () => { hamburger?.classList.remove('active'); mobileMenu?.classList.remove('open'); overlay.classList.remove('visible'); document.body.style.overflow = ''; });
-  document.querySelectorAll('.dest-nav-btn').forEach(btn => { btn.addEventListener('click', () => { document.querySelectorAll('.dest-nav-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); }); });
+  AOS.init({ duration: 700, once: true, offset: 50 });
+
+  function scrollToSection(id, btn) {
+    // Update active button
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    if (id === 'all') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const el = document.getElementById(id);
+      if (el) {
+        const offset = 120; // sticky header offset
+        const yCoord = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: yCoord, behavior: 'smooth' });
+      }
+    }
+  }
+
+  function enquire(dest) {
+    const select = document.getElementById('dest-select');
+    const form = document.getElementById('enquiry-form');
+    
+    if (select && dest) {
+      select.value = dest;
+      // Trigger subtle highlight effect
+      select.style.borderColor = "var(--pink)";
+      select.style.boxShadow = "0 0 0 3px rgba(233,30,140,0.1)";
+      setTimeout(() => {
+        select.style.borderColor = "";
+        select.style.boxShadow = "";
+      }, 1500);
+    }
+    
+    if (form) {
+      const offset = 100;
+      const yCoord = form.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: yCoord, behavior: 'smooth' });
+    }
+  }
 </script>
 </body>
 </html>
+
+

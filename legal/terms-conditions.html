@@ -23,16 +23,7 @@
   </style>
 </head>
 <body>
-<nav class="navbar scrolled" id="navbar">
-  <div class="container">
-    <div class="navbar-inner">
-      <a href="../index.html" class="navbar-logo"><div class="logo-icon">✈️</div><div class="logo-text"><span class="name">The Travel Spark</span><span class="tagline">Ignite Your Journey</span></div></a>
-      <ul class="navbar-links"><li><a href="../index.html">Home</a></li><li><a href="../contact.html">Contact</a></li></ul>
-      <div class="navbar-cta"><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
-    </div>
-  </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu"><a href="../index.html">Home</a><a href="../contact.html">Contact</a></div>
+<div id="navbar-placeholder"></div>
 
 <section class="page-hero"><div class="container"><h1>Terms & Conditions</h1><p>Please read these terms carefully before booking.</p></div></section>
 
@@ -71,8 +62,10 @@
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-bottom" style="border-top:none;padding:28px 0;">
-      <p>© The Travel Spark. All rights reserved.</p>
-      <div class="footer-bottom-links"><a href="privacy-policy.html">Privacy Policy</a><a
+<div id="footer-placeholder"></div>
+<script src="../assets/js/components.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+  AOS.init({ duration: 600, once: true });
+</script>
