@@ -165,43 +165,7 @@ section { padding: 80px 0; }
   transform: translateY(-2px);
 }
 
-/* ── WhatsApp Float ── */
-.whatsapp-float {
-  position: fixed;
-  bottom: 28px; right: 28px;
-  width: 56px; height: 56px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 6px 24px rgba(37,211,102,0.4);
-  z-index: 999;
-  transition: var(--transition);
-}
-
-.whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
-.whatsapp-float svg { width: 28px; height: 28px; fill: white; }
-
-/* ── Scroll To Top ── */
-.scroll-top {
-  position: fixed;
-  bottom: 94px; right: 28px;
-  width: 44px; height: 44px;
-  background: var(--navy);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 1rem;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-  opacity: 0;
-  pointer-events: none;
-  z-index: 998;
-}
-
-.scroll-top.visible { opacity: 1; pointer-events: all; }
-.scroll-top:hover { background: var(--pink); transform: translateY(-3px); }
+/* WhatsApp and Scroll styles moved to footer.css for component consistency */
 
 /* ── Promo Banner ── */
 .promo-banner {
