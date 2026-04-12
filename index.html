@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,18 +22,18 @@
   <style>
     /* ── Promo Banner ── */
     #promoBanner {
-      background: linear-gradient(90deg, var(--pink) 0%, #9b0058 100%);
+      background: linear-gradient(90deg, var(--pink) 0%, #005B46 100%);
       text-align: center;
       padding: 10px 40px;
       font-size: 0.82rem;
       font-weight: 600;
-      color: white;
+      color: var(--navy);
       position: relative;
       z-index: 1001;
     }
 
     #promoBanner a {
-      color: white;
+      color: var(--navy);
       text-decoration: underline;
       margin-left: 8px;
     }
@@ -45,7 +45,7 @@
       transform: translateY(-50%);
       background: none;
       border: none;
-      color: white;
+      color: var(--navy);
       font-size: 1.2rem;
       cursor: pointer;
       opacity: 0.7;
@@ -72,7 +72,7 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(26, 42, 108, 0.96) 0%, rgba(26, 42, 108, 0.7) 55%, rgba(26, 42, 108, 0.35) 100%);
+      background: linear-gradient(135deg, rgba(51, 65, 85, 0.96) 0%, rgba(51, 65, 85, 0.7) 55%, rgba(51, 65, 85, 0.35) 100%);
     }
 
     /* Pink spark accent */
@@ -82,7 +82,7 @@
       right: 8%;
       width: 360px;
       height: 360px;
-      background: radial-gradient(circle, rgba(233, 30, 140, 0.18) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(147, 197, 253, 0.18) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -92,7 +92,7 @@
       right: 25%;
       width: 200px;
       height: 200px;
-      background: radial-gradient(circle, rgba(91, 200, 216, 0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -107,8 +107,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(233, 30, 140, 0.15);
-      border: 1px solid rgba(233, 30, 140, 0.35);
+      background: rgba(147, 197, 253, 0.15);
+      border: 1px solid rgba(147, 197, 253, 0.35);
       color: var(--pink);
       font-size: 0.76rem;
       font-weight: 700;
@@ -237,7 +237,7 @@
     .search-field input:focus {
       outline: none;
       border-color: var(--pink);
-      box-shadow: 0 0 0 3px rgba(233, 30, 140, 0.1);
+      box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.1);
     }
 
     .search-btn {
@@ -328,7 +328,7 @@
 
     /* ── Summer Special Banner ── */
     .summer-banner {
-      background: linear-gradient(135deg, var(--navy) 0%, #0d1a47 100%);
+      background: linear-gradient(135deg, var(--navy) 0%, #334155 100%);
       padding: 60px 0;
       position: relative;
       overflow: hidden;
@@ -354,7 +354,7 @@
     .summer-tag {
       display: inline-block;
       background: var(--pink);
-      color: white;
+      color: var(--navy);
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -499,7 +499,7 @@
     .tour-img-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(26, 42, 108, 0.65) 0%, transparent 55%);
+      background: linear-gradient(to top, rgba(51, 65, 85, 0.65) 0%, transparent 55%);
     }
 
     .tour-duration {
@@ -507,7 +507,7 @@
       top: 14px;
       left: 14px;
       background: var(--pink);
-      color: white;
+      color: var(--navy);
       font-size: 0.72rem;
       font-weight: 700;
       padding: 5px 12px;
@@ -519,7 +519,7 @@
       position: absolute;
       top: 14px;
       right: 14px;
-      background: rgba(26, 42, 108, 0.85);
+      background: rgba(51, 65, 85, 0.85);
       color: white;
       font-size: 0.65rem;
       font-weight: 600;
@@ -647,7 +647,7 @@
     }
 
     .dest-pill.active {
-      box-shadow: 0 4px 15px rgba(26, 42, 108, 0.2);
+      box-shadow: 0 4px 15px rgba(51, 65, 85, 0.2);
     }
 
     .dest-panel {
@@ -676,7 +676,7 @@
 
     .dest-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 45px rgba(26, 42, 108, 0.22);
+      box-shadow: 0 20px 45px rgba(51, 65, 85, 0.22);
     }
 
     .dest-card img {
@@ -694,8 +694,8 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(to top, 
-        rgba(26, 42, 108, 0.95) 0%, 
-        rgba(26, 42, 108, 0.5) 35%, 
+        rgba(51, 65, 85, 0.95) 0%, 
+        rgba(51, 65, 85, 0.5) 35%, 
         transparent 70%);
       transition: opacity 0.4s;
     }
@@ -867,7 +867,7 @@
 
     .corp-svc-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(26, 42, 108, 0.08);
+      box-shadow: 0 15px 35px rgba(51, 65, 85, 0.08);
       border-bottom-color: var(--navy);
     }
 
@@ -937,7 +937,7 @@
     .corp-dest-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(26, 42, 108, 0.9) 0%, transparent 60%);
+      background: linear-gradient(to top, rgba(51, 65, 85, 0.9) 0%, transparent 60%);
     }
 
     .corp-dest-content {
@@ -1057,7 +1057,7 @@
       right: -120px;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(233, 30, 140, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(147, 197, 253, 0.1) 0%, transparent 70%);
     }
 
     .group-feature-inner {
@@ -1100,8 +1100,8 @@
     .perk-icon {
       width: 44px;
       height: 44px;
-      background: rgba(233, 30, 140, 0.15);
-      border: 1px solid rgba(233, 30, 140, 0.25);
+      background: rgba(147, 197, 253, 0.15);
+      border: 1px solid rgba(147, 197, 253, 0.25);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -1173,7 +1173,7 @@
 
     .gcm-badge {
       display: inline-block;
-      background: rgba(233, 30, 140, 0.2);
+      background: rgba(147, 197, 253, 0.2);
       color: var(--pink);
       font-size: 0.65rem;
       font-weight: 700;
@@ -1213,7 +1213,7 @@
       left: 16.67%;
       width: 66.66%;
       height: 2px;
-      background: linear-gradient(90deg, var(--pink), rgba(233, 30, 140, 0.1));
+      background: linear-gradient(90deg, var(--pink), rgba(147, 197, 253, 0.1));
       z-index: 0;
     }
 
@@ -1249,7 +1249,7 @@
       position: absolute;
       inset: -6px;
       border-radius: 50%;
-      border: 2px dashed rgba(233, 30, 140, 0.3);
+      border: 2px dashed rgba(147, 197, 253, 0.3);
     }
 
     .step-item h3 {
@@ -1293,7 +1293,7 @@
 
     .style-item:hover {
       border-color: var(--pink);
-      background: rgba(233, 30, 140, 0.04);
+      background: rgba(147, 197, 253, 0.04);
       transform: translateY(-4px);
       box-shadow: var(--shadow-sm);
     }
@@ -1450,7 +1450,7 @@
     .form-group textarea:focus {
       outline: none;
       border-color: var(--pink);
-      box-shadow: 0 0 0 3px rgba(233, 30, 140, 0.08);
+      box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.08);
     }
 
     .form-submit {
@@ -1590,7 +1590,7 @@
 
     .blog-tag {
       display: inline-block;
-      background: rgba(233, 30, 140, 0.1);
+      background: rgba(147, 197, 253, 0.1);
       color: var(--pink);
       font-size: 0.7rem;
       font-weight: 700;

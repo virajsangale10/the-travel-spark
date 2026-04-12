@@ -4,30 +4,30 @@ $rootNavbar = @'
   <nav class="navbar" id="navbar">
     <div class="container">
       <div class="navbar-inner">
-        <a href="index.html" class="navbar-logo">
-          <img src="assets/images/Logo-TTS.png" alt="The Travel Spark" />
-        </a>
-        <ul class="navbar-links">
-          <li><a href="index.html">Home</a></li>
-          <li>
-            <span>Holiday Packages <span class="chevron">▾</span></span>
-            <ul class="dropdown">
-              <li><a href="packages/international.html">🌍 International Holidays</a></li>
-              <li><a href="packages/group-tours.html">👥 Group Tours</a></li>
-              <li><a href="packages/domestic.html">🇮🇳 Explore India</a></li>
-              <li><a href="cruises.html">🛳️ Luxury Cruises</a></li>
-            </ul>
-          </li>
-          <li><a href="corporate-travel.html">Corporate Travel</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="navbar-cta">
-          <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
-          <a href="contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
-          <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-        </div>
+        <ul class="navbar-links" style="margin-right: auto;">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <span>Holiday Packages <span class="chevron">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="packages/international.html">🌍 International Holidays</a></li>
+            <li><a href="packages/group-tours.html">👥 Group Tours</a></li>
+            <li><a href="packages/domestic.html">🇮🇳 Explore India</a></li>
+            <li><a href="cruises.html">🛳️ Luxury Cruises</a></li>
+          </ul>
+        </li>
+        <li><a href="corporate-travel.html">Corporate Travel</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="contact.html" class="navbar-phone hide-mobile" style="font-size: 1.25rem; text-decoration: none;" title="Contact Us">📞</a>
+        <a href="contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+      <a href="index.html" class="navbar-logo">
+        <span class="logo-text-new">The Travel<span class="spark-mix">Spark</span></span>
+      </a>
       </div>
     </div>
   </nav>
@@ -55,8 +55,7 @@ $subfolderNavbar = @'
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="navbar-inner">
-                <a href="../index.html" class="navbar-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></a>
-                <ul class="navbar-links">
+                <ul class="navbar-links" style="margin-right: auto;">
                     <li><a href="../index.html">Home</a></li>
                     <li>
                         <span>Holiday Packages <span class="chevron">▾</span></span>
@@ -73,10 +72,11 @@ $subfolderNavbar = @'
                     <li><a href="../contact.html">Contact</a></li>
                 </ul>
                 <div class="navbar-cta">
-                    <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
+                    <a href="../contact.html" class="navbar-phone hide-mobile" style="font-size: 1.25rem; text-decoration: none;" title="Contact Us">📞</a>
                     <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
                     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
                 </div>
+                <a href="../index.html" class="navbar-logo"><span class="logo-text-new">The Travel<span class="spark-mix">Spark</span></span></a>
             </div>
         </div>
     </nav>
@@ -104,8 +104,7 @@ $legalNavbar = @'
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="navbar-inner">
-                <a href="../index.html" class="navbar-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></a>
-                <ul class="navbar-links">
+                <ul class="navbar-links" style="margin-right: auto;">
                     <li><a href="../index.html">Home</a></li>
                     <li>
                         <span>Holiday Packages <span class="chevron">▾</span></span>
@@ -122,10 +121,11 @@ $legalNavbar = @'
                     <li><a href="../contact.html">Contact</a></li>
                 </ul>
                 <div class="navbar-cta">
-                    <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
+                    <a href="../contact.html" class="navbar-phone hide-mobile" style="font-size: 1.25rem; text-decoration: none;" title="Contact Us">📞</a>
                     <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
                     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
                 </div>
+                <a href="../index.html" class="navbar-logo"><span class="logo-text-new">The Travel<span class="spark-mix">Spark</span></span></a>
             </div>
         </div>
     </nav>
@@ -164,7 +164,7 @@ foreach ($file in $targetFiles) {
     }
     
     # Check if the file has mobileMenu
-    $patternFull = '(?s)<nav class="navbar"[^>]*>.*?<div class="mobile-menu"[^>]*>.*?</div>'
+    $patternFull = '(?s)<nav class="navbar"[^>]*>.*?<div class="mobile-menu"[^>]*>.*?</a>\s*</div>'
     $patternNavOnly = '(?s)<nav class="navbar"[^>]*>.*?</nav>'
 
     if ($content -match $patternFull) {

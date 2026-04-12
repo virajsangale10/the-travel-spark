@@ -15,10 +15,7 @@
     <nav class="navbar" id="navbar">
       <div class="container">
         <div class="navbar-inner">
-          <a href="${prefix}index.html" class="navbar-logo">
-            <img src="${prefix}assets/images/Logo-TTS.png" alt="The Travel Spark" />
-          </a>
-          <ul class="navbar-links">
+          <ul class="navbar-links" style="margin-right: auto;">
             <li><a href="${prefix}index.html">Home</a></li>
             <li>
               <span>Holiday Packages <span class="chevron">▾</span></span>
@@ -35,10 +32,13 @@
             <li><a href="${prefix}contact.html">Contact</a></li>
           </ul>
           <div class="navbar-cta">
-            <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
+            <a href="${prefix}contact.html" class="navbar-phone hide-mobile" style="font-size: 1.25rem; text-decoration: none;" title="Contact Us">📞</a>
             <a href="${prefix}contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
             <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
           </div>
+          <a href="${prefix}index.html" class="navbar-logo">
+            <span class="logo-text-new">The Travel<span class="spark-mix">Spark</span></span>
+          </a>
         </div>
       </div>
     </nav>

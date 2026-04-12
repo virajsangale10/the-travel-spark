@@ -1,6 +1,7 @@
 /* =============================================
    THE TRAVEL SPARK — navbar.css
    ============================================= */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 .navbar {
   position: fixed;
@@ -74,24 +75,31 @@
 /* New Text Logo Style */
 .logo-text-new {
   font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
   color: var(--navy);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   display: flex;
   align-items: center;
   gap: 6px;
   line-height: 1;
 }
 
-.logo-text-new i {
+.spark-mix {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
   color: var(--pink);
-  font-style: italic;
   font-weight: 700;
+  letter-spacing: 0.02em;
+  transform: translateY(-2px);
 }
 
 .navbar:not(.scrolled) .logo-text-new {
   color: var(--white);
+}
+
+.navbar:not(.scrolled) .spark-mix {
+  color: var(--pink); /* You can also try var(--white) if pink doesn't pop, but pink+white is good */
 }
 
 /* Nav Links */

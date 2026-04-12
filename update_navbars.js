@@ -21,9 +21,11 @@ findHtmlFiles(rootDir);
 const rootNavbar = `  <nav class="navbar" id="navbar">
     <div class="container">
       <div class="navbar-inner">
-        <a href="index.html" class="navbar-logo">
-          <img src="assets/images/Logo-TTS.png" alt="The Travel Spark" />
-        </a>
+        <div class="navbar-cta">
+          <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
+          <a href="contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
+          <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
         <ul class="navbar-links">
           <li><a href="index.html">Home</a></li>
           <li>
@@ -40,11 +42,9 @@ const rootNavbar = `  <nav class="navbar" id="navbar">
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="navbar-cta">
-          <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
-          <a href="contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
-          <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-        </div>
+        <a href="index.html" class="navbar-logo">
+          <span class="logo-text-new">The Travel<span class="spark-mix">Spark</span></span>
+        </a>
       </div>
     </div>
   </nav>
@@ -70,7 +70,11 @@ const rootNavbar = `  <nav class="navbar" id="navbar">
 const subfolderNavbar = `    <nav class="navbar" id="navbar">
         <div class="container">
             <div class="navbar-inner">
-                <a href="../index.html" class="navbar-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></a>
+                <div class="navbar-cta">
+                    <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
+                    <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
+                    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+                </div>
                 <ul class="navbar-links">
                     <li><a href="../index.html">Home</a></li>
                     <li>
@@ -87,11 +91,7 @@ const subfolderNavbar = `    <nav class="navbar" id="navbar">
                     <li><a href="../about.html">About</a></li>
                     <li><a href="../contact.html">Contact</a></li>
                 </ul>
-                <div class="navbar-cta">
-                    <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
-                    <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
-                    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-                </div>
+                <a href="../index.html" class="navbar-logo"><span class="logo-text-new">The Travel<span class="spark-mix">Spark</span></span></a>
             </div>
         </div>
     </nav>
@@ -117,7 +117,11 @@ const subfolderNavbar = `    <nav class="navbar" id="navbar">
 const legalFolderNavbar = `    <nav class="navbar" id="navbar">
         <div class="container">
             <div class="navbar-inner">
-                <a href="../index.html" class="navbar-logo"><img src="../assets/images/Logo-TTS.png" alt="The Travel Spark" /></a>
+                <div class="navbar-cta">
+                    <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
+                    <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
+                    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+                </div>
                 <ul class="navbar-links">
                     <li><a href="../index.html">Home</a></li>
                     <li>
@@ -134,11 +138,7 @@ const legalFolderNavbar = `    <nav class="navbar" id="navbar">
                     <li><a href="../about.html">About</a></li>
                     <li><a href="../contact.html">Contact</a></li>
                 </ul>
-                <div class="navbar-cta">
-                    <a href="tel:+919421189999" class="navbar-phone hide-mobile">📞 +91 9421189999</a>
-                    <a href="../contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
-                    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-                </div>
+                <a href="../index.html" class="navbar-logo"><span class="logo-text-new">The Travel<span class="spark-mix">Spark</span></span></a>
             </div>
         </div>
     </nav>
@@ -161,7 +161,7 @@ const legalFolderNavbar = `    <nav class="navbar" id="navbar">
         <a href="tel:+919421189999" style="color:var(--pink);font-weight:700;">📞 +91 9421189999</a>
     </div>`;
 
-const regex = /<nav class="navbar" id="navbar">[\s\S]*?<div class="mobile-menu" id="mobileMenu">[\s\S]*?<\/div>/;
+const regex = /<nav class="navbar" id="navbar">[\s\S]*?<div class="mobile-menu" id="mobileMenu">[\s\S]*?<\/a>\s*<\/div>/;
 
 let updatedCount = 0;
 
