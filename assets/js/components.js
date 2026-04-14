@@ -37,7 +37,7 @@
             <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
           </div>
           <a href="${prefix}index.html" class="navbar-logo">
-            <span class="logo-text-new">The Travel<span class="spark-mix">Spark</span></span>
+            <span class="logo-text-new">The Travel&nbsp;<span class="spark-mix">Spark</span></span>
           </a>
         </div>
       </div>
@@ -57,7 +57,7 @@
       <a href="${prefix}about.html">About</a>
       <a href="${prefix}contact.html">Contact</a>
       <br/>
-      <a href="tel:+919421189999" style="color:var(--pink);font-weight:700;">&#128222; +91 9421189999</a>
+      <a href="tel:+919421189999" style="color:#E05A00;font-weight:700;">&#128222; +91 9421189999</a>
     </div>
     `;
 

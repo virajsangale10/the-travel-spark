@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="The Travel Spark — Customised Holidays, Group Tours & Corporate Travel. Your trusted travel partner for unforgettable experiences." />
-  <title>The Travel Spark — Ignite Your Journey</title>
+    content="The Travel Spark &rdquo; Customised Holidays, Group Tours & Corporate Travel. Your trusted travel partner for unforgettable experiences." />
+  <title>The Travel Spark &rdquo; Ignite Your Journey</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Nunito:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
@@ -20,327 +20,208 @@
   <link rel="stylesheet" href="assets/css/footer.css" />
 
   <style>
-    /* ── Promo Banner ── */
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Promo Banner &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
     #promoBanner {
-      background: linear-gradient(90deg, var(--pink) 0%, #005B46 100%);
+      background: linear-gradient(90deg, #E05A00 0%, #c44f00 100%);
       text-align: center;
       padding: 10px 40px;
+      font-family: 'Nunito', system-ui, sans-serif;
       font-size: 0.82rem;
       font-weight: 600;
-      color: var(--navy);
+      color: #fff;
       position: relative;
       z-index: 1001;
     }
-
-    #promoBanner a {
-      color: var(--navy);
-      text-decoration: underline;
-      margin-left: 8px;
-    }
-
+    #promoBanner a { color: #fff; text-decoration: underline; margin-left: 8px; }
     #promoBanner .cls {
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: var(--navy);
-      font-size: 1.2rem;
-      cursor: pointer;
-      opacity: 0.7;
-      line-height: 1;
+      position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;
+      opacity: 0.7; line-height: 1;
     }
 
-    /* ── Hero ── */
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Hero &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
     .hero {
-      min-height: 100vh;
+      background: #FFF8F0;
+      min-height: auto;
+      padding: 100px 0 60px;
       position: relative;
       display: flex;
       align-items: center;
       overflow: hidden;
-      background: var(--navy);
     }
 
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1800&q=80') center/cover no-repeat;
-      opacity: 0.28;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(51, 65, 85, 0.96) 0%, rgba(51, 65, 85, 0.7) 55%, rgba(51, 65, 85, 0.35) 100%);
-    }
-
-    /* Pink spark accent */
-    .hero-spark {
-      position: absolute;
-      top: 15%;
-      right: 8%;
-      width: 360px;
-      height: 360px;
-      background: radial-gradient(circle, rgba(147, 197, 253, 0.18) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero-spark2 {
-      position: absolute;
-      bottom: 20%;
-      right: 25%;
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
+    /* Hide old dark background elements */
+    .hero-bg, .hero-overlay, .hero-spark, .hero-spark2 { display: none; }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      padding: 130px 0 80px;
-      max-width: 700px;
+      padding: 0;
+      max-width: 640px;
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(147, 197, 253, 0.15);
-      border: 1px solid rgba(147, 197, 253, 0.35);
-      color: var(--pink);
-      font-size: 0.76rem;
+      background: #E8F5E8;
+      border: 1.5px solid #6BBF6B;
+      color: #2E7D2E;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      padding: 8px 16px;
-      border-radius: 100px;
-      margin-bottom: 24px;
+      padding: 7px 16px;
+      border-radius: 50px;
+      margin-bottom: 22px;
     }
 
     .hero-badge .dot {
-      width: 7px;
-      height: 7px;
-      background: var(--pink);
+      width: 7px; height: 7px;
+      background: #2E7D2E;
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
 
     @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1)
-      }
-
-      50% {
-        opacity: .5;
-        transform: scale(1.4)
-      }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .5; transform: scale(1.4); }
     }
 
     .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 6vw, 4.8rem);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.08;
-      margin-bottom: 24px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(2.6rem, 5vw, 3.6rem);
+      font-weight: 900;
+      color: #1A2E1A;
+      line-height: 1.05;
+      margin-bottom: 22px;
     }
 
     .hero h1 .accent {
-      color: var(--pink);
+      color: #E05A00;
       font-style: italic;
     }
 
     .hero-sub {
-      font-size: 1.1rem;
-      color: rgba(255, 255, 255, 0.72);
-      line-height: 1.75;
-      margin-bottom: 40px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 17px;
+      color: #666666;
+      line-height: 1.7;
+      margin-bottom: 36px;
       max-width: 520px;
+      font-weight: 400;
     }
 
     .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 56px;
+      margin-bottom: 48px;
     }
+
+    .hero-actions .btn-primary {
+      background: #E05A00;
+      color: #fff;
+      border: 2px solid #E05A00;
+      border-radius: 50px;
+      padding: 15px 32px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: none;
+    }
+    .hero-actions .btn-primary:hover { background: #c44f00; border-color: #c44f00; transform: translateY(-1px); }
+
+    .hero-actions .btn-outline {
+      background: #fff;
+      color: #0077B6;
+      border: 2px solid #0077B6;
+      border-radius: 50px;
+      padding: 15px 32px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: none;
+    }
+    .hero-actions .btn-outline:hover { background: #e8f4fb; transform: translateY(-1px); }
 
     .hero-stats {
       display: flex;
-      gap: 44px;
+      gap: 36px;
       flex-wrap: wrap;
     }
 
     .hero-stat .num {
-      font-family: var(--font-display);
-      font-size: 2.1rem;
-      font-weight: 700;
-      color: var(--pink);
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: #E05A00;
       line-height: 1;
     }
 
     .hero-stat .lbl {
-      font-size: 0.78rem;
-      color: rgba(255, 255, 255, 0.55);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
+      color: #888888;
       margin-top: 4px;
+      font-weight: 500;
     }
 
-    /* Search bar */
-    .hero-search {
-      position: absolute;
-      bottom: -36px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 900px;
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-lg);
-      padding: 22px 28px;
-      z-index: 10;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr auto;
-      gap: 16px;
-      align-items: end;
-    }
-
-    .search-field label {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--gray-600);
-      margin-bottom: 6px;
-    }
-
-    .search-field select,
-    .search-field input {
-      width: 100%;
-      padding: 11px 13px;
-      border: 1.5px solid var(--gray-300);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      color: var(--text);
-      background: var(--white);
-      transition: border-color 0.2s;
-      appearance: none;
-    }
-
-    .search-field select:focus,
-    .search-field input:focus {
-      outline: none;
-      border-color: var(--pink);
-      box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.1);
-    }
-
-    .search-btn {
-      background: var(--pink);
-      color: white;
-      border: none;
-      padding: 12px 26px;
-      border-radius: var(--radius-sm);
-      font-weight: 700;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: var(--transition);
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .search-btn:hover {
-      background: var(--pink-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-pink);
-    }
-
-    @media(max-width:768px) {
-      .hero-search {
-        grid-template-columns: 1fr;
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
-        margin: 32px auto 0;
-        width: 92%;
-      }
-    }
-
-    /* ── Stats Strip ── */
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Stats Strip &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
     .stats-strip {
-      background: var(--navy);
-      padding: 70px 0 40px;
-      margin-top: 36px;
+      background: #0077B6;
+      padding: 40px 0;
+      margin-top: 0;
     }
 
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      gap: 0;
       text-align: center;
     }
 
     .stat-item {
       padding: 28px 16px;
-      border-right: 1px solid rgba(255, 255, 255, 0.07);
+      border-right: 1px solid rgba(255,255,255,0.2);
     }
+    .stat-item:last-child { border-right: none; }
 
-    .stat-item:last-child {
-      border-right: none;
-    }
-
-    .stat-icon {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
+    .stat-icon { font-size: 1.8rem; margin-bottom: 8px; }
 
     .stat-num {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: var(--pink);
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #FFD166;
       line-height: 1;
       margin-bottom: 6px;
     }
 
     .stat-lbl {
-      font-size: 0.82rem;
-      color: rgba(255, 255, 255, 0.55);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
     }
 
     @media(max-width:640px) {
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stat-item:nth-child(2) {
-        border-right: none;
-      }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
     }
 
-    /* ── Summer Special Banner ── */
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Summer Special Banner &#8594; CTA Strip &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
     .summer-banner {
-      background: linear-gradient(135deg, var(--navy) 0%, #334155 100%);
-      padding: 60px 0;
+      background: #E05A00;
+      padding: 56px 0;
       position: relative;
       overflow: hidden;
     }
 
-    .summer-banner::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1400&q=70') center/cover;
-      opacity: 0.15;
-    }
+    .summer-banner::after { display: none; }
 
     .summer-inner {
       position: relative;
@@ -353,45 +234,64 @@
 
     .summer-tag {
       display: inline-block;
-      background: var(--pink);
-      color: var(--navy);
-      font-size: 0.7rem;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       padding: 6px 14px;
-      border-radius: 100px;
-      margin-bottom: 18px;
+      border-radius: 50px;
+      margin-bottom: 16px;
     }
 
     .summer-inner h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3.5vw, 3rem);
-      color: white;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 14px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      color: #fff;
+      font-weight: 900;
+      font-style: italic;
+      line-height: 1.15;
+      margin-bottom: 12px;
     }
 
     .summer-inner p {
-      color: rgba(255, 255, 255, 0.65);
-      font-size: 0.95rem;
-      margin-bottom: 28px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      color: rgba(255,255,255,0.80);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      line-height: 1.65;
     }
 
     .summer-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 0.8rem;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.9);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
       font-weight: 600;
       padding: 8px 16px;
-      border-radius: 100px;
-      margin-bottom: 28px;
+      border-radius: 50px;
+      margin-bottom: 24px;
     }
+
+    .summer-inner .btn-primary {
+      background: #fff;
+      color: #E05A00;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-weight: 700;
+      padding: 12px 28px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: none;
+    }
+    .summer-inner .btn-primary:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
 
     .summer-cards {
       display: grid;
@@ -400,152 +300,133 @@
     }
 
     .mini-tour-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 14px;
       overflow: hidden;
-      transition: var(--transition);
+      transition: background 0.2s;
     }
+    .mini-tour-card:hover { background: rgba(255,255,255,0.2); transform: translateY(-3px); }
 
-    .mini-tour-card:hover {
-      background: rgba(255, 255, 255, 0.14);
-      transform: translateY(-3px);
-    }
-
-    .mini-tour-card img {
-      width: 100%;
-      height: 130px;
-      object-fit: cover;
-    }
-
-    .mini-tour-card .mc-body {
-      padding: 14px;
-    }
+    .mini-tour-card img { width: 100%; height: 130px; object-fit: cover; }
+    .mini-tour-card .mc-body { padding: 14px; }
 
     .mini-tour-card h4 {
-      font-family: var(--font-display);
+      font-family: 'Fraunces', Georgia, serif;
       font-size: 0.95rem;
       color: white;
       margin-bottom: 4px;
+      font-weight: 700;
     }
 
     .mini-tour-card .mc-dur {
-      font-size: 0.72rem;
-      color: var(--pink);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,0.8);
       font-weight: 600;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .mini-tour-card .mc-dest {
-      font-size: 0.72rem;
-      color: rgba(255, 255, 255, 0.5);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
       line-height: 1.4;
     }
 
     @media(max-width:768px) {
-      .summer-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .summer-cards {
-        display: none;
-      }
+      .summer-inner { grid-template-columns: 1fr; }
+      .summer-cards { display: none; }
     }
 
-    /* ── Featured Tours ── */
-    .featured-tours {
-      background: var(--off-white);
-    }
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Featured Tours &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    .featured-tours { background: #F7F7F7; }
 
     .section-header {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      margin-bottom: 44px;
+      margin-bottom: 40px;
       flex-wrap: wrap;
       gap: 16px;
     }
 
     .tour-card {
-      background: var(--white);
-      border-radius: var(--radius);
+      background: #FFFFFF;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
+      border: 1.5px solid #EEEEEE;
+      transition: border-color 0.2s, transform 0.2s;
+      box-shadow: none;
     }
-
     .tour-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+      border-color: #E05A00;
+      box-shadow: none;
     }
 
     .tour-img {
       position: relative;
-      height: 220px;
+      height: 200px;
       overflow: hidden;
+      background: #5BA4CF;
     }
 
     .tour-img img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
       transition: transform 0.5s;
     }
+    .tour-card:hover .tour-img img { transform: scale(1.06); }
 
-    .tour-card:hover .tour-img img {
-      transform: scale(1.08);
-    }
-
-    .tour-img-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(51, 65, 85, 0.65) 0%, transparent 55%);
-    }
+    /* Remove dark overlay on images */
+    .tour-img-overlay { display: none; }
 
     .tour-duration {
       position: absolute;
-      top: 14px;
-      left: 14px;
-      background: var(--pink);
-      color: var(--navy);
-      font-size: 0.72rem;
+      top: 12px;
+      left: 12px;
+      background: rgba(255,255,255,0.85);
+      color: #1A2E1A;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 11px;
       font-weight: 700;
       padding: 5px 12px;
-      border-radius: 100px;
-      letter-spacing: 0.05em;
+      border-radius: 50px;
+      letter-spacing: 0.04em;
     }
 
     .tour-inclusive {
       position: absolute;
-      top: 14px;
-      right: 14px;
-      background: rgba(51, 65, 85, 0.85);
+      top: 12px;
+      right: 12px;
+      background: rgba(224,90,0,0.85);
       color: white;
-      font-size: 0.65rem;
-      font-weight: 600;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
       padding: 4px 10px;
-      border-radius: 100px;
+      border-radius: 50px;
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
-    .tour-body {
-      padding: 20px;
-    }
+    .tour-body { padding: 18px; }
 
     .tour-body h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 8px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1A2E1A;
+      margin-bottom: 6px;
     }
 
     .tour-destinations {
-      font-size: 0.78rem;
-      color: var(--text-light);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 12px;
+      color: #AAAAAA;
       line-height: 1.5;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -556,66 +437,58 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 16px;
-      border-top: 1px solid var(--gray-100);
+      padding-top: 14px;
+      border-top: 1.5px solid #EEEEEE;
     }
 
     .tour-price-label {
-      font-size: 0.72rem;
-      color: var(--gray-600);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 11px;
+      color: #AAAAAA;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
     }
 
     .tour-price {
-      font-family: var(--font-display);
-      font-size: 1.28rem;
-      font-weight: 700;
-      color: var(--navy);
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #1A2E1A;
     }
 
     .tour-book-btn {
-      background: var(--navy);
-      color: white;
+      background: transparent;
+      color: #E05A00;
+      border: 2px solid #E05A00;
       padding: 8px 18px;
-      border-radius: var(--radius-sm);
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: var(--transition);
+      border-radius: 50px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      transition: background 0.2s;
+      box-shadow: none;
     }
+    .tour-book-btn:hover { background: #FFF3EC; }
 
-    .tour-book-btn:hover {
-      background: var(--pink);
-    }
-
-    .swiper-nav {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .swiper-nav { display: flex; align-items: center; gap: 10px; }
 
     .swiper-btn {
-      width: 44px;
-      height: 44px;
+      width: 40px; height: 40px;
       border-radius: 50%;
-      background: var(--white);
-      border: 2px solid var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: #FFFFFF;
+      border: 1.5px solid #EEEEEE;
+      display: flex; align-items: center; justify-content: center;
       cursor: pointer;
       font-size: 1rem;
-      color: var(--navy);
-      transition: var(--transition);
+      color: #1A2E1A;
+      transition: all 0.2s;
+      box-shadow: none;
     }
+    .swiper-btn:hover { background: #E05A00; color: white; border-color: #E05A00; }
 
-    .swiper-btn:hover {
-      background: var(--navy);
-      color: white;
-    }
-
-    /* ── Year Round Destinations ── */
-    .yr-destinations {
-      background: var(--white);
-    }
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Year Round Destinations &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    .yr-destinations { background: #FFFFFF; }
 
     .dest-pills {
       display: flex;
@@ -629,160 +502,111 @@
       align-items: center;
       gap: 8px;
       padding: 10px 24px;
-      border-radius: 100px;
-      border: 2px solid var(--gray-300);
-      background: transparent;
-      font-size: 0.9rem;
+      border-radius: 50px;
+      border: 2px solid #E0E0E0;
+      background: #FFFFFF;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
       font-weight: 600;
-      color: var(--text-light);
+      color: #888888;
       cursor: pointer;
-      transition: var(--transition);
+      transition: all 0.2s;
     }
-
-    .dest-pill:hover,
+    .dest-pill:hover { border-color: #1A2E1A; color: #1A2E1A; }
     .dest-pill.active {
-      background: var(--navy);
-      border-color: var(--navy);
-      color: white;
+      background: #1A2E1A;
+      border-color: #1A2E1A;
+      color: #FFFFFF;
     }
 
-    .dest-pill.active {
-      box-shadow: 0 4px 15px rgba(51, 65, 85, 0.2);
-    }
+    .dest-panel { display: none; }
+    .dest-panel.active { display: block; }
 
-    .dest-panel {
-      display: none;
-    }
-
-    .dest-panel.active {
-      display: block;
-    }
-
-    .yr-swiper {
-      padding-bottom: 50px !important;
-    }
+    .yr-swiper { padding-bottom: 50px !important; }
 
     .dest-card {
       position: relative;
-      border-radius: var(--radius);
+      border-radius: 16px;
       overflow: hidden;
-      height: 420px;
+      height: 380px;
       cursor: pointer;
       text-decoration: none;
       display: block;
-      transition: var(--transition);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s;
+      border: 1.5px solid #EEEEEE;
+      box-shadow: none;
     }
-
-    .dest-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 45px rgba(51, 65, 85, 0.22);
-    }
+    .dest-card:hover { transform: translateY(-6px); }
 
     .dest-card img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
-      transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transition: transform 0.7s cubic-bezier(0.2,0.8,0.2,1);
     }
-
-    .dest-card:hover img {
-      transform: scale(1.15);
-    }
+    .dest-card:hover img { transform: scale(1.1); }
 
     .dest-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, 
-        rgba(51, 65, 85, 0.95) 0%, 
-        rgba(51, 65, 85, 0.5) 35%, 
-        transparent 70%);
-      transition: opacity 0.4s;
+      background: linear-gradient(to top, rgba(26,46,26,0.75) 0%, rgba(26,46,26,0.18) 50%, transparent 80%);
     }
 
     .dest-info {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 34px;
+      bottom: 0; left: 0; right: 0;
+      padding: 28px;
       z-index: 2;
     }
 
     .dest-card .dest-badge {
       position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      color: white;
-      padding: 6px 14px;
-      border-radius: 100px;
-      font-size: 0.7rem;
+      top: 16px; right: 16px;
+      background: rgba(255,255,255,0.9);
+      color: #1A2E1A;
+      padding: 5px 12px;
+      border-radius: 50px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      letter-spacing: 0.08em;
       z-index: 3;
     }
 
     .dest-info h3 {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      font-weight: 700;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 900;
       color: white;
       margin-bottom: 6px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
 
     .dest-info p {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.85);
-      margin-bottom: 22px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 18px;
     }
 
     .dest-info .exp-btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: var(--pink);
+      gap: 8px;
+      background: #E05A00;
       color: white;
-      padding: 12px 24px;
-      border-radius: var(--radius-sm);
-      font-size: 0.9rem;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
       font-weight: 700;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1.5px solid var(--pink);
-      overflow: hidden;
-      position: relative;
+      transition: background 0.2s;
+      border: none;
     }
-
-    .dest-info .exp-btn::after {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: 0.5s;
-    }
-
-    .dest-card:hover .exp-btn::after {
-      left: 100%;
-    }
-
-    .dest-card:hover .exp-btn {
-      background: white;
-      color: var(--pink);
-      border-color: white;
-      transform: translateX(5px);
-    }
+    .dest-card:hover .exp-btn { background: #c44f00; }
 
     .yr-nav-wrapper {
       position: absolute;
-      top: 50%;
-      left: -20px;
-      right: -20px;
+      top: 50%; left: -20px; right: -20px;
       transform: translateY(-50%);
       display: flex;
       justify-content: space-between;
@@ -791,429 +615,257 @@
     }
 
     .yr-nav-btn {
-      width: 50px;
-      height: 50px;
-      background: var(--white);
-      color: var(--navy);
-      border: none;
+      width: 46px; height: 46px;
+      background: #FFFFFF;
+      color: #1A2E1A;
+      border: 1.5px solid #EEEEEE;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
       cursor: pointer;
-      box-shadow: var(--shadow-md);
-      transition: var(--transition);
+      transition: all 0.2s;
       pointer-events: all;
+      box-shadow: none;
     }
+    .yr-nav-btn:hover { background: #E05A00; color: white; border-color: #E05A00; }
+    .yr-nav-btn.swiper-button-disabled { opacity: 0; pointer-events: none; }
 
-    .yr-nav-btn:hover {
-      background: var(--pink);
-      color: white;
-      transform: scale(1.1);
-    }
+    @media(max-width: 1300px) { .yr-nav-wrapper { display: none; } }
 
-    .yr-nav-btn.swiper-button-disabled {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    @media(max-width: 1300px) {
-      .yr-nav-wrapper {
-        display: none;
-      }
-    }
-
-
-    /* ── Corporate Travel Solutions ── */
-    .corp-solutions {
-      background: #F8F9FA;
-      padding: 100px 0;
-    }
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Corporate Travel Solutions &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    .corp-solutions { background: #F7F7F7; padding: 3rem 0; }
 
     .corp-services-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      margin-bottom: 80px;
+      gap: 1.2rem;
+      margin-bottom: 60px;
     }
 
     .corp-svc-card {
-      background: var(--white);
-      padding: 40px 30px;
-      border-radius: var(--radius);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-      transition: all 0.3s ease;
-      border-bottom: 3px solid transparent;
-      height: 100%;
+      background: #FFFFFF;
+      padding: 36px 28px;
+      border-radius: 16px;
+      border: 1.5px solid #EEEEEE;
+      box-shadow: none;
+      transition: border-color 0.2s, transform 0.2s;
       text-align: center;
-      flex: 0 1 calc(33.33% - 20px);
-      min-width: 300px;
+      flex: 0 1 calc(33.33% - 0.8rem);
+      min-width: 280px;
     }
 
-    @media (max-width: 900px) {
-      .corp-svc-card {
-        flex: 0 1 calc(50% - 15px);
-        min-width: 250px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .corp-svc-card {
-        flex: 0 1 100%;
-      }
-    }
+    @media(max-width:900px) { .corp-svc-card { flex: 0 1 calc(50% - 0.6rem); min-width: 240px; } }
+    @media(max-width:600px) { .corp-svc-card { flex: 0 1 100%; } }
 
     .corp-svc-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(51, 65, 85, 0.08);
-      border-bottom-color: var(--navy);
+      transform: translateY(-5px);
+      border-color: #E05A00;
     }
 
-    .corp-svc-icon {
-      font-size: 2.2rem;
-      margin-bottom: 24px;
-      display: block;
-    }
+    .corp-svc-icon { font-size: 2rem; margin-bottom: 20px; display: block; }
 
     .corp-svc-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      color: var(--navy);
-      margin-bottom: 14px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.1rem;
+      color: #1A2E1A;
+      margin-bottom: 12px;
       font-weight: 700;
     }
 
     .corp-svc-card p {
-      font-size: 0.88rem;
-      color: var(--text-light);
-      line-height: 1.6;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
+      color: #777777;
+      line-height: 1.65;
     }
 
-    .corp-dest-header {
-      margin-bottom: 40px;
-      padding-top: 60px;
-      border-top: 1px solid var(--gray-200);
-    }
+    .corp-dest-header { margin-bottom: 36px; padding-top: 48px; border-top: 1.5px solid #EEEEEE; }
 
     .corp-dest-desc {
-      font-size: 1.1rem;
-      color: var(--navy);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
       font-weight: 700;
-      margin-bottom: 30px;
+      color: #E05A00;
+      margin-bottom: 24px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       justify-content: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
     .corp-dest-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
+      gap: 1.2rem;
     }
 
     .corp-dest-item {
       position: relative;
-      border-radius: var(--radius-sm);
+      border-radius: 12px;
       overflow: hidden;
-      height: 280px;
+      height: 260px;
       text-decoration: none;
       display: block;
+      border: 1.5px solid #EEEEEE;
     }
-
-    .corp-dest-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-
-    .corp-dest-item:hover img {
-      transform: scale(1.1);
-    }
+    .corp-dest-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+    .corp-dest-item:hover img { transform: scale(1.08); }
 
     .corp-dest-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(51, 65, 85, 0.9) 0%, transparent 60%);
+      background: linear-gradient(to top, rgba(26,46,26,0.8) 0%, transparent 60%);
     }
 
-    .corp-dest-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding: 18px;
-      color: white;
-    }
+    .corp-dest-content { position: absolute; bottom: 0; left: 0; padding: 16px; color: white; }
+    .corp-dest-content h4 { font-family: 'Fraunces', Georgia, serif; font-size: 1rem; font-weight: 700; margin-bottom: 3px; }
+    .corp-dest-content p { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; opacity: 0.8; line-height: 1.3; }
 
-    .corp-dest-content h4 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .corp-dest-content p {
-      font-size: 0.75rem;
-      opacity: 0.85;
-      line-height: 1.3;
-    }
-
-    @media (max-width: 1100px) {
-      .corp-dest-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 900px) {
+    @media(max-width:1100px) { .corp-dest-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media(max-width:900px) {
       .corp-services-grid { grid-template-columns: repeat(2, 1fr) !important; }
       .corp-svc-card { grid-column: span 1 !important; }
       .corp-dest-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 600px) {
+    @media(max-width:600px) {
       .corp-services-grid { grid-template-columns: 1fr !important; }
       .corp-dest-grid { grid-template-columns: 1fr; }
     }
 
-    /* ── Travel Styles (Illustrative) ── */
-    .travel-styles {
-      background: var(--white);
-      padding: 80px 0;
-    }
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Travel Styles &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    .travel-styles { background: #FFFFFF; padding: 3rem 0; }
 
     .styles-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 20px;
+      gap: 1.2rem;
+      margin-top: 40px;
     }
 
     .style-item {
-      background: #fdfdfd;
-      border: 2px solid #f0f0f0;
-      border-radius: 24px;
-      padding: 30px 20px;
-      text-align: center;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      cursor: default;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
+      padding: 24px 14px;
+      border-radius: 16px;
+      border: 1.5px solid #EEEEEE;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.2s;
+      text-align: center;
+      text-decoration: none;
     }
-
-    .style-item:hover {
-      transform: translateY(-12px) scale(1.03);
-      border-color: #e0e0e0;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-    }
+    .style-item:hover { border-color: #E05A00; transform: translateY(-4px); background: #FFF8F0; }
 
     .style-icon-wrapper {
-      width: 80px;
-      height: 80px;
+      width: 68px; height: 68px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      margin-bottom: 5px;
-      transition: transform 0.3s ease;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.2rem;
+      margin-bottom: 4px;
+      transition: transform 0.25s;
     }
-
-    .style-item:hover .style-icon-wrapper {
-      transform: scale(1.15) rotate(5deg);
-    }
+    .style-item:hover .style-icon-wrapper { transform: scale(1.12) rotate(5deg); }
 
     .style-item span {
+      font-family: 'Nunito', system-ui, sans-serif;
       font-weight: 700;
-      color: var(--navy);
-      font-size: 0.95rem;
-      font-family: var(--font-display);
+      color: #1A2E1A;
+      font-size: 14px;
     }
 
-    /* Illustrative colors */
-    .style-item.family .style-icon-wrapper { background: #E3F2FD; }
-    .style-item.india .style-icon-wrapper { background: #FFF3E0; }
-    .style-item.honeymoon .style-icon-wrapper { background: #FCE4EC; }
-    .style-item.visa .style-icon-wrapper { background: #E8F5E9; }
+    .style-item.family   .style-icon-wrapper { background: #E3F2FD; }
+    .style-item.india    .style-icon-wrapper { background: #FFF3E0; }
+    .style-item.honeymoon .style-icon-wrapper { background: #FFF0F0; }
+    .style-item.visa     .style-icon-wrapper { background: #E8F5E9; }
     .style-item.corporate .style-icon-wrapper { background: #F3E5F5; }
-    .style-item.groups .style-icon-wrapper { background: #E0F2F1; }
+    .style-item.groups   .style-icon-wrapper { background: #E0F2F1; }
 
-    @media (max-width: 1100px) {
-      .styles-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 600px) {
-      .styles-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-      .style-item { padding: 20px 15px; }
-      .style-icon-wrapper { width: 60px; height: 60px; font-size: 1.8rem; }
-    }
-    .group-feature {
-      background: var(--navy);
-      position: relative;
-      overflow: hidden;
-    }
+    @media(max-width:1100px) { .styles-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media(max-width:600px)  { .styles-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
 
-    .group-feature::before {
-      content: '';
-      position: absolute;
-      top: -120px;
-      right: -120px;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(147, 197, 253, 0.1) 0%, transparent 70%);
-    }
+    /* Group feature section &rdquo; now light */
+    .group-feature { background: #F7F7F7; position: relative; overflow: hidden; }
+    .group-feature::before { display: none; }
 
     .group-feature-inner {
       display: grid;
       grid-template-columns: 1fr 1.3fr;
       gap: 64px;
       align-items: center;
-      position: relative;
-      z-index: 1;
     }
 
-    .group-feature-left .section-label {
-      color: var(--pink);
-    }
+    .group-feature-left .section-label { color: #E05A00; }
+    .group-feature-left .section-title { color: #1A2E1A; }
+    .group-feature-left p { font-family: 'Nunito', system-ui, sans-serif; color: #666666; font-size: 15px; line-height: 1.7; margin-bottom: 28px; }
 
-    .group-feature-left .section-title {
-      color: white;
-    }
+    .group-perks { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
 
-    .group-feature-left p {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.95rem;
-      line-height: 1.75;
-      margin-bottom: 32px;
-    }
-
-    .group-perks {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-bottom: 36px;
-    }
-
-    .perk-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+    .perk-item { display: flex; align-items: center; gap: 14px; }
 
     .perk-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(147, 197, 253, 0.15);
-      border: 1px solid rgba(147, 197, 253, 0.25);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 44px; height: 44px;
+      background: #E8F5E8;
+      border: 1.5px solid #D4EDD4;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
       font-size: 1.2rem;
       flex-shrink: 0;
     }
 
-    .perk-text h4 {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: white;
-      margin-bottom: 2px;
-    }
+    .perk-text h4 { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; font-weight: 700; color: #1A2E1A; margin-bottom: 2px; }
+    .perk-text p  { font-family: 'Nunito', system-ui, sans-serif; font-size: 13px; color: #888888; }
 
-    .perk-text p {
-      font-size: 0.8rem;
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .group-cards-mini {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
+    .group-cards-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
 
     .gcm {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius);
+      background: #FFFFFF;
+      border: 1.5px solid #EEEEEE;
+      border-radius: 16px;
       overflow: hidden;
-      transition: var(--transition);
+      transition: border-color 0.2s, transform 0.2s;
     }
-
-    .gcm:hover {
-      background: rgba(255, 255, 255, 0.1);
-      transform: translateY(-4px);
-    }
-
-    .gcm img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .gcm-body {
-      padding: 16px;
-    }
-
-    .gcm-body h4 {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      color: white;
-      margin-bottom: 4px;
-    }
-
-    .gcm-dur {
-      font-size: 0.72rem;
-      color: var(--pink);
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .gcm-dest {
-      font-size: 0.72rem;
-      color: rgba(255, 255, 255, 0.45);
-      line-height: 1.4;
-    }
-
+    .gcm:hover { border-color: #E05A00; transform: translateY(-4px); }
+    .gcm img { width: 100%; height: 140px; object-fit: cover; }
+    .gcm-body { padding: 14px; }
+    .gcm-body h4 { font-family: 'Fraunces', Georgia, serif; font-size: 1rem; color: #1A2E1A; margin-bottom: 4px; font-weight: 700; }
+    .gcm-dur  { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #E05A00; font-weight: 700; margin-bottom: 4px; }
+    .gcm-dest { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #AAAAAA; line-height: 1.4; }
     .gcm-badge {
       display: inline-block;
-      background: rgba(147, 197, 253, 0.2);
-      color: var(--pink);
-      font-size: 0.65rem;
+      background: #E8F5E8;
+      color: #2E7D2E;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       padding: 3px 8px;
-      border-radius: 4px;
-      margin-top: 10px;
+      border-radius: 50px;
+      margin-top: 8px;
     }
 
-    @media(max-width:900px) {
-      .group-feature-inner {
-        grid-template-columns: 1fr;
-      }
+    @media(max-width:900px) { .group-feature-inner { grid-template-columns: 1fr; } .group-cards-mini { display: none; } }
 
-      .group-cards-mini {
-        display: none;
-      }
-    }
-
-    /* ── How It Works ── */
-    .how-it-works {
-      background: var(--off-white);
-    }
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; How It Works &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    .how-it-works { background: #F7F7F7; }
 
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
+      gap: 1.2rem;
       position: relative;
     }
 
     .steps-grid::before {
       content: '';
       position: absolute;
-      top: 44px;
-      left: 16.67%;
-      width: 66.66%;
+      top: 44px; left: 16.67%; width: 66.66%;
       height: 2px;
-      background: linear-gradient(90deg, var(--pink), rgba(147, 197, 253, 0.1));
+      background: linear-gradient(90deg, #E05A00, rgba(0,119,182,0.3));
       z-index: 0;
     }
 
@@ -1221,399 +873,237 @@
       text-align: center;
       position: relative;
       z-index: 1;
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 36px 28px;
-      box-shadow: var(--shadow-sm);
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 32px 24px;
+      border: 1.5px solid #EEEEEE;
+      box-shadow: none;
     }
 
     .step-num {
-      width: 88px;
-      height: 88px;
+      width: 80px; height: 80px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%);
+      background: #E05A00;
       color: white;
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.7rem;
+      font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
       position: relative;
-      box-shadow: var(--shadow-pink);
+      box-shadow: none;
     }
-
     .step-num::after {
       content: '';
       position: absolute;
-      inset: -6px;
+      inset: -5px;
       border-radius: 50%;
-      border: 2px dashed rgba(147, 197, 253, 0.3);
+      border: 2px dashed rgba(224,90,0,0.3);
     }
 
-    .step-item h3 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      color: var(--navy);
-      margin-bottom: 12px;
-    }
+    .step-item h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.05rem; font-weight: 700; color: #1A2E1A; margin-bottom: 10px; }
+    .step-item p  { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; color: #777777; line-height: 1.65; }
 
-    .step-item p {
-      font-size: 0.87rem;
-      color: var(--text-light);
-      line-height: 1.7;
-    }
-
-    /* ── Travel Styles ── */
-    .travel-styles {
-      background: var(--white);
-    }
-
-    .styles-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 14px;
-      margin-top: 48px;
-    }
-
-    .style-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      padding: 24px 12px;
-      border-radius: var(--radius);
-      border: 2px solid var(--gray-100);
-      cursor: pointer;
-      transition: var(--transition);
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .style-item:hover {
-      border-color: var(--pink);
-      background: rgba(147, 197, 253, 0.04);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .style-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 14px;
-      background: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      transition: var(--transition);
-    }
-
-    .style-item:hover .style-icon {
-      background: var(--pink);
-    }
-
-    .style-item span {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    @media(max-width:900px) {
-      .styles-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media(max-width:540px) {
-      .styles-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* ── Enquiry Section ── */
-    .enquiry-section {
-      background: var(--off-white);
-    }
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Enquiry Section &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    .enquiry-section { background: #F7F7F7; }
 
     .enquiry-wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 64px;
+      gap: 56px;
       align-items: center;
     }
 
     .enquiry-left h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 700;
-      color: var(--navy);
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: #1A2E1A;
       line-height: 1.2;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    .enquiry-left h2 .ac {
-      color: var(--pink);
-      font-style: italic;
-    }
+    .enquiry-left h2 .ac { color: #0077B6; font-style: italic; }
+    .enquiry-left > p { font-family: 'Nunito', system-ui, sans-serif; color: #666666; line-height: 1.7; margin-bottom: 28px; font-size: 15px; }
 
-    .enquiry-left>p {
-      color: var(--text-light);
-      line-height: 1.75;
-      margin-bottom: 32px;
-    }
-
-    .enquiry-benefits {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+    .enquiry-benefits { display: flex; flex-direction: column; gap: 12px; }
 
     .benefit-item {
       display: flex;
       align-items: center;
       gap: 12px;
-      font-size: 0.9rem;
-      color: var(--text);
-      font-weight: 500;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
+      color: #1A2E1A;
+      font-weight: 600;
     }
 
     .benefit-item .check {
-      width: 26px;
-      height: 26px;
-      background: var(--pink);
+      width: 24px; height: 24px;
+      background: #E05A00;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px;
       color: white;
       flex-shrink: 0;
     }
 
     .enquiry-form-box {
-      background: var(--white);
+      background: #FFFFFF;
       border-radius: 16px;
-      padding: 40px;
-      box-shadow: var(--shadow-md);
+      padding: 36px;
+      border: 1.5px solid #EEEEEE;
+      box-shadow: none;
     }
 
-    .enquiry-form-box h3 {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
+    .enquiry-form-box h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.35rem; color: #1A2E1A; margin-bottom: 6px; font-weight: 700; }
+    .enquiry-form-box .sub { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; color: #888888; margin-bottom: 24px; }
 
-    .enquiry-form-box .sub {
-      font-size: 0.84rem;
-      color: var(--text-light);
-      margin-bottom: 28px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form-group {
-      margin-bottom: 14px;
-    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { margin-bottom: 12px; }
 
     .form-group label {
       display: block;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 6px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1A2E1A;
+      margin-bottom: 5px;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
       width: 100%;
-      padding: 12px 14px;
-      border: 1.5px solid var(--gray-300);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      color: var(--text);
-      background: var(--white);
+      padding: 11px 14px;
+      border: 1.5px solid #EEEEEE;
+      border-radius: 10px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
+      color: #1A2E1A;
+      background: #FFFFFF;
       transition: border-color 0.2s;
       resize: vertical;
     }
-
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: var(--pink);
-      box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.08);
+      border-color: #E05A00;
+      box-shadow: none;
     }
 
     .form-submit {
       width: 100%;
       padding: 14px;
-      background: var(--navy);
+      background: #E05A00;
       color: white;
       border: none;
-      border-radius: var(--radius-sm);
-      font-family: var(--font-body);
-      font-size: 1rem;
-      font-weight: 600;
+      border-radius: 50px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
       cursor: pointer;
-      transition: var(--transition);
-      margin-top: 8px;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 6px;
+      box-shadow: none;
     }
-
-    .form-submit:hover {
-      background: var(--pink);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-pink);
-    }
+    .form-submit:hover { background: #c44f00; transform: translateY(-1px); }
 
     @media(max-width:900px) {
-      .enquiry-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
+      .enquiry-wrapper { grid-template-columns: 1fr; gap: 36px; }
+      .form-row { grid-template-columns: 1fr; }
     }
 
-    /* ── Testimonials ── */
-    .testimonials-section {
-      background: var(--white);
-    }
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Testimonials &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    .testimonials-section { background: #FFFFFF; }
 
     .testi-card {
-      background: var(--off-white);
-      border-radius: var(--radius);
-      padding: 28px;
+      background: #F7F7F7;
+      border-radius: 16px;
+      padding: 26px;
       height: 100%;
-      border: 1px solid var(--gray-100);
+      border: 1.5px solid #EEEEEE;
+      box-shadow: none;
     }
 
-    .testi-stars {
-      color: var(--pink);
-      font-size: 0.95rem;
-      margin-bottom: 14px;
-      letter-spacing: 2px;
-    }
+    .testi-stars { color: #E05A00; font-size: 0.95rem; margin-bottom: 12px; letter-spacing: 2px; }
 
     .testi-card p {
-      font-size: 0.9rem;
-      color: var(--text-light);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
+      color: #555555;
       line-height: 1.75;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       font-style: italic;
     }
 
-    .testi-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
 
     .testi-avatar {
-      width: 46px;
-      height: 46px;
+      width: 44px; height: 44px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--pink), var(--navy));
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: #E05A00;
+      display: flex; align-items: center; justify-content: center;
       color: white;
+      font-family: 'Fraunces', Georgia, serif;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.9rem;
       flex-shrink: 0;
     }
 
-    .testi-name {
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--navy);
-    }
+    .testi-name { font-family: 'Nunito', system-ui, sans-serif; font-weight: 700; font-size: 14px; color: #1A2E1A; }
+    .testi-trip { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #888888; }
 
-    .testi-trip {
-      font-size: 0.75rem;
-      color: var(--text-light);
-    }
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Blog &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    .blog-section { background: #F7F7F7; }
 
-    /* ── Blog ── */
-    .blog-section {
-      background: var(--off-white);
-    }
-
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 
     .blog-card {
-      background: var(--white);
-      border-radius: var(--radius);
+      background: #FFFFFF;
+      border-radius: 16px;
       overflow: hidden;
-      border: 1px solid var(--gray-100);
-      transition: var(--transition);
+      border: 1.5px solid #EEEEEE;
+      transition: border-color 0.2s, transform 0.2s;
+      box-shadow: none;
     }
+    .blog-card:hover { transform: translateY(-4px); border-color: #E05A00; }
 
-    .blog-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-    }
+    .blog-img { height: 190px; overflow: hidden; }
+    .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .blog-card:hover .blog-img img { transform: scale(1.06); }
 
-    .blog-img {
-      height: 200px;
-      overflow: hidden;
-    }
-
-    .blog-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-
-    .blog-card:hover .blog-img img {
-      transform: scale(1.06);
-    }
-
-    .blog-body {
-      padding: 22px;
-    }
+    .blog-body { padding: 20px; }
 
     .blog-tag {
       display: inline-block;
-      background: rgba(147, 197, 253, 0.1);
-      color: var(--pink);
-      font-size: 0.7rem;
+      background: rgba(224,90,0,0.08);
+      color: #E05A00;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       padding: 4px 10px;
-      border-radius: 4px;
-      margin-bottom: 12px;
-    }
-
-    .blog-body h3 {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--navy);
-      line-height: 1.4;
+      border-radius: 50px;
       margin-bottom: 10px;
     }
 
+    .blog-body h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1A2E1A;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
     .blog-body p {
-      font-size: 0.84rem;
-      color: var(--text-light);
-      line-height: 1.6;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
+      color: #777777;
+      line-height: 1.65;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -1624,47 +1114,28 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid var(--gray-100);
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1.5px solid #EEEEEE;
     }
 
-    .blog-meta .date {
-      font-size: 0.77rem;
-      color: var(--gray-600);
-    }
+    .blog-meta .date { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #AAAAAA; font-weight: 500; }
 
     .blog-meta .read-more {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--pink);
-      display: flex;
-      align-items: center;
-      gap: 4px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #E05A00;
+      display: flex; align-items: center; gap: 4px;
       transition: gap 0.2s;
     }
+    .blog-card:hover .read-more { gap: 8px; }
 
-    .blog-card:hover .read-more {
-      gap: 8px;
-    }
+    @media(max-width:900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:600px) { .blog-grid { grid-template-columns: 1fr; } }
 
-    @media(max-width:900px) {
-      .blog-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media(max-width:600px) {
-      .blog-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* ── Partners ── */
-    .partners-section {
-      background: var(--white);
-      overflow: hidden;
-    }
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Partners &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    .partners-section { background: #FFFFFF; overflow: hidden; }
 
     .partners-scroll {
       overflow: hidden;
@@ -1679,42 +1150,28 @@
       width: max-content;
       animation: marquee 28s linear infinite;
     }
+    .partners-track:hover { animation-play-state: paused; }
 
-    .partners-track:hover {
-      animation-play-state: paused;
-    }
-
-    @keyframes marquee {
-      from {
-        transform: translateX(0)
-      }
-
-      to {
-        transform: translateX(-50%)
-      }
-    }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
     .partner-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 60px;
-      min-width: 140px;
-      filter: grayscale(1) opacity(.45);
+      display: flex; align-items: center; justify-content: center;
+      height: 55px; min-width: 130px;
+      filter: grayscale(1) opacity(.4);
       transition: filter 0.3s;
     }
-
-    .partner-item:hover {
-      filter: grayscale(0) opacity(1);
-    }
+    .partner-item:hover { filter: grayscale(0) opacity(1); }
 
     .partner-item span {
-      font-family: var(--font-display);
+      font-family: 'Fraunces', Georgia, serif;
       font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--navy);
+      font-weight: 700;
+      color: #1A2E1A;
       white-space: nowrap;
     }
+
+    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Search bar (legacy &rdquo; hidden on new design) &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    .hero-search { display: none; }
   </style>
 </head>
 
@@ -1735,9 +1192,9 @@
         <div class="hero-badge"><span class="dot"></span> Group Tour Departures Now Open</div>
         <h1>Ignite Your<br /><span class="accent">Journey</span> with Us</h1>
         <p class="hero-sub">Customised holidays, premium group tours & seamless corporate travel. Every trip crafted
-          with passion — just for you.</p>
+          with passion &rdquo; just for you.</p>
         <div class="hero-actions">
-          <a href="packages/group-tours.html" class="btn btn-primary">Explore Group Tours ✈️</a>
+          <a href="packages/group-tours.html" class="btn btn-primary">Explore Group Tours &#9992;&#65039;</a>
           <a href="contact.html" class="btn btn-outline">Plan My Trip</a>
         </div>
         <div class="hero-stats">
@@ -1753,6 +1210,30 @@
 
   </section>
 
+  <!-- Stats Bar -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num">18+</div>
+          <div class="stat-lbl">Years of Excellence</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">40,000+</div>
+          <div class="stat-lbl">Happy Travellers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">120+</div>
+          <div class="stat-lbl">Destinations</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4.8 &#9733;</div>
+          <div class="stat-lbl">Star Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Featured Tour Packages Slider -->
   <section class="featured-tours section">
     <div class="container">
@@ -1763,8 +1244,8 @@
           <p class="section-sub">Hand-picked itineraries, all-inclusive pricing, and expert-guided experiences.</p>
         </div>
         <div class="swiper-nav">
-          <button class="swiper-btn tours-prev">←</button>
-          <button class="swiper-btn tours-next">→</button>
+          <button class="swiper-btn tours-prev">&#8592;</button>
+          <button class="swiper-btn tours-next">&#8594;</button>
         </div>
       </div>
       <div class="swiper tours-swiper">
@@ -1781,12 +1262,12 @@
               </div>
               <div class="tour-body">
                 <h3>Magical Europe</h3>
-                <p class="tour-destinations">France · Belgium · Netherlands · Luxembourg · Germany · Switzerland ·
-                  Austria · Italy · Vatican</p>
+                <p class="tour-destinations">France &middot; Belgium &middot; Netherlands &middot; Luxembourg &middot; Germany &middot; Switzerland &middot;
+                  Austria &middot; Italy &middot; Vatican</p>
                 <div class="tour-footer">
                   <div>
                     <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">₹3,85,874</div>
+                    <div class="tour-price">&#8377;3,85,874</div>
                   </div>
                   <a href="packages/europe.html" class="tour-book-btn">Book Now</a>
                 </div>
@@ -1805,11 +1286,11 @@
               </div>
               <div class="tour-body">
                 <h3>Blooming Japan</h3>
-                <p class="tour-destinations">Narita · Tokyo · Hakone · Hiroshima · Kyoto · Nara · Osaka</p>
+                <p class="tour-destinations">Narita &middot; Tokyo &middot; Hakone &middot; Hiroshima &middot; Kyoto &middot; Nara &middot; Osaka</p>
                 <div class="tour-footer">
                   <div>
                     <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">₹2,60,578</div>
+                    <div class="tour-price">&#8377;2,60,578</div>
                   </div>
                   <a href="packages/japan.html" class="tour-book-btn">Book Now</a>
                 </div>
@@ -1828,11 +1309,11 @@
               </div>
               <div class="tour-body">
                 <h3>Spectacular Dubai</h3>
-                <p class="tour-destinations">Dubai City · Desert Safari · Burj Khalifa · Dhow Cruise · Abu Dhabi</p>
+                <p class="tour-destinations">Dubai City &middot; Desert Safari &middot; Burj Khalifa &middot; Dhow Cruise &middot; Abu Dhabi</p>
                 <div class="tour-footer">
                   <div>
                     <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">₹49,000</div>
+                    <div class="tour-price">&#8377;49,000</div>
                   </div>
                   <a href="packages/dubai.html" class="tour-book-btn">Book Now</a>
                 </div>
@@ -1851,11 +1332,11 @@
               </div>
               <div class="tour-body">
                 <h3>Mesmerising Maldives</h3>
-                <p class="tour-destinations">Holiday Inn Kandooma · Water Villa · Snorkelling · Dolphin Cruise</p>
+                <p class="tour-destinations">Holiday Inn Kandooma &middot; Water Villa &middot; Snorkelling &middot; Dolphin Cruise</p>
                 <div class="tour-footer">
                   <div>
                     <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">₹1,63,404</div>
+                    <div class="tour-price">&#8377;1,63,404</div>
                   </div>
                   <a href="packages/maldives.html" class="tour-book-btn">Book Now</a>
                 </div>
@@ -1874,11 +1355,11 @@
               </div>
               <div class="tour-body">
                 <h3>Highlights of Georgia</h3>
-                <p class="tour-destinations">Tbilisi · Mtskheta · Kazbegi · Batumi · Borjomi · Kutaisi</p>
+                <p class="tour-destinations">Tbilisi &middot; Mtskheta &middot; Kazbegi &middot; Batumi &middot; Borjomi &middot; Kutaisi</p>
                 <div class="tour-footer">
                   <div>
                     <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">₹30,676</div>
+                    <div class="tour-price">&#8377;30,676</div>
                   </div>
                   <a href="packages/georgia.html" class="tour-book-btn">Book Now</a>
                 </div>
@@ -1897,11 +1378,11 @@
               </div>
               <div class="tour-body">
                 <h3>Charming Singapore + Malaysia</h3>
-                <p class="tour-destinations">Singapore · Marina Bay · Sentosa · Kuala Lumpur · Genting Highlands</p>
+                <p class="tour-destinations">Singapore &middot; Marina Bay &middot; Sentosa &middot; Kuala Lumpur &middot; Genting Highlands</p>
                 <div class="tour-footer">
                   <div>
                     <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">₹66,986</div>
+                    <div class="tour-price">&#8377;66,986</div>
                   </div>
                   <a href="packages/charming-singapore-with-malaysia.html" class="tour-book-btn">Book Now</a>
                 </div>
@@ -1920,11 +1401,11 @@
               </div>
               <div class="tour-body">
                 <h3>Classic Vietnam</h3>
-                <p class="tour-destinations">Hanoi · Halong Bay · Da Nang · Ho Chi Minh City</p>
+                <p class="tour-destinations">Hanoi &middot; Halong Bay &middot; Da Nang &middot; Ho Chi Minh City</p>
                 <div class="tour-footer">
                   <div>
                     <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">₹54,879</div>
+                    <div class="tour-price">&#8377;54,879</div>
                   </div>
                   <a href="packages/vietnam.html" class="tour-book-btn">Book Now</a>
                 </div>
@@ -1943,11 +1424,11 @@
               </div>
               <div class="tour-body">
                 <h3>Vibrant Philippines</h3>
-                <p class="tour-destinations">Manila · Boracay · White Beach · Island Hopping</p>
+                <p class="tour-destinations">Manila &middot; Boracay &middot; White Beach &middot; Island Hopping</p>
                 <div class="tour-footer">
                   <div>
                     <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">₹68,409</div>
+                    <div class="tour-price">&#8377;68,409</div>
                   </div>
                   <a href="packages/philippines.html" class="tour-book-btn">Book Now</a>
                 </div>
@@ -1959,7 +1440,7 @@
         <div class="tours-pagination" style="text-align:center;margin-top:28px;"></div>
       </div>
       <div style="text-align:center;margin-top:36px;">
-        <a href="packages/international.html" class="btn btn-outline-navy">View All International Packages →</a>
+        <a href="packages/international.html" class="btn btn-outline-navy">View All International Packages &#8594;</a>
       </div>
     </div>
   </section>
@@ -1969,12 +1450,12 @@
     <div class="container">
       <div class="summer-inner">
         <div data-aos="fade-right">
-          <span class="summer-tag">☀️ Seasonal Special</span>
+          <span class="summer-tag">&#226;&#732;&#8364;&#65039; Seasonal Special</span>
           <h2>Europe Group Tours<br />Booking Now Open</h2>
-          <div class="summer-badge">🎉 GST Included · All Inclusive Package</div>
+          <div class="summer-badge">&#127881; GST Included &middot; All Inclusive Package</div>
           <p>Experience the best of Europe with our fully curated group departures. Flights, hotels, sightseeing, meals
-            — all covered. T&C apply.</p>
-          <a href="packages/group-tours.html" class="btn btn-primary">Join Group Tour →</a>
+            &rdquo; all covered. T&C apply.</p>
+          <a href="packages/group-tours.html" class="btn btn-primary">Join Group Tour &#8594;</a>
         </div>
         <div class="summer-cards" data-aos="fade-left">
           <div class="mini-tour-card">
@@ -1983,7 +1464,7 @@
             <div class="mc-body">
               <div class="mc-dur">13N / 14D</div>
               <h4>Magical Europe</h4>
-              <div class="mc-dest">France · Belgium · Switzerland · Italy</div>
+              <div class="mc-dest">France &middot; Belgium &middot; Switzerland &middot; Italy</div>
             </div>
           </div>
           <div class="mini-tour-card">
@@ -1992,7 +1473,7 @@
             <div class="mc-body">
               <div class="mc-dur">07N / 08D</div>
               <h4>Blooming Japan</h4>
-              <div class="mc-dest">Tokyo · Kyoto · Osaka · Nara</div>
+              <div class="mc-dest">Tokyo &middot; Kyoto &middot; Osaka &middot; Nara</div>
             </div>
           </div>
           <div class="mini-tour-card">
@@ -2001,7 +1482,7 @@
             <div class="mc-body">
               <div class="mc-dur">04N / 05D</div>
               <h4>Mesmerising Maldives</h4>
-              <div class="mc-dest">North Malé Atoll · Kaafu Atoll</div>
+              <div class="mc-dest">North Mal&#195;&#169; Atoll &middot; Kaafu Atoll</div>
             </div>
           </div>
           <div class="mini-tour-card">
@@ -2010,7 +1491,7 @@
             <div class="mc-body">
               <div class="mc-dur">06N / 07D</div>
               <h4>Highlights of Georgia</h4>
-              <div class="mc-dest">Tbilisi · Kazbegi · Batumi</div>
+              <div class="mc-dest">Tbilisi &middot; Kazbegi &middot; Batumi</div>
             </div>
           </div>
         </div>
@@ -2024,12 +1505,12 @@
       <div style="text-align:center;margin-bottom:48px;" data-aos="fade-up">
         <div class="section-label" style="justify-content:center;">Popular Destinations</div>
         <h2 class="section-title">Year Round <span class="accent">Destinations</span></h2>
-        <p class="section-sub" style="margin:0 auto;">Dream destinations — hand-crafted packages ready to go.</p>
+        <p class="section-sub" style="margin:0 auto;">Dream destinations &rdquo; hand-crafted packages ready to go.</p>
       </div>
 
       <div class="dest-pills" data-aos="fade-up" style="justify-content:center;margin-bottom:60px;">
-        <button class="dest-pill active" data-tab="intl">🌍 International</button>
-        <button class="dest-pill" data-tab="india">🇮🇳 Explore India</button>
+        <button class="dest-pill active" data-tab="intl">&#127757; International</button>
+        <button class="dest-pill" data-tab="india">&#127470;&#127475; Explore India</button>
       </div>
       <div class="dest-panel active" data-panel="intl" style="position:relative;">
         <div class="swiper yr-swiper yr-swiper-intl">
@@ -2044,7 +1525,7 @@
                 <div class="dest-info">
                   <h3>USA</h3>
                   <p>Empire State to Golden Gate</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2058,7 +1539,7 @@
                 <div class="dest-info">
                   <h3>Australia</h3>
                   <p>Great Barrier Reef & Sydney Opera</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2071,7 +1552,7 @@
                 <div class="dest-info">
                   <h3>Europe</h3>
                   <p>14+ Itineraries Available</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2084,7 +1565,7 @@
                 <div class="dest-info">
                   <h3>Japan</h3>
                   <p>Cherry Blossom Specials</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2097,7 +1578,7 @@
                 <div class="dest-info">
                   <h3>Germany</h3>
                   <p>Bavarian Alps & Berlin History</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2111,7 +1592,7 @@
                 <div class="dest-info">
                   <h3>New Zealand</h3>
                   <p>Fiordland & Alpine Lakes</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2124,7 +1605,7 @@
                 <div class="dest-info">
                   <h3>Kazakhstan</h3>
                   <p>Steppes & Almaty Mountains</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2137,7 +1618,7 @@
                 <div class="dest-info">
                   <h3>Dubai</h3>
                   <p>Luxury Desert Experiences</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2149,8 +1630,8 @@
                 <div class="dest-overlay"></div>
                 <div class="dest-info">
                   <h3>Thailand</h3>
-                  <p>Bangkok · Phuket · Krabi</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <p>Bangkok &middot; Phuket &middot; Krabi</p>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2163,15 +1644,15 @@
                 <div class="dest-info">
                   <h3>Vietnam</h3>
                   <p>Ancient Towns & Halong Bay</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
           </div>
         </div>
         <div class="yr-nav-wrapper">
-          <button class="yr-nav-btn yr-prev-intl">←</button>
-          <button class="yr-nav-btn yr-next-intl">→</button>
+          <button class="yr-nav-btn yr-prev-intl">&#8592;</button>
+          <button class="yr-nav-btn yr-next-intl">&#8594;</button>
         </div>
         <div class="yr-pagination-intl" style="text-align:center;margin-top:28px;"></div>
       </div>
@@ -2189,8 +1670,8 @@
                 <div class="dest-overlay"></div>
                 <div class="dest-info">
                   <h3>Kashmir</h3>
-                  <p>Paradise on Earth · Dal Lake</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <p>Paradise on Earth &middot; Dal Lake</p>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2203,7 +1684,7 @@
                 <div class="dest-info">
                   <h3>Meghalaya</h3>
                   <p>Cherrapunji & Living Root Bridges</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2216,7 +1697,7 @@
                 <div class="dest-info">
                   <h3>Rajasthan</h3>
                   <p>Royal Heritage & Desert Glow</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2229,7 +1710,7 @@
                 <div class="dest-info">
                   <h3>Kerala</h3>
                   <p>Backwaters & Houseboat Stays</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2243,7 +1724,7 @@
                 <div class="dest-info">
                   <h3>Sikkim</h3>
                   <p>Tsomgo Lake & Himalayan Peaks</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2256,7 +1737,7 @@
                 <div class="dest-info">
                   <h3>Goa</h3>
                   <p>Pristine Beaches & Portuguese Charm</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2269,7 +1750,7 @@
                 <div class="dest-info">
                   <h3>Ladakh</h3>
                   <p>The Land of High Passes</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2283,7 +1764,7 @@
                 <div class="dest-info">
                   <h3>Spiti Valley</h3>
                   <p>High-Altitude Deserts & Monasteries</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2297,7 +1778,7 @@
                 <div class="dest-info">
                   <h3>Varanasi</h3>
                   <p>Ganga Aarti & Spiritual Ghats</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2311,7 +1792,7 @@
                 <div class="dest-info">
                   <h3>Munnar</h3>
                   <p>Tea Gardens & Emerald Hills</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2324,7 +1805,7 @@
                 <div class="dest-info">
                   <h3>Hampi</h3>
                   <p>Vijayanagara Ruins & Boulders</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2336,8 +1817,8 @@
                 <div class="dest-overlay"></div>
                 <div class="dest-info">
                   <h3>Rann of Kutch</h3>
-                  <p>White Salt Desert · Kutch Festival</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <p>White Salt Desert &middot; Kutch Festival</p>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2350,7 +1831,7 @@
                 <div class="dest-info">
                   <h3>Amritsar</h3>
                   <p>The Golden Temple Bliss</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2363,7 +1844,7 @@
                 <div class="dest-info">
                   <h3>Himachal</h3>
                   <p>Snowy Manali & Parvati Valley</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2376,7 +1857,7 @@
                 <div class="dest-info">
                   <h3>Uttarakhand</h3>
                   <p>Misty Peaks & Sacred Rivers</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
@@ -2389,20 +1870,20 @@
                 <div class="dest-info">
                   <h3>Andaman</h3>
                   <p>Havelock Island & Sparkling Shores</p>
-                  <span class="exp-btn">Explore More →</span>
+                  <span class="exp-btn">Explore More &#8594;</span>
                 </div>
               </a>
             </div>
           </div>
         </div>
         <div class="yr-nav-wrapper">
-          <button class="yr-nav-btn yr-prev-india">←</button>
-          <button class="yr-nav-btn yr-next-india">→</button>
+          <button class="yr-nav-btn yr-prev-india">&#8592;</button>
+          <button class="yr-nav-btn yr-next-india">&#8594;</button>
         </div>
         <div class="yr-pagination-india" style="text-align:center;margin-top:28px;"></div>
       </div>
       <div style="text-align:center;margin-top:40px;" data-aos="fade-up">
-        <a href="packages/international.html" class="btn btn-primary">Explore All Packages →</a>
+        <a href="packages/international.html" class="btn btn-primary">Explore All Packages &#8594;</a>
       </div>
     </div>
   </section>
@@ -2413,38 +1894,38 @@
       <div style="text-align:center;margin-bottom:60px;" data-aos="fade-up">
         <div class="section-label" style="justify-content:center;">Business & MICE</div>
         <h2 class="section-title">Corporate <span class="accent">Travel Solutions</span></h2>
-        <p class="section-sub" style="margin:0 auto; max-width: 800px;">From large-scale MICE events to seamless executive travel, we provide end-to-end management for your company’s business movement. Focus on your goals — we’ll handle the planning, logistics, and coordination.</p>
+        <p class="section-sub" style="margin:0 auto; max-width: 800px;">From large-scale MICE events to seamless executive travel, we provide end-to-end management for your company&rsquo;s business movement. Focus on your goals &rdquo; we&rsquo;ll handle the planning, logistics, and coordination.</p>
       </div>
 
       <!-- Part 1: Service Cards -->
       <div class="corp-services-grid" data-aos="fade-up">
         <!-- 1. MICE & Events -->
         <div class="corp-svc-card">
-          <span class="corp-svc-icon">🏢</span>
+          <span class="corp-svc-icon">&#127970;</span>
           <h3>MICE & Events</h3>
           <p>Meetings, Incentives, Conferences, and Exhibitions managed with complete travel, stay, venue, and logistics support.</p>
         </div>
         <!-- 2. Team Offsites -->
         <div class="corp-svc-card">
-          <span class="corp-svc-icon">🤝</span>
+          <span class="corp-svc-icon">&#129309;</span>
           <h3>Team Offsites & Retreats</h3>
           <p>Thoughtfully planned offsites for team bonding, leadership meets, strategy sessions, and company retreats.</p>
         </div>
         <!-- 3. Executive Business Travel -->
         <div class="corp-svc-card">
-          <span class="corp-svc-icon">💼</span>
+          <span class="corp-svc-icon">&#128188;</span>
           <h3>Executive Business Travel</h3>
           <p>Reliable and efficient travel arrangements for founders, executives, and professionals.</p>
         </div>
         <!-- 4. Incentive & Reward Trips -->
         <div class="corp-svc-card">
-          <span class="corp-svc-icon">🏆</span>
+          <span class="corp-svc-icon">&#127942;</span>
           <h3>Incentive & Reward Trips</h3>
           <p>Memorable travel experiences for employee rewards, top performers, and partner programs.</p>
         </div>
         <!-- 5. International Corporate Travel -->
         <div class="corp-svc-card">
-          <span class="corp-svc-icon">🌍</span>
+          <span class="corp-svc-icon">&#127757;</span>
           <h3>International Corporate Travel</h3>
           <p>Smooth planning for cross-border meetings, expos, retreats, and business travel.</p>
         </div>
@@ -2453,7 +1934,7 @@
       <!-- Part 2: Suggested Destinations -->
       <div class="corp-dest-header" data-aos="fade-up">
         <div class="corp-dest-desc">
-          <span>📍 Suggested Destinations for Corporate Success</span>
+          <span>&#127760; Suggested Destinations for Corporate Success</span>
         </div>
         <div class="corp-dest-grid">
           <!-- Dubai -->
@@ -2505,7 +1986,7 @@
       </div>
 
       <div style="text-align:center;margin-top:50px;" data-aos="fade-up">
-        <a href="corporate-travel.html" class="btn btn-primary">View Comprehensive Corporate Portfolio →</a>
+        <a href="corporate-travel.html" class="btn btn-primary">View Comprehensive Corporate Portfolio &#8594;</a>
       </div>
     </div>
   </section>
@@ -2524,32 +2005,32 @@
       <div class="styles-grid" data-aos="fade-up">
         <!-- Family Vacation -->
         <div class="style-item family">
-          <div class="style-icon-wrapper">👨‍👩‍👧‍👦</div>
+          <div class="style-icon-wrapper">&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102;</div>
           <span>Family Vacation</span>
         </div>
         <!-- Incredible India -->
         <div class="style-item india">
-          <div class="style-icon-wrapper">🇮🇳</div>
+          <div class="style-icon-wrapper">&#127470;&#127475;</div>
           <span>Incredible India</span>
         </div>
         <!-- Honeymoon -->
         <div class="style-item honeymoon">
-          <div class="style-icon-wrapper">💑</div>
+          <div class="style-icon-wrapper">&#128145;</div>
           <span>Honeymoon</span>
         </div>
         <!-- Visa on Arrival -->
         <div class="style-item visa">
-          <div class="style-icon-wrapper">🛂</div>
+          <div class="style-icon-wrapper">&#128706;</div>
           <span>Visa on Arrival</span>
         </div>
         <!-- Corporate Travel -->
         <div class="style-item corporate">
-          <div class="style-icon-wrapper">💼</div>
+          <div class="style-icon-wrapper">&#128188;</div>
           <span>Corporate Travel</span>
         </div>
         <!-- Group Tours -->
         <div class="style-item groups">
-          <div class="style-icon-wrapper">👥</div>
+          <div class="style-icon-wrapper">&#128101;</div>
           <span>Group Tours</span>
         </div>
       </div>
@@ -2566,11 +2047,11 @@
           <p>Our travel experts are standing by to design your perfect trip. Share your details and we'll get back to
             you within 2 hours.</p>
           <div class="enquiry-benefits">
-            <div class="benefit-item"><span class="check">✓</span>Free personalised itinerary consultation</div>
-            <div class="benefit-item"><span class="check">✓</span>Best price guarantee on all packages</div>
-            <div class="benefit-item"><span class="check">✓</span>Dedicated travel manager assigned</div>
-            <div class="benefit-item"><span class="check">✓</span>Visa & documentation assistance</div>
-            <div class="benefit-item"><span class="check">✓</span>24/7 on-trip support</div>
+            <div class="benefit-item"><span class="check">&#10003;</span>Free personalised itinerary consultation</div>
+            <div class="benefit-item"><span class="check">&#10003;</span>Best price guarantee on all packages</div>
+            <div class="benefit-item"><span class="check">&#10003;</span>Dedicated travel manager assigned</div>
+            <div class="benefit-item"><span class="check">&#10003;</span>Visa & documentation assistance</div>
+            <div class="benefit-item"><span class="check">&#10003;</span>24/7 on-trip support</div>
           </div>
         </div>
         <div class="enquiry-form-box" data-aos="fade-left">
@@ -2608,16 +2089,16 @@
               <div class="form-group"><label>No. of Travellers</label>
                 <select name="pax">
                   <option value="">Select</option>
-                  <option>1 – 2</option>
-                  <option>3 – 5</option>
-                  <option>6 – 10</option>
+                  <option>1 &ndash; 2</option>
+                  <option>3 &ndash; 5</option>
+                  <option>6 &ndash; 10</option>
                   <option>10+</option>
                 </select>
               </div>
             </div>
             <div class="form-group"><label>Message</label><textarea name="message" rows="3"
                 placeholder="Tell us about your dream trip..."></textarea></div>
-            <button type="submit" class="form-submit">🚀 Send Enquiry</button>
+            <button type="submit" class="form-submit">&#128640; Send Enquiry</button>
           </form>
         </div>
       </div>
@@ -2635,70 +2116,70 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="testi-card">
-              <div class="testi-stars">★★★★★</div>
+              <div class="testi-stars">&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;</div>
               <p>"The Europe trip was absolutely flawless. Every hotel was premium, food was amazing, and our tour
                 leader was incredible. Can't wait to book again!"</p>
               <div class="testi-author">
                 <div class="testi-avatar">PS</div>
                 <div>
                   <div class="testi-name">Priya Sharma</div>
-                  <div class="testi-trip">Magical Europe · 2024</div>
+                  <div class="testi-trip">Magical Europe &middot; 2024</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="testi-card">
-              <div class="testi-stars">★★★★★</div>
-              <p>"Japan was on our bucket list for years. The Travel Spark made it a reality — cherry blossoms, temples,
+              <div class="testi-stars">&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;</div>
+              <p>"Japan was on our bucket list for years. The Travel Spark made it a reality &rdquo; cherry blossoms, temples,
                 food tours. Literally picture-perfect!"</p>
               <div class="testi-author">
                 <div class="testi-avatar">RK</div>
                 <div>
                   <div class="testi-name">Rohan Kulkarni</div>
-                  <div class="testi-trip">Blooming Japan · 2024</div>
+                  <div class="testi-trip">Blooming Japan &middot; 2024</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="testi-card">
-              <div class="testi-stars">★★★★★</div>
-              <p>"Maldives overwater villa was our honeymoon dream. The package included everything — transfers, water
+              <div class="testi-stars">&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;</div>
+              <p>"Maldives overwater villa was our honeymoon dream. The package included everything &rdquo; transfers, water
                 activities, and beautiful candlelight dinners!"</p>
               <div class="testi-author">
                 <div class="testi-avatar">AM</div>
                 <div>
                   <div class="testi-name">Ananya & Mihir</div>
-                  <div class="testi-trip">Maldives Honeymoon · 2024</div>
+                  <div class="testi-trip">Maldives Honeymoon &middot; 2024</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="testi-card">
-              <div class="testi-stars">★★★★★</div>
+              <div class="testi-stars">&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;</div>
               <p>"Georgia was a hidden gem and The Travel Spark showed us every corner of it. The itinerary was balanced
                 perfectly between adventure and culture."</p>
               <div class="testi-author">
                 <div class="testi-avatar">VN</div>
                 <div>
                   <div class="testi-name">Vikram Nair</div>
-                  <div class="testi-trip">Georgia Highlights · 2024</div>
+                  <div class="testi-trip">Georgia Highlights &middot; 2024</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="testi-card">
-              <div class="testi-stars">★★★★★</div>
-              <p>"Corporate offsite to Singapore was seamless. From flights to team dinners — everything was handled
+              <div class="testi-stars">&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;&#226;&#732;&#8230;</div>
+              <p>"Corporate offsite to Singapore was seamless. From flights to team dinners &rdquo; everything was handled
                 professionally. Highly recommend for corporate travel!"</p>
               <div class="testi-author">
                 <div class="testi-avatar">SJ</div>
                 <div>
                   <div class="testi-name">Sneha Joshi</div>
-                  <div class="testi-trip">Corporate Singapore · 2024</div>
+                  <div class="testi-trip">Corporate Singapore &middot; 2024</div>
                 </div>
               </div>
             </div>
@@ -2717,7 +2198,7 @@
           <div class="section-label">Travel Inspiration</div>
           <h2 class="section-title">Read Our Virtual <span class="accent">Travel Guide</span></h2>
         </div>
-        <a href="blog.html" class="btn btn-outline-navy">View All Articles →</a>
+        <a href="blog.html" class="btn btn-outline-navy">View All Articles &#8594;</a>
       </div>
       <div class="blog-grid">
         <div class="blog-card" data-aos="fade-up" data-aos-delay="0">
@@ -2726,10 +2207,10 @@
           <div class="blog-body">
             <span class="blog-tag">Europe</span>
             <h3>Top 10 Things to Do in Paris</h3>
-            <p>From the Eiffel Tower to hidden bistros in Montmartre — our local guide reveals Paris beyond the tourist
+            <p>From the Eiffel Tower to hidden bistros in Montmartre &rdquo; our local guide reveals Paris beyond the tourist
               trail.</p>
             <div class="blog-meta"><span class="date">Mar 10</span><a href="blog.html" class="read-more">Read More
-                →</a></div>
+                &#8594;</a></div>
           </div>
         </div>
         <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
@@ -2741,7 +2222,7 @@
             <p>Cherry blossoms in Japan, tulips in Netherlands, or spring sunshine in Greece? We break down the best
               April destinations for Indian travellers.</p>
             <div class="blog-meta"><span class="date">Feb 22</span><a href="blog.html" class="read-more">Read More
-                →</a></div>
+                &#8594;</a></div>
           </div>
         </div>
         <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
@@ -2750,10 +2231,10 @@
           <div class="blog-body">
             <span class="blog-tag">Georgia</span>
             <h3>Top 10 Places to Visit in Georgia</h3>
-            <p>Georgia is Europe's best-kept secret. Tbilisi's old town, Kazbegi's mountains and Batumi's beaches — our
+            <p>Georgia is Europe's best-kept secret. Tbilisi's old town, Kazbegi's mountains and Batumi's beaches &rdquo; our
               complete travel guide.</p>
             <div class="blog-meta"><span class="date">Feb 5</span><a href="blog.html" class="read-more">Read More
-                →</a></div>
+                &#8594;</a></div>
           </div>
         </div>
       </div>

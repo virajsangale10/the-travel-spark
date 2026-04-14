@@ -1,0 +1,196 @@
+/*
+  THE TRAVEL SPARK — package-theme.css
+  Shared design-system overrides for all package / detail pages.
+  Loaded AFTER navbar.css and footer.css, BEFORE the page's own <style>.
+  This remaps the old variable names to the new palette so existing
+  page CSS continues to work without any structural changes.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Nunito:wght@400;500;600;700&display=swap');
+
+/* ── Remap old tokens to new palette ── */
+:root {
+  /* Old names → new values */
+  --navy:           #1A2E1A;   /* was slate-700, now near-black green */
+  --navy-mid:       #1A2E1A;
+  --pink:           #E05A00;   /* was blue-300, now sunset orange */
+  --pink-light:     #f07020;
+  --pink-dark:      #c44f00;
+  --teal:           #0077B6;
+  --off-white:      #F7F7F7;
+  --text:           #1A2E1A;
+  --text-light:     #666666;
+  --gray-50:        #fafafa;
+  --gray-100:       #EEEEEE;
+  --gray-200:       #DDDDDD;
+  --gray-300:       #cccccc;
+  --gray-600:       #888888;
+
+  /* Typography */
+  --font-display:   'Fraunces', Georgia, serif;
+  --font-body:      'Nunito', system-ui, sans-serif;
+
+  /* Shape — keep existing radius values */
+  --radius:         16px;
+  --radius-sm:      10px;
+
+  /* Shadows → removed per spec (use borders) */
+  --shadow-sm:      none;
+  --shadow-md:      none;
+  --shadow-lg:      none;
+}
+
+/* ── Base overrides ── */
+body {
+  font-family: var(--font-body);
+  background: #FFFFFF;
+  color: #1A2E1A;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Headings use Fraunces ── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: #1A2E1A;
+}
+
+/* ── All buttons pill-shaped ── */
+.btn {
+  border-radius: 50px !important;
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+.btn-primary {
+  background: #E05A00 !important;
+  color: #ffffff !important;
+  border: 2px solid #E05A00 !important;
+}
+.btn-primary:hover {
+  background: #c44f00 !important;
+  border-color: #c44f00 !important;
+  box-shadow: none !important;
+}
+
+.btn-outline {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255,255,255,0.75) !important;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.12) !important;
+  border-color: #ffffff !important;
+}
+
+/* ── Package Hero — keep dark overlay (image hero stays dark for readability) ── */
+.package-hero {
+  background: #1A2E1A;
+}
+
+.package-hero-overlay {
+  background: linear-gradient(to top,
+    rgba(26,46,26,0.95) 0%,
+    rgba(26,46,26,0.5)  50%,
+    rgba(26,46,26,0.15) 100%) !important;
+}
+
+/* ── Package title & breadcrumb ── */
+.package-title {
+  font-family: 'Fraunces', Georgia, serif !important;
+  font-weight: 900 !important;
+}
+
+.crumb a { color: #E05A00 !important; }
+
+.meta-item .icon { color: #E05A00 !important; }
+
+/* ── Day markers on itinerary timeline ── */
+.day-marker {
+  background: #E05A00 !important;
+  box-shadow: 0 0 0 2px #E05A00 !important;
+}
+
+.day-dest {
+  color: #E05A00 !important;
+  background: rgba(224,90,0,0.08) !important;
+}
+
+.day-title { color: #1A2E1A !important; }
+
+/* ── Detail section cards ── */
+.detail-section {
+  border: 1.5px solid #EEEEEE !important;
+  box-shadow: none !important;
+  background: #FFFFFF;
+}
+
+.detail-section h2 { color: #1A2E1A !important; }
+.detail-section h2 .icon { color: #E05A00 !important; }
+
+/* ── Price card sidebar ── */
+.price-card {
+  border-top: 4px solid #E05A00 !important;
+  box-shadow: none !important;
+  border: 1.5px solid #EEEEEE;
+  border-top: 4px solid #E05A00;
+}
+
+.price-card .price-amount {
+  font-family: 'Fraunces', Georgia, serif !important;
+  color: #1A2E1A !important;
+}
+
+.price-card .help-text a { color: #E05A00 !important; }
+
+/* ── Quick info sidebar ── */
+.quick-info {
+  border: 1.5px solid #EEEEEE !important;
+  box-shadow: none !important;
+}
+
+.quick-info h3 { color: #1A2E1A !important; }
+.info-val { color: #1A2E1A !important; }
+
+/* ── Flight card ── */
+.flight-badge {
+  background: #E05A00 !important;
+}
+
+/* ── Policy table ── */
+.policy-table th {
+  background: rgba(224,90,0,0.05) !important;
+  color: #1A2E1A !important;
+}
+
+/* ── Section headings inside pages ── */
+.section-eyebrow,
+.section-label {
+  font-family: 'Nunito', system-ui, sans-serif !important;
+  color: #E05A00 !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+
+/* ── Package content background ── */
+.package-content { background: #F7F7F7 !important; }
+
+/* ── Inclusion/Exclusion check colours stay green/red ── */
+/* (no override needed — they use hardcoded colours #10b981 / #ef4444) */
+
+/* ── Scroll-top button ── */
+.scroll-top {
+  background: #E05A00 !important;
+}
+.scroll-top:hover { background: #c44f00 !important; }
+
+/* ── Tabs (if any) ── */
+.tab-btn.active,
+.tab-btn:focus {
+  background: #1A2E1A !important;
+  color: #fff !important;
+  border-color: #1A2E1A !important;
+}
