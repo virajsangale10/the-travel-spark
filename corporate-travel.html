@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,41 +6,42 @@
   <meta name="description" content="Corporate Travel Management — The Travel Spark. MICE, offsites, business travel for companies." />
   <title>Corporate Travel — The Travel Spark</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/navbar.css" />
   <link rel="stylesheet" href="assets/css/footer.css" />
   <style>
-    .page-hero { background:linear-gradient(135deg,var(--navy),#0d1a47); padding:150px 0 80px; text-align:center; position:relative; overflow:hidden; }
+    .page-hero { background:linear-gradient(135deg,var(--color-forest),var(--color-forest)); padding:150px 0 80px; text-align:center; position:relative; overflow:hidden; }
     .page-hero::before { content:''; position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1600&q=70') center/cover; opacity:0.15; }
     .page-hero-inner { position:relative; z-index:1; }
     .page-hero h1 { font-family:var(--font-display); font-size:clamp(2.2rem,5vw,3.8rem); color:white; margin-bottom:14px; }
-    .page-hero h1 span { color:var(--pink); font-style:italic; }
+    .page-hero h1 span { color:var(--color-sage); font-style:italic; }
     .page-hero p { color:rgba(255,255,255,0.65); font-size:1rem; max-width:540px; margin:0 auto; }
     .crumb { color:rgba(255,255,255,0.4); font-size:0.82rem; margin-bottom:16px; }
-    .crumb a { color:var(--pink); }
+    .crumb a { color:var(--color-sage); }
 
     /* Services */
     .services-section { background:var(--off-white); }
     .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
     .svc-card { background:var(--white); border-radius:var(--radius); padding:32px 26px; box-shadow:var(--shadow-sm); transition:var(--transition); border-top:3px solid transparent; }
-    .svc-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); border-top-color:var(--pink); }
+    .svc-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); border-top-color:var(--color-sage); }
     .svc-icon { width:58px; height:58px; border-radius:14px; background:linear-gradient(135deg,rgba(233,30,140,0.12),rgba(233,30,140,0.04)); border:1px solid rgba(233,30,140,0.2); display:flex; align-items:center; justify-content:center; font-size:1.6rem; margin-bottom:20px; }
-    .svc-card h3 { font-family:var(--font-display); font-size:1.1rem; color:var(--navy); margin-bottom:10px; }
+    .svc-card h3 { font-family:var(--font-display); font-size:1.1rem; color:var(--color-forest); margin-bottom:10px; }
     .svc-card p { font-size:0.85rem; color:var(--text-light); line-height:1.7; margin-bottom:16px; }
     .svc-card ul { list-style:none; display:flex; flex-direction:column; gap:7px; }
     .svc-card ul li { font-size:0.82rem; color:var(--text-light); display:flex; align-items:center; gap:8px; }
-    .svc-card ul li::before { content:'✓'; color:var(--pink); font-weight:700; font-size:0.8rem; }
+    .svc-card ul li::before { content:'✓'; color:var(--color-sage); font-weight:700; font-size:0.8rem; }
 
     /* Why us */
-    .why-corp { background:var(--navy); }
+    .why-corp { background:var(--color-forest); }
     .why-corp-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
     .why-corp-left .section-title { color:white; }
     .why-corp-left p { color:rgba(255,255,255,0.6); font-size:0.95rem; line-height:1.75; margin-bottom:36px; }
     .why-items { display:flex; flex-direction:column; gap:20px; }
     .why-item { display:flex; gap:16px; }
-    .wi-num { width:36px; height:36px; border-radius:50%; background:rgba(233,30,140,0.2); border:1px solid rgba(233,30,140,0.3); display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; color:var(--pink); flex-shrink:0; }
+    .wi-num { width:36px; height:36px; border-radius:50%; background:rgba(233,30,140,0.2); border:1px solid rgba(233,30,140,0.3); display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; color:var(--color-sage); flex-shrink:0; }
     .wi-text h4 { font-size:0.95rem; font-weight:600; color:white; margin-bottom:4px; }
     .wi-text p { font-size:0.82rem; color:rgba(255,255,255,0.5); line-height:1.6; }
     .corp-img { border-radius:var(--radius-lg); overflow:hidden; }
@@ -52,9 +53,9 @@
     .process-steps::after { content:''; position:absolute; top:40px; left:12%; right:12%; height:2px; border-top:2px dashed var(--gray-200); z-index:0; }
     .process-step { text-align:center; position:relative; z-index:1; }
     .step-icon { width:80px; height:80px; background:var(--white); border:1px solid var(--gray-200); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 24px; box-shadow:var(--shadow-sm); transition:var(--transition); position:relative; }
-    .process-step:hover .step-icon { border-color:var(--pink); transform:translateY(-5px); box-shadow:var(--shadow-md); }
-    .step-num { position:absolute; top:-5px; right:-5px; width:28px; height:28px; background:var(--pink); color:white; border-radius:50%; font-size:0.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; border:2px solid var(--white); }
-    .process-step h3 { font-family:var(--font-display); font-size:1.15rem; color:var(--navy); margin-bottom:12px; }
+    .process-step:hover .step-icon { border-color:var(--color-sage); transform:translateY(-5px); box-shadow:var(--shadow-md); }
+    .step-num { position:absolute; top:-5px; right:-5px; width:28px; height:28px; background:var(--color-sage); color:white; border-radius:50%; font-size:0.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; border:2px solid var(--white); }
+    .process-step h3 { font-family:var(--font-display); font-size:1.15rem; color:var(--color-forest); margin-bottom:12px; }
     .process-step p { font-size:0.88rem; color:var(--text-light); line-height:1.6; padding:0 10px; }
 
     @media(max-width:900px){
@@ -68,25 +69,25 @@
     /* Enquiry */
     .corp-enquiry { background:var(--off-white); }
     .corp-enquiry-inner { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; }
-    .ceq-left h2 { font-family:var(--font-display); font-size:clamp(1.8rem,3vw,2.4rem); color:var(--navy); margin-bottom:16px; }
-    .ceq-left h2 span { color:var(--pink); font-style:italic; }
+    .ceq-left h2 { font-family:var(--font-display); font-size:clamp(1.8rem,3vw,2.4rem); color:var(--color-forest); margin-bottom:16px; }
+    .ceq-left h2 span { color:var(--color-sage); font-style:italic; }
     .ceq-left p { color:var(--text-light); line-height:1.75; margin-bottom:28px; }
     .ceq-info { display:flex; flex-direction:column; gap:14px; }
     .ceq-row { display:flex; align-items:center; gap:14px; }
     .ceq-row .ic { width:40px; height:40px; background:rgba(233,30,140,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
-    .ceq-row .tx h4 { font-size:0.88rem; font-weight:600; color:var(--navy); }
+    .ceq-row .tx h4 { font-size:0.88rem; font-weight:600; color:var(--color-forest); }
     .ceq-row .tx p { font-size:0.82rem; color:var(--text-light); }
     .ceq-row .tx a { color:var(--text-light); }
     .ceq-form { background:var(--white); border-radius:16px; padding:40px; box-shadow:var(--shadow-md); }
-    .ceq-form h3 { font-family:var(--font-display); font-size:1.4rem; color:var(--navy); margin-bottom:6px; }
+    .ceq-form h3 { font-family:var(--font-display); font-size:1.4rem; color:var(--color-forest); margin-bottom:6px; }
     .ceq-form .sub { font-size:0.84rem; color:var(--text-light); margin-bottom:28px; }
     .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
     .form-group { margin-bottom:14px; }
     .form-group label { display:block; font-size:0.78rem; font-weight:600; color:var(--text); margin-bottom:6px; }
     .form-group input,.form-group select,.form-group textarea { width:100%; padding:12px 14px; border:1.5px solid var(--gray-300); border-radius:var(--radius-sm); font-family:var(--font-body); font-size:0.9rem; color:var(--text); background:var(--white); transition:border-color 0.2s; resize:vertical; }
-    .form-group input:focus,.form-group select:focus,.form-group textarea:focus { outline:none; border-color:var(--pink); box-shadow:0 0 0 3px rgba(233,30,140,0.08); }
-    .form-submit { width:100%; padding:14px; background:var(--navy); color:white; border:none; border-radius:var(--radius-sm); font-family:var(--font-body); font-size:1rem; font-weight:600; cursor:pointer; transition:var(--transition); }
-    .form-submit:hover { background:var(--pink); transform:translateY(-2px); }
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus { outline:none; border-color:var(--color-sage); box-shadow:0 0 0 3px rgba(233,30,140,0.08); }
+    .form-submit { width:100%; padding:14px; background:var(--color-forest); color:white; border:none; border-radius:var(--radius-sm); font-family:var(--font-body); font-size:1rem; font-weight:600; cursor:pointer; transition:var(--transition); }
+    .form-submit:hover { background:var(--color-sage); transform:translateY(-2px); }
 
     @media(max-width:900px){.services-grid{grid-template-columns:1fr 1fr;}.why-corp-inner{grid-template-columns:1fr;}.corp-img{display:none;}.corp-enquiry-inner{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}}
     @media(max-width:580px){.services-grid{grid-template-columns:1fr;}}
@@ -131,7 +132,7 @@
   <div class="container">
     <div class="why-corp-inner">
       <div data-aos="fade-right">
-        <div class="section-label" style="color:var(--pink);">Why Choose Us</div>
+        <div class="section-label" style="color:var(--color-sage);">Why Choose Us</div>
         <h2 class="section-title" style="color:white;">Your Dedicated <span class="accent">Travel Partner</span></h2>
         <p>We don't just book tickets — we become an extension of your team. A dedicated account manager, 24/7 support, and years of corporate travel expertise at your service.</p>
         <div class="why-items">
@@ -243,7 +244,10 @@
 </section>
 
 <div id="footer-placeholder"></div>
-<script src="assets/js/components.js"></script>
+  <!-- CMS scripts (Supabase CDN â†’ supabase-client â†’ cms â†’ components) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="assets/js/supabase-client.js"></script>
+  <script src="assets/js/cms.js"></script><script src="assets/js/components.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="assets/js/main.js"></script>
 <script>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,14 +6,15 @@
   <meta name="description" content="Contact The Travel Spark — Plan your dream trip today." />
   <title>Contact Us — The Travel Spark</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/navbar.css" />
   <link rel="stylesheet" href="assets/css/footer.css" />
   <style>
     .page-hero {
-      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+      background: linear-gradient(135deg, var(--color-sage) 0%, var(--blue-mid) 100%);
       padding: 140px 0 80px;
       text-align: center;
       position: relative;
@@ -35,7 +36,7 @@
     .contact-section { padding: 80px 0; background: var(--off-white); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: start; }
     
-    .contact-info h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--blue); margin-bottom: 12px; }
+    .contact-info h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--color-sage); margin-bottom: 12px; }
     .contact-info p { color: var(--text-light); line-height: 1.7; margin-bottom: 32px; }
     
     .info-cards { display: flex; flex-direction: column; gap: 16px; }
@@ -45,20 +46,20 @@
     }
     .info-card:hover { transform: translateX(4px); box-shadow: var(--shadow-md); }
     .info-card .ic { width: 48px; height: 48px; background: var(--yellow-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
-    .info-card .ic-text h4 { font-size: 0.85rem; font-weight: 600; color: var(--blue); margin-bottom: 4px; }
+    .info-card .ic-text h4 { font-size: 0.85rem; font-weight: 600; color: var(--color-sage); margin-bottom: 4px; }
     .info-card .ic-text p { font-size: 0.88rem; color: var(--text-light); margin: 0; }
     .info-card .ic-text a { color: var(--blue-light); }
     
     .contact-form-box { background: var(--white); border-radius: 16px; padding: 40px; box-shadow: var(--shadow-md); }
-    .contact-form-box h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--blue); margin-bottom: 6px; }
+    .contact-form-box h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--color-sage); margin-bottom: 6px; }
     .contact-form-box .sub { font-size: 0.85rem; color: var(--text-light); margin-bottom: 28px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-group { margin-bottom: 16px; }
     .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
     .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid var(--gray-300); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 0.9rem; color: var(--text); background: var(--white); transition: border-color 0.2s; resize: vertical; }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--blue-light); box-shadow: 0 0 0 3px rgba(37,99,196,0.08); }
-    .form-submit { width: 100%; padding: 14px; background: var(--blue); color: white; border: none; border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); margin-top: 8px; }
-    .form-submit:hover { background: var(--yellow); color: var(--blue); transform: translateY(-2px); }
+    .form-submit { width: 100%; padding: 14px; background: var(--color-sage); color: white; border: none; border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); margin-top: 8px; }
+    .form-submit:hover { background: var(--yellow); color: var(--color-sage); transform: translateY(-2px); }
 
     @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
   </style>
@@ -143,7 +144,10 @@
 </section>
 
 <div id="footer-placeholder"></div>
-<script src="assets/js/components.js"></script>
+  <!-- CMS scripts (Supabase CDN â†’ supabase-client â†’ cms â†’ components) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="assets/js/supabase-client.js"></script>
+  <script src="assets/js/cms.js"></script><script src="assets/js/components.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="assets/js/main.js"></script>
 <script>

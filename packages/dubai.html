@@ -1,4 +1,4 @@
-&#65279;<!DOCTYPE html>
+﻿&#65279;<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,28 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Spectacular Dubai &#8212; 5 Nights / 6 Days Tour Package. City Tour, Desert Safari, Burj Khalifa." />
     <title>Spectacular Dubai &#8212; The Travel Spark</title>
+
+    <!-- ── Google Fonts (editorial design system) ── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="../assets/css/variables.css" />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/package-theme.css" />
     <style>
         :root {
-            --navy: #1a2a6c;
-            --pink: #e91e8c;
-            --off-white: #f5f5f5;
-            --text: #333;
-            --text-light: #666;
-            --gray-100: #e8e8e8;
-            --gray-200: #d4d4d4;
-            --gray-600: #666;
-            --font-display: 'Playfair Display', serif;
-            --font-body: 'DM Sans', sans-serif;
-            --radius: 12px;
-            --radius-sm: 8px;
-            --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
-            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+            /* Legacy page-level vars — mapped to new design system tokens */
+            --navy:          #1C3A2A;   /* --color-forest */
+            --pink:          #C9A84C;   /* --color-gold */
+            --off-white:     #F5F0E8;   /* --color-bg-page */
+            --text:          #1E1E1E;   /* --color-text-primary */
+            --text-light:    #5A5A4E;   /* --color-text-secondary */
+            --gray-100:      #D4CEBE;   /* --color-border */
+            --gray-200:      #B8B2A6;   /* --color-border-strong */
+            --gray-600:      #8A8A7A;   /* --color-text-muted */
+            --font-display:  'Cormorant Garamond', Georgia, serif;
+            --font-body:     'Jost', system-ui, sans-serif;
+            --radius:        14px;
+            --radius-sm:     8px;
+            --shadow-sm:     0 2px 12px rgba(28,58,42,0.08);
+            --shadow-md:     0 8px 28px rgba(28,58,42,0.14);
         }
 
         *,
@@ -61,9 +67,9 @@
         }
 
         .btn-primary {
-            background: var(--pink);
+            background: var(--color-sage);
             color: white;
-            border: 2px solid var(--pink);
+            border: 2px solid var(--color-sage);
         }
 
         .btn-primary:hover {
@@ -88,7 +94,7 @@
             align-items: flex-end;
             padding-bottom: 60px;
             overflow: hidden;
-            background: var(--navy);
+            background: var(--color-forest);
             margin-top: 68px;
         }
 
@@ -118,7 +124,7 @@
         }
 
         .crumb a {
-            color: var(--pink);
+            color: var(--color-sage);
             font-weight: 500;
             text-decoration: none;
         }
@@ -147,7 +153,7 @@
             font-weight: 500;
         }
 
-        .meta-item .icon { color: var(--pink); font-size: 1.2rem; }
+        .meta-item .icon { color: var(--color-sage); font-size: 1.2rem; }
 
         .hero-actions {
             display: flex;
@@ -178,14 +184,14 @@
         .detail-section h2 {
             font-family: var(--font-display);
             font-size: 1.6rem;
-            color: var(--navy);
+            color: var(--color-forest);
             margin-bottom: 24px;
             display: flex;
             align-items: center;
             gap: 12px;
         }
 
-        .detail-section h2 .icon { color: var(--pink); }
+        .detail-section h2 .icon { color: var(--color-sage); }
 
         .city-overview {
             display: flex;
@@ -199,7 +205,7 @@
 
         .city-block { flex: 1; text-align: center; }
         .city-block .emoji { font-size: 2rem; margin-bottom: 8px; }
-        .city-block .name { font-weight: 700; color: var(--navy); font-size: 1.1rem; }
+        .city-block .name { font-weight: 700; color: var(--color-forest); font-size: 1.1rem; }
         .city-block .nights { font-size: 0.85rem; color: var(--text-light); }
 
         .itinerary-list {
@@ -226,7 +232,7 @@
             top: 0;
             width: 24px;
             height: 24px;
-            background: var(--pink);
+            background: var(--color-sage);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -235,7 +241,7 @@
             font-size: 0.75rem;
             font-weight: 700;
             border: 4px solid white;
-            box-shadow: 0 0 0 2px var(--pink);
+            box-shadow: 0 0 0 2px var(--color-sage);
         }
 
         .day-header {
@@ -247,11 +253,11 @@
             gap: 12px;
         }
 
-        .day-title { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin: 0; }
+        .day-title { font-size: 1.15rem; font-weight: 700; color: var(--color-forest); margin: 0; }
         .day-dest {
             font-size: 0.8rem;
             font-weight: 600;
-            color: var(--pink);
+            color: var(--color-sage);
             background: rgba(233, 30, 140, 0.1);
             padding: 4px 12px;
             border-radius: 100px;
@@ -303,7 +309,7 @@
         }
 
         .policy-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-        .policy-table th { background: rgba(26, 42, 108, 0.07); color: var(--navy); font-weight: 700; padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--gray-100); }
+        .policy-table th { background: rgba(26, 42, 108, 0.07); color: var(--color-forest); font-weight: 700; padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--gray-100); }
         .policy-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray-100); color: var(--text-light); }
         .policy-table tr:last-child td { border-bottom: none; }
 
@@ -314,16 +320,16 @@
             padding: 32px;
             box-shadow: var(--shadow-md);
             text-align: center;
-            border-top: 5px solid var(--pink);
+            border-top: 5px solid var(--color-sage);
             margin-bottom: 24px;
         }
         .price-card .price-label { font-size: 0.85rem; color: var(--gray-600); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
-        .price-card .price-amount { font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; line-height: 1; }
+        .price-card .price-amount { font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; color: var(--color-forest); margin-bottom: 4px; line-height: 1; }
         .price-card .price-sub { font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; }
         .price-card .price-tax { font-size: 0.75rem; color: var(--text-light); margin-bottom: 24px; }
         .price-card .btn { width: 100%; padding: 14px; font-size: 1rem; margin-bottom: 16px; display: block; text-align: center; }
         .price-card .help-text { font-size: 0.8rem; color: var(--text-light); }
-        .price-card .help-text a { color: var(--pink); font-weight: 600; text-decoration: none; }
+        .price-card .help-text a { color: var(--color-sage); font-weight: 600; text-decoration: none; }
 
         .quick-info {
             background: white;
@@ -332,13 +338,13 @@
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--gray-100);
         }
-        .quick-info h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--navy); margin-bottom: 16px; border-bottom: 1px solid var(--gray-100); padding-bottom: 10px; }
+        .quick-info h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-forest); margin-bottom: 16px; border-bottom: 1px solid var(--gray-100); padding-bottom: 10px; }
         .info-row { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.85rem; }
         .info-row:last-child { margin-bottom: 0; }
         .info-lbl { color: var(--gray-600); }
-        .info-val { font-weight: 600; color: var(--navy); text-align: right; }
+        .info-val { font-weight: 600; color: var(--color-forest); text-align: right; }
 
-        .footer { background: var(--navy); color: rgba(255, 255, 255, 0.8); padding: 60px 0 0; }
+        .footer { background: var(--color-forest); color: rgba(255, 255, 255, 0.8); padding: 60px 0 0; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; padding-bottom: 40px; }
         .footer-brand .footer-logo img { height: 40px; filter: brightness(0) invert(1); margin-bottom: 16px; }
         .footer-desc { font-size: 0.88rem; line-height: 1.6; color: rgba(255, 255, 255, 0.6); margin-bottom: 20px; }
@@ -388,17 +394,17 @@
     </style>
 </head>
 
-<body>
+<body data-package-slug="dubai-5n6d">
 
-<div id="navbar-placeholder"></div>`r`n`r`n<!-- Hero -->
+<div id="navbar-placeholder"></div>
     <section class="package-hero">
         <div class="package-hero-bg"></div>
         <div class="package-hero-overlay"></div>
         <div class="container package-hero-content" data-aos="fade-up">
             <p class="crumb"><a href="../index.html">Home</a> / <a href="international.html">International Packages</a> / Dubai</p>
-            <h1 class="package-title">Spectacular Dubai</h1>
+            <h1 class="package-title cms-editable" data-field="name">Spectacular Dubai</h1>
             <div class="package-meta">
-                <div class="meta-item"><span class="icon">&#128338;</span> 5 Nights / 6 Days</div>
+                <div class="meta-item"><span class="icon">&#128338;</span> <span class="cms-editable" data-field="duration">5 Nights / 6 Days</span></div>
                 <div class="meta-item"><span class="icon">&#127757;</span> 1 Country / 1 City</div>
                 <div class="meta-item"><span class="icon">&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102;</span> Family / Couples / Friends</div>
             </div>
@@ -529,7 +535,7 @@
                     <!-- Inclusions & Exclusions -->
                     <div class="detail-section" data-aos="fade-up">
                         <h2><span class="icon">&#9989;</span> Inclusions & Exclusions</h2>
-                        <h3 style="font-size: 1rem; color: var(--navy); margin-bottom: 16px;">What's Included</h3>
+                        <h3 style="font-size: 1rem; color: var(--color-forest); margin-bottom: 16px;">What's Included</h3>
                         <div class="incl-grid">
                             <div class="incl-item"><span class="check">&#10004;</span><div class="text">5 Nights' accommodation in a well-rated 4&#9733; Hotel in Dubai</div></div>
                             <div class="incl-item"><span class="check">&#10004;</span><div class="text">Daily Buffet Breakfast at the Hotel</div></div>
@@ -542,7 +548,7 @@
                             <div class="incl-item"><span class="check">&#10004;</span><div class="text">All local taxes (Except Tourism Dirham Fee)</div></div>
                         </div>
 
-                        <h3 style="font-size: 1rem; color: var(--navy); margin-bottom: 16px; margin-top: 32px; border-top: 1px solid var(--gray-100); padding-top: 24px;">What's Not Included</h3>
+                        <h3 style="font-size: 1rem; color: var(--color-forest); margin-bottom: 16px; margin-top: 32px; border-top: 1px solid var(--gray-100); padding-top: 24px;">What's Not Included</h3>
                         <div class="excl-grid">
                             <div class="excl-item"><span class="cross">&#10008;</span><div class="text">Return Airfare</div></div>
                             <div class="excl-item"><span class="cross">&#10008;</span><div class="text">UAE Tourist Visa & OTB charges (can be arranged at an extra cost)</div></div>
@@ -582,9 +588,9 @@
 
                         <div class="price-card" data-aos="fade-up">
                             <div class="price-label">Starting From</div>
-                            <div class="price-amount">&#8377;32,500</div>
+                            <div class="price-amount cms-editable" data-field="price">&#8377;32,500</div>
                             <div class="price-sub">Per Person on Twin Sharing</div>
-                            <div class="price-tax">Excludes Airfare & Visa (Land Package Only)</div>
+                            <div class="price-tax">Excludes Airfare &amp; Visa (Land Package Only)</div>
                             <a href="../contact.html" class="btn btn-primary">Book This Package</a>
                             <div class="help-text">Need to customize? <a href="tel:+919421189999">Call Us</a></div>
                         </div>
@@ -621,20 +627,33 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    
+    <!-- AOS animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!--
+      SCRIPT LOAD ORDER (must be this exact order):
+      1. Supabase CDN  — global `supabase` object
+      2. supabase-client.js — fetchPackageBySlug / updatePackageField
+      3. cms.js — password gate + edit-mode UI
+      4. components.js — navbar / footer injection
+      5. main.js — page interactions
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="../assets/js/supabase-client.js"></script>
+    <script src="../assets/js/cms.js"></script>
+    <script src="../assets/js/components.js"></script>
     <script src="../assets/js/main.js"></script>
+
     <script>
         AOS.init({ duration: 700, once: true, offset: 60 });
-        document.querySelector('a[href="#itinerary"]')?.addEventListener('click', e => { e.preventDefault(); document.getElementById('itinerary')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+        document.querySelector('a[href="#itinerary"]')?.addEventListener('click', e => {
+            e.preventDefault();
+            document.getElementById('itinerary')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
     </script>
-<script src="../assets/js/components.js"></script>
 </body>
 
 
 </html>
-

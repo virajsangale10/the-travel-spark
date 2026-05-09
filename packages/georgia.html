@@ -1,17 +1,22 @@
-&#65279;<!DOCTYPE html>
+﻿&#65279;<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Highlights of Georgia &#8212; 4 Nights / 5 Days Tour Package. Tbilisi." />
     <title>Highlights of Georgia &#8212; The Travel Spark</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="../assets/css/variables.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/package-theme.css" />
+    <link rel="stylesheet" href="../assets/css/variables.css" />
     <style>
         :root {
             --navy: #1a2a6c;
@@ -22,8 +27,8 @@
             --gray-100: #e8e8e8;
             --gray-200: #d4d4d4;
             --gray-600: #666;
-            --font-display: 'Playfair Display', serif;
-            --font-body: 'DM Sans', sans-serif;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Jost', sans-serif;
             --radius: 12px;
             --radius-sm: 8px;
             --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
@@ -61,9 +66,9 @@
         }
 
         .btn-primary {
-            background: var(--pink);
+            background: var(--color-sage);
             color: white;
-            border: 2px solid var(--pink);
+            border: 2px solid var(--color-sage);
         }
 
         .btn-primary:hover {
@@ -74,7 +79,7 @@
         .btn-outline {
             background: transparent;
             overflow: hidden;
-            background: var(--navy);
+            background: var(--color-forest);
             margin-top: 68px;
         }
 
@@ -104,7 +109,7 @@
         }
 
         .crumb a {
-            color: var(--pink);
+            color: var(--color-sage);
             font-weight: 500;
             text-decoration: none;
         }
@@ -134,7 +139,7 @@
         }
 
         .meta-item .icon {
-            color: var(--pink);
+            color: var(--color-sage);
             font-size: 1.2rem;
         }
 
@@ -167,7 +172,7 @@
         .detail-section h2 {
             font-family: var(--font-display);
             font-size: 1.6rem;
-            color: var(--navy);
+            color: var(--color-forest);
             margin-bottom: 24px;
             display: flex;
             align-items: center;
@@ -175,7 +180,7 @@
         }
 
         .detail-section h2 .icon {
-            color: var(--pink);
+            color: var(--color-sage);
         }
 
         .city-overview {
@@ -200,7 +205,7 @@
 
         .city-block .name {
             font-weight: 700;
-            color: var(--navy);
+            color: var(--color-forest);
             font-size: 1.1rem;
         }
 
@@ -240,7 +245,7 @@
             top: 0;
             width: 24px;
             height: 24px;
-            background: var(--pink);
+            background: var(--color-sage);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -249,7 +254,7 @@
             font-size: 0.75rem;
             font-weight: 700;
             border: 4px solid white;
-            box-shadow: 0 0 0 2px var(--pink);
+            box-shadow: 0 0 0 2px var(--color-sage);
         }
 
         .day-header {
@@ -264,14 +269,14 @@
         .day-title {
             font-size: 1.15rem;
             font-weight: 700;
-            color: var(--navy);
+            color: var(--color-forest);
             margin: 0;
         }
 
         .day-dest {
             font-size: 0.8rem;
             font-weight: 600;
-            color: var(--pink);
+            color: var(--color-sage);
             background: rgba(233, 30, 140, 0.1);
             padding: 4px 12px;
             border-radius: 100px;
@@ -367,7 +372,7 @@
 
         .policy-table th {
             background: rgba(26, 42, 108, 0.07);
-            color: var(--navy);
+            color: var(--color-forest);
             font-weight: 700;
             padding: 10px 14px;
             text-align: left;
@@ -395,7 +400,7 @@
             padding: 32px;
             box-shadow: var(--shadow-md);
             text-align: center;
-            border-top: 5px solid var(--pink);
+            border-top: 5px solid var(--color-sage);
             margin-bottom: 24px;
         }
 
@@ -412,7 +417,7 @@
             font-family: var(--font-display);
             font-size: 2.4rem;
             font-weight: 700;
-            color: var(--navy);
+            color: var(--color-forest);
             margin-bottom: 4px;
             line-height: 1;
         }
@@ -444,7 +449,7 @@
         }
 
         .price-card .help-text a {
-            color: var(--pink);
+            color: var(--color-sage);
             font-weight: 600;
             text-decoration: none;
         }
@@ -460,7 +465,7 @@
         .quick-info h3 {
             font-family: var(--font-display);
             font-size: 1.1rem;
-            color: var(--navy);
+            color: var(--color-forest);
             margin-bottom: 16px;
             border-bottom: 1px solid var(--gray-100);
             padding-bottom: 10px;
@@ -483,12 +488,12 @@
 
         .info-val {
             font-weight: 600;
-            color: var(--navy);
+            color: var(--color-forest);
             text-align: right;
         }
 
         .footer {
-            background: var(--navy);
+            background: var(--color-forest);
             color: rgba(255, 255, 255, 0.8);
             padding: 60px 0 0;
         }
@@ -653,7 +658,7 @@
     </style>
 </head>
 
-<body>
+<body data-package-slug="georgia-tour">
 
 <div id="navbar-placeholder"></div>`r`n`r`n<section class="package-hero">
         <div class="package-hero-bg"></div>
@@ -661,7 +666,7 @@
         <div class="container package-hero-content" data-aos="fade-up">
             <p class="crumb"><a href="../index.html">Home</a> / <a href="international.html">International Packages</a>
                 / Georgia</p>
-            <h1 class="package-title">Highlights of Georgia</h1>
+            <h1 class="package-title cms-editable" data-field="name">Highlights of Georgia</h1>
             <div class="package-meta">
                 <div class="meta-item"><span class="icon">&#128336;</span> 4 Nights / 5 Days</div>
                 <div class="meta-item"><span class="icon">&#127757;</span> 1 Country / 1 City</div>
@@ -792,7 +797,7 @@
                     <!-- Inclusions & Exclusions -->
                     <div class="detail-section" data-aos="fade-up">
                         <h2><span class="icon">&#9989;</span> Inclusions &amp; Exclusions</h2>
-                        <h3 style="font-size: 1rem; color: var(--navy); margin-bottom: 16px;">What's Included</h3>
+                        <h3 style="font-size: 1rem; color: var(--color-forest); margin-bottom: 16px;">What's Included</h3>
                         <div class="incl-grid">
                             <div class="incl-item"><span class="check">&#10004;</span>
                                 <div class="text">4 Nights' accommodation in Tbilisi (Economy category)</div>
@@ -842,7 +847,7 @@
                         </div>
 
                         <h3
-                            style="font-size: 1rem; color: var(--navy); margin-bottom: 16px; margin-top: 32px; border-top: 1px solid var(--gray-100); padding-top: 24px;">
+                            style="font-size: 1rem; color: var(--color-forest); margin-bottom: 16px; margin-top: 32px; border-top: 1px solid var(--gray-100); padding-top: 24px;">
                             What's Not Included</h3>
                         <div class="excl-grid">
                             <div class="excl-item"><span class="cross">&#10008;</span>
@@ -946,7 +951,7 @@
 
                         <div class="price-card" data-aos="fade-up">
                             <div class="price-label">Net Payable Amount</div>
-                            <div class="price-amount">&#8377;61,535</div>
+                            <div class="price-amount cms-editable" data-field="price">&#8377;61,535</div>
                             <div class="price-sub">For 2 Adults</div>
                             <div class="price-tax">Incl. GST &amp; TCS (Claimable)</div>
                             <a href="../contact.html" class="btn btn-primary">Book This Package</a>
@@ -970,10 +975,10 @@
                             <div class="info-row"><span class="info-lbl">TCS (5%) Claimable</span><span
                                     class="info-val">&#8377;2,930</span></div>
                             <div class="info-row"
-                                style="border-top: 2px solid var(--navy); padding-top: 12px; margin-top: 4px;">
-                                <span class="info-lbl" style="font-weight: 700; color: var(--navy);">Net Payable</span>
+                                style="border-top: 2px solid var(--color-forest); padding-top: 12px; margin-top: 4px;">
+                                <span class="info-lbl" style="font-weight: 700; color: var(--color-forest);">Net Payable</span>
                                 <span class="info-val"
-                                    style="font-size: 1.05rem; color: var(--pink);">&#8377;61,535</span>
+                                    style="font-size: 1.05rem; color: var(--color-sage);">&#8377;61,535</span>
                             </div>
                         </div>
 
@@ -1006,7 +1011,10 @@
         AOS.init({ duration: 700, once: true, offset: 60 });
         document.querySelector('a[href="#itinerary"]')?.addEventListener('click', e => { e.preventDefault(); document.getElementById('itinerary')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
     </script>
-<script src="../assets/js/components.js"></script>
+    <!-- CMS scripts (Supabase CDN â†’ supabase-client â†’ cms â†’ components) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="../assets/js/supabase-client.js"></script>
+    <script src="../assets/js/cms.js"></script><script src="../assets/js/components.js"></script>
 </body>
 
 

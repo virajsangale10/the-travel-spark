@@ -1,17 +1,22 @@
-&#65279;<!DOCTYPE html>
+﻿&#65279;<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="International Holiday Packages &#8212; The Travel Spark. Europe, Japan, Dubai, Maldives & more." />
   <title>International Holidays &#8212; The Travel Spark</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+    <link rel="stylesheet" href="../assets/css/variables.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/navbar.css" />
   <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/package-theme.css" />
+    <link rel="stylesheet" href="../assets/css/variables.css" />
   <style>
     :root {
       --card-bg: #fff;
@@ -20,7 +25,7 @@
 
     /* Page Hero */
     .page-hero { 
-      background: linear-gradient(135deg, var(--navy) 0%, #0d1a47 100%); 
+      background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest) 100%); 
       padding: 150px 0 80px; 
       text-align: center; 
       position: relative; 
@@ -35,10 +40,10 @@
     }
     .page-hero-inner { position: relative; z-index: 1; }
     .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.8rem); color: white; margin-bottom: 14px; }
-    .page-hero h1 span { color: var(--pink); font-style: italic; }
+    .page-hero h1 span { color: var(--color-sage); font-style: italic; }
     .page-hero p { color: rgba(255, 255, 255, 0.7); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
     .crumb { color: rgba(255, 255, 255, 0.4); font-size: 0.82rem; margin-bottom: 16px; }
-    .crumb a { color: var(--pink); transition: opacity 0.2s; }
+    .crumb a { color: var(--color-sage); transition: opacity 0.2s; }
     .crumb a:hover { opacity: 0.8; }
 
     /* Sticky Filter Bar */
@@ -67,8 +72,8 @@
       align-items: center;
       gap: 6px;
     }
-    .filter-btn:hover { color: var(--navy); }
-    .filter-btn.active { color: var(--pink); border-bottom-color: var(--pink); }
+    .filter-btn:hover { color: var(--color-forest); }
+    .filter-btn.active { color: var(--color-sage); border-bottom-color: var(--color-sage); }
 
     /* Main Content Layout */
     .intl-wrap { padding: 60px 0 100px; background: var(--off-white); }
@@ -79,7 +84,7 @@
     .dest-section:last-child { margin-bottom: 0; }
     
     .dest-head { 
-      border-left: 4px solid var(--pink); 
+      border-left: 4px solid var(--color-sage); 
       padding-left: 18px; 
       margin-bottom: 24px; 
       display: flex; 
@@ -88,15 +93,15 @@
       flex-wrap: wrap;
       gap: 12px;
     }
-    .dest-head h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--navy); }
-    .dest-head .package-link { font-size: 0.85rem; font-weight: 700; color: var(--pink); text-decoration: none; transition: gap 0.2s; display: flex; align-items: center; gap: 5px; }
+    .dest-head h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--color-forest); }
+    .dest-head .package-link { font-size: 0.85rem; font-weight: 700; color: var(--color-sage); text-decoration: none; transition: gap 0.2s; display: flex; align-items: center; gap: 5px; }
     .dest-head .package-link:hover { gap: 10px; }
 
     /* Info Strip */
     .info-strip { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
     .is-pill { 
       background: var(--strip-bg); 
-      color: var(--navy); 
+      color: var(--color-forest); 
       font-size: 0.76rem; 
       font-weight: 600; 
       padding: 5px 12px; 
@@ -117,18 +122,18 @@
     .card:hover .card-img img { transform: scale(1.08); }
     
     .badge { position: absolute; top: 12px; padding: 4px 12px; border-radius: 100px; font-size: 0.68rem; font-weight: 600; color: white; z-index: 2; }
-    .badge-dur { left: 12px; background: var(--pink); }
+    .badge-dur { left: 12px; background: var(--color-sage); }
     .badge-type { right: 12px; background: rgba(26, 42, 108, 0.85); text-transform: uppercase; letter-spacing: 0.05em; }
 
     .card-body { padding: 22px; flex-grow: 1; display: flex; flex-direction: column; }
-    .card-body h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--navy); margin-bottom: 6px; line-height: 1.3; }
+    .card-body h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--color-forest); margin-bottom: 6px; line-height: 1.3; }
     .card-cities { font-size: 0.78rem; color: var(--text-light); line-height: 1.5; margin-bottom: 16px; }
     
     .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; margin-top: auto; }
     .tag { background: var(--off-white); font-size: 0.68rem; color: var(--text-light); padding: 4px 10px; border-radius: 100px; font-weight: 500; border: 0.5px solid var(--gray-200); }
     
     .enquire-btn { 
-      background: var(--navy); 
+      background: var(--color-forest); 
       color: white; 
       width: 100%; 
       border: none; 
@@ -140,16 +145,16 @@
       transition: all 0.3s;
       text-align: center;
     }
-    .enquire-btn:hover { background: var(--pink); }
+    .enquire-btn:hover { background: var(--color-sage); }
 
     /* Sticky Enquiry Form (same as domestic) */
     .enquiry-side { position: sticky; top: 100px; }
     .enquiry-box { background: white; border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-md); }
-    .enquiry-box h2 { font-family: var(--font-display); font-size: 1.7rem; color: var(--navy); margin-bottom: 8px; text-align: center; }
+    .enquiry-box h2 { font-family: var(--font-display); font-size: 1.7rem; color: var(--color-forest); margin-bottom: 8px; text-align: center; }
     .enquiry-box p.sub { text-align: center; color: var(--text-light); font-size: 0.88rem; margin-bottom: 24px; line-height: 1.5; }
     
     .form-group { margin-bottom: 16px; }
-    .form-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--color-forest); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
     .form-control { 
       width: 100%; 
       padding: 11px 14px; 
@@ -160,12 +165,12 @@
       outline: none; 
       transition: border-color 0.2s; 
     }
-    .form-control:focus { border-color: var(--pink); }
+    .form-control:focus { border-color: var(--color-sage); }
     
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .submit-btn { 
       width: 100%; 
-      background: var(--pink); 
+      background: var(--color-sage); 
       color: white; 
       border: none; 
       padding: 15px; 
@@ -857,7 +862,10 @@
 
 <div id="footer-placeholder"></div>
 
-<script src="../assets/js/components.js"></script>
+    <!-- CMS scripts (Supabase CDN â†’ supabase-client â†’ cms â†’ components) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="../assets/js/supabase-client.js"></script>
+    <script src="../assets/js/cms.js"></script><script src="../assets/js/components.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
   AOS.init({ duration: 700, once: true, offset: 50 });
@@ -886,7 +894,7 @@
     if (select && dest) {
       select.value = dest;
       // Trigger subtle highlight effect
-      select.style.borderColor = "var(--pink)";
+      select.style.borderColor = "var(--color-sage)";
       select.style.boxShadow = "0 0 0 3px rgba(233,30,140,0.1)";
       setTimeout(() => {
         select.style.borderColor = "";

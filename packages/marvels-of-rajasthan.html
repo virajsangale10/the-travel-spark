@@ -1,18 +1,23 @@
-&#65279;<!DOCTYPE html>
+﻿&#65279;<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="Marvels of Rajasthan &#8212; 8 Nights / 9 Days Tour Package." />
     <title>Marvels of Rajasthan &#8212; The Travel Spark</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="../assets/css/variables.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/package-theme.css" />
+    <link rel="stylesheet" href="../assets/css/variables.css" />
 
     <style>
         *,
@@ -32,8 +37,8 @@
             --gray-100: #f3f4f6;
             --gray-200: #e5e7eb;
             --gray-600: #4b5563;
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-body: 'DM Sans', sans-serif;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Jost', sans-serif;
             --radius: 16px;
             --radius-sm: 10px;
             --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.04);
@@ -82,7 +87,7 @@
         }
 
         .btn-primary {
-            background: var(--pink);
+            background: var(--color-sage);
             color: white;
         }
 
@@ -111,7 +116,7 @@
             align-items: flex-end;
             padding-bottom: 60px;
             overflow: hidden;
-            background: var(--navy);
+            background: var(--color-forest);
             margin-top: 68px;
         }
 
@@ -141,7 +146,7 @@
         }
 
         .crumb a {
-            color: var(--pink);
+            color: var(--color-sage);
             font-weight: 500;
         }
 
@@ -170,7 +175,7 @@
         }
 
         .meta-item .icon {
-            color: var(--pink);
+            color: var(--color-sage);
             font-size: 1.2rem;
         }
 
@@ -204,7 +209,7 @@
         .detail-section h2 {
             font-family: var(--font-display);
             font-size: 1.6rem;
-            color: var(--navy);
+            color: var(--color-forest);
             margin-bottom: 24px;
             display: flex;
             align-items: center;
@@ -212,7 +217,7 @@
         }
 
         .detail-section h2 .icon {
-            color: var(--pink);
+            color: var(--color-sage);
         }
 
         /* Itinerary */
@@ -247,7 +252,7 @@
             top: 0;
             width: 24px;
             height: 24px;
-            background: var(--pink);
+            background: var(--color-sage);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -256,7 +261,7 @@
             font-size: 0.75rem;
             font-weight: 700;
             border: 4px solid white;
-            box-shadow: 0 0 0 2px var(--pink);
+            box-shadow: 0 0 0 2px var(--color-sage);
         }
 
         .day-header {
@@ -271,14 +276,14 @@
         .day-title {
             font-size: 1.15rem;
             font-weight: 700;
-            color: var(--navy);
+            color: var(--color-forest);
             margin: 0;
         }
 
         .day-dest {
             font-size: 0.8rem;
             font-weight: 600;
-            color: var(--pink);
+            color: var(--color-sage);
             background: rgba(147, 197, 253, 0.1);
             padding: 4px 12px;
             border-radius: 100px;
@@ -354,7 +359,7 @@
         .flight-card h4 {
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--navy);
+            color: var(--color-forest);
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 12px;
@@ -374,7 +379,7 @@
         }
 
         .flight-badge {
-            background: var(--navy);
+            background: var(--color-forest);
             color: white;
             font-size: 0.75rem;
             font-weight: 700;
@@ -394,7 +399,7 @@
             padding: 32px;
             box-shadow: var(--shadow-md);
             text-align: center;
-            border-top: 5px solid var(--pink);
+            border-top: 5px solid var(--color-sage);
             margin-bottom: 24px;
         }
 
@@ -411,7 +416,7 @@
             font-family: var(--font-display);
             font-size: 2.4rem;
             font-weight: 700;
-            color: var(--navy);
+            color: var(--color-forest);
             margin-bottom: 8px;
             line-height: 1;
         }
@@ -435,7 +440,7 @@
         }
 
         .price-card .help-text a {
-            color: var(--pink);
+            color: var(--color-sage);
             font-weight: 600;
         }
 
@@ -450,7 +455,7 @@
         .quick-info h3 {
             font-family: var(--font-display);
             font-size: 1.1rem;
-            color: var(--navy);
+            color: var(--color-forest);
             margin-bottom: 16px;
             border-bottom: 1px solid var(--gray-100);
             padding-bottom: 10px;
@@ -473,7 +478,7 @@
 
         .info-val {
             font-weight: 600;
-            color: var(--navy);
+            color: var(--color-forest);
             text-align: right;
         }
 
@@ -487,7 +492,7 @@
 
         .policy-table th {
             background: rgba(51, 65, 85, 0.05);
-            color: var(--navy);
+            color: var(--color-forest);
             font-weight: 700;
             text-align: left;
             padding: 10px 14px;
@@ -517,7 +522,7 @@
 
         /* Footer */
         .footer {
-            background: var(--navy);
+            background: var(--color-forest);
             color: white;
             padding: 48px 0 24px;
         }
@@ -537,7 +542,7 @@
         }
 
         .footer-brand .footer-logo span {
-            color: var(--pink);
+            color: var(--color-sage);
         }
 
         .footer-desc {
@@ -565,7 +570,7 @@
         }
 
         .footer-social a:hover {
-            background: var(--pink);
+            background: var(--color-sage);
         }
 
         .footer-col h4 {
@@ -590,7 +595,7 @@
         }
 
         .footer-col ul li a:hover {
-            color: var(--pink);
+            color: var(--color-sage);
         }
 
         .footer-contact {
@@ -616,7 +621,7 @@
         }
 
         .footer-contact-item .info a:hover {
-            color: var(--pink);
+            color: var(--color-sage);
         }
 
         .footer-bottom {
@@ -646,7 +651,7 @@
         }
 
         .footer-bottom-links a:hover {
-            color: var(--pink);
+            color: var(--color-sage);
         }
 
         .whatsapp-float {
@@ -682,7 +687,7 @@
             z-index: 999;
             width: 40px;
             height: 40px;
-            background: var(--navy);
+            background: var(--color-forest);
             color: white;
             border: none;
             border-radius: 50%;
@@ -695,7 +700,7 @@
         }
 
         .scroll-top:hover {
-            background: var(--pink);
+            background: var(--color-sage);
         }
 
         .scroll-top.visible {
@@ -734,7 +739,7 @@
     </style>
 </head>
 
-<body>
+<body data-package-slug="marvels-of-rajasthan">
 
     <div id="navbar-placeholder"></div>`r`n`r`n<!-- Hero -->
     <section class="package-hero">
@@ -743,9 +748,9 @@
         <div class="container package-hero-content" data-aos="fade-up">
             <p class="crumb"><a href="../index.html">Home</a> / <a href="domestic.html">Explore India</a>
                 / Rajasthan</p>
-            <h1 class="package-title">Marvels of Rajasthan</h1>
+            <h1 class="package-title cms-editable" data-field="name">Marvels of Rajasthan</h1>
             <div class="package-meta">
-                <div class="meta-item"><span class="icon">&#128338;</span> 5 Nights / 6 Days</div>
+                <div class="meta-item"><span class="icon">&#128338;</span> <span class="cms-editable" data-field="duration">5 Nights / 6 Days</span></div>
                 <div class="meta-item"><span class="icon">&#127757;</span> Jaipur, Jodhpur, Jaisalmer</div>
                 <div class="meta-item"><span class="icon">&#128106;</span> Cultural</div>
                 <div class="meta-item"><span class="icon">&#10024;</span> Deluxe</div>
@@ -778,25 +783,25 @@
                             style="display:flex; gap: 16px; margin-top:24px; padding: 20px; background: rgba(147, 197, 253,0.05); border-radius: var(--radius-sm); border: 1px solid rgba(147, 197, 253,0.1); flex-wrap: wrap;">
                             <div style="flex:1; text-align:center; min-width:80px;">
                                 <div style="font-size:1.6rem; margin-bottom:6px;">&#127983;</div>
-                                <div style="font-weight:700; color:var(--navy); font-size:0.9rem;">Jaipur</div>
+                                <div style="font-weight:700; color:var(--color-forest); font-size:0.9rem;">Jaipur</div>
                                 <div style="font-size:0.78rem; color:var(--text-light);">2 Nights</div>
                             </div>
                             <div
                                 style="flex:1; text-align:center; border-left:1px solid rgba(147, 197, 253,0.2); min-width:80px;">
                                 <div style="font-size:1.6rem; margin-bottom:6px;">&#128042;</div>
-                                <div style="font-weight:700; color:var(--navy); font-size:0.9rem;">Bikaner</div>
+                                <div style="font-weight:700; color:var(--color-forest); font-size:0.9rem;">Bikaner</div>
                                 <div style="font-size:0.78rem; color:var(--text-light);">2 Nights</div>
                             </div>
                             <div
                                 style="flex:1; text-align:center; border-left:1px solid rgba(147, 197, 253,0.2); min-width:80px;">
                                 <div style="font-size:1.6rem; margin-bottom:6px;">&#127749;</div>
-                                <div style="font-weight:700; color:var(--navy); font-size:0.9rem;">Jaisalmer</div>
+                                <div style="font-weight:700; color:var(--color-forest); font-size:0.9rem;">Jaisalmer</div>
                                 <div style="font-size:0.78rem; color:var(--text-light);">2 Nights</div>
                             </div>
                             <div
                                 style="flex:1; text-align:center; border-left:1px solid rgba(147, 197, 253,0.2); min-width:80px;">
                                 <div style="font-size:1.6rem; margin-bottom:6px;">&#127984;</div>
-                                <div style="font-weight:700; color:var(--navy); font-size:0.9rem;">Jodhpur</div>
+                                <div style="font-weight:700; color:var(--color-forest); font-size:0.9rem;">Jodhpur</div>
                                 <div style="font-size:0.78rem; color:var(--text-light);">2 Nights</div>
                             </div>
                         </div>
@@ -912,7 +917,7 @@
                     <!-- Inclusions & Exclusions -->
                     <div class="detail-section" data-aos="fade-up">
                         <h2><span class="icon">&#9989;</span> Inclusions & Exclusions</h2>
-                        <h3 style="font-size: 1rem; color: var(--navy); margin-bottom: 16px;">What's Included</h3>
+                        <h3 style="font-size: 1rem; color: var(--color-forest); margin-bottom: 16px;">What's Included</h3>
                         <div class="incl-grid">
                             <div class="incl-item"><span class="check">&#10004;</span>
                                 <div class="text">Accommodation in the listed hotels or similar category hotels as per the availability.</div>
@@ -1039,7 +1044,7 @@
 
                         <div class="price-card" data-aos="fade-up">
                             <div class="price-label">Net Payable Amount</div>
-                            <div class="price-amount">&#8377;66,536</div>
+                            <div class="price-amount cms-editable" data-field="price">&#8377;66,536</div>
                             <div class="price-tax">For 2 Adults &#183; Excl. Govt Tax (5%)</div>
                             <a href="../contact.html" class="btn btn-primary">Book This Package</a>
                             <div class="help-text">Need help? <a href="tel:+919421189999">Call Us</a></div>
@@ -1053,8 +1058,8 @@
                                     class="info-val">&#8377;3,168</span></div>
                             <div class="info-row"
                                 style="border-top: 1px solid var(--gray-200); padding-top: 10px; margin-top: 4px;"><span
-                                    class="info-lbl" style="font-weight:700;color:var(--navy);">Net Payable</span><span
-                                    class="info-val" style="color:var(--pink);">&#8377;66,536</span></div>
+                                    class="info-lbl" style="font-weight:700;color:var(--color-forest);">Net Payable</span><span
+                                    class="info-val" style="color:var(--color-sage);">&#8377;66,536</span></div>
                         </div>
 
                         <div class="quick-info" style="margin-top:24px;" data-aos="fade-up" data-aos-delay="150">
@@ -1099,7 +1104,10 @@
 
     <div id="footer-placeholder"></div>
 
-    <script src="../assets/js/components.js"></script>
+        <!-- CMS scripts (Supabase CDN â†’ supabase-client â†’ cms â†’ components) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="../assets/js/supabase-client.js"></script>
+    <script src="../assets/js/cms.js"></script><script src="../assets/js/components.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="../assets/js/main.js"></script>
     <script>

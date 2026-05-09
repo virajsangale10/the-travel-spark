@@ -1,6 +1,6 @@
 /* =============================================
    THE TRAVEL SPARK — navbar.css
-   Design: White bar, orange accents
+   Design System: Light Lime Green — fresh, vivid, premium
    ============================================= */
 
 .navbar {
@@ -9,17 +9,17 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 68px;
-  background: #FFFFFF;
-  border-bottom: 2px solid #F0F0F0;
+  height: var(--navbar-height);
+  background: var(--color-bg-navbar);
+  border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  transition: box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .navbar.scrolled {
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-card);
 }
 
 .navbar .container {
@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  height: 68px;
+  height: var(--navbar-height);
 }
 
 /* ── Logo ── */
@@ -49,22 +49,17 @@
 .navbar-logo img {
   height: 44px;
   width: auto;
-}
-
-/* Remove white background hack from old design */
-.navbar:not(.scrolled) .navbar-logo img {
   background: none;
   padding: 0;
   border-radius: 0;
   box-shadow: none;
 }
 
-/* Text logo that was being used */
 .logo-text-new {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: var(--font-display);
   font-size: 1.35rem;
-  font-weight: 900;
-  color: #1A2E1A;
+  font-weight: 700;
+  color: var(--color-forest);
   letter-spacing: -0.01em;
   display: flex;
   align-items: baseline;
@@ -73,18 +68,14 @@
 }
 
 .spark-mix {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: var(--font-display);
   font-size: 1.35rem;
-  color: #E05A00;
-  font-weight: 900;
+  color: var(--color-sage);
+  font-weight: 700;
   font-style: italic;
   letter-spacing: 0;
   transform: none;
 }
-
-/* Always dark — no transparent mode */
-.navbar:not(.scrolled) .logo-text-new { color: #1A2E1A; }
-.navbar:not(.scrolled) .spark-mix      { color: #E05A00; }
 
 /* ── Nav Links ── */
 .navbar-links {
@@ -105,33 +96,21 @@
   align-items: center;
   gap: 4px;
   padding: 8px 12px;
-  font-family: 'Nunito', system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 500;
-  color: #555555;
-  border-radius: 8px;
-  transition: color 0.2s;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
   cursor: pointer;
   white-space: nowrap;
-}
-
-/* Always dark on white navbar */
-.navbar.scrolled .navbar-links > li > a,
-.navbar.scrolled .navbar-links > li > span {
-  color: #555555;
 }
 
 .navbar-links > li > a:hover,
 .navbar-links > li > span:hover,
 .navbar-links > li > a.active {
-  color: #E05A00;
-  background: rgba(224,90,0,0.05);
-}
-
-.navbar.scrolled .navbar-links > li > a:hover,
-.navbar.scrolled .navbar-links > li > span:hover {
-  color: #E05A00;
-  background: rgba(224,90,0,0.05);
+  color: var(--color-forest);
+  background: var(--color-sage-pale);
 }
 
 .chevron { font-size: 0.65rem; opacity: 0.6; transition: transform 0.2s; }
@@ -143,16 +122,16 @@
   top: calc(100% + 8px);
   left: 0;
   min-width: 220px;
-  background: #FFFFFF;
-  border-radius: 12px;
-  border: 1.5px solid #EEEEEE;
+  background: var(--color-bg-navbar);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
   list-style: none;
   padding: 8px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(6px);
   transition: all 0.2s ease;
-  box-shadow: none;
+  box-shadow: var(--shadow-hover);
 }
 
 .navbar-links li:hover .dropdown {
@@ -166,17 +145,17 @@
   align-items: center;
   gap: 10px;
   padding: 10px 14px;
-  font-family: 'Nunito', system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-weight: 500;
-  color: #555555;
-  border-radius: 8px;
-  transition: var(--transition, all 0.2s);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
 }
 
 .dropdown li a:hover {
-  background: rgba(224,90,0,0.06);
-  color: #E05A00;
+  background: var(--color-sage-pale);
+  color: var(--color-forest);
   padding-left: 18px;
 }
 
@@ -189,32 +168,32 @@
 }
 
 .navbar-phone {
-  font-family: 'Nunito', system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 1.2rem;
-  color: #555555;
+  font-weight: 500;
+  color: var(--color-forest);
   transition: color 0.2s;
   white-space: nowrap;
 }
 
-.navbar.scrolled .navbar-phone { color: #555555; }
-.navbar-phone:hover { color: #E05A00 !important; }
+.navbar-phone:hover { color: var(--color-sage); }
 
 .navbar-enquire {
-  background: #E05A00;
-  color: white !important;
+  background: var(--color-sage);
+  color: var(--color-text-on-sage) !important;
   padding: 9px 22px;
-  border-radius: 50px;
-  font-family: 'Nunito', system-ui, sans-serif;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   transition: background 0.2s, transform 0.2s;
   white-space: nowrap;
-  border: 2px solid #E05A00;
+  border: 2px solid var(--color-sage);
 }
 
 .navbar-enquire:hover {
-  background: #c44f00;
-  border-color: #c44f00;
+  background: var(--color-forest);
+  border-color: var(--color-forest);
   transform: translateY(-1px);
 }
 
@@ -222,23 +201,21 @@
 .logo-text { display: flex; flex-direction: column; }
 
 .logo-text .name {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: 900;
-  color: #1A2E1A;
+  font-weight: 700;
+  color: var(--color-forest);
   line-height: 1.1;
 }
 
 .logo-text .tagline {
+  font-family: var(--font-body);
   font-size: 0.62rem;
-  color: #E05A00;
+  color: var(--color-sage);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-
-.navbar:not(.scrolled) .logo-text .name   { color: #1A2E1A; }
-.navbar:not(.scrolled) .logo-text .tagline { color: #E05A00; }
 
 /* ── Hamburger ── */
 .hamburger {
@@ -255,13 +232,10 @@
 .hamburger span {
   display: block;
   height: 2px;
-  background: #1A2E1A;
+  background: var(--color-forest);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-
-.navbar.scrolled .hamburger span { background: #1A2E1A; }
-.navbar:not(.scrolled) .hamburger span { background: #1A2E1A; }
 
 .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
@@ -274,12 +248,12 @@
   right: -100%;
   width: min(340px, 100vw);
   height: 100vh;
-  background: #FFFFFF;
+  background: var(--color-bg-navbar);
   z-index: 999;
   padding: 80px 28px 40px;
   transition: right 0.35s cubic-bezier(0.4,0,0.2,1);
   overflow-y: auto;
-  border-left: 2px solid #EEEEEE;
+  border-left: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -291,32 +265,33 @@
 .mobile-menu .m-parent {
   display: block;
   padding: 12px 16px;
-  font-family: 'Nunito', system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
-  color: #1A2E1A;
-  border-radius: 8px;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
   transition: all 0.2s;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .mobile-menu a:hover {
-  color: #E05A00;
-  background: rgba(224,90,0,0.05);
+  color: var(--color-forest);
+  background: var(--color-sage-pale);
   padding-left: 24px;
 }
 
 .mobile-menu .m-parent {
-  font-weight: 700;
-  color: #888888;
+  font-weight: 600;
+  color: var(--color-text-muted);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 12px;
+  background: none;
 }
 
-.mobile-menu .sub-links { padding-left: 16px; }
-.mobile-menu .sub-links a { font-size: 0.92rem; }
+.mobile-menu .sub-links { padding-left: 16px; border: none; }
+.mobile-menu .sub-links a { font-size: 0.92rem; border-bottom: none; }
 
 /* ── Overlay ── */
 .menu-overlay {

@@ -1,13 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../assets/css/variables.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- TEMPLATE: Replace all [DESTINATION] and [CONTENT] placeholders -->
   <meta name="description" content="[DESTINATION] Holiday Packages — The Travel Spark" />
   <title>[DESTINATION] Holiday Packages — The Travel Spark</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
@@ -18,7 +19,7 @@
       min-height: 65vh;
       position: relative;
       display: flex; align-items: flex-end;
-      background: var(--blue);
+      background: var(--color-sage);
       overflow: hidden;
     }
     .dest-hero-bg {
@@ -47,16 +48,16 @@
     .pkg-img { height: 210px; overflow: hidden; position: relative; }
     .pkg-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
     .pkg-card:hover .pkg-img img { transform: scale(1.06); }
-    .pkg-badge { position: absolute; top: 12px; left: 12px; background: var(--yellow); color: var(--blue); font-size: 0.7rem; font-weight: 700; padding: 5px 12px; border-radius: 100px; }
+    .pkg-badge { position: absolute; top: 12px; left: 12px; background: var(--yellow); color: var(--color-sage); font-size: 0.7rem; font-weight: 700; padding: 5px 12px; border-radius: 100px; }
     .pkg-body { padding: 20px; }
-    .pkg-body h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--blue); margin-bottom: 8px; font-weight: 600; }
+    .pkg-body h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-sage); margin-bottom: 8px; font-weight: 600; }
     .pkg-highlights { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
     .pkg-highlight { background: var(--off-white); color: var(--text-light); font-size: 0.72rem; padding: 4px 10px; border-radius: 100px; font-weight: 500; }
     .pkg-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--gray-100); }
-    .pkg-price { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--blue); }
+    .pkg-price { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--color-sage); }
     .pkg-price-label { font-size: 0.7rem; color: var(--gray-600); }
-    .pkg-btn { background: var(--blue); color: white; padding: 8px 18px; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; transition: var(--transition); }
-    .pkg-btn:hover { background: var(--yellow); color: var(--blue); }
+    .pkg-btn { background: var(--color-sage); color: white; padding: 8px 18px; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 600; transition: var(--transition); }
+    .pkg-btn:hover { background: var(--yellow); color: var(--color-sage); }
 
     /* Highlights */
     .highlights-section { background: var(--white); }
@@ -64,11 +65,11 @@
     .highlight-item { text-align: center; padding: 28px 16px; border-radius: var(--radius); border: 2px solid var(--gray-100); transition: var(--transition); }
     .highlight-item:hover { border-color: var(--yellow); background: var(--yellow-light); }
     .highlight-item .hl-icon { font-size: 2rem; margin-bottom: 12px; }
-    .highlight-item h4 { font-family: var(--font-display); font-size: 0.95rem; color: var(--blue); margin-bottom: 6px; }
+    .highlight-item h4 { font-family: var(--font-display); font-size: 0.95rem; color: var(--color-sage); margin-bottom: 6px; }
     .highlight-item p { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; }
 
     /* CTA Band */
-    .cta-band { background: var(--blue); padding: 64px 0; text-align: center; position: relative; overflow: hidden; }
+    .cta-band { background: var(--color-sage); padding: 64px 0; text-align: center; position: relative; overflow: hidden; }
     .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(245,197,24,0.08) 0%, transparent 70%); }
     .cta-band h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--white); margin-bottom: 14px; position: relative; }
     .cta-band p { color: rgba(255,255,255,0.65); font-size: 1rem; margin-bottom: 32px; position: relative; }

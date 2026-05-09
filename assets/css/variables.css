@@ -1,0 +1,113 @@
+/*
+  THE TRAVEL SPARK — variables.css
+  Design System: Light Lime Green — fresh, vivid, premium
+  Core accent: #51E64C (bright lime)
+  Complementary: warm whites, charcoal text, honey-gold prices
+
+  USAGE: Imported first in every page's <head>.
+  All other CSS files reference these tokens via var().
+*/
+
+:root {
+  /* ── Navbar height ── */
+  --navbar-height: 72px;
+
+  /* ── Brand Greens ── */
+  --color-forest:      #1A8C16;   /* vivid mid-green — logo, footer bg, dark headings */
+  --color-sage:        #51E64C;   /* bright lime-green — primary buttons, CTAs */
+  --color-sage-light:  #84ED81;   /* lighter lime — hover states, border accents */
+  --color-sage-pale:   #DFFBDE;   /* very pale lime — section tints, tag pills */
+  --color-mint:        #B5F0B3;   /* mint — text on dark backgrounds, pills */
+
+  /* ── Backgrounds ── */
+  --color-bg-page:     #FFFFFF;   /* pure white body */
+  --color-bg-section:  #F4FDF4;   /* faint lime — alt section tint */
+  --color-bg-card:     #FFFFFF;   /* white cards */
+  --color-bg-navbar:   #FFFFFF;   /* white navbar */
+  --color-bg-dark:     #1A8C16;   /* vivid forest — footer, hero overlays */
+
+  /* ── Accents ── */
+  --color-gold:        #D4A017;   /* warm honey — prices, star ratings */
+  --color-gold-dark:   #B08010;   /* darker honey — hover on gold */
+  --color-gold-light:  #F5E6B2;   /* light honey — price badge bg */
+
+  /* ── Text ── */
+  --color-text-primary:   #1A1A2E;   /* near-black — body copy */
+  --color-text-secondary: #374151;   /* charcoal — supporting copy (was #4A5568, now passes AA) */
+  --color-text-muted:     #5C6678;   /* medium grey — labels, captions (was #718096, now ~6:1 on white) */
+  --color-text-on-dark:   #FFFFFF;   /* white — text on forest/dark bg */
+  --color-text-sage:      #1A8C16;   /* forest — links, accents on light */
+  --color-text-on-sage:   #FFFFFF;   /* white — text on lime/sage bg */
+  --color-text-mint:      #B5F0B3;   /* mint — links on dark bg */
+
+  /* ── Borders ── */
+  --color-border:         #D6F5D5;   /* very light lime border */
+  --color-border-strong:  #84ED81;   /* stronger lime border */
+
+  /* ── Typography ── */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Jost', system-ui, sans-serif;
+
+  /* ── Spacing & Shape ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+
+  /* Legacy radius aliases */
+  --radius:       var(--radius-lg);
+
+  /* ── Elevation ── */
+  --shadow-card:  0 2px 16px rgba(26,140,22,0.07);
+  --shadow-hover: 0 8px 32px rgba(26,140,22,0.13);
+
+  /* Legacy shadow aliases */
+  --shadow-sm: var(--shadow-card);
+  --shadow-md: var(--shadow-hover);
+  --shadow-lg: 0 16px 48px rgba(26,140,22,0.18);
+
+  /* ── Transitions ── */
+  --transition: 0.22s ease;
+
+  /* ── Legacy variable aliases ──────────────────────────────────────────────
+     Kept so any old var() references in existing page <style> blocks don't
+     break. Mapped to nearest new token.
+  ── */
+  --navy:           var(--color-forest);
+  --navy-mid:       var(--color-forest);
+  --navy-light:     var(--color-sage);
+  --pink:           var(--color-sage);
+  --pink-light:     var(--color-sage-light);
+  --pink-dark:      var(--color-forest);
+  --orange:         var(--color-sage);
+  --orange-light:   var(--color-sage-pale);
+  --orange-dark:    var(--color-forest);
+  --blue:           var(--color-sage);
+  --blue-mid:       var(--color-forest);
+  --blue-light:     var(--color-sage-light);
+  --blue-light-bg:  var(--color-sage-pale);
+  --teal:           var(--color-sage);
+  --teal-light:     var(--color-sage-pale);
+  --off-white:      var(--color-bg-page);
+  --white:          var(--color-bg-page);
+  --text:           var(--color-text-primary);
+  --text-light:     var(--color-text-secondary);
+  --muted:          var(--color-text-muted);
+  --dark:           var(--color-forest);
+  --border:         var(--color-border);
+  --border-warm:    var(--color-border);
+  --gray-50:        #f9fdf9;
+  --gray-100:       var(--color-border);
+  --gray-200:       var(--color-border-strong);
+  --gray-300:       #a8d8a6;
+  --gray-600:       var(--color-text-muted);
+  --yellow:         var(--color-gold);
+  --yellow-dark:    var(--color-gold-dark);
+  --yellow-light:   rgba(212,160,23,0.10);
+  --green-light:    var(--color-sage-pale);
+  --green-border:   var(--color-sage-light);
+  --green-icon-bg:  rgba(81,230,76,0.12);
+  --hero-bg:        var(--color-bg-dark);
+  --route:          var(--color-text-muted);
+  --mint-pale:      var(--color-sage-pale);
+  --color-mint-pale: var(--color-sage-pale);
+}

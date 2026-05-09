@@ -8,21 +8,35 @@
     content="The Travel Spark &rdquo; Customised Holidays, Group Tours & Corporate Travel. Your trusted travel partner for unforgettable experiences." />
   <title>The Travel Spark &rdquo; Ignite Your Journey</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Nunito:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/navbar.css" />
   <link rel="stylesheet" href="assets/css/footer.css" />
 
+  <!-- ===== LIGHT SAGE RETHEME — index.html only ===== -->
   <style>
-    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Promo Banner &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
+    /* ── index.html specific styles ── */
+
+    /* ── Base ── */
+    body {
+      background: var(--color-bg-page);
+      font-family: var(--font-body);
+      color: var(--color-text-primary);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      color: var(--color-forest);
+    }
+
+    /* ── Promo Banner ── */
     #promoBanner {
-      background: linear-gradient(90deg, #E05A00 0%, #c44f00 100%);
+      background: linear-gradient(90deg, var(--color-forest) 0%, var(--color-sage) 100%);
       text-align: center;
       padding: 10px 40px;
       font-family: 'Nunito', system-ui, sans-serif;
@@ -41,7 +55,7 @@
 
     /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Hero &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
     .hero {
-      background: #FFF8F0;
+      background: var(--color-bg-page);
       min-height: auto;
       padding: 100px 0 60px;
       position: relative;
@@ -93,13 +107,13 @@
       font-family: 'Fraunces', Georgia, serif;
       font-size: clamp(2.6rem, 5vw, 3.6rem);
       font-weight: 900;
-      color: #1A2E1A;
+      color: var(--color-forest);
       line-height: 1.05;
       margin-bottom: 22px;
     }
 
     .hero h1 .accent {
-      color: #E05A00;
+      color: var(--color-sage);
       font-style: italic;
     }
 
@@ -121,32 +135,32 @@
     }
 
     .hero-actions .btn-primary {
-      background: #E05A00;
+      background: var(--color-sage);
       color: #fff;
-      border: 2px solid #E05A00;
-      border-radius: 50px;
+      border: 2px solid var(--color-sage);
+      border-radius: var(--radius-md);
       padding: 15px 32px;
-      font-family: 'Nunito', system-ui, sans-serif;
+      font-family: var(--font-body);
       font-weight: 700;
       font-size: 15px;
       transition: background 0.2s, transform 0.2s;
       box-shadow: none;
     }
-    .hero-actions .btn-primary:hover { background: #c44f00; border-color: #c44f00; transform: translateY(-1px); }
+    .hero-actions .btn-primary:hover { background: var(--color-forest); border-color: var(--color-forest); transform: translateY(-1px); }
 
     .hero-actions .btn-outline {
       background: #fff;
-      color: #0077B6;
-      border: 2px solid #0077B6;
-      border-radius: 50px;
+      color: var(--color-sage);
+      border: 2px solid var(--color-sage);
+      border-radius: var(--radius-md);
       padding: 15px 32px;
-      font-family: 'Nunito', system-ui, sans-serif;
+      font-family: var(--font-body);
       font-weight: 700;
       font-size: 15px;
       transition: background 0.2s, transform 0.2s;
       box-shadow: none;
     }
-    .hero-actions .btn-outline:hover { background: #e8f4fb; transform: translateY(-1px); }
+    .hero-actions .btn-outline:hover { background: var(--color-sage-pale); transform: translateY(-1px); }
 
     .hero-stats {
       display: flex;
@@ -155,24 +169,24 @@
     }
 
     .hero-stat .num {
-      font-family: 'Fraunces', Georgia, serif;
+      font-family: var(--font-display);
       font-size: 1.9rem;
       font-weight: 900;
-      color: #E05A00;
+      color: var(--color-forest);
       line-height: 1;
     }
 
     .hero-stat .lbl {
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 13px;
-      color: #888888;
+      color: #5C6678;
       margin-top: 4px;
       font-weight: 500;
     }
 
     /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Stats Strip &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
     .stats-strip {
-      background: #0077B6;
+      background: var(--color-forest);
       padding: 40px 0;
       margin-top: 0;
     }
@@ -215,7 +229,7 @@
 
     /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Summer Special Banner &#8594; CTA Strip &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
     .summer-banner {
-      background: #E05A00;
+      background: var(--color-forest);
       padding: 56px 0;
       position: relative;
       overflow: hidden;
@@ -281,17 +295,17 @@
     }
 
     .summer-inner .btn-primary {
-      background: #fff;
-      color: #E05A00;
-      border: 2px solid #fff;
-      border-radius: 50px;
-      font-family: 'Nunito', system-ui, sans-serif;
+      background: var(--color-mint);
+      color: var(--color-forest);
+      border: 2px solid var(--color-mint);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
       font-weight: 700;
       padding: 12px 28px;
       transition: background 0.2s, transform 0.2s;
       box-shadow: none;
     }
-    .summer-inner .btn-primary:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
+    .summer-inner .btn-primary:hover { background: #fff; color: var(--color-forest); transform: translateY(-1px); }
 
     .summer-cards {
       display: grid;
@@ -361,15 +375,15 @@
     }
     .tour-card:hover {
       transform: translateY(-4px);
-      border-color: #E05A00;
-      box-shadow: none;
+      border-color: var(--color-sage-light);
+      box-shadow: var(--shadow-hover);
     }
 
     .tour-img {
       position: relative;
       height: 200px;
       overflow: hidden;
-      background: #5BA4CF;
+      background: var(--color-sage-pale);
     }
 
     .tour-img img {
@@ -387,7 +401,7 @@
       top: 12px;
       left: 12px;
       background: rgba(255,255,255,0.85);
-      color: #1A2E1A;
+      color: var(--color-forest);
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 11px;
       font-weight: 700;
@@ -400,9 +414,9 @@
       position: absolute;
       top: 12px;
       right: 12px;
-      background: rgba(224,90,0,0.85);
+      background: rgba(45,106,79,0.85);
       color: white;
-      font-family: 'Nunito', system-ui, sans-serif;
+      font-family: var(--font-body);
       font-size: 10px;
       font-weight: 700;
       padding: 4px 10px;
@@ -417,14 +431,14 @@
       font-family: 'Fraunces', Georgia, serif;
       font-size: 1.1rem;
       font-weight: 700;
-      color: #1A2E1A;
+      color: var(--color-forest);
       margin-bottom: 6px;
     }
 
     .tour-destinations {
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 12px;
-      color: #AAAAAA;
+      color: #6B7280;
       line-height: 1.5;
       margin-bottom: 14px;
       display: -webkit-box;
@@ -444,7 +458,7 @@
     .tour-price-label {
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 11px;
-      color: #AAAAAA;
+      color: #6B7280;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       font-weight: 600;
@@ -454,22 +468,22 @@
       font-family: 'Fraunces', Georgia, serif;
       font-size: 1.35rem;
       font-weight: 900;
-      color: #1A2E1A;
+      color: var(--color-forest);
     }
 
     .tour-book-btn {
       background: transparent;
-      color: #E05A00;
-      border: 2px solid #E05A00;
+      color: var(--color-sage);
+      border: 1.5px solid var(--color-sage);
       padding: 8px 18px;
-      border-radius: 50px;
-      font-family: 'Nunito', system-ui, sans-serif;
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
       font-size: 13px;
       font-weight: 700;
       transition: background 0.2s;
       box-shadow: none;
     }
-    .tour-book-btn:hover { background: #FFF3EC; }
+    .tour-book-btn:hover { background: var(--color-sage); color: #fff; }
 
     .swiper-nav { display: flex; align-items: center; gap: 10px; }
 
@@ -481,11 +495,11 @@
       display: flex; align-items: center; justify-content: center;
       cursor: pointer;
       font-size: 1rem;
-      color: #1A2E1A;
+      color: var(--color-forest);
       transition: all 0.2s;
       box-shadow: none;
     }
-    .swiper-btn:hover { background: #E05A00; color: white; border-color: #E05A00; }
+    .swiper-btn:hover { background: var(--color-sage); color: white; border-color: var(--color-sage); }
 
     /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Year Round Destinations &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
     .yr-destinations { background: #FFFFFF; }
@@ -508,14 +522,14 @@
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 14px;
       font-weight: 600;
-      color: #888888;
+      color: #5C6678;
       cursor: pointer;
       transition: all 0.2s;
     }
-    .dest-pill:hover { border-color: #1A2E1A; color: #1A2E1A; }
+    .dest-pill:hover { border-color: var(--color-forest); color: var(--color-forest); }
     .dest-pill.active {
-      background: #1A2E1A;
-      border-color: #1A2E1A;
+      background: var(--color-forest);
+      border-color: var(--color-forest);
       color: #FFFFFF;
     }
 
@@ -562,7 +576,7 @@
       position: absolute;
       top: 16px; right: 16px;
       background: rgba(255,255,255,0.9);
-      color: #1A2E1A;
+      color: var(--color-forest);
       padding: 5px 12px;
       border-radius: 50px;
       font-family: 'Nunito', system-ui, sans-serif;
@@ -592,17 +606,17 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #E05A00;
+      background: var(--color-sage);
       color: white;
       padding: 10px 20px;
       border-radius: 50px;
-      font-family: 'Nunito', system-ui, sans-serif;
+      font-family: var(--font-body);
       font-size: 13px;
       font-weight: 700;
       transition: background 0.2s;
       border: none;
     }
-    .dest-card:hover .exp-btn { background: #c44f00; }
+    .dest-card:hover .exp-btn { background: var(--color-forest); }
 
     .yr-nav-wrapper {
       position: absolute;
@@ -617,7 +631,7 @@
     .yr-nav-btn {
       width: 46px; height: 46px;
       background: #FFFFFF;
-      color: #1A2E1A;
+      color: var(--color-forest);
       border: 1.5px solid #EEEEEE;
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
@@ -627,7 +641,7 @@
       pointer-events: all;
       box-shadow: none;
     }
-    .yr-nav-btn:hover { background: #E05A00; color: white; border-color: #E05A00; }
+    .yr-nav-btn:hover { background: var(--color-sage); color: white; border-color: var(--color-sage); }
     .yr-nav-btn.swiper-button-disabled { opacity: 0; pointer-events: none; }
 
     @media(max-width: 1300px) { .yr-nav-wrapper { display: none; } }
@@ -660,7 +674,7 @@
 
     .corp-svc-card:hover {
       transform: translateY(-5px);
-      border-color: #E05A00;
+      border-color: var(--color-sage-light);
     }
 
     .corp-svc-icon { font-size: 2rem; margin-bottom: 20px; display: block; }
@@ -668,7 +682,7 @@
     .corp-svc-card h3 {
       font-family: 'Fraunces', Georgia, serif;
       font-size: 1.1rem;
-      color: #1A2E1A;
+      color: var(--color-forest);
       margin-bottom: 12px;
       font-weight: 700;
     }
@@ -676,7 +690,7 @@
     .corp-svc-card p {
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 14px;
-      color: #777777;
+      color: #5C6678;
       line-height: 1.65;
     }
 
@@ -686,7 +700,7 @@
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 14px;
       font-weight: 700;
-      color: #E05A00;
+      color: var(--color-sage);
       margin-bottom: 24px;
       display: flex;
       align-items: center;
@@ -758,7 +772,7 @@
       text-align: center;
       text-decoration: none;
     }
-    .style-item:hover { border-color: #E05A00; transform: translateY(-4px); background: #FFF8F0; }
+    .style-item:hover { border-color: var(--color-sage); transform: translateY(-4px); background: var(--color-sage-pale); }
 
     .style-icon-wrapper {
       width: 68px; height: 68px;
@@ -773,7 +787,7 @@
     .style-item span {
       font-family: 'Nunito', system-ui, sans-serif;
       font-weight: 700;
-      color: #1A2E1A;
+      color: var(--color-forest);
       font-size: 14px;
     }
 
@@ -798,8 +812,8 @@
       align-items: center;
     }
 
-    .group-feature-left .section-label { color: #E05A00; }
-    .group-feature-left .section-title { color: #1A2E1A; }
+    .group-feature-left .section-label { color: var(--color-sage); }
+    .group-feature-left .section-title { color: var(--color-forest); }
     .group-feature-left p { font-family: 'Nunito', system-ui, sans-serif; color: #666666; font-size: 15px; line-height: 1.7; margin-bottom: 28px; }
 
     .group-perks { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
@@ -816,8 +830,8 @@
       flex-shrink: 0;
     }
 
-    .perk-text h4 { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; font-weight: 700; color: #1A2E1A; margin-bottom: 2px; }
-    .perk-text p  { font-family: 'Nunito', system-ui, sans-serif; font-size: 13px; color: #888888; }
+    .perk-text h4 { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; font-weight: 700; color: var(--color-forest); margin-bottom: 2px; }
+    .perk-text p  { font-family: 'Nunito', system-ui, sans-serif; font-size: 13px; color: #5C6678; }
 
     .group-cards-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
 
@@ -828,12 +842,12 @@
       overflow: hidden;
       transition: border-color 0.2s, transform 0.2s;
     }
-    .gcm:hover { border-color: #E05A00; transform: translateY(-4px); }
+    .gcm:hover { border-color: var(--color-sage-light); transform: translateY(-4px); }
     .gcm img { width: 100%; height: 140px; object-fit: cover; }
     .gcm-body { padding: 14px; }
-    .gcm-body h4 { font-family: 'Fraunces', Georgia, serif; font-size: 1rem; color: #1A2E1A; margin-bottom: 4px; font-weight: 700; }
-    .gcm-dur  { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #E05A00; font-weight: 700; margin-bottom: 4px; }
-    .gcm-dest { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #AAAAAA; line-height: 1.4; }
+    .gcm-body h4 { font-family: 'Fraunces', Georgia, serif; font-size: 1rem; color: var(--color-forest); margin-bottom: 4px; font-weight: 700; }
+    .gcm-dur  { font-family: var(--font-body); font-size: 12px; color: var(--color-sage); font-weight: 700; margin-bottom: 4px; }
+    .gcm-dest { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #6B7280; line-height: 1.4; }
     .gcm-badge {
       display: inline-block;
       background: #E8F5E8;
@@ -865,7 +879,7 @@
       position: absolute;
       top: 44px; left: 16.67%; width: 66.66%;
       height: 2px;
-      background: linear-gradient(90deg, #E05A00, rgba(0,119,182,0.3));
+      background: linear-gradient(90deg, var(--color-sage), var(--color-sage-light));
       z-index: 0;
     }
 
@@ -883,7 +897,7 @@
     .step-num {
       width: 80px; height: 80px;
       border-radius: 50%;
-      background: #E05A00;
+      background: var(--color-sage);
       color: white;
       font-family: 'Fraunces', Georgia, serif;
       font-size: 1.7rem;
@@ -898,11 +912,11 @@
       position: absolute;
       inset: -5px;
       border-radius: 50%;
-      border: 2px dashed rgba(224,90,0,0.3);
+      border: 2px dashed rgba(82,183,136,0.3);
     }
 
-    .step-item h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.05rem; font-weight: 700; color: #1A2E1A; margin-bottom: 10px; }
-    .step-item p  { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; color: #777777; line-height: 1.65; }
+    .step-item h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.05rem; font-weight: 700; color: var(--color-forest); margin-bottom: 10px; }
+    .step-item p  { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; color: #5C6678; line-height: 1.65; }
 
     /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Enquiry Section &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
     .enquiry-section { background: #F7F7F7; }
@@ -918,12 +932,12 @@
       font-family: 'Fraunces', Georgia, serif;
       font-size: clamp(1.7rem, 3vw, 2.4rem);
       font-weight: 900;
-      color: #1A2E1A;
+      color: var(--color-forest);
       line-height: 1.2;
       margin-bottom: 18px;
     }
 
-    .enquiry-left h2 .ac { color: #0077B6; font-style: italic; }
+    .enquiry-left h2 .ac { color: var(--color-sage); font-style: italic; }
     .enquiry-left > p { font-family: 'Nunito', system-ui, sans-serif; color: #666666; line-height: 1.7; margin-bottom: 28px; font-size: 15px; }
 
     .enquiry-benefits { display: flex; flex-direction: column; gap: 12px; }
@@ -934,13 +948,13 @@
       gap: 12px;
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 14px;
-      color: #1A2E1A;
+      color: var(--color-forest);
       font-weight: 600;
     }
 
     .benefit-item .check {
       width: 24px; height: 24px;
-      background: #E05A00;
+      background: var(--color-sage);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-size: 12px;
@@ -956,8 +970,8 @@
       box-shadow: none;
     }
 
-    .enquiry-form-box h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.35rem; color: #1A2E1A; margin-bottom: 6px; font-weight: 700; }
-    .enquiry-form-box .sub { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; color: #888888; margin-bottom: 24px; }
+    .enquiry-form-box h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.35rem; color: var(--color-forest); margin-bottom: 6px; font-weight: 700; }
+    .enquiry-form-box .sub { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; color: #5C6678; margin-bottom: 24px; }
 
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .form-group { margin-bottom: 12px; }
@@ -967,7 +981,7 @@
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 13px;
       font-weight: 700;
-      color: #1A2E1A;
+      color: var(--color-forest);
       margin-bottom: 5px;
     }
 
@@ -980,7 +994,7 @@
       border-radius: 10px;
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 14px;
-      color: #1A2E1A;
+      color: var(--color-forest);
       background: #FFFFFF;
       transition: border-color 0.2s;
       resize: vertical;
@@ -989,18 +1003,18 @@
     .form-group select:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: #E05A00;
+      border-color: var(--color-sage);
       box-shadow: none;
     }
 
     .form-submit {
       width: 100%;
       padding: 14px;
-      background: #E05A00;
+      background: var(--color-sage);
       color: white;
       border: none;
-      border-radius: 50px;
-      font-family: 'Nunito', system-ui, sans-serif;
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
       font-size: 15px;
       font-weight: 700;
       cursor: pointer;
@@ -1008,7 +1022,7 @@
       margin-top: 6px;
       box-shadow: none;
     }
-    .form-submit:hover { background: #c44f00; transform: translateY(-1px); }
+    .form-submit:hover { background: var(--color-forest); transform: translateY(-1px); }
 
     @media(max-width:900px) {
       .enquiry-wrapper { grid-template-columns: 1fr; gap: 36px; }
@@ -1027,7 +1041,7 @@
       box-shadow: none;
     }
 
-    .testi-stars { color: #E05A00; font-size: 0.95rem; margin-bottom: 12px; letter-spacing: 2px; }
+    .testi-stars { color: var(--color-gold); font-size: 0.95rem; margin-bottom: 12px; letter-spacing: 2px; }
 
     .testi-card p {
       font-family: 'Nunito', system-ui, sans-serif;
@@ -1043,17 +1057,17 @@
     .testi-avatar {
       width: 44px; height: 44px;
       border-radius: 50%;
-      background: #E05A00;
+      background: var(--color-sage);
       display: flex; align-items: center; justify-content: center;
       color: white;
-      font-family: 'Fraunces', Georgia, serif;
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 0.9rem;
       flex-shrink: 0;
     }
 
-    .testi-name { font-family: 'Nunito', system-ui, sans-serif; font-weight: 700; font-size: 14px; color: #1A2E1A; }
-    .testi-trip { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #888888; }
+    .testi-name { font-family: 'Nunito', system-ui, sans-serif; font-weight: 700; font-size: 14px; color: var(--color-forest); }
+    .testi-trip { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #5C6678; }
 
     /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Blog &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
     .blog-section { background: #F7F7F7; }
@@ -1068,7 +1082,7 @@
       transition: border-color 0.2s, transform 0.2s;
       box-shadow: none;
     }
-    .blog-card:hover { transform: translateY(-4px); border-color: #E05A00; }
+    .blog-card:hover { transform: translateY(-4px); border-color: var(--color-sage-light); }
 
     .blog-img { height: 190px; overflow: hidden; }
     .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
@@ -1078,9 +1092,9 @@
 
     .blog-tag {
       display: inline-block;
-      background: rgba(224,90,0,0.08);
-      color: #E05A00;
-      font-family: 'Nunito', system-ui, sans-serif;
+      background: var(--color-sage-pale);
+      color: var(--color-forest);
+      font-family: var(--font-body);
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
@@ -1094,7 +1108,7 @@
       font-family: 'Fraunces', Georgia, serif;
       font-size: 1rem;
       font-weight: 700;
-      color: #1A2E1A;
+      color: var(--color-forest);
       line-height: 1.45;
       margin-bottom: 8px;
     }
@@ -1102,7 +1116,7 @@
     .blog-body p {
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 14px;
-      color: #777777;
+      color: #5C6678;
       line-height: 1.65;
       display: -webkit-box;
       -webkit-line-clamp: 3;
@@ -1119,13 +1133,13 @@
       border-top: 1.5px solid #EEEEEE;
     }
 
-    .blog-meta .date { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #AAAAAA; font-weight: 500; }
+    .blog-meta .date { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: #6B7280; font-weight: 500; }
 
     .blog-meta .read-more {
-      font-family: 'Nunito', system-ui, sans-serif;
+      font-family: var(--font-body);
       font-size: 13px;
       font-weight: 700;
-      color: #E05A00;
+      color: var(--color-sage);
       display: flex; align-items: center; gap: 4px;
       transition: gap 0.2s;
     }
@@ -1163,21 +1177,92 @@
     .partner-item:hover { filter: grayscale(0) opacity(1); }
 
     .partner-item span {
-      font-family: 'Fraunces', Georgia, serif;
+      font-family: var(--font-display);
       font-size: 0.9rem;
       font-weight: 700;
-      color: #1A2E1A;
+      color: var(--color-forest);
       white-space: nowrap;
     }
+    .testi-name { color: var(--color-forest); font-family: var(--font-body); font-weight: 500; }
+    .testi-trip { color: var(--color-text-muted); font-family: var(--font-body); }
+    .testi-avatar { background: var(--color-sage); font-family: var(--font-display); }
 
-    /* &#226;&#8221;&#8364;&#226;&#8221;&#8364; Search bar (legacy &rdquo; hidden on new design) &#226;&#8221;&#8364;&#226;&#8221;&#8364; */
-    .hero-search { display: none; }
+    /* ── Blog ── */
+    .blog-card { background: var(--color-bg-card); border-color: var(--color-border); box-shadow: var(--shadow-card); border-radius: var(--radius-lg); }
+    .blog-card:hover { border-color: var(--color-sage-light); box-shadow: var(--shadow-hover); }
+    .blog-tag { background: var(--color-sage-pale); color: var(--color-forest); font-family: var(--font-body); }
+    .blog-body h3 { font-family: var(--font-display); color: var(--color-forest); }
+    .blog-body p { color: var(--color-text-secondary); font-family: var(--font-body); }
+    .blog-meta { border-top-color: var(--color-border); }
+    .blog-meta .date { color: var(--color-text-muted); }
+    .blog-meta .read-more { color: var(--color-sage); font-family: var(--font-body); }
+
+    /* ── Group mini cards ── */
+    .gcm { background: var(--color-bg-card); border-color: var(--color-border); border-radius: var(--radius-lg); }
+    .gcm:hover { border-color: var(--color-sage-light); }
+    .gcm-body h4 { font-family: var(--font-display); color: var(--color-forest); }
+    .gcm-dur { color: var(--color-sage); font-family: var(--font-body); }
+    .gcm-dest { color: var(--color-text-muted); font-family: var(--font-body); }
+
+    /* ── Summer / CTA banner ── */
+    .summer-banner { background: var(--color-forest); }
+    .summer-inner h2 { font-family: var(--font-display); color: #fff; }
+    .summer-inner p { font-family: var(--font-body); color: rgba(255,255,255,0.85); }
+    .summer-tag { font-family: var(--font-body); }
+    .summer-badge { font-family: var(--font-body); }
+    .summer-inner .btn-primary, .summer-inner .btn.btn-primary {
+      background: var(--color-mint);
+      color: var(--color-forest);
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+    }
+    .summer-inner .btn-primary:hover { background: #fff; }
+    .mini-tour-card h4 { font-family: var(--font-display); }
+    .mini-tour-card .mc-dur { font-family: var(--font-body); }
+
+    /* ── Partners ── */
+    .partner-item span { color: var(--color-forest); font-family: var(--font-display); }
+
+    /* ── Footer ── */
+    footer, .footer {
+      background: var(--color-forest) !important;
+      border-top: none !important;
+    }
+    footer *, .footer * { font-family: var(--font-body); }
+    footer h3, footer h4, footer .footer-logo, .footer h3, .footer h4, .footer .footer-logo {
+      color: #fff;
+      font-family: var(--font-display);
+    }
+    footer p, footer li, footer span, .footer p, .footer li, .footer span {
+      color: rgba(255,255,255,0.85);
+    }
+    footer a, .footer a { color: var(--color-mint); }
+    footer a:hover, .footer a:hover { color: #fff; }
+
+    /* ── Global btn-outline-navy override ── */
+    .btn-outline-navy {
+      border: 1.5px solid var(--color-sage);
+      color: var(--color-sage);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      background: transparent;
+    }
+    .btn-outline-navy:hover { background: var(--color-sage); color: #fff; }
+
+    /* ── Mobile responsive ── */
+    @media (max-width: 375px) {
+      .hero h1 { font-size: 2rem; }
+      .hero-stats { gap: 20px; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 64px 0 40px; }
+      section.section, .section { padding: 64px 0; }
+    }
   </style>
 </head>
 
 <body>
-
-
 
   <div id="navbar-placeholder"></div>
 
@@ -2277,6 +2362,11 @@
 
   <div id="footer-placeholder"></div>
 
+  <!-- CMS scripts (must load before components.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="assets/js/supabase-client.js"></script>
+  <script src="assets/js/cms.js"></script>
+  <!-- Page scripts -->
   <script src="assets/js/components.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>

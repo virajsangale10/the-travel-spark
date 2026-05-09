@@ -1,64 +1,64 @@
 /* =============================================
    THE TRAVEL SPARK — style.css
-   Design System: Fraunces + Nunito | Orange + Blue
+   Design System: Light Lime Green — fresh, vivid, premium
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
 
 :root {
   /* Brand Colors */
-  --orange:        #E05A00;
-  --orange-light:  #FFF3EC;
-  --orange-dark:   #c44f00;
-  --blue:          #0077B6;
-  --blue-light:    #e8f4fb;
-  --dark:          #1A2E1A;
-  --muted:         #888888;
-  --route:         #AAAAAA;
-  --border:        #EEEEEE;
-  --border-warm:   #F0EAE0;
+  --orange:        var(--color-sage);
+  --orange-light:  var(--color-sage-pale);
+  --orange-dark:   var(--color-forest);
+  --blue:          var(--color-sage);
+  --blue-light:    var(--color-sage-light);
+  --dark:          var(--color-forest);
+  --muted:         var(--color-text-muted);
+  --route:         var(--color-text-muted);
+  --border:        var(--color-border);
+  --border-warm:   var(--color-border);
 
   /* Backgrounds */
-  --white:         #FFFFFF;
-  --off-white:     #F7F7F7;
-  --hero-bg:       #FFF8F0;
-  --green-light:   #F6FFF6;
-  --green-border:  #D4EDD4;
-  --green-icon-bg: #E8F5E8;
+  --white:         var(--color-bg-page);
+  --off-white:     var(--color-bg-section);
+  --hero-bg:       var(--color-bg-page);
+  --green-light:   var(--color-sage-pale);
+  --green-border:  var(--color-sage-light);
+  --green-icon-bg: rgba(81,230,76,0.12);
 
-  /* Legacy aliases — keep for any leftover var() refs */
-  --navy:          var(--dark);
-  --navy-mid:      var(--dark);
-  --navy-light:    var(--dark);
-  --pink:          var(--orange);
-  --pink-light:    #f07020;
-  --pink-dark:     var(--orange-dark);
-  --teal:          var(--blue);
-  --teal-light:    var(--blue-light);
-  --text:          var(--dark);
-  --text-light:    var(--muted);
-  --gray-50:       #fafafa;
-  --gray-100:      var(--border);
-  --gray-300:      #dddddd;
-  --gray-600:      var(--muted);
-  --yellow:        var(--orange);
-  --yellow-dark:   var(--orange-dark);
-  --yellow-light:  rgba(224,90,0,0.08);
-  --off-white-old: var(--off-white);
+  /* Legacy aliases — mapped to new variables from variables.css */
+  --navy:          var(--color-forest);
+  --navy-mid:      var(--color-forest);
+  --navy-light:    var(--color-sage);
+  --pink:          var(--color-sage);
+  --pink-light:    var(--color-sage-light);
+  --pink-dark:     var(--color-forest);
+  --teal:          var(--color-sage);
+  --teal-light:    var(--color-sage-pale);
+  --text:          var(--color-text-primary);
+  --text-light:    var(--color-text-secondary);
+  --gray-50:       var(--color-bg-section);
+  --gray-100:      var(--color-border);
+  --gray-300:      var(--color-border-strong);
+  --gray-600:      var(--color-text-muted);
+  --yellow:        var(--color-gold);
+  --yellow-dark:   var(--color-gold-dark);
+  --yellow-light:  rgba(212,160,23,0.10);
+  --off-white-old: var(--color-bg-section);
 
   /* Typography */
-  --font-display:  'Fraunces', Georgia, serif;
-  --font-body:     'Nunito', system-ui, sans-serif;
+  --font-display:  'Cormorant Garamond', Georgia, serif;
+  --font-body:     'Jost', system-ui, sans-serif;
 
   /* Spacing & Shape */
-  --radius:        16px;
-  --radius-sm:     50px;   /* pill — all buttons */
-  --radius-lg:     24px;
+  --radius:        16px;   /* --radius-lg */
+  --radius-sm:     4px;
+  --radius-lg:     16px;
 
-  /* Shadows — none per spec, but keep var names to avoid JS errors */
-  --shadow-sm:     none;
-  --shadow-md:     none;
-  --shadow-lg:     none;
+  /* Shadows */
+  --shadow-sm:     var(--shadow-card);
+  --shadow-md:     var(--shadow-hover);
+  --shadow-lg:     0 16px 48px rgba(26,140,22,0.18);
   --shadow-pink:   none;
 
   /* Transitions */
@@ -72,8 +72,8 @@ html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
   font-family: var(--font-body);
-  color: var(--dark);
-  background: var(--white);
+  color: var(--color-text-primary);
+  background: var(--color-bg-page);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
@@ -104,7 +104,7 @@ section { padding: 3rem 0; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--color-forest);  /* was var(--color-sage) lime — now forest green for legibility */
   margin-bottom: 12px;
 }
 
@@ -112,27 +112,27 @@ section { padding: 3rem 0; }
   content: '';
   width: 20px;
   height: 2px;
-  background: var(--orange);
+  background: var(--color-forest);  /* was lime, now forest */
   border-radius: 2px;
 }
 
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 2.6rem);
-  font-weight: 900;
-  color: var(--dark);
+  font-weight: 700;
+  color: var(--color-forest);
   line-height: 1.15;
   margin-bottom: 14px;
 }
 
 .section-title .accent {
-  color: var(--blue);
+  color: var(--color-gold);  /* warm honey accent on section titles */
   font-style: italic;
 }
 
 .section-sub {
   font-family: var(--font-body);
-  color: #777777;
+  color: var(--color-text-secondary);
   font-size: 15px;
   line-height: 1.65;
   max-width: 560px;
@@ -144,10 +144,10 @@ section { padding: 3rem 0; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 13px 28px;
-  border-radius: 50px;
+  padding: 12px 28px;
+  border-radius: var(--radius-md);
   font-family: var(--font-body);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.9rem;
   transition: var(--transition);
   border: 2px solid transparent;
@@ -157,44 +157,44 @@ section { padding: 3rem 0; }
 }
 
 .btn-primary {
-  background: var(--orange);
-  color: var(--white);
-  border-color: var(--orange);
+  background: var(--color-sage);
+  color: var(--color-text-on-sage);
+  border-color: var(--color-sage);
 }
 
 .btn-primary:hover {
-  background: var(--orange-dark);
-  border-color: var(--orange-dark);
+  background: var(--color-forest);
+  border-color: var(--color-forest);
   transform: translateY(-1px);
 }
 
 .btn-outline {
-  background: var(--white);
-  color: var(--blue);
-  border-color: var(--blue);
+  background: var(--color-bg-page);
+  color: var(--color-sage);
+  border-color: var(--color-sage);
 }
 
 .btn-outline:hover {
-  background: var(--blue-light);
+  background: var(--color-sage-pale);
   transform: translateY(-1px);
 }
 
 .btn-outline-navy {
   background: transparent;
-  color: var(--dark);
-  border-color: var(--dark);
-  border-radius: 50px;
+  color: var(--color-sage);
+  border-color: var(--color-sage);
+  border-radius: var(--radius-md);
 }
 
 .btn-outline-navy:hover {
-  background: var(--dark);
-  color: var(--white);
+  background: var(--color-sage);
+  color: var(--color-text-on-sage);
   transform: translateY(-1px);
 }
 
 /* ── Promo Banner ── */
 .promo-banner {
-  background: linear-gradient(90deg, var(--orange) 0%, var(--orange-dark) 100%);
+  background: linear-gradient(90deg, var(--color-forest) 0%, var(--color-sage) 100%);
   text-align: center;
   padding: 11px 24px;
   font-size: 0.82rem;
@@ -221,8 +221,8 @@ section { padding: 3rem 0; }
 .promo-banner .close-banner:hover { opacity: 1; }
 
 /* ── Utilities ── */
-.text-pink  { color: var(--orange); }
-.text-navy  { color: var(--dark); }
+.text-pink  { color: var(--color-sage); }
+.text-navy  { color: var(--color-forest); }
 .fw-600     { font-weight: 600; }
 .mt-8       { margin-top: 8px; }
-.swiper-pagination-bullet-active { background: var(--orange) !important; }
+.swiper-pagination-bullet-active { background: var(--color-sage) !important; }
