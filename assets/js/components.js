@@ -32,12 +32,14 @@
             <li><a href="${prefix}contact.html">Contact</a></li>
           </ul>
           <div class="navbar-cta">
-            <a href="${prefix}contact.html" class="navbar-phone hide-mobile" style="font-size: 1.25rem; text-decoration: none;" title="Contact Us">&#128222;</a>
+            <a href="${prefix}contact.html" class="navbar-phone hide-mobile" style="text-align: center; display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; text-decoration: none; color: var(--primary-dark); transition: color 0.2s;" title="Contact Us">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
             <a href="${prefix}contact.html" class="navbar-enquire hide-mobile">Enquire Now</a>
             <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
           </div>
           <a href="${prefix}index.html" class="navbar-logo">
-            <span class="logo-text-new">The Travel&nbsp;<span class="spark-mix">Spark</span></span>
+            <img src="${prefix}assets/images/Logo-TTS.png" alt="The Travel Spark" style="height:64px;width:auto;display:block;" />
           </a>
         </div>
       </div>
@@ -57,7 +59,7 @@
       <a href="${prefix}about.html">About</a>
       <a href="${prefix}contact.html">Contact</a>
       <br/>
-      <a href="tel:+919421189999" style="color:#E05A00;font-weight:700;">&#128222; +91 9421189999</a>
+      <a href="tel:+919421189999" style="color:var(--primary);font-weight:700;">&#128222; +91 9421189999</a>
     </div>
     `;
 
@@ -67,46 +69,71 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-logo">
-              <span class="footer-logo-text">The Travel <i>Spark</i></span>
+              <img src="${prefix}assets/images/Logo-TTS.png" alt="The Travel Spark" style="height:110px;width:auto;display:block;margin-bottom:12px;" />
             </div>
-            <p class="footer-desc">Your trusted travel partner for unforgettable holidays, seamless group tours, and premium corporate travel.</p>
+            <p class="footer-desc" style="color: #000000; font-weight: 600;">Your trusted travel partner for unforgettable holidays, seamless group tours, and premium corporate travel.</p>
             <div class="footer-social">
-              <a href="#" title="Instagram">&#128248;</a>
-              <a href="#" title="Facebook">&#128100;</a>
-              <a href="https://wa.me/919421189999" title="WhatsApp">&#128172;</a>
-              <a href="#" title="YouTube">&#9654;&#65039;</a>
+              <a href="#" title="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="#" title="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="https://wa.me/919421189999" title="WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              </a>
+              <a href="#" title="YouTube">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+              </a>
             </div>
           </div>
           <div class="footer-col">
-            <h4>Quick Links</h4>
+            <h4>International</h4>
             <ul>
-              <li><a href="${prefix}index.html">Home</a></li>
-              <li><a href="${prefix}about.html">About Us</a></li>
+              <li><a href="${prefix}packages/dubai.html">Dubai Packages</a></li>
+              <li><a href="${prefix}packages/europe.html">Europe Packages</a></li>
+              <li><a href="${prefix}packages/georgia.html">Georgia Packages</a></li>
+              <li><a href="${prefix}packages/japan.html">Japan Packages</a></li>
+              <li><a href="${prefix}packages/maldives.html">Maldives Packages</a></li>
+              <li><a href="${prefix}packages/philippines.html">Philippines Packages</a></li>
+              <li><a href="${prefix}packages/charming-singapore-with-malaysia.html">Singapore Packages</a></li>
+              <li><a href="${prefix}packages/vietnam.html">Vietnam Packages</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>India Tours</h4>
+            <ul>
+              <li><a href="${prefix}packages/andaman-package.html">Andaman Packages</a></li>
+              <li><a href="${prefix}packages/goa-escape-neelam.html">Goa Packages</a></li>
+              <li><a href="${prefix}packages/fascinating-gujarat.html">Gujarat Packages</a></li>
+              <li><a href="${prefix}packages/glorious-himachal.html">Himachal Packages</a></li>
+              <li><a href="${prefix}packages/kashmir-heaven-on-earth.html">Kashmir Packages</a></li>
+              <li><a href="${prefix}packages/essence-of-kerala.html">Kerala Packages</a></li>
+              <li><a href="${prefix}packages/ladakh-delight.html">Ladakh Packages</a></li>
+              <li><a href="${prefix}packages/northeast-odyssey.html">North East India</a></li>
+              <li><a href="${prefix}packages/marvels-of-rajasthan.html">Rajasthan Packages</a></li>
+              <li><a href="${prefix}packages/uttarakhand-06-nights.html">Uttarakhand Packages</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
               <li><a href="${prefix}packages/group-tours.html">Group Tours</a></li>
-              <li><a href="${prefix}contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Packages</h4>
-            <ul>
-              <li><a href="${prefix}packages/international.html">International</a></li>
+              <li><a href="${prefix}packages/international.html">International Holidays</a></li>
               <li><a href="${prefix}packages/domestic.html">Explore India</a></li>
-              <li><a href="${prefix}corporate-travel.html">Corporate</a></li>
-              <li><a href="${prefix}cruises.html">Cruises</a></li>
+              <li><a href="${prefix}corporate-travel.html">Corporate Travel</a></li>
+              <li><a href="${prefix}cruises.html">Luxury Cruises</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Contact</h4>
-            <div class="footer-contact">
-              <div class="footer-contact-item">
-                <div class="icon">&#128222;</div>
-                <div class="info"><a href="tel:+919421189999">+91 9421189999</a></div>
-              </div>
-              <div class="footer-contact-item">
-                <div class="icon">&#9993;&#65039;</div>
-                <div class="info"><a href="mailto:thetravelspark2@gmail.com">thetravelspark2@gmail.com</a></div>
-              </div>
-            </div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="${prefix}about.html">About Us</a></li>
+              <li><a href="${prefix}contact.html">Contact Us</a></li>
+              <li><a href="${prefix}blog.html">Blog</a></li>
+              <li><a href="${prefix}legal/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="${prefix}legal/terms-conditions.html">Terms & Conditions</a></li>
+            </ul>
           </div>
         </div>
         <div class="footer-bottom">

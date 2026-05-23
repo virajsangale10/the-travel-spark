@@ -58,7 +58,7 @@
   /* Shadows */
   --shadow-sm:     var(--shadow-card);
   --shadow-md:     var(--shadow-hover);
-  --shadow-lg:     0 16px 48px rgba(26,140,22,0.18);
+  --shadow-lg:     0 16px 48px rgba(13, 46, 82, 0.18);
   --shadow-pink:   none;
 
   /* Transitions */
@@ -104,7 +104,7 @@ section { padding: 3rem 0; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-forest);  /* was var(--color-sage) lime — now forest green for legibility */
+  color: var(--color-gold);  /* warm gold eyebrow label */
   margin-bottom: 12px;
 }
 
@@ -112,7 +112,7 @@ section { padding: 3rem 0; }
   content: '';
   width: 20px;
   height: 2px;
-  background: var(--color-forest);  /* was lime, now forest */
+  background: var(--color-gold);
   border-radius: 2px;
 }
 
@@ -157,14 +157,15 @@ section { padding: 3rem 0; }
 }
 
 .btn-primary {
-  background: var(--color-sage);
-  color: var(--color-text-on-sage);
-  border-color: var(--color-sage);
+  background: var(--color-gold);
+  color: var(--color-forest);
+  border-color: var(--color-gold);
 }
 
 .btn-primary:hover {
-  background: var(--color-forest);
-  border-color: var(--color-forest);
+  background: var(--color-gold-dark);
+  border-color: var(--color-gold-dark);
+  color: var(--color-forest);
   transform: translateY(-1px);
 }
 
@@ -226,3 +227,78 @@ section { padding: 3rem 0; }
 .fw-600     { font-weight: 600; }
 .mt-8       { margin-top: 8px; }
 .swiper-pagination-bullet-active { background: var(--color-sage) !important; }
+
+/* ==========================================================
+   GLOBAL SLATE & GOLD RETHEME (Applied to all pages)
+   Overrides legacy .page-hero and .package-hero styles
+   ========================================================== */
+
+/* 1. Light Sky-Blue Hero Backgrounds */
+.page-hero, .package-hero, .cruise-hero {
+  background: linear-gradient(135deg, #C8D8EA 0%, #D8E6F3 60%, #EEF2F7 100%) !important;
+}
+
+/* 2. Hide legacy dark overlays and background images to match the clean Slate theme */
+.page-hero::before, 
+.package-hero-bg, .package-hero-overlay, 
+.cruise-hero-bg, .cruise-hero-overlay {
+  display: none !important;
+}
+
+/* 3. Deep Slate Typography for Heroes */
+.page-hero h1, .package-hero h1, .cruise-hero h1, .package-title {
+  color: var(--primary-dark) !important;
+}
+
+.page-hero h1 span, .cruise-hero h1 span {
+  color: var(--primary) !important;
+}
+
+.page-hero p, .package-hero p, .cruise-hero p {
+  color: var(--primary-dark) !important;
+  opacity: 0.8 !important;
+}
+
+/* Breadcrumbs */
+.crumb {
+  color: var(--primary-dark) !important;
+  opacity: 0.7 !important;
+}
+.crumb a {
+  color: var(--primary) !important;
+  font-weight: 700 !important;
+}
+
+/* Badges & Meta info in Hero */
+.hero-badge, .meta-item {
+  color: var(--primary-dark) !important;
+  border-color: var(--primary) !important;
+  background: rgba(13, 46, 82, 0.08) !important;
+}
+.meta-item .icon {
+  color: var(--primary) !important;
+}
+
+/* 4. Global Button Retheme (Gold & Slate) */
+.btn-primary, .pkg-btn, .form-submit {
+  background: var(--accent) !important;
+  color: var(--primary-dark) !important;
+  border: 2px solid var(--accent) !important;
+  box-shadow: none !important;
+}
+.btn-primary:hover, .pkg-btn:hover, .form-submit:hover {
+  background: var(--accent-dark) !important;
+  border-color: var(--accent-dark) !important;
+  color: var(--primary-dark) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn-outline, .btn-outline-navy {
+  background: transparent !important;
+  color: var(--primary-dark) !important;
+  border: 2px solid var(--primary-dark) !important;
+}
+.btn-outline:hover, .btn-outline-navy:hover {
+  background: rgba(13, 46, 82, 0.1) !important;
+  color: var(--primary-dark) !important;
+}

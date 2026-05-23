@@ -48,7 +48,6 @@ button { font-family: var(--font-body); cursor: pointer; }
 .navbar {
   background: var(--color-forest) !important;
   border-bottom: none !important;
-  height: 68px;
 }
 
 .navbar.scrolled {
@@ -154,12 +153,12 @@ button { font-family: var(--font-body); cursor: pointer; }
 .package-hero {
   background: var(--color-forest) !important;
   /* Push content below the fixed navbar */
-  margin-top: var(--navbar-height, 68px) !important;
+  margin-top: var(--navbar-height) !important;
 }
 
 /* Inner page heros (about, blog, corporate etc.) */
 .page-hero {
-  padding-top: calc(var(--navbar-height, 68px) + 60px) !important;
+  padding-top: calc(var(--navbar-height) + 60px) !important;
   background: linear-gradient(135deg, var(--color-forest) 0%, #0d2a1a 100%) !important;
 }
 
@@ -488,80 +487,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   border-color: var(--color-forest) !important;
 }
 
-/* ══════════════════════════════════════════════════════════════
-   FOOTER  (injected by components.js)
-══════════════════════════════════════════════════════════════ */
 
-.footer {
-  background: var(--color-forest) !important;
-  border-top: 2px solid var(--color-sage) !important;
-  color: var(--color-text-on-dark) !important;
-}
-
-.footer::before {
-  background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%) !important;
-}
-
-/* Footer logo */
-.footer-logo-text {
-  font-family: var(--font-display) !important;
-  color: var(--color-text-on-dark) !important;
-}
-
-.footer-logo-text i { color: var(--color-gold) !important; }
-
-/* Column headings */
-.footer-col h4 {
-  font-family: var(--font-display) !important;
-  color: #ffffff !important;
-}
-
-.footer-col h4::after { background: var(--color-gold) !important; }
-
-/* Links */
-.footer-col ul li a {
-  color: var(--color-mint) !important;
-  font-family: var(--font-body) !important;
-}
-
-.footer-col ul li a:hover { color: #ffffff !important; }
-.footer-col ul li a::before { color: var(--color-gold) !important; }
-
-/* Footer description — raised from 70% mint to 70% white for better contrast on forest bg */
-.footer-desc { color: rgba(255, 255, 255, 0.68) !important; }
-
-/* Social icons */
-.footer-social a {
-  background: rgba(255, 255, 255, 0.06) !important;
-  border-color: rgba(255, 255, 255, 0.18) !important;
-  color: rgba(255, 255, 255, 0.82) !important;  /* was faint mint */
-}
-
-.footer-social a:hover {
-  background: var(--color-gold) !important;
-  border-color: var(--color-gold) !important;
-  color: var(--color-forest) !important;
-}
-
-/* Contact column */
-.footer-contact-item .icon {
-  background: rgba(201, 168, 76, 0.15) !important;
-}
-
-/* Footer contact column — raised to near-white */
-.footer-contact-item .info { color: rgba(255, 255, 255, 0.78) !important; }
-.footer-contact-item .info a { color: rgba(255, 255, 255, 0.78) !important; }
-.footer-contact-item .info a:hover { color: var(--color-gold) !important; }
-
-/* Bottom bar */
-.footer-bottom {
-  border-top-color: rgba(168, 197, 160, 0.15) !important;
-}
-
-/* Footer bottom bar — was nearly invisible at 45% mint, now 55% white */
-.footer-bottom p { color: rgba(255, 255, 255, 0.55) !important; }
-.footer-bottom-links a { color: rgba(255, 255, 255, 0.55) !important; }
-.footer-bottom-links a:hover { color: var(--color-gold) !important; }
 
 /* ══════════════════════════════════════════════════════════════
    FLOAT COMPONENTS
@@ -624,4 +550,114 @@ button { font-family: var(--font-body); cursor: pointer; }
   .excl-grid {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* ==========================================================
+   GLOBAL SLATE & GOLD RETHEME (Applied to all pages)
+   Overrides legacy package-theme.css to match index.html
+   ========================================================== */
+
+/* 1. Revert Navbar to Light Mode (matching index.html) */
+.navbar {
+  background: var(--color-bg-navbar) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+}
+.logo-text-new {
+  color: var(--color-forest) !important;
+}
+.navbar-links > li > a, .navbar-links > li > span {
+  color: var(--color-text-secondary) !important;
+}
+.navbar-links > li > a:hover, .navbar-links > li > span:hover, .navbar-links > li > a.active {
+  color: var(--color-forest) !important;
+  background: var(--color-sage-pale) !important;
+}
+.dropdown {
+  background: var(--color-bg-navbar) !important;
+  border: 1px solid var(--color-border) !important;
+}
+.dropdown li a {
+  color: var(--color-text-secondary) !important;
+}
+.dropdown li a:hover {
+  background: var(--color-sage-pale) !important;
+  color: var(--color-forest) !important;
+}
+.hamburger span {
+  background: var(--color-forest) !important;
+}
+.mobile-menu {
+  background: var(--color-bg-navbar) !important;
+}
+.mobile-menu a, .mobile-menu .m-parent {
+  color: var(--color-text-secondary) !important;
+  border-bottom-color: var(--color-border) !important;
+}
+.mobile-menu a:hover {
+  color: var(--color-forest) !important;
+  background: var(--color-sage-pale) !important;
+}
+
+/* Navbar Buttons */
+.navbar-enquire, #navbar .navbar-enquire, nav .navbar-enquire {
+  background: var(--accent) !important;
+  color: var(--primary-dark) !important;
+  border-color: var(--accent) !important;
+}
+.navbar-enquire:hover {
+  background: var(--accent-dark) !important;
+  border-color: var(--accent-dark) !important;
+}
+
+/* 2. Light Sky-Blue Hero Backgrounds */
+.page-hero, .package-hero, .cruise-hero {
+  background: linear-gradient(135deg, #C8D8EA 0%, #D8E6F3 60%, #EEF2F7 100%) !important;
+}
+
+/* Hide legacy dark overlays */
+.page-hero::before, .package-hero-bg, .package-hero-overlay, .cruise-hero-bg, .cruise-hero-overlay {
+  display: none !important;
+}
+
+/* 3. Deep Slate Typography for Heroes */
+.page-hero h1, .package-hero h1, .cruise-hero h1, .package-title {
+  color: var(--primary-dark) !important;
+}
+.page-hero h1 span, .cruise-hero h1 span {
+  color: var(--primary) !important;
+}
+.page-hero p, .package-hero p, .cruise-hero p {
+  color: var(--primary-dark) !important;
+  opacity: 0.8 !important;
+}
+.crumb { color: var(--primary-dark) !important; opacity: 0.7 !important; }
+.crumb a { color: var(--primary) !important; font-weight: 700 !important; }
+.hero-badge, .meta-item {
+  color: var(--primary-dark) !important;
+  border-color: var(--primary) !important;
+  background: rgba(13, 46, 82, 0.08) !important;
+}
+.meta-item .icon { color: var(--primary) !important; }
+
+/* 4. Global Button Retheme */
+.btn-primary, .pkg-btn, .form-submit {
+  background: var(--accent) !important;
+  color: var(--primary-dark) !important;
+  border: 2px solid var(--accent) !important;
+  box-shadow: none !important;
+}
+.btn-primary:hover, .pkg-btn:hover, .form-submit:hover {
+  background: var(--accent-dark) !important;
+  border-color: var(--accent-dark) !important;
+  color: var(--primary-dark) !important;
+  transform: translateY(-1px) !important;
+}
+.btn-outline, .btn-outline-navy {
+  background: transparent !important;
+  color: var(--primary-dark) !important;
+  border: 2px solid var(--primary-dark) !important;
+}
+.btn-outline:hover, .btn-outline-navy:hover {
+  background: rgba(13, 46, 82, 0.1) !important;
+  color: var(--primary-dark) !important;
 }

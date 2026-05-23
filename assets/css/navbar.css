@@ -47,7 +47,6 @@
 }
 
 .navbar-logo img {
-  height: 44px;
   width: auto;
   background: none;
   padding: 0;
@@ -179,8 +178,8 @@
 .navbar-phone:hover { color: var(--color-sage); }
 
 .navbar-enquire {
-  background: var(--color-sage);
-  color: var(--color-text-on-sage) !important;
+  background: var(--accent);
+  color: var(--primary-dark) !important;
   padding: 9px 22px;
   border-radius: var(--radius-md);
   font-family: var(--font-body);
@@ -188,12 +187,13 @@
   font-weight: 600;
   transition: background 0.2s, transform 0.2s;
   white-space: nowrap;
-  border: 2px solid var(--color-sage);
+  border: 2px solid var(--accent);
 }
 
 .navbar-enquire:hover {
-  background: var(--color-forest);
-  border-color: var(--color-forest);
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: var(--primary-dark) !important;
   transform: translateY(-1px);
 }
 
@@ -297,7 +297,7 @@
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(26,46,26,0.35);
+  background: rgba(13, 46, 82, 0.35);
   z-index: 998;
   opacity: 0;
   pointer-events: none;

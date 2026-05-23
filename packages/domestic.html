@@ -1,4 +1,4 @@
-﻿&#65279;<!DOCTYPE html>
+&#65279;<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -51,7 +51,9 @@
       line-height: 1.6;
     }
     .hero-badges { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
-    .hero-badge { background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); padding: 8px 20px; border-radius: 100px; color: white; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,255,255,0.2); }
+    .hero-badge { background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); padding: 6px 20px 6px 6px; border-radius: 100px; color: white; font-size: 0.9rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.3); display: flex; align-items: center; gap: 10px; transition: all 0.3s; cursor: pointer; }
+    .hero-badge:hover { background: rgba(255,255,255,0.25); transform: translateY(-2px); }
+    .hero-badge img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
 
     /* Layout Sections */
     .section-padding { padding: 90px 0; }
@@ -113,6 +115,50 @@
 
     @media(max-width:1100px){ .discovery-layout { grid-template-columns: 1fr; } .enquiry-sticky { position: relative; top: 0; } }
     @media(max-width:600px){ .slc { flex-direction: column; } .slc-img { width: 100%; height: 180px; } .form-row { grid-template-columns: 1fr; } .pkg-grid { grid-template-columns: 1fr; } }
+    .pkg-grid-wrapper {
+      margin: 0 calc(50% - 50vw) !important;
+      padding: 0 !important;
+      position: relative !important;
+    }
+    .pkg-grid {
+      display: flex !important;
+      align-items: center !important;
+      overflow-x: auto !important;
+      scroll-snap-type: x mandatory !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+      padding: 40px calc(50% - 160px) !important;
+      gap: 0 !important;
+    }
+    .pkg-grid::-webkit-scrollbar { display: none !important; }
+    .pkg-card {
+      flex: 0 0 320px !important;
+      margin: 0 15px !important;
+      scroll-snap-align: center !important;
+      transform: scale(0.85) !important;
+      opacity: 0.6 !important;
+      transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1), opacity 0.4s ease, box-shadow 0.4s ease, border-color 0.2s !important;
+      border: 1px solid rgba(200, 216, 234, 0.4) !important;
+      box-shadow: none !important;
+    }
+    .pkg-card.is-center {
+      transform: scale(1.05) !important;
+      opacity: 1 !important;
+      z-index: 2;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.15) !important;
+      border-color: var(--accent) !important;
+    }
+    .pkg-card:hover {
+      opacity: 1 !important;
+      transform: scale(0.98) !important;
+    }
+    .pkg-card.is-center:hover {
+      transform: scale(1.08) !important;
+    }
+    #pkgPrev:hover, #pkgNext:hover {
+      background: var(--accent) !important;
+      border-color: var(--accent) !important;
+    }
   </style>
 </head>
 <body>
@@ -124,10 +170,10 @@
     <h1>The Heart of <span>Incredible India</span></h1>
     <p>From the snow-capped Himalayas to the tranquil backwaters of Kerala, discover curated journeys across our magnificent land.</p>
     <div class="hero-badges">
-      <div class="hero-badge">&#127956;&#65039; Mountain Escapes</div>
-      <div class="hero-badge">&#127958;&#65039; Tropical Paradise</div>
-      <div class="hero-badge">&#127984; Royal Heritage</div>
-      <div class="hero-badge">&#128591; Spiritual Journeys</div>
+      <div class="hero-badge"><img src="https://images.unsplash.com/photo-1544634076-a90160ddf44a?w=100" alt="Mountain"> Mountain Escapes</div>
+      <div class="hero-badge"><img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=100" alt="Tropical"> Tropical Paradise</div>
+      <div class="hero-badge"><img src="https://images.unsplash.com/photo-1572979909810-a04f2a7da52a?w=100" alt="Heritage"> Royal Heritage</div>
+      <div class="hero-badge"><img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=100" alt="Spiritual"> Spiritual Journeys</div>
     </div>
     <a href="#featured-packages" class="pkg-btn" style="background:var(--color-sage); color:white; padding:15px 35px; text-decoration:none; display:inline-block;">View All Packages &#8595;</a>
   </div>
@@ -136,13 +182,19 @@
 <!-- Featured Packages Section -->
 <section class="section-padding bg-off-white" id="featured-packages">
   <div class="container">
-    <div class="section-header" data-aos="fade-up">
-      <div class="section-label" style="justify-content:center;">Top Curated Tours</div>
-      <h2>Our Most <span>Popular Packages</span></h2>
-      <p>Systematically designed itineraries based on years of travel expertise. All packages include premium stays and private transfers.</p>
+    <div class="section-header" data-aos="fade-up" style="display: flex; align-items: flex-end; justify-content: space-between; text-align: left; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <div class="section-label" style="justify-content:flex-start;">Top Curated Tours</div>
+        <h2 style="font-family: var(--font-display); font-size: 2.4rem; color: var(--primary-dark); margin-bottom: 10px;">Our Most <span style="color: var(--accent); font-style: italic;">Popular Packages</span></h2>
+        <p style="color: var(--text-secondary);">Systematically designed itineraries based on years of travel expertise. All packages include premium stays and private transfers.</p>
+      </div>
+      <div class="swiper-nav" style="display: flex; gap: 10px;">
+        <button id="pkgPrev" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid var(--primary-dark); color: var(--primary-dark); cursor: pointer; font-size: 1rem; transition: all 0.2s;">&#8592;</button>
+        <button id="pkgNext" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid var(--primary-dark); color: var(--primary-dark); cursor: pointer; font-size: 1rem; transition: all 0.2s;">&#8594;</button>
+      </div>
     </div>
 
-    <div class="pkg-grid">
+    <div class="pkg-grid-wrapper"><div class="pkg-grid">
       <!-- 1. Kashmir -->
       <div class="pkg-card" data-aos="fade-up">
         <div class="pkg-img">
@@ -382,8 +434,49 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+
+      <!-- 13. Goa -->
+      <div class="pkg-card" data-aos="fade-up">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800" alt="Goa" />
+          <div class="pkg-dur">4 Nights / 5 Days</div>
+          <div class="pkg-type">Beaches</div>
+        </div>
+        <div class="pkg-body">
+          <h3>Goa Beach Escape</h3>
+          <p class="pkg-desc">Find your perfect beach break from the party north to the peaceful south.</p>
+          <div class="pkg-footer">
+            <div class="pkg-price-box">
+              <span class="pkg-price-lbl">Starts from</span>
+              <span class="pkg-price">On Request</span>
+            </div>
+            <a href="goa-beach-escape.html" class="pkg-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14. Sikkim -->
+      <div class="pkg-card" data-aos="fade-up">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1544634076-a90160ddf44a?w=800" alt="Sikkim" />
+          <div class="pkg-dur">5 Nights / 6 Days</div>
+          <div class="pkg-type">Mountains</div>
+        </div>
+        <div class="pkg-body">
+          <h3>Sikkim & Darjeeling</h3>
+          <p class="pkg-desc">Explore majestic Kanchenjunga views, serene monasteries, and rolling tea gardens.</p>
+          <div class="pkg-footer">
+            <div class="pkg-price-box">
+              <span class="pkg-price-lbl">Starts from</span>
+              <span class="pkg-price">On Request</span>
+            </div>
+            <a href="sikkim-darjeeling.html" class="pkg-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.pkg-grid -->
+  </div><!-- /.pkg-grid-wrapper -->
+  </div><!-- /.container -->
 </section>
 
 <!-- Discovery + Form Section -->
@@ -448,12 +541,74 @@
           </div>
         </div>
 
-        <!-- More states as placeholders/buttons -->
-        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top:20px;">
-           <button class="slc-btn" data-state="Uttarakhand" style="width:100%">Uttarakhand</button>
-           <button class="slc-btn" data-state="Himachal" style="width:100%">Himachal</button>
-           <button class="slc-btn" data-state="Gujarat" style="width:100%">Gujarat</button>
-           <button class="slc-btn" data-state="Karnataka" style="width:100%">Karnataka</button>
+        <!-- More states converted to full cards -->
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=400" alt="Uttarakhand" /></div>
+          <div class="slc-info">
+            <h3>Uttarakhand</h3>
+            <div class="slc-hl">Hills & Wildlife</div>
+            <div class="slc-desc">Discover the lake district of Nainital and the wild heart of Jim Corbett.</div>
+            <button class="slc-btn" data-state="Uttarakhand">Enquire Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1593693397690-362bb9a11863?w=400" alt="Himachal" /></div>
+          <div class="slc-info">
+            <h3>Himachal</h3>
+            <div class="slc-hl">Snowy Peaks & Valleys</div>
+            <div class="slc-desc">The classic Shimla and Manali escape featuring Himalayan charm.</div>
+            <button class="slc-btn" data-state="Himachal">Enquire Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1620612261623-0182fcff27a3?w=400" alt="Gujarat" /></div>
+          <div class="slc-info">
+            <h3>Gujarat</h3>
+            <div class="slc-hl">Heritage & Lions</div>
+            <div class="slc-desc">Spiritual journeys and the wild roar of Asiatic Lions in Gir.</div>
+            <button class="slc-btn" data-state="Gujarat">Enquire Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1600100397608-f010f41ab446?w=400" alt="Karnataka" /></div>
+          <div class="slc-info">
+            <h3>Karnataka</h3>
+            <div class="slc-hl">Palaces & Temples</div>
+            <div class="slc-desc">A grand tour from Mysore palaces to ancient stone carvings of Hampi.</div>
+            <button class="slc-btn" data-state="Karnataka">Enquire Now</button>
+          </div>
+        </div>
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1588602641570-5b5ea6c4bcba?w=400" alt="Andaman" /></div>
+          <div class="slc-info">
+            <h3>Andaman</h3>
+            <div class="slc-hl">Pristine Beaches</div>
+            <div class="slc-desc">Pristine white sands of Havelock island and rich colonial history.</div>
+            <button class="slc-btn" data-state="Andaman">Enquire Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1544634076-a90160ddf44a?w=400" alt="Sikkim" /></div>
+          <div class="slc-info">
+            <h3>Sikkim</h3>
+            <div class="slc-hl">Majestic Peaks</div>
+            <div class="slc-desc">Explore majestic Kanchenjunga views and serene monasteries.</div>
+            <button class="slc-btn" data-state="Sikkim">Enquire Now</button>
+          </div>
+        </div>
+
+        <div class="slc">
+          <div class="slc-img"><img src="https://images.unsplash.com/photo-1596788062835-263be0b82eb9?w=400" alt="Northeast Circuit" /></div>
+          <div class="slc-info">
+            <h3>Northeast Circuit</h3>
+            <div class="slc-hl">Uncharted Nature</div>
+            <div class="slc-desc">Assam's wildlife and the breathtaking 'Scotland of the East'.</div>
+            <button class="slc-btn" data-state="Northeast">Enquire Now</button>
+          </div>
         </div>
       </div>
 
@@ -511,7 +666,7 @@
 
 <div id="footer-placeholder"></div>
 
-    <!-- CMS scripts (Supabase CDN â†’ supabase-client â†’ cms â†’ components) -->
+    <!-- CMS scripts (Supabase CDN → supabase-client → cms → components) -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
     <script src="../assets/js/supabase-client.js"></script>
     <script src="../assets/js/cms.js"></script><script src="../assets/js/components.js"></script>
@@ -535,6 +690,59 @@
       formBox.style.borderColor = "var(--color-sage)";
       setTimeout(() => formBox.style.borderColor = "", 2000);
     });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.pkg-grid');
+    const prev = document.getElementById('pkgPrev');
+    const next = document.getElementById('pkgNext');
+    const cardW = 320 + 30; // width + margin
+    
+    function updateCenterCards() {
+      if(!track) return;
+      const cards = track.querySelectorAll('.pkg-card');
+      const trackCenter = track.scrollLeft + track.clientWidth / 2;
+      let minDistance = Infinity;
+      let closestCard = null;
+      
+      cards.forEach(card => {
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        const distance = Math.abs(trackCenter - cardCenter);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestCard = card;
+        }
+      });
+      
+      cards.forEach(card => {
+        if (card === closestCard) {
+          card.classList.add('is-center');
+        } else {
+          card.classList.remove('is-center');
+        }
+      });
+    }
+
+    if(track) {
+      track.addEventListener('scroll', updateCenterCards);
+      setTimeout(() => {
+        const cw = track.clientWidth || window.innerWidth;
+        const halfW = cw / 2;
+        const n = Math.round(halfW / cardW);
+        track.scrollLeft = n * cardW;
+        updateCenterCards();
+      }, 50);
+    }
+    
+    if(track && prev && next) {
+      prev.addEventListener('click', () => {
+        track.scrollBy({ left: -cardW, behavior: 'smooth' });
+      });
+      next.addEventListener('click', () => {
+        track.scrollBy({ left: cardW, behavior: 'smooth' });
+      });
+    }
   });
 </script>
 </body>

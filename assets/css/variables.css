@@ -10,39 +10,51 @@
 
 :root {
   /* ── Navbar height ── */
-  --navbar-height: 72px;
+  --navbar-height: 84px;
 
-  /* ── Brand Greens ── */
-  --color-forest:      #1A8C16;   /* vivid mid-green — logo, footer bg, dark headings */
-  --color-sage:        #51E64C;   /* bright lime-green — primary buttons, CTAs */
-  --color-sage-light:  #84ED81;   /* lighter lime — hover states, border accents */
-  --color-sage-pale:   #DFFBDE;   /* very pale lime — section tints, tag pills */
-  --color-mint:        #B5F0B3;   /* mint — text on dark backgrounds, pills */
+  /* ── NEW COLOUR TOKENS ── */
+  --primary:        #4A7FB5;   /* medium slate blue — buttons, links, active states */
+  --primary-dark:   #0D2E52;   /* deep slate — hero bg, footer bg, dark sections */
+  --primary-light:  #C8D8EA;   /* light slate — borders, dividers, muted text on dark */
+  --primary-bg:     #EEF2F7;   /* softest tint — page bg, card bg, input fills */
+  --accent:         #E8B84B;   /* warm gold — CTAs, highlights, eyebrow labels */
+  --accent-dark:    #C99220;   /* gold hover state */
+  --accent-bg:      #FDF6E3;   /* gold tint — badges, tag backgrounds */
+  --text-on-dark:   #C8D8EA;   /* body text on dark backgrounds */
+  --text-primary:   #0D2E52;   /* all body text on white/light backgrounds */
+  --text-secondary: #4A7FB5;   /* muted/secondary text */
+
+  /* ── Brand Colors mapped to slate blue design system ── */
+  --color-forest:      var(--primary-dark);   /* deep slate */
+  --color-sage:        var(--primary);        /* medium slate blue */
+  --color-sage-light:  var(--primary-light);  /* light slate */
+  --color-sage-pale:   var(--primary-bg);     /* soft slate tint */
+  --color-mint:        var(--primary-light);  /* light slate text on dark */
 
   /* ── Backgrounds ── */
   --color-bg-page:     #FFFFFF;   /* pure white body */
-  --color-bg-section:  #F4FDF4;   /* faint lime — alt section tint */
+  --color-bg-section:  var(--primary-bg);   /* soft slate alt section tint */
   --color-bg-card:     #FFFFFF;   /* white cards */
-  --color-bg-navbar:   #FFFFFF;   /* white navbar */
-  --color-bg-dark:     #1A8C16;   /* vivid forest — footer, hero overlays */
+  --color-bg-navbar:   var(--primary-bg);   /* soft slate navbar bg */
+  --color-bg-dark:     var(--primary-dark);   /* deep slate footer/hero */
 
   /* ── Accents ── */
-  --color-gold:        #D4A017;   /* warm honey — prices, star ratings */
-  --color-gold-dark:   #B08010;   /* darker honey — hover on gold */
-  --color-gold-light:  #F5E6B2;   /* light honey — price badge bg */
+  --color-gold:        var(--accent);   /* warm gold */
+  --color-gold-dark:   var(--accent-dark);   /* gold hover */
+  --color-gold-light:  var(--accent-bg);   /* gold tint bg */
 
   /* ── Text ── */
-  --color-text-primary:   #1A1A2E;   /* near-black — body copy */
-  --color-text-secondary: #374151;   /* charcoal — supporting copy (was #4A5568, now passes AA) */
-  --color-text-muted:     #5C6678;   /* medium grey — labels, captions (was #718096, now ~6:1 on white) */
-  --color-text-on-dark:   #FFFFFF;   /* white — text on forest/dark bg */
-  --color-text-sage:      #1A8C16;   /* forest — links, accents on light */
-  --color-text-on-sage:   #FFFFFF;   /* white — text on lime/sage bg */
-  --color-text-mint:      #B5F0B3;   /* mint — links on dark bg */
+  --color-text-primary:   var(--text-primary);   /* deep slate body text */
+  --color-text-secondary: var(--text-secondary);   /* slate blue secondary */
+  --color-text-muted:     var(--text-secondary);   /* slate blue muted */
+  --color-text-on-dark:   var(--text-on-dark);   /* light slate text on dark bg */
+  --color-text-sage:      var(--primary);   /* links, accents on light */
+  --color-text-on-sage:   #FFFFFF;   /* white text */
+  --color-text-mint:      var(--text-on-dark);   /* light slate links on dark */
 
   /* ── Borders ── */
-  --color-border:         #D6F5D5;   /* very light lime border */
-  --color-border-strong:  #84ED81;   /* stronger lime border */
+  --color-border:         var(--primary-light);   /* light slate border */
+  --color-border-strong:  var(--primary);   /* medium slate border */
 
   /* ── Typography ── */
   --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -57,13 +69,13 @@
   --radius:       var(--radius-lg);
 
   /* ── Elevation ── */
-  --shadow-card:  0 2px 16px rgba(26,140,22,0.07);
-  --shadow-hover: 0 8px 32px rgba(26,140,22,0.13);
+  --shadow-card:  0 2px 16px rgba(13, 46, 82, 0.07);
+  --shadow-hover: 0 8px 32px rgba(13, 46, 82, 0.13);
 
   /* Legacy shadow aliases */
   --shadow-sm: var(--shadow-card);
   --shadow-md: var(--shadow-hover);
-  --shadow-lg: 0 16px 48px rgba(26,140,22,0.18);
+  --shadow-lg: 0 16px 48px rgba(13, 46, 82, 0.18);
 
   /* ── Transitions ── */
   --transition: 0.22s ease;
