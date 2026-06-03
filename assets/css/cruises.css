@@ -1,4 +1,4 @@
-﻿/* =============================================
+/* =============================================
    THE TRAVEL SPARK — cruises.css
    Premium Cruises Page Styles
    ============================================= */
@@ -36,6 +36,7 @@
     z-index: 3;
     max-width: 900px;
     padding: 0 24px;
+    margin: 0 auto;
 }
 
 .cruise-hero h1 {

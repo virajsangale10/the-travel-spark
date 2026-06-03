@@ -1601,6 +1601,230 @@
       .tw-cta-row { flex-direction: column; }
       .tw-cta-call, .tw-cta-wa { justify-content: center; }
     }
+
+    /* ════════════════════════════════════════════════════
+       SMART HERO SEARCH BAR
+    ════════════════════════════════════════════════════ */
+    .hero-search-wrap { margin-bottom: 8px; }
+
+    .hero-search-box {
+      display: flex;
+      align-items: stretch;
+      background: #FFFFFF;
+      border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(13,46,82,0.18), 0 2px 8px rgba(13,46,82,0.08);
+      padding: 6px 6px 6px 0;
+      border: 1.5px solid rgba(200,216,234,0.6);
+      transition: box-shadow 0.25s, border-color 0.25s;
+    }
+    .hero-search-box:focus-within {
+      box-shadow: 0 12px 40px rgba(13,46,82,0.22);
+      border-color: var(--primary);
+    }
+
+    .hs-field {
+      flex: 1;
+      padding: 14px 18px 10px;
+      position: relative;
+    }
+
+    .hs-label {
+      display: block;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .hs-input-row { display: flex; align-items: center; gap: 8px; }
+    .hs-icon { font-size: 1rem; flex-shrink: 0; }
+
+    .hs-input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--primary-dark);
+      width: 100%;
+    }
+    .hs-input::placeholder { color: #9db3c8; }
+
+    .hs-search-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--primary-dark);
+      border: none;
+      border-radius: 10px;
+      padding: 0 24px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      margin: 4px 4px 4px 8px;
+      white-space: nowrap;
+    }
+    .hs-search-btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .hs-btn-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--primary-dark);
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    /* Dropdown */
+    .hs-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0; right: 0;
+      background: #fff;
+      border: 1.5px solid rgba(200,216,234,0.8);
+      border-radius: 12px;
+      box-shadow: 0 16px 40px rgba(13,46,82,0.14);
+      z-index: 200;
+      max-height: 280px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+    .hs-dropdown.open { display: block; animation: hsDrop 0.18s cubic-bezier(0.2,0.8,0.2,1); }
+    @keyframes hsDrop { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+
+    .hs-dd-group {
+      padding: 8px 14px 4px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: rgba(74,127,181,0.05);
+      border-bottom: 1px solid rgba(200,216,234,0.4);
+    }
+
+    .hs-dd-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 16px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13.5px;
+      color: var(--primary-dark);
+      cursor: pointer;
+      border-bottom: 1px solid rgba(200,216,234,0.2);
+      transition: background 0.15s;
+    }
+    .hs-dd-item:last-child { border-bottom: none; }
+    .hs-dd-item:hover, .hs-dd-item.hs-active { background: rgba(74,127,181,0.07); color: var(--primary); }
+    .hs-dd-item .hs-dd-flag { font-size: 1.15rem; flex-shrink: 0; }
+    .hs-dd-item .hs-dd-type {
+      margin-left: auto;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 50px;
+    }
+    .hs-dd-item .hs-dd-type.type-intl { background: #e3f2fd; color: #1565c0; }
+    .hs-dd-item .hs-dd-type.type-dom  { background: #e8f5e9; color: #2e7d32; }
+    .hs-dd-no-results {
+      padding: 18px 16px;
+      text-align: center;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
+      color: #9db3c8;
+    }
+
+    /* Selected destination card */
+    .hs-selected-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(13,46,82,0.92);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-top: 10px;
+      cursor: pointer;
+      border: 1.5px solid rgba(200,216,234,0.25);
+      animation: hsCardIn 0.3s cubic-bezier(0.2,0.8,0.2,1);
+      position: relative;
+    }
+    @keyframes hsCardIn { from { opacity:0; transform:translateY(10px) scale(0.97); } to { opacity:1; transform:none; } }
+    .hs-selected-card:hover { background: rgba(13,46,82,0.97); }
+
+    .hs-card-flag { font-size: 2.4rem; flex-shrink: 0; }
+    .hs-card-info { flex: 1; }
+
+    .hs-card-label {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+
+    .hs-card-name {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .hs-card-tagline {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 12px;
+      color: rgba(200,216,234,0.7);
+      margin-top: 2px;
+    }
+
+    .hs-card-cta {
+      background: var(--accent);
+      color: var(--primary-dark);
+      border: none;
+      border-radius: 50px;
+      padding: 10px 20px;
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .hs-card-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    .hs-card-close {
+      position: absolute;
+      top: 8px; right: 10px;
+      background: none;
+      border: none;
+      color: rgba(200,216,234,0.5);
+      font-size: 1.1rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 2px 6px;
+      border-radius: 50%;
+      transition: color 0.2s, background 0.2s;
+    }
+    .hs-card-close:hover { color: #fff; background: rgba(255,255,255,0.1); }
+
+    @media (max-width: 600px) {
+      .hero-search-box { flex-direction: column; padding: 8px; gap: 4px; }
+      .hs-search-btn { margin: 4px 0 0 0; padding: 14px; justify-content: center; border-radius: 10px; }
+      .hs-selected-card { flex-wrap: wrap; }
+      .hs-card-cta { width: 100%; text-align: center; margin-top: 8px; }
+    }
   </style>
 </head>
 
@@ -1834,16 +2058,55 @@
     <div class="hero-spark"></div>
     <div class="hero-spark2"></div>
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge"><span class="dot"></span> Group Tour Departures Now Open</div>
-        <h1>Ignite Your<br /><span class="accent">Journey</span> with Us</h1>
-        <p class="hero-sub">Customised holidays, premium group tours & seamless corporate travel. Every trip crafted
-          with passion &rdquo; just for you.</p>
-        <div class="hero-actions">
-          <a href="packages/group-tours.html" class="btn btn-primary">Explore Group Tours &#9992;&#65039;</a>
-          <a href="contact.html" class="btn btn-outline">Plan My Trip</a>
+      <div class="hero-content" style="max-width:700px;">
+        <div class="hero-badge"><span class="dot"></span> India's Most Trusted Travel Company</div>
+        <h1>Your Tour,<br /><span class="accent">Perfectly Personalised!</span></h1>
+        <p class="hero-sub">Handcrafted holidays for every dream &mdash; Domestic escapes &amp; International adventures</p>
+
+        <!-- ===== SMART DESTINATION SEARCH BAR ===== -->
+        <div class="hero-search-wrap" id="heroSearchWrap">
+          <div class="hero-search-box">
+            <div class="hs-field hs-dest-field" id="hsDestField">
+              <label class="hs-label">DESTINATION</label>
+              <div class="hs-input-row">
+                <span class="hs-icon">&#128205;</span>
+                <input
+                  type="text"
+                  id="hsDestInput"
+                  class="hs-input"
+                  placeholder="Where do you want to go? eg: Bali"
+                  autocomplete="off"
+                  aria-label="Search destination"
+                  aria-autocomplete="list"
+                  aria-expanded="false"
+                  aria-controls="hsDropdown"
+                />
+              </div>
+              <!-- Dropdown -->
+              <div class="hs-dropdown" id="hsDropdown" role="listbox" aria-label="Destination suggestions">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+            <button class="hs-search-btn" id="hsSearchBtn" onclick="hsDoSearch()">
+              <span class="hs-btn-dot"></span> Search
+            </button>
+          </div>
+
+          <!-- Selected Destination Preview Card -->
+          <div class="hs-selected-card" id="hsSelectedCard" style="display:none;">
+            <div class="hs-card-flag" id="hsCardFlag">&#127758;</div>
+            <div class="hs-card-info">
+              <div class="hs-card-label" id="hsCardLabel">International</div>
+              <div class="hs-card-name" id="hsCardName">Destination</div>
+              <div class="hs-card-tagline" id="hsCardTagline">Explore curated packages &rarr;</div>
+            </div>
+            <button class="hs-card-cta" id="hsCardCta">View Packages &#8594;</button>
+            <button class="hs-card-close" id="hsCardClose" aria-label="Clear selection">&times;</button>
+          </div>
         </div>
-        <div class="hero-stats">
+        <!-- ===== END SMART SEARCH ===== -->
+
+        <div class="hero-stats" style="margin-top:32px;">
           <div class="hero-stat"><span class="num" data-counter data-target="30000" data-suffix="+">30,000+</span><span
               class="lbl">Happy Travellers</span></div>
           <div class="hero-stat"><span class="num" data-counter data-target="50" data-suffix="+">50+</span><span
@@ -2118,7 +2381,7 @@
             <div class="mc-body">
               <div class="mc-dur">04N / 05D</div>
               <h4>Mesmerising Maldives</h4>
-              <div class="mc-dest">North Mal&#195;&#169; Atoll &middot; Kaafu Atoll</div>
+              <div class="mc-dest">North Mal&eacute; Atoll &middot; Kaafu Atoll</div>
             </div>
           </div>
           <div class="mini-tour-card">
@@ -3264,6 +3527,206 @@
         track.scrollBy({ left: cardW, behavior: 'smooth' });
       });
     })();
+  </script>
+
+  <!-- ════════════════════════════════════════════════════
+       SMART HERO SEARCH BAR — JavaScript
+  ════════════════════════════════════════════════════ -->
+  <script>
+  (function() {
+    /* ─── Destination Data ─── */
+    const HS_DESTINATIONS = [
+      /* Domestic */
+      { name: 'Andaman & Nicobar',     type: 'dom',  flag: '🏝️',  key: 'Andaman',       section: null },
+      { name: 'Coorg, Karnataka',       type: 'dom',  flag: '☕',  key: 'Karnataka',     section: null },
+      { name: 'Goa',                    type: 'dom',  flag: '🏖️',  key: 'Goa',           section: null },
+      { name: 'Gujarat',                type: 'dom',  flag: '🦁',  key: 'Gujarat',       section: null },
+      { name: 'Himachal Pradesh',       type: 'dom',  flag: '🏔️',  key: 'Himachal',      section: null },
+      { name: 'Jammu & Kashmir',        type: 'dom',  flag: '❄️',  key: 'Kashmir',       section: null },
+      { name: 'Kashmir',                type: 'dom',  flag: '❄️',  key: 'Kashmir',       section: null },
+      { name: 'Kerala',                 type: 'dom',  flag: '🌴',  key: 'Kerala',        section: null },
+      { name: 'Kedarnath / Do Dham',    type: 'dom',  flag: '🛕',  key: 'Uttarakhand',   section: null },
+      { name: 'Ladakh',                 type: 'dom',  flag: '🏔️',  key: 'Ladakh',        section: null },
+      { name: 'Manali, Himachal',       type: 'dom',  flag: '🌨️',  key: 'Himachal',      section: null },
+      { name: 'Northeast Circuit',      type: 'dom',  flag: '🌿',  key: 'Northeast',     section: null },
+      { name: 'Ooty, Tamil Nadu',       type: 'dom',  flag: '🍃',  key: 'Karnataka',     section: null },
+      { name: 'Rajasthan',              type: 'dom',  flag: '🏰',  key: 'Rajasthan',     section: null },
+      { name: 'Shimla, Himachal',       type: 'dom',  flag: '🏔️',  key: 'Himachal',      section: null },
+      { name: 'Sikkim & Darjeeling',    type: 'dom',  flag: '🏔️',  key: 'Sikkim',        section: null },
+      { name: 'Uttarakhand',            type: 'dom',  flag: '⛰️',  key: 'Uttarakhand',   section: null },
+      { name: 'Varanasi',              type: 'dom',  flag: '🪔',  key: 'Uttarakhand',   section: null },
+      /* International */
+      { name: 'Bali, Indonesia',        type: 'intl', flag: '🌺',  key: 'Bali',          section: 'bali' },
+      { name: 'Dubai, UAE',             type: 'intl', flag: '🏙️',  key: 'Dubai',         section: 'dubai' },
+      { name: 'Europe',                 type: 'intl', flag: '🗼',  key: 'Europe',        section: 'europe' },
+      { name: 'France',                 type: 'intl', flag: '🥐',  key: 'Europe',        section: 'europe' },
+      { name: 'Georgia',                type: 'intl', flag: '⛰️',  key: 'Georgia',       section: 'georgia' },
+      { name: 'Germany',                type: 'intl', flag: '🏰',  key: 'Europe',        section: 'europe' },
+      { name: 'Greece',                 type: 'intl', flag: '🏛️',  key: 'Europe',        section: 'europe' },
+      { name: 'Italy',                  type: 'intl', flag: '🍕',  key: 'Europe',        section: 'europe' },
+      { name: 'Japan',                  type: 'intl', flag: '🌸',  key: 'Japan',         section: 'japan' },
+      { name: 'Kenya & Tanzania',       type: 'intl', flag: '🦁',  key: 'Kenya & Tanzania', section: 'kenya' },
+      { name: 'Maldives',               type: 'intl', flag: '🏝️',  key: 'Maldives',      section: 'maldives' },
+      { name: 'Mauritius',              type: 'intl', flag: '🌊',  key: 'Maldives',      section: 'maldives' },
+      { name: 'Nepal',                  type: 'intl', flag: '🏔️',  key: 'Nepal',         section: 'nepal' },
+      { name: 'Philippines',            type: 'intl', flag: '🏖️',  key: 'Philippines',   section: 'philippines' },
+      { name: 'Singapore',              type: 'intl', flag: '🦁',  key: 'Singapore',     section: 'singapore' },
+      { name: 'Singapore & Malaysia',   type: 'intl', flag: '🎡',  key: 'Singapore',     section: 'singapore' },
+      { name: 'Sri Lanka',              type: 'intl', flag: '🌴',  key: 'Sri Lanka',     section: 'srilanka' },
+      { name: 'Switzerland',            type: 'intl', flag: '🏔️',  key: 'Europe',        section: 'europe' },
+      { name: 'Thailand',               type: 'intl', flag: '🐘',  key: 'Thailand',      section: 'thailand' },
+      { name: 'Turkey',                 type: 'intl', flag: '🕌',  key: 'Turkey',        section: 'turkey' },
+      { name: 'Vietnam',                type: 'intl', flag: '🏮',  key: 'Vietnam',       section: 'vietnam' },
+    ];
+
+    const input    = document.getElementById('hsDestInput');
+    const dropdown = document.getElementById('hsDropdown');
+    const card     = document.getElementById('hsSelectedCard');
+    const cardFlag = document.getElementById('hsCardFlag');
+    const cardLbl  = document.getElementById('hsCardLabel');
+    const cardName = document.getElementById('hsCardName');
+    const cardTag  = document.getElementById('hsCardTagline');
+    const cardCta  = document.getElementById('hsCardCta');
+    const cardClose= document.getElementById('hsCardClose');
+
+    if (!input) return;
+
+    let selectedDest = null;
+
+    /* ─── Build dropdown items ─── */
+    function buildDropdown(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) { dropdown.classList.remove('open'); return; }
+
+      const matches = HS_DESTINATIONS.filter(d => d.name.toLowerCase().includes(q));
+
+      if (!matches.length) {
+        dropdown.innerHTML = '<div class="hs-dd-no-results">No destinations found. Try another name.</div>';
+        dropdown.classList.add('open');
+        return;
+      }
+
+      /* Group into domestic / international */
+      const dom  = matches.filter(d => d.type === 'dom');
+      const intl = matches.filter(d => d.type === 'intl');
+
+      let html = '';
+      if (dom.length) {
+        html += '<div class="hs-dd-group">&#127758; Domestic (India)</div>';
+        dom.forEach(d => {
+          html += `<div class="hs-dd-item" data-key="${d.key}" data-type="${d.type}" data-flag="${d.flag}" data-name="${d.name}" data-section="${d.section||''}">
+            <span class="hs-dd-flag">${d.flag}</span>
+            ${d.name}
+            <span class="hs-dd-type type-dom">India</span>
+          </div>`;
+        });
+      }
+      if (intl.length) {
+        html += '<div class="hs-dd-group">&#127757; International</div>';
+        intl.forEach(d => {
+          html += `<div class="hs-dd-item" data-key="${d.key}" data-type="${d.type}" data-flag="${d.flag}" data-name="${d.name}" data-section="${d.section||''}">
+            <span class="hs-dd-flag">${d.flag}</span>
+            ${d.name}
+            <span class="hs-dd-type type-intl">International</span>
+          </div>`;
+        });
+      }
+
+      dropdown.innerHTML = html;
+      dropdown.classList.add('open');
+      input.setAttribute('aria-expanded', 'true');
+
+      /* Attach click handlers */
+      dropdown.querySelectorAll('.hs-dd-item').forEach(item => {
+        item.addEventListener('click', () => {
+          selectDestination(item.dataset);
+        });
+      });
+    }
+
+    /* ─── Select a destination ─── */
+    function selectDestination(data) {
+      selectedDest = data;
+      input.value = data.name;
+      dropdown.classList.remove('open');
+      input.setAttribute('aria-expanded', 'false');
+
+      /* Populate card */
+      cardFlag.textContent = data.flag;
+      cardLbl.textContent  = data.type === 'intl' ? 'International' : 'Domestic — India';
+      cardName.textContent = data.name;
+      cardTag.textContent  = data.type === 'intl'
+        ? 'View international packages & enquiry form \u2192'
+        : 'View domestic packages & enquiry form \u2192';
+
+      card.style.display = 'flex';
+      card.style.animation = 'none';
+      requestAnimationFrame(() => { card.style.animation = ''; });
+
+      /* CTA click → navigate */
+      cardCta.onclick = () => navigateToDest(data);
+      card.onclick    = (e) => { if (!e.target.closest('.hs-card-close') && !e.target.closest('.hs-card-cta')) navigateToDest(data); };
+    }
+
+    /* ─── Navigate to the correct page ─── */
+    function navigateToDest(data) {
+      const dest = encodeURIComponent(data.key);
+      const section = data.section || '';
+      if (data.type === 'intl') {
+        let url = `packages/international.html?dest=${dest}`;
+        if (section) url += `&section=${section}`;
+        window.location.href = url;
+      } else {
+        window.location.href = `packages/domestic.html?dest=${dest}`;
+      }
+    }
+
+    /* ─── Global search button ─── */
+    window.hsDoSearch = function() {
+      if (selectedDest) { navigateToDest(selectedDest); return; }
+      const q = input.value.trim();
+      if (!q) { input.focus(); return; }
+      /* Pick first match */
+      const match = HS_DESTINATIONS.find(d => d.name.toLowerCase().includes(q.toLowerCase()));
+      if (match) {
+        const fakeData = { key: match.key, type: match.type, flag: match.flag, name: match.name, section: match.section || '' };
+        navigateToDest(fakeData);
+      } else {
+        /* No match → go to international general page */
+        window.location.href = 'packages/international.html';
+      }
+    };
+
+    /* ─── Input events ─── */
+    input.addEventListener('input', () => {
+      selectedDest = null;
+      card.style.display = 'none';
+      buildDropdown(input.value);
+    });
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { window.hsDoSearch(); }
+      if (e.key === 'Escape') { dropdown.classList.remove('open'); }
+    });
+
+    /* ─── Close dropdown on outside click ─── */
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('#hsDestField')) {
+        dropdown.classList.remove('open');
+        input.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    /* ─── Clear / close card ─── */
+    cardClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      selectedDest = null;
+      card.style.display = 'none';
+      input.value = '';
+      input.focus();
+    });
+
+  })();
   </script>
 </body>
 

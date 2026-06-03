@@ -17,15 +17,10 @@
         <div class="navbar-inner">
           <ul class="navbar-links" style="margin-right: auto;">
             <li><a href="${prefix}index.html">Home</a></li>
-            <li>
-              <span>Holiday Packages <span class="chevron">&#9662;</span></span>
-              <ul class="dropdown">
-                <li><a href="${prefix}packages/international.html">&#127757; International Holidays</a></li>
-                <li><a href="${prefix}packages/group-tours.html">&#128101; Group Tours</a></li>
-                <li><a href="${prefix}packages/domestic.html">&#127470;&#127475; Explore India</a></li>
-                <li><a href="${prefix}cruises.html">&#128674; Luxury Cruises</a></li>
-              </ul>
-            </li>
+            <li><a href="${prefix}packages/international.html">International</a></li>
+            <li><a href="${prefix}packages/group-tours.html">Group Tours</a></li>
+            <li><a href="${prefix}packages/domestic.html">Explore India</a></li>
+            <li><a href="${prefix}cruises.html">Cruises</a></li>
             <li><a href="${prefix}corporate-travel.html">Corporate Travel</a></li>
             <li><a href="${prefix}blog.html">Blog</a></li>
             <li><a href="${prefix}about.html">About</a></li>
@@ -47,13 +42,10 @@
     <div class="menu-overlay" id="menuOverlay"></div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="${prefix}index.html">Home</a>
-      <div class="m-parent">Holiday Packages</div>
-      <div class="sub-links">
-        <a href="${prefix}packages/international.html">&#127757; International</a>
-        <a href="${prefix}packages/group-tours.html">&#128101; Group Tours</a>
-        <a href="${prefix}packages/domestic.html">&#127470;&#127475; Explore India</a>
-        <a href="${prefix}cruises.html">&#128674; Luxury Cruises</a>
-      </div>
+      <a href="${prefix}packages/international.html">International</a>
+      <a href="${prefix}packages/group-tours.html">Group Tours</a>
+      <a href="${prefix}packages/domestic.html">Explore India</a>
+      <a href="${prefix}cruises.html">Cruises</a>
       <a href="${prefix}corporate-travel.html">Corporate Travel</a>
       <a href="${prefix}blog.html">Blog</a>
       <a href="${prefix}about.html">About</a>
@@ -151,12 +143,54 @@
     <button class="scroll-top" id="scrollTop">&#8593;</button>
     `;
 
+    const modalHTML = `
+    <div id="enquiryModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="form-header">
+                <h2 style="font-family: var(--font-display); color: var(--color-forest); font-size: 1.8rem; margin-bottom: 8px;">Request a Quote</h2>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">Fill out the details below and we'll send you a customized itinerary and pricing.</p>
+            </div>
+            <form action="https://formsubmit.co/thetravelspark2@gmail.com" method="POST">
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-forest); margin-bottom: 8px;">Full Name</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid var(--gray-200); border-radius: 8px; font-family: inherit;">
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-forest); margin-bottom: 8px;">Phone Number</label>
+                    <input type="tel" name="phone" required style="width: 100%; padding: 12px; border: 1px solid var(--gray-200); border-radius: 8px; font-family: inherit;">
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-forest); margin-bottom: 8px;">Email Address</label>
+                    <input type="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid var(--gray-200); border-radius: 8px; font-family: inherit;">
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-forest); margin-bottom: 8px;">Destination / Package</label>
+                    <input type="text" name="destination" id="modalDestination" value="" required style="width: 100%; padding: 12px; border: 1px solid var(--gray-200); border-radius: 8px; font-family: inherit;">
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-forest); margin-bottom: 8px;">Travel Details</label>
+                    <textarea name="message" rows="3" placeholder="Travel dates, number of people..." style="width: 100%; padding: 12px; border: 1px solid var(--gray-200); border-radius: 8px; font-family: inherit;"></textarea>
+                </div>
+                <button type="submit" style="width: 100%; background: var(--color-forest); color: white; border: none; padding: 14px; border-radius: 8px; font-weight: 700; cursor: pointer;">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
+    <style>
+        .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; display: none; align-items: center; justify-content: center;  opacity: 0; transition: opacity 0.3s ease; }
+        .modal-overlay.show { display: flex; opacity: 1; }
+        .modal-content { background: white; padding: 32px; border-radius: 16px; width: 90%; max-width: 450px; position: relative; transform: translateY(20px); transition: transform 0.3s ease; max-height: 90vh; overflow-y: auto; text-align: left; }
+        .modal-overlay.show .modal-content { transform: translateY(0); }
+        .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-light); line-height: 1; }
+    </style>
+    `;
+
     function injectComponents() {
         const navPlaceholder = document.getElementById('navbar-placeholder');
         const footPlaceholder = document.getElementById('footer-placeholder');
 
         if (navPlaceholder) navPlaceholder.innerHTML = navbarHTML;
-        if (footPlaceholder) footPlaceholder.innerHTML = footerHTML;
+        if (footPlaceholder) footPlaceholder.innerHTML = footerHTML + modalHTML;
 
         // Trigger events for the newly injected navbar (Hamburger etc.)
         initNavbarEvents();
@@ -206,6 +240,32 @@
                 link.classList.add('active');
             }
         });
+
+        // Setup Modal Events
+        const modal = document.getElementById('enquiryModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalDest = document.getElementById('modalDestination');
+        
+        document.querySelectorAll('a[href*="contact.html"]').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (this.classList.contains('btn-primary') || this.classList.contains('btn-outline') || this.innerText.includes('Book') || this.innerText.includes('Enquire')) {
+                    e.preventDefault();
+                    let pkgName = document.title.split('—')[0].trim();
+                    if(pkgName.includes('|')) pkgName = pkgName.split('|')[0].trim();
+                    if(modalDest) modalDest.value = pkgName !== 'The Travel Spark' ? pkgName : 'General Enquiry';
+                    modal.classList.add('show');
+                }
+            });
+        });
+
+        if (modalClose) {
+            modalClose.addEventListener('click', () => modal.classList.remove('show'));
+        }
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if(e.target === modal) modal.classList.remove('show');
+            });
+        }
     }
 
     if (document.readyState === 'loading') {

@@ -315,6 +315,26 @@
         </div>
       </div>
 
+      <!-- 6.1. Himalayan Triangle -->
+      <div class="pkg-card" data-aos="fade-up">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1593693397690-362bb9a11863?w=800" alt="Himalayan Triangle" />
+          <div class="pkg-dur">5 Nights / 6 Days</div>
+          <div class="pkg-type">Cultural</div>
+        </div>
+        <div class="pkg-body">
+          <h3>Himalayan Triangle</h3>
+          <p class="pkg-desc">An extended trip covering the queen of hills, Shimla, the adventure hub of Manali, and the architectural wonder of Chandigarh.</p>
+          <div class="pkg-footer">
+            <div class="pkg-price-box">
+              <span class="pkg-price-lbl">Starts from</span>
+              <span class="pkg-price">On Request</span>
+            </div>
+            <a href="himalayan-triangle.html" class="pkg-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+
       <!-- 7. Gujarat -->
       <div class="pkg-card" data-aos="fade-up">
         <div class="pkg-img">
@@ -674,7 +694,51 @@
 <script>
   AOS.init({ duration: 800, once: true, offset: 100 });
 
-  // Pre-select logic
+  /* ─── Read URL params from homepage smart search ─── */
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const dest   = params.get('dest');
+
+    if (dest) {
+      const destSelect = document.getElementById('destination-select');
+      const formBox    = document.getElementById('enquiry-form');
+
+      if (destSelect) {
+        const opt = Array.from(destSelect.options).find(o =>
+          o.value === dest || o.value.toLowerCase() === dest.toLowerCase()
+        );
+        if (opt) {
+          destSelect.value = opt.value;
+          destSelect.style.borderColor = 'var(--color-sage)';
+          destSelect.style.boxShadow   = '0 0 0 3px rgba(147,197,253,0.2)';
+          setTimeout(() => { destSelect.style.borderColor = ''; destSelect.style.boxShadow = ''; }, 2500);
+        }
+      }
+
+      /* Scroll to enquiry form smoothly */
+      if (formBox) {
+        setTimeout(() => {
+          const y = formBox.getBoundingClientRect().top + window.scrollY - 120;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+          formBox.style.borderTopColor = 'var(--color-sage)';
+          setTimeout(() => { formBox.style.borderTopColor = ''; }, 2500);
+        }, 400);
+
+        /* Add "Searching for" badge */
+        const badge = document.createElement('div');
+        badge.style.cssText = `
+          display:inline-flex;align-items:center;gap:8px;
+          background:rgba(147,197,253,0.12);border:1px solid rgba(147,197,253,0.4);
+          color:var(--color-forest);font-size:0.8rem;font-weight:700;
+          padding:6px 14px;border-radius:50px;margin-bottom:14px;
+        `;
+        badge.innerHTML = `&#128205; Searching for: <strong>${decodeURIComponent(dest)}</strong>`;
+        formBox.insertBefore(badge, formBox.firstChild);
+      }
+    }
+  })();
+
+  // Pre-select logic (from on-page buttons)
   const stateBtns = document.querySelectorAll('.slc-btn');
   const destSelect = document.getElementById('destination-select');
   const formBox = document.getElementById('enquiry-form');
