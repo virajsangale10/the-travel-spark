@@ -1,4 +1,4 @@
-&#65279;<!DOCTYPE html>
+﻿&#65279;<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -159,6 +159,82 @@
       background: var(--accent) !important;
       border-color: var(--accent) !important;
     }
+
+    /* Destination Sections */
+    .dest-section { margin-bottom: 80px; }
+    .dest-section:last-child { margin-bottom: 0; }
+    
+    .dest-head { 
+      border-left: 4px solid var(--color-sage); 
+      padding-left: 18px; 
+      margin-bottom: 24px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .dest-head h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--color-forest); }
+    .dest-head .package-link { font-size: 0.85rem; font-weight: 700; color: var(--color-sage); text-decoration: none; transition: gap 0.2s; display: flex; align-items: center; gap: 5px; }
+    .dest-head .package-link:hover { gap: 10px; }
+
+    /* Info Strip */
+    .info-strip { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+    .is-pill { 
+      background: var(--strip-bg); 
+      color: var(--color-forest); 
+      font-size: 0.76rem; 
+      font-weight: 600; 
+      padding: 5px 12px; 
+      border-radius: 100px; 
+      display: flex; 
+      align-items: center; 
+      gap: 6px;
+      border: 1px solid rgba(26, 42, 108, 0.05);
+    }
+
+    /* Package Cards - 2 Column Grid */
+    .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .card { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+    .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    
+    .card-img { height: 200px; overflow: hidden; position: relative; flex-shrink: 0; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .card:hover .card-img img { transform: scale(1.08); }
+    
+    .badge { position: absolute; top: 12px; padding: 4px 12px; border-radius: 100px; font-size: 0.68rem; font-weight: 600; color: white; z-index: 2; }
+    .badge-dur { left: 12px; background: var(--color-sage); }
+    .badge-type { right: 12px; background: rgba(26, 42, 108, 0.85); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    .card-body { padding: 22px; flex-grow: 1; display: flex; flex-direction: column; }
+    .card-body h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--color-forest); margin-bottom: 6px; line-height: 1.3; }
+    .card-cities { font-size: 0.78rem; color: var(--text-light); line-height: 1.5; margin-bottom: 16px; }
+    
+    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; margin-top: auto; }
+    .tag { background: var(--off-white); font-size: 0.68rem; color: var(--text-light); padding: 4px 10px; border-radius: 100px; font-weight: 500; border: 0.5px solid var(--gray-200); }
+    
+    .enquire-btn { 
+      background: var(--color-forest); 
+      color: white; 
+      width: 100%; 
+      border: none; 
+      padding: 12px; 
+      border-radius: var(--radius-sm); 
+      font-size: 0.85rem; 
+      font-weight: 700; 
+      cursor: pointer; 
+      transition: all 0.3s;
+      text-align: center;
+    }
+    .enquire-btn:hover { background: var(--color-sage); }
+
+
+    .enquiry-side { position: sticky; top: 100px; }
+    .enquiry-box { background: white; border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-md); max-height: calc(100vh - 120px); overflow-y: auto; }
+    .enquiry-box h2 { font-family: var(--font-display); font-size: 1.7rem; color: var(--color-forest); margin-bottom: 8px; text-align: center; }
+    .enquiry-box p.sub { text-align: center; color: var(--text-light); font-size: 0.88rem; margin-bottom: 24px; line-height: 1.5; }
+    
+
   </style>
 </head>
 <body>
@@ -198,7 +274,7 @@
       <!-- 1. Kashmir -->
       <div class="pkg-card" data-aos="fade-up">
         <div class="pkg-img">
-          <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=800" alt="Kashmir" />
+          <img src="../assets/images/kashmir.png" alt="Kashmir" />
           <div class="pkg-dur">5 Nights / 6 Days</div>
           <div class="pkg-type">Scenic</div>
         </div>
@@ -511,134 +587,967 @@
     <div class="discovery-layout">
       <!-- Left: Discovery Cards -->
       <div class="discovery-list" data-aos="fade-up">
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=400" alt="Kashmir" /></div>
-          <div class="slc-info">
-            <h3>Kashmir</h3>
-            <div class="slc-hl">Alpine Lakes & Snow Peaks</div>
-            <div class="slc-desc">Experience the true paradise with our curated Gulmarg and Srinagar packages.</div>
-            <button class="slc-btn" data-state="Kashmir">Enquire Now</button>
+        <div class="dest-section" id="kashmir" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Kashmir</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="../assets/images/kashmir.png" alt="Kashmir" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Alpine Lakes & Snow Peaks</h3>
+                <p class="card-cities">Experience the true paradise with our curated Gulmarg and Srinagar packages.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Kashmir')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1572979909810-a04f2a7da52a?w=400" alt="Rajasthan" /></div>
-          <div class="slc-info">
-            <h3>Rajasthan</h3>
-            <div class="slc-hl">Forts & Palaces</div>
-            <div class="slc-desc">Step into royal history with stays in heritage palaces and desert camps.</div>
-            <button class="slc-btn" data-state="Rajasthan">Enquire Now</button>
+        <div class="dest-section" id="rajasthan" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Rajasthan</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1572979909810-a04f2a7da52a?w=400" alt="Rajasthan" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Forts & Palaces</h3>
+                <p class="card-cities">Step into royal history with stays in heritage palaces and desert camps.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Rajasthan')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400" alt="Kerala" /></div>
-          <div class="slc-info">
-            <h3>Kerala</h3>
-            <div class="slc-hl">Backwaters & Ayurveda</div>
-            <div class="slc-desc">God's own country awaits with serene houseboat cruises and lush hills.</div>
-            <button class="slc-btn" data-state="Kerala">Enquire Now</button>
+        <div class="dest-section" id="kerala" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Kerala</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400" alt="Kerala" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Backwaters & Ayurveda</h3>
+                <p class="card-cities">God's own country awaits with serene houseboat cruises and lush hills.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Kerala')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400" alt="Goa" /></div>
-          <div class="slc-info">
-            <h3>Goa</h3>
-            <div class="slc-hl">Beaches & Heritage</div>
-            <div class="slc-desc">Find your perfect beach break from the party north to the peaceful south.</div>
-            <button class="slc-btn" data-state="Goa">Enquire Now</button>
+        <div class="dest-section" id="goa" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Goa</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400" alt="Goa" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Beaches & Heritage</h3>
+                <p class="card-cities">Find your perfect beach break from the party north to the peaceful south.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Goa')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400" alt="Ladakh" /></div>
-          <div class="slc-info">
-            <h3>Ladakh</h3>
-            <div class="slc-hl">High Altitude Adventure</div>
-            <div class="slc-desc">Explore the land of lamas and high mountain passes on a private tour.</div>
-            <button class="slc-btn" data-state="Ladakh">Enquire Now</button>
+        <div class="dest-section" id="ladakh" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Ladakh</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400" alt="Ladakh" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>High Altitude Adventure</h3>
+                <p class="card-cities">Explore the land of lamas and high mountain passes on a private tour.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Ladakh')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- More states converted to full cards -->
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=400" alt="Uttarakhand" /></div>
-          <div class="slc-info">
-            <h3>Uttarakhand</h3>
-            <div class="slc-hl">Hills & Wildlife</div>
-            <div class="slc-desc">Discover the lake district of Nainital and the wild heart of Jim Corbett.</div>
-            <button class="slc-btn" data-state="Uttarakhand">Enquire Now</button>
+        <div class="dest-section" id="uttarakhand" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Uttarakhand</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=400" alt="Uttarakhand" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Hills & Wildlife</h3>
+                <p class="card-cities">Discover the lake district of Nainital and the wild heart of Jim Corbett.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Uttarakhand')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1593693397690-362bb9a11863?w=400" alt="Himachal" /></div>
-          <div class="slc-info">
-            <h3>Himachal</h3>
-            <div class="slc-hl">Snowy Peaks & Valleys</div>
-            <div class="slc-desc">The classic Shimla and Manali escape featuring Himalayan charm.</div>
-            <button class="slc-btn" data-state="Himachal">Enquire Now</button>
+        <div class="dest-section" id="himachal" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Himachal</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1593693397690-362bb9a11863?w=400" alt="Himachal" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Snowy Peaks & Valleys</h3>
+                <p class="card-cities">The classic Shimla and Manali escape featuring Himalayan charm.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Himachal')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1620612261623-0182fcff27a3?w=400" alt="Gujarat" /></div>
-          <div class="slc-info">
-            <h3>Gujarat</h3>
-            <div class="slc-hl">Heritage & Lions</div>
-            <div class="slc-desc">Spiritual journeys and the wild roar of Asiatic Lions in Gir.</div>
-            <button class="slc-btn" data-state="Gujarat">Enquire Now</button>
+        <div class="dest-section" id="gujarat" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Gujarat</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1620612261623-0182fcff27a3?w=400" alt="Gujarat" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Heritage & Lions</h3>
+                <p class="card-cities">Spiritual journeys and the wild roar of Asiatic Lions in Gir.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Gujarat')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1600100397608-f010f41ab446?w=400" alt="Karnataka" /></div>
-          <div class="slc-info">
-            <h3>Karnataka</h3>
-            <div class="slc-hl">Palaces & Temples</div>
-            <div class="slc-desc">A grand tour from Mysore palaces to ancient stone carvings of Hampi.</div>
-            <button class="slc-btn" data-state="Karnataka">Enquire Now</button>
+        <div class="dest-section" id="karnataka" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Karnataka</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1600100397608-f010f41ab446?w=400" alt="Karnataka" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Palaces & Temples</h3>
+                <p class="card-cities">A grand tour from Mysore palaces to ancient stone carvings of Hampi.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Karnataka')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1588602641570-5b5ea6c4bcba?w=400" alt="Andaman" /></div>
-          <div class="slc-info">
-            <h3>Andaman</h3>
-            <div class="slc-hl">Pristine Beaches</div>
-            <div class="slc-desc">Pristine white sands of Havelock island and rich colonial history.</div>
-            <button class="slc-btn" data-state="Andaman">Enquire Now</button>
+        <div class="dest-section" id="andaman" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Andaman</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1588602641570-5b5ea6c4bcba?w=400" alt="Andaman" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Pristine Beaches</h3>
+                <p class="card-cities">Pristine white sands of Havelock island and rich colonial history.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Andaman')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1544634076-a90160ddf44a?w=400" alt="Sikkim" /></div>
-          <div class="slc-info">
-            <h3>Sikkim</h3>
-            <div class="slc-hl">Majestic Peaks</div>
-            <div class="slc-desc">Explore majestic Kanchenjunga views and serene monasteries.</div>
-            <button class="slc-btn" data-state="Sikkim">Enquire Now</button>
+        <div class="dest-section" id="sikkim" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Sikkim</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1544634076-a90160ddf44a?w=400" alt="Sikkim" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Majestic Peaks</h3>
+                <p class="card-cities">Explore majestic Kanchenjunga views and serene monasteries.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Sikkim')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="slc">
-          <div class="slc-img"><img src="https://images.unsplash.com/photo-1596788062835-263be0b82eb9?w=400" alt="Northeast Circuit" /></div>
-          <div class="slc-info">
-            <h3>Northeast Circuit</h3>
-            <div class="slc-hl">Uncharted Nature</div>
-            <div class="slc-desc">Assam's wildlife and the breathtaking 'Scotland of the East'.</div>
-            <button class="slc-btn" data-state="Northeast">Enquire Now</button>
+        <div class="dest-section" id="northeastcircuit" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Northeast Circuit</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1596788062835-263be0b82eb9?w=400" alt="Northeast Circuit" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Uncharted Nature</h3>
+                <p class="card-cities">Assam's wildlife and the breathtaking 'Scotland of the East'.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Northeast')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="mussoorie" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Mussoorie</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mussoorie_Snow_Over_Dehradun_%2814831297545%29.jpg/500px-Mussoorie_Snow_Over_Dehradun_%2814831297545%29.jpg" alt="Mussoorie" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Mussoorie</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Mussoorie.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Mussoorie')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="rishikesh" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Rishikesh</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Trayambakeshwar_Temple_VK.jpg/500px-Trayambakeshwar_Temple_VK.jpg" alt="Rishikesh" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Rishikesh</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Rishikesh.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Rishikesh')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="haridwar" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Haridwar</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ganga_aarti_haridwar_01.jpg/500px-Ganga_aarti_haridwar_01.jpg" alt="Haridwar" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Haridwar</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Haridwar.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Haridwar')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="hampi" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Hampi</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg/500px-Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg" alt="Hampi" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Hampi</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Hampi.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Hampi')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="meghalaya" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Meghalaya</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Dawki_River%2C_Meghalaya%2C_India.jpg/500px-Dawki_River%2C_Meghalaya%2C_India.jpg" alt="Meghalaya" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Meghalaya</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Meghalaya.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Meghalaya')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="spitivalley" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Spiti Valley</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Spiti Valley" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Spiti Valley</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Spiti Valley.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Spiti Valley')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="lakshadweep" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Lakshadweep</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/A_beach_side_resort_at_Kadmat_Island%2C_Lakshadweep.jpg/500px-A_beach_side_resort_at_Kadmat_Island%2C_Lakshadweep.jpg" alt="Lakshadweep" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Lakshadweep</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Lakshadweep.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Lakshadweep')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="malvan" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Malvan</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Malvan" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Malvan</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Malvan.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Malvan')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="konark" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Konark</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Konark" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Konark</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Konark.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Konark')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="rannofkutch" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Rann of Kutch</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Rann_of_Kutch_-_White_Desert.jpg/500px-Rann_of_Kutch_-_White_Desert.jpg" alt="Rann of Kutch" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Rann of Kutch</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Rann of Kutch.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Rann of Kutch')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="chikmagalur" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Chikmagalur</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Chikmagalur%2C_India._%287793316622%29.jpg/500px-Chikmagalur%2C_India._%287793316622%29.jpg" alt="Chikmagalur" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Chikmagalur</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Chikmagalur.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Chikmagalur')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="munnar" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Munnar</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Munnar_Overview.jpg/500px-Munnar_Overview.jpg" alt="Munnar" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Munnar</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Munnar.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Munnar')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="vrindavan" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Vrindavan</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Vrindavan" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Vrindavan</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Vrindavan.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Vrindavan')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="tirupati" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Tirupati</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Tirupati" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Tirupati</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Tirupati.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Tirupati')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="amritsar" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Amritsar</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Amritsar" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Amritsar</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Amritsar.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Amritsar')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="nainital" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Nainital</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Nainital" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Nainital</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Nainital.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Nainital')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="jimcorbettnationalpark" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Jim Corbett National Park</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Jim Corbett National Park" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Jim Corbett National Park</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Jim Corbett National Park.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Jim Corbett National Park')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="jaisalmer" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Jaisalmer</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Jaisalmer" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Jaisalmer</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Jaisalmer.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Jaisalmer')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="udaipur" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Udaipur</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Udaipur" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Udaipur</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Udaipur.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Udaipur')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="ziro" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Ziro</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Ziro" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Ziro</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Ziro.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Ziro')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="majuli" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Majuli</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Majuli" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Majuli</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Majuli.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Majuli')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="auli" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Auli</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Auli" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Auli</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Auli.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Auli')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="kabini" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Kabini</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Kabini" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Kabini</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Kabini.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Kabini')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="khajuraho" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Khajuraho</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Khajuraho" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Khajuraho</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Khajuraho.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Khajuraho')">Enquire Now &#8594;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dest-section" id="vaishnodevi" data-aos="fade-up">
+          <div class="dest-head">
+            <h2>📌 Vaishno Devi</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/kashmir.png" alt="Vaishno Devi" />
+                <span class="badge badge-dur">Customized</span>
+                <span class="badge badge-type">Tour</span>
+              </div>
+              <div class="card-body">
+                <h3>Explore Vaishno Devi</h3>
+                <p class="card-cities">Custom-designed packages and curated experiences in Vaishno Devi.</p>
+                <div class="card-tags">
+                  <span class="tag">Flights Incl.</span><span class="tag">Hotels</span>
+                </div>
+                <button class="enquire-btn" onclick="enquire('Vaishno Devi')">Enquire Now &#8594;</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Right: Enquiry Form Sticky -->
-      <div class="enquiry-panel">
-        <div class="enquiry-sticky" id="enquiry-form" data-aos="fade-up">
-          <div class="form-header">
-            <h2>Plan Your Trip</h2>
-            <p>Share your requirements and we'll create a free customized quote.</p>
-          </div>
+            <!-- Right: Enquiry Form Sticky -->
+      <div class="enquiry-side">
+        <div class="enquiry-box" id="enquiry-form" data-aos="fade-up">
+          <h2>Plan Your Domestic Trip</h2>
+          <p class="sub">Tell us where you want to go &#8212; we'll handle the rest.</p>
+          
+          <form action="https://formsubmit.co/thetravelspark2@gmail.com" method="POST">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" name="name" class="form-control" placeholder="John Doe" required />
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" class="form-control" placeholder="+91" required />
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" class="form-control" placeholder="john@example.com" required />
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>Destination</label>
+                <select name="destination" id="dest-select" class="form-control" required>
+<option value="" disabled selected>Where to?</option>
+                  <option value="Kashmir">Kashmir</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Ladakh">Ladakh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="Himachal">Himachal</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Andaman">Andaman</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Northeast Circuit">Northeast Circuit</option>
+                  <option value="Mussoorie">Mussoorie</option>
+                  <option value="Rishikesh">Rishikesh</option>
+                  <option value="Haridwar">Haridwar</option>
+                  <option value="Hampi">Hampi</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Spiti Valley">Spiti Valley</option>
+                  <option value="Lakshadweep">Lakshadweep</option>
+                  <option value="Tarkarli / Malvan">Tarkarli / Malvan</option>
+                  <option value="Puri & Konark">Puri & Konark</option>
+                  <option value="Rann of Kutch">Rann of Kutch</option>
+                  <option value="Chikmagalur">Chikmagalur</option>
+                  <option value="Munnar">Munnar</option>
+                  <option value="Mathura & Vrindavan">Mathura & Vrindavan</option>
+                  <option value="Tirupati">Tirupati</option>
+                  <option value="Amritsar">Amritsar</option>
+                  <option value="Nainital">Nainital</option>
+                  <option value="Jim Corbett">Jim Corbett</option>
+                  <option value="Jaisalmer">Jaisalmer</option>
+                  <option value="Udaipur">Udaipur</option>
+                  <option value="Ziro Valley">Ziro Valley</option>
+                  <option value="Majuli Island">Majuli Island</option>
+                  <option value="Auli">Auli</option>
+                  <option value="Coorg">Coorg</option>
+                  <option value="Kabini">Kabini</option>
+                  <option value="Khajuraho">Khajuraho</option>
+                  <option value="Vaishno Devi">Vaishno Devi</option>
+                  <option value="Europe">Europe</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Dubai">Dubai</option>
+                  <option value="Maldives">Maldives</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Philippines">Philippines</option>
+                  <option value="Bali">Bali</option>
+                  <option value="Turkey">Turkey</option>
+                  <option value="Kenya & Tanzania">Kenya & Tanzania</option>
+                  <option value="Nepal">Nepal</option>
+                  <option value="Sri Lanka">Sri Lanka</option>
+                  <option value="USA">USA</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Australia">Australia</option>
+                  <option value="New Zealand">New Zealand</option>
+                  <option value="Spain">Spain</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Croatia">Croatia</option>
+                  <option value="Czech Republic">Czech Republic</option>
+                  <option value="Austria">Austria</option>
+                  <option value="Iceland">Iceland</option>
+                  <option value="Bhutan">Bhutan</option>
+                  <option value="Cambodia">Cambodia</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Egypt">Egypt</option>
+                  <option value="Morocco">Morocco</option>
+                  <option value="Oman">Oman</option>
+                  <option value="Saudi Arabia">Saudi Arabia</option>
+                  <option value="Azerbaijan">Azerbaijan</option>
+                  <option value="Uzbekistan">Uzbekistan</option>
+                  <option value="Kyrgyzstan">Kyrgyzstan</option>
+                  <option value="Peru">Peru</option>
+                  <option value="Mexico">Mexico</option>
+                  <option value="South Africa">South Africa</option>
+                  <option value="Jordan">Jordan</option>
+                  <option value="Taiwan">Taiwan</option>
+                  <option value="South Korea">South Korea</option>
+                  <option value="Armenia">Armenia</option>
+                  <option value="Fiji">Fiji</option>
+                  <option value="Hungary">Hungary</option>
+                  <option value="Poland">Poland</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Travel Month</label>
+                <input type="month" name="month" class="form-control" />
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>No. of Travellers</label>
+                <input type="number" name="travellers" min="1" class="form-control" placeholder="2" />
+              </div>
+              <div class="form-group">
+                <label>Trip Type</label>
+                <select name="type" class="form-control">
+                  <option value="Leisure Holiday">Leisure Holiday</option>
+                  <option value="Honeymoon">Honeymoon</option>
+                  <option value="Family Trip">Family Trip</option>
+                  <option value="Group Tour">Group Tour</option>
+                  <option value="Corporate / MICE">Corporate / MICE</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Message / Special Requests</label>
+              <textarea name="message" class="form-control" rows="3" placeholder="Tell us about your dream trip..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn" style="background:var(--color-forest); color:white; width:100%; border:none; padding:12px; border-radius:8px; font-weight:700; cursor:pointer;">Send Enquiry &#128640;</button>
+          </form>
+        </div>
+      </div>
+    </div>
           <form action="https://formsubmit.co/thetravelspark2@gmail.com" method="POST">
             <div class="form-group">
               <label>Full Name</label>
@@ -686,7 +1595,7 @@
 
 <div id="footer-placeholder"></div>
 
-    <!-- CMS scripts (Supabase CDN → supabase-client → cms → components) -->
+    <!-- CMS scripts (Supabase CDN â†’ supabase-client â†’ cms â†’ components) -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
     <script src="../assets/js/supabase-client.js"></script>
     <script src="../assets/js/cms.js"></script><script src="../assets/js/components.js"></script>
@@ -694,7 +1603,7 @@
 <script>
   AOS.init({ duration: 800, once: true, offset: 100 });
 
-  /* ─── Read URL params from homepage smart search ─── */
+  /* â”€â”€â”€ Read URL params from homepage smart search â”€â”€â”€ */
   (function() {
     const params = new URLSearchParams(window.location.search);
     const dest   = params.get('dest');
@@ -811,3 +1720,12 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
