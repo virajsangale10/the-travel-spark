@@ -246,7 +246,133 @@
     <h1>The Heart of <span>Incredible India</span></h1>
     <p>From the snow-capped Himalayas to the tranquil backwaters of Kerala, discover curated journeys across our magnificent land.</p>
     <div class="hero-badges">
-      <div class="hero-badge"><img src="https://images.unsplash.com/photo-1506452814446-e56578a1bc1b?w=800" alt="Himalayan Triangle" />
+      <div class="hero-badge" onclick="document.getElementById('himachal').scrollIntoView({behavior:'smooth'})"><img src="https://images.unsplash.com/photo-1626025211913-7925c48b6727?w=100" alt="Himalayas" /> Himalayas</div>
+      <div class="hero-badge" onclick="document.getElementById('kerala').scrollIntoView({behavior:'smooth'})"><img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=100" alt="Backwaters" /> Backwaters</div>
+      <div class="hero-badge" onclick="document.getElementById('rajasthan').scrollIntoView({behavior:'smooth'})"><img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=100" alt="Palaces" /> Palaces</div>
+    </div>
+  </div><!-- /.container -->
+</section>
+
+<!-- Featured Packages Section -->
+<section class="section-padding bg-off-white" id="featured-packages">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up" style="display: flex; align-items: flex-end; justify-content: space-between; text-align: left; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <div class="section-label" style="justify-content:flex-start;">Top Curated Tours</div>
+        <h2 style="font-family: var(--font-display); font-size: 2.4rem; color: var(--primary-dark); margin-bottom: 10px;">Our Most <span style="color: var(--accent); font-style: italic;">Popular Packages</span></h2>
+        <p style="color: var(--text-secondary);">Systematically designed itineraries based on years of travel expertise. All packages include premium stays and private transfers.</p>
+      </div>
+      <div class="swiper-nav" style="display: flex; gap: 10px;">
+        <button id="pkgPrev" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid var(--primary-dark); color: var(--primary-dark); cursor: pointer; font-size: 1rem; transition: all 0.2s;">&#8592;</button>
+        <button id="pkgNext" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: 1.5px solid var(--primary-dark); color: var(--primary-dark); cursor: pointer; font-size: 1rem; transition: all 0.2s;">&#8594;</button>
+      </div>
+    </div>
+
+    <div class="pkg-grid-wrapper"><div class="pkg-grid">
+      <!-- 1. Kashmir -->
+      <div class="pkg-card" data-aos="fade-up">
+        <div class="pkg-img">
+          <img src="../assets/images/kashmir.png" alt="Kashmir" />
+          <div class="pkg-dur">5 Nights / 6 Days</div>
+          <div class="pkg-type">Scenic</div>
+        </div>
+        <div class="pkg-body">
+          <h3>Kashmir - Heaven on Earth</h3>
+          <p class="pkg-desc">Experience Shikar rides, Mughal gardens, and the snow-kissed peaks of Gulmarg and Pahalgam.</p>
+          <div class="pkg-footer">
+            <div class="pkg-price-box">
+              <span class="pkg-price-lbl">Starts from</span>
+              <span class="pkg-price">On Request</span>
+            </div>
+            <a href="kashmir-heaven-on-earth.html" class="pkg-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Kerala -->
+      <div class="pkg-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800" alt="Kerala" />
+          <div class="pkg-dur">4 Nights / 5 Days</div>
+          <div class="pkg-type">Nature</div>
+        </div>
+        <div class="pkg-body">
+          <h3>Essence of Kerala</h3>
+          <p class="pkg-desc">The perfect blend of Munnar's tea gardens, Thekkady's spices, and Alleppey's backwaters.</p>
+          <div class="pkg-footer">
+            <div class="pkg-price-box">
+              <span class="pkg-price-lbl">Starts from</span>
+              <span class="pkg-price">On Request</span>
+            </div>
+            <a href="essence-of-kerala.html" class="pkg-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Ladakh -->
+      <div class="pkg-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="pkg-img">
+          <img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=800" alt="Ladakh" />
+          <div class="pkg-dur">5 Nights / 6 Days</div>
+          <div class="pkg-type">Adventure</div>
+        </div>
+        <div class="pkg-body">
+          <h3>Ladakh Delight</h3>
+          <p class="pkg-desc">Conquer the high passes, see Pangong Tso's azure waters, and explore the Nubra Valley.</p>
+          <div class="pkg-footer">
+            <div class="pkg-price-box">
+              <span class="pkg-price-lbl">Starts from</span>
+              <span class="pkg-price">On Request</span>
+            </div>
+            <a href="ladakh-delight.html" class="pkg-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Andaman -->
+      <div class="pkg-card" data-aos="fade-up">
+        <div class="pkg-img">
+          <img src="../assets/images/andaman.png" alt="Andaman" />
+          <div class="pkg-dur">5 Nights / 6 Days</div>
+          <div class="pkg-type">Leisure</div>
+        </div>
+        <div class="pkg-body">
+          <h3>Enchanting Andaman</h3>
+          <p class="pkg-desc">Pristine white sands of Havelock island and the rich colonial history of Port Blair.</p>
+          <div class="pkg-footer">
+            <div class="pkg-price-box">
+              <span class="pkg-price-lbl">Starts from</span>
+              <span class="pkg-price">On Request</span>
+            </div>
+            <a href="andaman-package.html" class="pkg-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Rajasthan -->
+      <div class="pkg-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="pkg-img">
+          <img src="../assets/images/rajasthan.png" alt="Rajasthan" />
+          <div class="pkg-dur">6 Nights / 7 Days</div>
+          <div class="pkg-type">Royal</div>
+        </div>
+        <div class="pkg-body">
+          <h3>Marvels of Rajasthan</h3>
+          <p class="pkg-desc">The Golden Triangle of the Desert: Jaipur, Jodhpur, and the lake city of Udaipur.</p>
+          <div class="pkg-footer">
+            <div class="pkg-price-box">
+              <span class="pkg-price-lbl">Starts from</span>
+              <span class="pkg-price">On Request</span>
+            </div>
+            <a href="marvels-of-rajasthan.html" class="pkg-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Himachal -->
+      <div class="pkg-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="pkg-img">
+          <img src="../assets/images/himalayan_triangle.png" alt="Himalayan Triangle" />
           <div class="pkg-dur">5 Nights / 6 Days</div>
           <div class="pkg-type">Cultural</div>
         </div>
@@ -266,7 +392,7 @@
       <!-- 7. Gujarat -->
       <div class="pkg-card" data-aos="fade-up">
         <div class="pkg-img">
-          <img src="https://images.unsplash.com/photo-1620612261623-0182fcff27a3?w=800" alt="Gujarat" />
+          <img src="../assets/images/gujarat.png" alt="Gujarat" />
           <div class="pkg-dur">6 Nights / 7 Days</div>
           <div class="pkg-type">Heritage</div>
         </div>
@@ -306,7 +432,7 @@
       <!-- 9. Northeast -->
       <div class="pkg-card" data-aos="fade-up" data-aos-delay="200">
         <div class="pkg-img">
-          <img src="https://images.unsplash.com/photo-1596788062835-263be0b82eb9?w=800" alt="Northeast" />
+          <img src="../assets/images/northeast.png" alt="Northeast" />
           <div class="pkg-dur">6 Nights / 7 Days</div>
           <div class="pkg-type">Culture</div>
         </div>
@@ -326,7 +452,7 @@
       <!-- 10. Karnataka -->
       <div class="pkg-card" data-aos="fade-up">
         <div class="pkg-img">
-          <img src="https://images.unsplash.com/photo-1600100397608-f010f41ab446?w=800" alt="Karnataka" />
+          <img src="../assets/images/karnataka.png" alt="Karnataka" />
           <div class="pkg-dur">9 Nights / 10 Days</div>
           <div class="pkg-type">Temples</div>
         </div>
@@ -346,7 +472,7 @@
       <!-- 11. Coorg / Mysore -->
       <div class="pkg-card" data-aos="fade-up" data-aos-delay="100">
         <div class="pkg-img">
-          <img src="https://images.unsplash.com/photo-1623869680327-013baacf807e?w=800" alt="Coorg" />
+          <img src="../assets/images/coorg.png" alt="Coorg" />
           <div class="pkg-dur">4 Nights / 5 Days</div>
           <div class="pkg-type">Relax</div>
         </div>
@@ -366,7 +492,7 @@
       <!-- 12. Kedarnath -->
       <div class="pkg-card" data-aos="fade-up" data-aos-delay="200">
         <div class="pkg-img">
-          <img src="https://images.unsplash.com/photo-1627885233076-7cb058e5a31a?w=800" alt="Kedarnath" />
+          <img src="../assets/images/dodham.png" alt="Kedarnath" />
           <div class="pkg-dur">5 Nights / 6 Days</div>
           <div class="pkg-type">Divine</div>
         </div>
@@ -406,7 +532,7 @@
       <!-- 14. Sikkim -->
       <div class="pkg-card" data-aos="fade-up">
         <div class="pkg-img">
-          <img src="https://images.unsplash.com/photo-1544634076-a90160ddf44a?w=800" alt="Sikkim" />
+          <img src="../assets/images/sikkim.png" alt="Sikkim" />
           <div class="pkg-dur">5 Nights / 6 Days</div>
           <div class="pkg-type">Mountains</div>
         </div>
@@ -427,6 +553,8 @@
   </div><!-- /.container -->
 </section>
 
+
+
 <!-- Discovery + Form Section -->
 <section class="section-padding" id="discovery">
   <div class="container">
@@ -441,7 +569,7 @@
       <div class="discovery-list" data-aos="fade-up">
         <div class="dest-section" id="kashmir" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Kashmir</h2>
+            <h2>Kashmir</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -463,12 +591,12 @@
         </div>
         <div class="dest-section" id="rajasthan" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Rajasthan</h2>
+            <h2>Rajasthan</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800" alt="Rajasthan" />
+                <img src="../assets/images/rajasthan.png" alt="Rajasthan" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -485,12 +613,12 @@
         </div>
         <div class="dest-section" id="kerala" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Kerala</h2>
+            <h2>Kerala</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800" alt="Kerala" />
+                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400" alt="Kerala" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -507,12 +635,12 @@
         </div>
         <div class="dest-section" id="goa" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Goa</h2>
+            <h2>Goa</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1560179406-1c6c60e0faa2?w=800" alt="Goa" />
+                <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400" alt="Goa" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -529,12 +657,12 @@
         </div>
         <div class="dest-section" id="ladakh" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Ladakh</h2>
+            <h2>Ladakh</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1558281050-0c436abfa113?w=800" alt="Ladakh" />
+                <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400" alt="Ladakh" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -551,12 +679,12 @@
         </div>
         <div class="dest-section" id="uttarakhand" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Uttarakhand</h2>
+            <h2>Uttarakhand</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1624522956956-657e3f89078f?w=800" alt="Uttarakhand" />
+                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=400" alt="Uttarakhand" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -573,12 +701,12 @@
         </div>
         <div class="dest-section" id="himachal" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Himachal</h2>
+            <h2>Himachal</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=800" alt="Himachal" />
+                <img src="../assets/images/himachal.png" alt="Himachal" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -595,12 +723,12 @@
         </div>
         <div class="dest-section" id="gujarat" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Gujarat</h2>
+            <h2>Gujarat</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1598977123118-4e50bb6c469f?w=800" alt="Gujarat" />
+                <img src="../assets/images/gujarat.png" alt="Gujarat" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -617,12 +745,12 @@
         </div>
         <div class="dest-section" id="karnataka" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Karnataka</h2>
+            <h2>Karnataka</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800" alt="Karnataka" />
+                <img src="../assets/images/karnataka.png" alt="Karnataka" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -639,12 +767,12 @@
         </div>
         <div class="dest-section" id="andaman" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Andaman</h2>
+            <h2>Andaman</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1534088568595-a066f410cbda?w=800" alt="Andaman" />
+                <img src="../assets/images/andaman.png" alt="Andaman" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -661,12 +789,12 @@
         </div>
         <div class="dest-section" id="sikkim" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Sikkim</h2>
+            <h2>Sikkim</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1610488661664-8ab36ba2b0ff?w=800" alt="Sikkim" />
+                <img src="../assets/images/sikkim.png" alt="Sikkim" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -683,12 +811,12 @@
         </div>
         <div class="dest-section" id="northeastcircuit" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Northeast Circuit</h2>
+            <h2>Northeast Circuit</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1596788062835-263be0b82eb9?w=400" alt="Northeast Circuit" />
+                <img src="../assets/images/northeast.png" alt="Northeast Circuit" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -705,12 +833,12 @@
         </div>
         <div class="dest-section" id="mussoorie" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Mussoorie</h2>
+            <h2>Mussoorie</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1626025211913-7925c48b6727?w=800" alt="Mussoorie" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mussoorie_Snow_Over_Dehradun_%2814831297545%29.jpg/500px-Mussoorie_Snow_Over_Dehradun_%2814831297545%29.jpg" alt="Mussoorie" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -727,12 +855,12 @@
         </div>
         <div class="dest-section" id="rishikesh" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Rishikesh</h2>
+            <h2>Rishikesh</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1589136199852-cbfb49e54823?w=800" alt="Rishikesh" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Trayambakeshwar_Temple_VK.jpg/500px-Trayambakeshwar_Temple_VK.jpg" alt="Rishikesh" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -749,12 +877,12 @@
         </div>
         <div class="dest-section" id="haridwar" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Haridwar</h2>
+            <h2>Haridwar</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1601058269785-50ea0efbc450?w=800" alt="Haridwar" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ganga_aarti_haridwar_01.jpg/500px-Ganga_aarti_haridwar_01.jpg" alt="Haridwar" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -771,12 +899,12 @@
         </div>
         <div class="dest-section" id="hampi" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Hampi</h2>
+            <h2>Hampi</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800" alt="Hampi" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg/500px-Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg" alt="Hampi" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -793,12 +921,12 @@
         </div>
         <div class="dest-section" id="meghalaya" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Meghalaya</h2>
+            <h2>Meghalaya</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1571536802807-30451e3955d8?w=800" alt="Meghalaya" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Dawki_River%2C_Meghalaya%2C_India.jpg/500px-Dawki_River%2C_Meghalaya%2C_India.jpg" alt="Meghalaya" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -815,7 +943,7 @@
         </div>
         <div class="dest-section" id="spitivalley" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Spiti Valley</h2>
+            <h2>Spiti Valley</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -837,12 +965,12 @@
         </div>
         <div class="dest-section" id="lakshadweep" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Lakshadweep</h2>
+            <h2>Lakshadweep</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=800" alt="Lakshadweep" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/A_beach_side_resort_at_Kadmat_Island%2C_Lakshadweep.jpg/500px-A_beach_side_resort_at_Kadmat_Island%2C_Lakshadweep.jpg" alt="Lakshadweep" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -859,7 +987,7 @@
         </div>
         <div class="dest-section" id="malvan" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Malvan</h2>
+            <h2>Malvan</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -881,7 +1009,7 @@
         </div>
         <div class="dest-section" id="konark" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Konark</h2>
+            <h2>Konark</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -903,12 +1031,12 @@
         </div>
         <div class="dest-section" id="rannofkutch" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Rann of Kutch</h2>
+            <h2>Rann of Kutch</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1586220800662-7935deff81db?w=800" alt="Rann of Kutch" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Rann_of_Kutch_-_White_Desert.jpg/500px-Rann_of_Kutch_-_White_Desert.jpg" alt="Rann of Kutch" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -925,12 +1053,12 @@
         </div>
         <div class="dest-section" id="chikmagalur" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Chikmagalur</h2>
+            <h2>Chikmagalur</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1596644026363-f2229555c814?w=800" alt="Chikmagalur" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Chikmagalur%2C_India._%287793316622%29.jpg/500px-Chikmagalur%2C_India._%287793316622%29.jpg" alt="Chikmagalur" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -947,12 +1075,12 @@
         </div>
         <div class="dest-section" id="munnar" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Munnar</h2>
+            <h2>Munnar</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1602491453631-e2a56cb1d0f1?w=800" alt="Munnar" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Munnar_Overview.jpg/500px-Munnar_Overview.jpg" alt="Munnar" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -969,7 +1097,7 @@
         </div>
         <div class="dest-section" id="vrindavan" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Vrindavan</h2>
+            <h2>Vrindavan</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -991,7 +1119,7 @@
         </div>
         <div class="dest-section" id="tirupati" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Tirupati</h2>
+            <h2>Tirupati</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -1013,7 +1141,7 @@
         </div>
         <div class="dest-section" id="amritsar" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Amritsar</h2>
+            <h2>Amritsar</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -1035,7 +1163,7 @@
         </div>
         <div class="dest-section" id="nainital" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Nainital</h2>
+            <h2>Nainital</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -1057,7 +1185,7 @@
         </div>
         <div class="dest-section" id="jimcorbettnationalpark" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Jim Corbett National Park</h2>
+            <h2>Jim Corbett National Park</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -1079,7 +1207,7 @@
         </div>
         <div class="dest-section" id="jaisalmer" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Jaisalmer</h2>
+            <h2>Jaisalmer</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -1101,7 +1229,7 @@
         </div>
         <div class="dest-section" id="udaipur" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Udaipur</h2>
+            <h2>Udaipur</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -1123,7 +1251,7 @@
         </div>
         <div class="dest-section" id="ziro" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Ziro</h2>
+            <h2>Ziro</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -1145,7 +1273,7 @@
         </div>
         <div class="dest-section" id="majuli" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Majuli</h2>
+            <h2>Majuli</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -1167,7 +1295,7 @@
         </div>
         <div class="dest-section" id="auli" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Auli</h2>
+            <h2>Auli</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -1189,7 +1317,7 @@
         </div>
         <div class="dest-section" id="kabini" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Kabini</h2>
+            <h2>Kabini</h2>
           </div>
           <div class="card-grid">
             <div class="card">
@@ -1211,12 +1339,12 @@
         </div>
         <div class="dest-section" id="khajuraho" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Khajuraho</h2>
+            <h2>Khajuraho</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=800" alt="Khajuraho" />
+                <img src="../assets/images/khajuraho.png" alt="Khajuraho" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -1233,12 +1361,12 @@
         </div>
         <div class="dest-section" id="vaishnodevi" data-aos="fade-up">
           <div class="dest-head">
-            <h2>📌 Vaishno Devi</h2>
+            <h2>Vaishno Devi</h2>
           </div>
           <div class="card-grid">
             <div class="card">
               <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800" alt="Vaishno Devi" />
+                <img src="../assets/images/vaishnodevi.png" alt="Vaishno Devi" />
                 <span class="badge badge-dur">Customized</span>
                 <span class="badge badge-type">Tour</span>
               </div>
@@ -1260,146 +1388,6 @@
           <h2>Plan Your Domestic Trip</h2>
           <p class="sub">Tell us where you want to go &#8212; we'll handle the rest.</p>
           
-          <form action="https://formsubmit.co/thetravelspark2@gmail.com" method="POST">
-            <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" name="name" class="form-control" placeholder="John Doe" required />
-            </div>
-            
-            <div class="form-row">
-              <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" name="phone" class="form-control" placeholder="+91" required />
-              </div>
-              <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="email" class="form-control" placeholder="john@example.com" required />
-              </div>
-            </div>
-            
-            <div class="form-row">
-              <div class="form-group">
-                <label>Destination</label>
-                <select name="destination" id="dest-select" class="form-control" required>
-<option value="" disabled selected>Where to?</option>
-                  <option value="Kashmir">Kashmir</option>
-                  <option value="Rajasthan">Rajasthan</option>
-                  <option value="Kerala">Kerala</option>
-                  <option value="Goa">Goa</option>
-                  <option value="Ladakh">Ladakh</option>
-                  <option value="Uttarakhand">Uttarakhand</option>
-                  <option value="Himachal">Himachal</option>
-                  <option value="Gujarat">Gujarat</option>
-                  <option value="Karnataka">Karnataka</option>
-                  <option value="Andaman">Andaman</option>
-                  <option value="Sikkim">Sikkim</option>
-                  <option value="Northeast Circuit">Northeast Circuit</option>
-                  <option value="Mussoorie">Mussoorie</option>
-                  <option value="Rishikesh">Rishikesh</option>
-                  <option value="Haridwar">Haridwar</option>
-                  <option value="Hampi">Hampi</option>
-                  <option value="Meghalaya">Meghalaya</option>
-                  <option value="Spiti Valley">Spiti Valley</option>
-                  <option value="Lakshadweep">Lakshadweep</option>
-                  <option value="Tarkarli / Malvan">Tarkarli / Malvan</option>
-                  <option value="Puri & Konark">Puri & Konark</option>
-                  <option value="Rann of Kutch">Rann of Kutch</option>
-                  <option value="Chikmagalur">Chikmagalur</option>
-                  <option value="Munnar">Munnar</option>
-                  <option value="Mathura & Vrindavan">Mathura & Vrindavan</option>
-                  <option value="Tirupati">Tirupati</option>
-                  <option value="Amritsar">Amritsar</option>
-                  <option value="Nainital">Nainital</option>
-                  <option value="Jim Corbett">Jim Corbett</option>
-                  <option value="Jaisalmer">Jaisalmer</option>
-                  <option value="Udaipur">Udaipur</option>
-                  <option value="Ziro Valley">Ziro Valley</option>
-                  <option value="Majuli Island">Majuli Island</option>
-                  <option value="Auli">Auli</option>
-                  <option value="Coorg">Coorg</option>
-                  <option value="Kabini">Kabini</option>
-                  <option value="Khajuraho">Khajuraho</option>
-                  <option value="Vaishno Devi">Vaishno Devi</option>
-                  <option value="Europe">Europe</option>
-                  <option value="Japan">Japan</option>
-                  <option value="Dubai">Dubai</option>
-                  <option value="Maldives">Maldives</option>
-                  <option value="Thailand">Thailand</option>
-                  <option value="Singapore">Singapore</option>
-                  <option value="Georgia">Georgia</option>
-                  <option value="Vietnam">Vietnam</option>
-                  <option value="Philippines">Philippines</option>
-                  <option value="Bali">Bali</option>
-                  <option value="Turkey">Turkey</option>
-                  <option value="Kenya & Tanzania">Kenya & Tanzania</option>
-                  <option value="Nepal">Nepal</option>
-                  <option value="Sri Lanka">Sri Lanka</option>
-                  <option value="USA">USA</option>
-                  <option value="Canada">Canada</option>
-                  <option value="Australia">Australia</option>
-                  <option value="New Zealand">New Zealand</option>
-                  <option value="Spain">Spain</option>
-                  <option value="Portugal">Portugal</option>
-                  <option value="Croatia">Croatia</option>
-                  <option value="Czech Republic">Czech Republic</option>
-                  <option value="Austria">Austria</option>
-                  <option value="Iceland">Iceland</option>
-                  <option value="Bhutan">Bhutan</option>
-                  <option value="Cambodia">Cambodia</option>
-                  <option value="Malaysia">Malaysia</option>
-                  <option value="Egypt">Egypt</option>
-                  <option value="Morocco">Morocco</option>
-                  <option value="Oman">Oman</option>
-                  <option value="Saudi Arabia">Saudi Arabia</option>
-                  <option value="Azerbaijan">Azerbaijan</option>
-                  <option value="Uzbekistan">Uzbekistan</option>
-                  <option value="Kyrgyzstan">Kyrgyzstan</option>
-                  <option value="Peru">Peru</option>
-                  <option value="Mexico">Mexico</option>
-                  <option value="South Africa">South Africa</option>
-                  <option value="Jordan">Jordan</option>
-                  <option value="Taiwan">Taiwan</option>
-                  <option value="South Korea">South Korea</option>
-                  <option value="Armenia">Armenia</option>
-                  <option value="Fiji">Fiji</option>
-                  <option value="Hungary">Hungary</option>
-                  <option value="Poland">Poland</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Travel Month</label>
-                <input type="month" name="month" class="form-control" />
-              </div>
-            </div>
-            
-            <div class="form-row">
-              <div class="form-group">
-                <label>No. of Travellers</label>
-                <input type="number" name="travellers" min="1" class="form-control" placeholder="2" />
-              </div>
-              <div class="form-group">
-                <label>Trip Type</label>
-                <select name="type" class="form-control">
-                  <option value="Leisure Holiday">Leisure Holiday</option>
-                  <option value="Honeymoon">Honeymoon</option>
-                  <option value="Family Trip">Family Trip</option>
-                  <option value="Group Tour">Group Tour</option>
-                  <option value="Corporate / MICE">Corporate / MICE</option>
-                </select>
-              </div>
-            </div>
-            
-            <div class="form-group">
-              <label>Message / Special Requests</label>
-              <textarea name="message" class="form-control" rows="3" placeholder="Tell us about your dream trip..."></textarea>
-            </div>
-            
-            <button type="submit" class="submit-btn" style="background:var(--color-forest); color:white; width:100%; border:none; padding:12px; border-radius:8px; font-weight:700; cursor:pointer;">Send Enquiry &#128640;</button>
-          </form>
-        </div>
-      </div>
-    </div>
           <form action="https://formsubmit.co/thetravelspark2@gmail.com" method="POST">
             <div class="form-group">
               <label>Full Name</label>
@@ -1430,14 +1418,40 @@
                 <option value="Karnataka">Karnataka</option>
                 <option value="Andaman">Andaman</option>
                 <option value="Sikkim">Sikkim</option>
-                <option value="Northeast">Northeast Circuit</option>
+                <option value="Northeast Circuit">Northeast Circuit</option>
+                <option value="Mussoorie">Mussoorie</option>
+                <option value="Rishikesh">Rishikesh</option>
+                <option value="Haridwar">Haridwar</option>
+                <option value="Hampi">Hampi</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Spiti Valley">Spiti Valley</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Tarkarli / Malvan">Tarkarli / Malvan</option>
+                <option value="Puri & Konark">Puri & Konark</option>
+                <option value="Rann of Kutch">Rann of Kutch</option>
+                <option value="Chikmagalur">Chikmagalur</option>
+                <option value="Munnar">Munnar</option>
+                <option value="Mathura & Vrindavan">Mathura & Vrindavan</option>
+                <option value="Tirupati">Tirupati</option>
+                <option value="Amritsar">Amritsar</option>
+                <option value="Nainital">Nainital</option>
+                <option value="Jim Corbett">Jim Corbett</option>
+                <option value="Jaisalmer">Jaisalmer</option>
+                <option value="Udaipur">Udaipur</option>
+                <option value="Ziro Valley">Ziro Valley</option>
+                <option value="Majuli Island">Majuli Island</option>
+                <option value="Auli">Auli</option>
+                <option value="Coorg">Coorg</option>
+                <option value="Kabini">Kabini</option>
+                <option value="Khajuraho">Khajuraho</option>
+                <option value="Vaishno Devi">Vaishno Devi</option>
               </select>
             </div>
             <div class="form-group">
               <label>Tell us more</label>
               <textarea class="form-control" name="message" rows="3" placeholder="Approx date, number of travelers, etc."></textarea>
             </div>
-            <button type="submit" class="form-submit">Send Free Enquiry</button>
+            <button type="submit" class="submit-btn" style="background:var(--color-forest); color:white; width:100%; border:none; padding:12px; border-radius:8px; font-weight:700; cursor:pointer;">Send Enquiry &#128640;</button>
           </form>
         </div>
       </div>
@@ -1447,7 +1461,7 @@
 
 <div id="footer-placeholder"></div>
 
-    <!-- CMS scripts (Supabase CDN â†’ supabase-client â†’ cms â†’ components) -->
+    <!-- CMS scripts (Supabase CDN Ã¢â€ â€™ supabase-client Ã¢â€ â€™ cms Ã¢â€ â€™ components) -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
     <script src="../assets/js/supabase-client.js"></script>
     <script src="../assets/js/cms.js"></script><script src="../assets/js/components.js"></script>
@@ -1455,7 +1469,7 @@
 <script>
   AOS.init({ duration: 800, once: true, offset: 100 });
 
-  /* â”€â”€â”€ Read URL params from homepage smart search â”€â”€â”€ */
+  /* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Read URL params from homepage smart search Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
   (function() {
     const params = new URLSearchParams(window.location.search);
     const dest   = params.get('dest');
@@ -1572,6 +1586,8 @@
 </script>
 </body>
 </html>
+
+
 
 
 

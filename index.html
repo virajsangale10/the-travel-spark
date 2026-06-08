@@ -9,7 +9,9 @@
   <title>The Travel Spark &rdquo; Ignite Your Journey</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/variables.css?v=2" />
@@ -28,7 +30,9 @@
       color: var(--color-text-primary);
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: var(--font-display);
       font-weight: 600;
       color: var(--primary-dark);
@@ -46,11 +50,25 @@
       position: relative;
       z-index: 1001;
     }
-    #promoBanner a { color: #fff; text-decoration: underline; margin-left: 8px; }
+
+    #promoBanner a {
+      color: #fff;
+      text-decoration: underline;
+      margin-left: 8px;
+    }
+
     #promoBanner .cls {
-      position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
-      background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;
-      opacity: 0.7; line-height: 1;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0.7;
+      line-height: 1;
     }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Hero ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
@@ -65,7 +83,12 @@
     }
 
     /* Hide old dark background elements */
-    .hero-bg, .hero-overlay, .hero-spark, .hero-spark2 { display: none; }
+    .hero-bg,
+    .hero-overlay,
+    .hero-spark,
+    .hero-spark2 {
+      display: none;
+    }
 
     .hero-content {
       position: relative;
@@ -92,15 +115,25 @@
     }
 
     .hero-badge .dot {
-      width: 7px; height: 7px;
+      width: 7px;
+      height: 7px;
       background: var(--primary);
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: .5; transform: scale(1.4); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .5;
+        transform: scale(1.4);
+      }
     }
 
     .hero h1 {
@@ -147,7 +180,13 @@
       transition: background 0.2s, transform 0.2s;
       box-shadow: none;
     }
-    .hero-actions .btn-primary:hover { background: var(--accent-dark) !important; border-color: var(--accent-dark) !important; color: var(--primary-dark) !important; transform: translateY(-1px); }
+
+    .hero-actions .btn-primary:hover {
+      background: var(--accent-dark) !important;
+      border-color: var(--accent-dark) !important;
+      color: var(--primary-dark) !important;
+      transform: translateY(-1px);
+    }
 
     .hero-actions .btn-outline {
       background: transparent !important;
@@ -161,7 +200,11 @@
       transition: background 0.2s, transform 0.2s;
       box-shadow: none;
     }
-    .hero-actions .btn-outline:hover { background: rgba(13, 46, 82, 0.1) !important; transform: translateY(-1px); }
+
+    .hero-actions .btn-outline:hover {
+      background: rgba(13, 46, 82, 0.1) !important;
+      transform: translateY(-1px);
+    }
 
     .hero-stats {
       display: flex;
@@ -205,9 +248,15 @@
       padding: 28px 16px;
       border-right: 1px solid var(--primary-light);
     }
-    .stat-item:last-child { border-right: none; }
 
-    .stat-icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
 
     .stat-num {
       font-family: 'Fraunces', Georgia, serif;
@@ -226,8 +275,13 @@
     }
 
     @media(max-width:640px) {
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .stat-item:nth-child(2) { border-right: none; }
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-item:nth-child(2) {
+        border-right: none;
+      }
     }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Summer Special Banner ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ CTA Strip ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
@@ -238,7 +292,9 @@
       overflow: hidden;
     }
 
-    .summer-banner::after { display: none; }
+    .summer-banner::after {
+      display: none;
+    }
 
     .summer-inner {
       position: relative;
@@ -309,7 +365,12 @@
       transition: background 0.2s, transform 0.2s;
       box-shadow: none;
     }
-    .summer-inner .btn-primary:hover { background: var(--accent-dark) !important; border-color: var(--accent-dark); transform: translateY(-1px); }
+
+    .summer-inner .btn-primary:hover {
+      background: var(--accent-dark) !important;
+      border-color: var(--accent-dark);
+      transform: translateY(-1px);
+    }
 
     .summer-cards {
       display: grid;
@@ -324,10 +385,22 @@
       overflow: hidden;
       transition: border-color 0.2s, transform 0.2s;
     }
-    .mini-tour-card:hover { transform: translateY(-3px); border-color: var(--primary); box-shadow: var(--shadow-hover); }
 
-    .mini-tour-card img { width: 100%; height: 130px; object-fit: cover; }
-    .mini-tour-card .mc-body { padding: 14px; }
+    .mini-tour-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .mini-tour-card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .mini-tour-card .mc-body {
+      padding: 14px;
+    }
 
     .mini-tour-card h4 {
       font-family: 'Fraunces', Georgia, serif;
@@ -353,8 +426,13 @@
     }
 
     @media(max-width:768px) {
-      .summer-inner { grid-template-columns: 1fr; }
-      .summer-cards { display: none; }
+      .summer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .summer-cards {
+        display: none;
+      }
     }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Featured Tours ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
@@ -363,10 +441,21 @@
     }
 
     /* Section label & title on dark bg */
-    .featured-tours .section-label { color: var(--accent); }
-    .featured-tours .section-title { color: #FFFFFF; }
-    .featured-tours .section-title .accent { color: var(--accent); }
-    .featured-tours .section-sub { color: var(--text-on-dark); }
+    .featured-tours .section-label {
+      color: var(--accent);
+    }
+
+    .featured-tours .section-title {
+      color: #FFFFFF;
+    }
+
+    .featured-tours .section-title .accent {
+      color: var(--accent);
+    }
+
+    .featured-tours .section-sub {
+      color: var(--text-on-dark);
+    }
 
     .section-header {
       display: flex;
@@ -379,19 +468,25 @@
 
     .tours-scroll-track {
       display: flex;
-      align-items: center; /* Center vertically for scaling */
+      align-items: center;
+      /* Center vertically for scaling */
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      padding: 40px calc(50% - 160px); /* Center cards (160px is half of 320px) */
+      padding: 40px 20px;
+      /* Start from left */
       scrollbar-width: none;
       position: relative;
     }
-    .tours-scroll-track::-webkit-scrollbar { display: none; }
+
+    .tours-scroll-track::-webkit-scrollbar {
+      display: none;
+    }
 
     .tour-card {
       flex: 0 0 320px;
-      margin: 0 15px;
+      margin: 0 8px;
+      /* Positive margin to prevent glitchy overlap */
       background: var(--primary);
       border-radius: 16px;
       overflow: hidden;
@@ -399,26 +494,34 @@
       scroll-snap-align: center;
       display: flex;
       flex-direction: column;
-      
-      transform: scale(0.85); /* Smaller by default */
-      opacity: 0.6; /* Dimmed by default */
-      transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1), opacity 0.4s ease, box-shadow 0.4s ease, border-color 0.2s;
+
+      transform: scale(0.95);
+      /* Base scale */
+      opacity: 1;
+      /* Fully visible */
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease, box-shadow 0.4s ease, border-color 0.2s;
       position: relative;
     }
+
     .tour-card.is-center {
-      transform: scale(1.05); /* Center card is larger */
+      transform: scale(1.02);
+      /* Center card is larger */
       opacity: 1;
       z-index: 2;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
       border-color: var(--accent);
     }
+
     .tour-card:hover {
-      transform: scale(0.98); /* Bring up side cards slightly on hover */
+      transform: scale(1);
+      /* Smoothly scale up to 100% without extreme overlap */
       opacity: 1;
       z-index: 3;
     }
+
     .tour-card.is-center:hover {
-      transform: scale(1.08); /* Center card gets even larger on hover */
+      transform: scale(1.05);
+      /* Center card gets slightly larger on hover */
     }
 
     .tour-img {
@@ -429,19 +532,25 @@
     }
 
     .tour-img img {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       transition: transform 0.5s;
     }
-    .tour-card:hover .tour-img img { transform: scale(1.06); }
 
-    .tour-img-overlay { display: none; }
+    .tour-card:hover .tour-img img {
+      transform: scale(1.06);
+    }
+
+    .tour-img-overlay {
+      display: none;
+    }
 
     .tour-duration {
       position: absolute;
       top: 12px;
       left: 12px;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.9);
       color: var(--primary-dark);
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 11px;
@@ -466,7 +575,9 @@
       text-transform: uppercase;
     }
 
-    .tour-body { padding: 18px; }
+    .tour-body {
+      padding: 18px;
+    }
 
     .tour-body h3 {
       font-family: 'Fraunces', Georgia, serif;
@@ -524,23 +635,40 @@
       transition: all 0.2s;
       box-shadow: none;
     }
-    .tour-book-btn:hover { background: var(--accent); border-color: var(--accent); color: var(--primary-dark); }
 
-    .swiper-nav { display: flex; align-items: center; gap: 10px; }
+    .tour-book-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    .swiper-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
     .swiper-btn {
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.12);
       border: 1.5px solid rgba(200, 216, 234, 0.35);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
       font-size: 1rem;
       color: #FFFFFF;
       transition: all 0.2s;
       box-shadow: none;
     }
-    .swiper-btn:hover { background: var(--accent); color: var(--primary-dark); border-color: var(--accent); }
+
+    .swiper-btn:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+      border-color: var(--accent);
+    }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Year Round Destinations ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
     .yr-destinations {
@@ -552,8 +680,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(74,127,181,0.09);
-      border: 1px solid rgba(74,127,181,0.22);
+      background: rgba(74, 127, 181, 0.09);
+      border: 1px solid rgba(74, 127, 181, 0.22);
       color: var(--primary);
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 11px;
@@ -574,6 +702,7 @@
       gap: 4px;
       margin-bottom: 44px;
     }
+
     .dest-pill {
       display: flex;
       align-items: center;
@@ -589,64 +718,86 @@
       cursor: pointer;
       transition: background 0.22s, color 0.22s, box-shadow 0.22s;
     }
-    .dest-pill:hover { color: var(--primary); }
+
+    .dest-pill:hover {
+      color: var(--primary);
+    }
+
     .dest-pill.active {
       background: #fff;
       color: var(--primary-dark);
-      box-shadow: 0 2px 10px rgba(13,46,82,0.10);
+      box-shadow: 0 2px 10px rgba(13, 46, 82, 0.10);
     }
 
-    .dest-panel { display: none; }
-    .dest-panel.active { display: block; }
+    .dest-panel {
+      display: none;
+    }
+
+    .dest-panel.active {
+      display: block;
+    }
 
     /* Horizontal scroll track */
     .yr-scroll-track {
       display: flex;
-      align-items: center; /* Center vertically for scaling */
+      align-items: center;
+      /* Center vertically for scaling */
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      padding: 40px calc(50% - 130px); /* Center the first and last cards (130px is half of 260px) */
+      padding: 40px 20px;
+      /* Start from left */
       scrollbar-width: none;
       position: relative;
     }
-    .yr-scroll-track::-webkit-scrollbar { display: none; }
+
+    .yr-scroll-track::-webkit-scrollbar {
+      display: none;
+    }
 
     /* Destination card ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â portrait style like reference */
     .dest-card {
       flex: 0 0 260px;
-      margin: 0 12px;
+      margin: 0 8px;
+      /* Positive margin to prevent glitchy overlap */
       background: #fff;
       border-radius: 18px;
       overflow: hidden;
-      scroll-snap-align: center; /* Snap to center */
+      scroll-snap-align: center;
+      /* Snap to center */
       text-decoration: none;
       display: flex;
       flex-direction: column;
       border: 1px solid #e2eaf4;
-      box-shadow: 0 4px 15px rgba(13,46,82,0.05);
-      
-      transform: scale(0.85); /* Smaller by default */
-      opacity: 0.6; /* Dimmed by default */
-      transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1), opacity 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 4px 15px rgba(13, 46, 82, 0.05);
+
+      transform: scale(0.95);
+      /* Base scale */
+      opacity: 1;
+      /* Fully visible */
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease, box-shadow 0.4s ease;
       position: relative;
     }
-    
+
     .dest-card.is-center {
-      transform: scale(1.08); /* Center card is larger */
+      transform: scale(1.02);
+      /* Center card is larger */
       opacity: 1;
       z-index: 2;
-      box-shadow: 0 15px 45px rgba(13,46,82,0.15);
+      box-shadow: 0 15px 45px rgba(13, 46, 82, 0.15);
       border-color: #d4e0ee;
     }
 
     .dest-card:hover {
-      transform: scale(1.02); /* Bring up side cards slightly on hover */
+      transform: scale(1);
+      /* Smoothly scale up without extreme overlap */
       opacity: 1;
       z-index: 3;
     }
+
     .dest-card.is-center:hover {
-      transform: scale(1.11); /* Center card gets even larger on hover */
+      transform: scale(1.05);
+      /* Center card gets slightly larger on hover */
     }
 
     .dest-card-img {
@@ -655,17 +806,23 @@
       overflow: hidden;
       flex-shrink: 0;
     }
+
     .dest-card-img img {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      transition: transform 0.55s cubic-bezier(0.2,0.8,0.2,1);
+      transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
-    .dest-card:hover .dest-card-img img { transform: scale(1.07); }
+
+    .dest-card:hover .dest-card-img img {
+      transform: scale(1.07);
+    }
 
     /* Badge top-left on image */
     .dest-badge {
       position: absolute;
-      top: 12px; left: 12px;
+      top: 12px;
+      left: 12px;
       padding: 4px 11px;
       border-radius: 50px;
       font-family: 'Nunito', system-ui, sans-serif;
@@ -675,14 +832,54 @@
       letter-spacing: 0.07em;
       z-index: 3;
     }
-    .dest-badge.badge-popular  { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
-    .dest-badge.badge-trend    { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
-    .dest-badge.badge-best     { background: #fce4ec; color: #c62828; border: 1px solid #ef9a9a; }
-    .dest-badge.badge-scenic   { background: #e3f2fd; color: #1565c0; border: 1px solid #90caf9; }
-    .dest-badge.badge-new      { background: #f3e5f5; color: #6a1b9a; border: 1px solid #ce93d8; }
-    .dest-badge.badge-adv      { background: #e0f7fa; color: #00695c; border: 1px solid #80cbc4; }
-    .dest-badge.badge-cult     { background: #fff8e1; color: #f57f17; border: 1px solid #ffe082; }
-    .dest-badge.badge-nature   { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
+
+    .dest-badge.badge-popular {
+      background: #fff3e0;
+      color: #e65100;
+      border: 1px solid #ffcc80;
+    }
+
+    .dest-badge.badge-trend {
+      background: #e8f5e9;
+      color: #2e7d32;
+      border: 1px solid #a5d6a7;
+    }
+
+    .dest-badge.badge-best {
+      background: #fce4ec;
+      color: #c62828;
+      border: 1px solid #ef9a9a;
+    }
+
+    .dest-badge.badge-scenic {
+      background: #e3f2fd;
+      color: #1565c0;
+      border: 1px solid #90caf9;
+    }
+
+    .dest-badge.badge-new {
+      background: #f3e5f5;
+      color: #6a1b9a;
+      border: 1px solid #ce93d8;
+    }
+
+    .dest-badge.badge-adv {
+      background: #e0f7fa;
+      color: #00695c;
+      border: 1px solid #80cbc4;
+    }
+
+    .dest-badge.badge-cult {
+      background: #fff8e1;
+      color: #f57f17;
+      border: 1px solid #ffe082;
+    }
+
+    .dest-badge.badge-nature {
+      background: #e8f5e9;
+      color: #1b5e20;
+      border: 1px solid #a5d6a7;
+    }
 
     /* Card body */
     .dest-card-body {
@@ -691,6 +888,7 @@
       flex-direction: column;
       flex: 1;
     }
+
     .dest-card-body h3 {
       font-family: 'Fraunces', Georgia, serif;
       font-size: 1.15rem;
@@ -698,6 +896,7 @@
       color: var(--primary-dark);
       margin-bottom: 4px;
     }
+
     .dest-card-body .dest-tagline {
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 12.5px;
@@ -706,6 +905,7 @@
       margin-bottom: 12px;
       flex: 1;
     }
+
     .dest-card-footer {
       display: flex;
       align-items: center;
@@ -714,6 +914,7 @@
       border-top: 1px solid #edf1f7;
       margin-top: auto;
     }
+
     .dest-rating {
       display: flex;
       align-items: center;
@@ -723,8 +924,16 @@
       font-weight: 700;
       color: var(--primary-dark);
     }
-    .dest-rating .star { color: #f59e0b; font-size: 13px; }
-    .dest-rating .count { color: var(--text-secondary); font-weight: 500; }
+
+    .dest-rating .star {
+      color: #f59e0b;
+      font-size: 13px;
+    }
+
+    .dest-rating .count {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
 
     .dest-explore-btn {
       display: inline-flex;
@@ -732,7 +941,7 @@
       gap: 5px;
       background: var(--primary-bg);
       color: var(--primary);
-      border: 1.5px solid rgba(74,127,181,0.28);
+      border: 1.5px solid rgba(74, 127, 181, 0.28);
       padding: 7px 14px;
       border-radius: 50px;
       font-family: 'Nunito', system-ui, sans-serif;
@@ -740,6 +949,7 @@
       font-weight: 700;
       transition: background 0.18s, color 0.18s, border-color 0.18s;
     }
+
     .dest-card:hover .dest-explore-btn {
       background: var(--primary);
       color: #fff;
@@ -754,21 +964,34 @@
       gap: 10px;
       margin-bottom: 22px;
     }
+
     .yr-nav-btn {
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       background: #fff;
       color: var(--primary);
       border: 1.5px solid #d4e0ee;
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1rem;
       cursor: pointer;
       transition: background 0.18s, color 0.18s, border-color 0.18s;
       flex-shrink: 0;
-      box-shadow: 0 1px 4px rgba(13,46,82,0.07);
+      box-shadow: 0 1px 4px rgba(13, 46, 82, 0.07);
     }
-    .yr-nav-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
-    .yr-nav-btn:disabled { opacity: 0.35; pointer-events: none; }
+
+    .yr-nav-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .yr-nav-btn:disabled {
+      opacity: 0.35;
+      pointer-events: none;
+    }
 
     /* Dot indicators */
     .yr-dots {
@@ -777,20 +1000,32 @@
       align-items: center;
       flex: 1;
     }
+
     .yr-dot {
-      width: 7px; height: 7px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: #d4e0ee;
       transition: background 0.2s, width 0.2s;
     }
-    .yr-dot.active { background: var(--primary); width: 20px; border-radius: 4px; }
+
+    .yr-dot.active {
+      background: var(--primary);
+      width: 20px;
+      border-radius: 4px;
+    }
 
     @media(max-width:768px) {
-      .dest-card { flex: 0 0 230px; }
+      .dest-card {
+        flex: 0 0 230px;
+      }
     }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Corporate Travel Solutions ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
-    .corp-solutions { background: var(--primary-bg); padding: 3rem 0; }
+    .corp-solutions {
+      background: var(--primary-bg);
+      padding: 3rem 0;
+    }
 
     .corp-services-grid {
       display: flex;
@@ -812,15 +1047,29 @@
       min-width: 280px;
     }
 
-    @media(max-width:900px) { .corp-svc-card { flex: 0 1 calc(50% - 0.6rem); min-width: 240px; } }
-    @media(max-width:600px) { .corp-svc-card { flex: 0 1 100%; } }
+    @media(max-width:900px) {
+      .corp-svc-card {
+        flex: 0 1 calc(50% - 0.6rem);
+        min-width: 240px;
+      }
+    }
+
+    @media(max-width:600px) {
+      .corp-svc-card {
+        flex: 0 1 100%;
+      }
+    }
 
     .corp-svc-card:hover {
       transform: translateY(-5px);
       border-color: var(--primary);
     }
 
-    .corp-svc-icon { font-size: 2rem; margin-bottom: 20px; display: block; }
+    .corp-svc-icon {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      display: block;
+    }
 
     .corp-svc-card h3 {
       font-family: 'Fraunces', Georgia, serif;
@@ -837,7 +1086,11 @@
       line-height: 1.65;
     }
 
-    .corp-dest-header { margin-bottom: 36px; padding-top: 48px; border-top: 1px solid var(--primary-light); }
+    .corp-dest-header {
+      margin-bottom: 36px;
+      padding-top: 48px;
+      border-top: 1px solid var(--primary-light);
+    }
 
     .corp-dest-desc {
       font-family: 'Nunito', system-ui, sans-serif;
@@ -868,32 +1121,81 @@
       display: block;
       border: 1px solid var(--primary-light);
     }
-    .corp-dest-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
-    .corp-dest-item:hover img { transform: scale(1.08); }
+
+    .corp-dest-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s;
+    }
+
+    .corp-dest-item:hover img {
+      transform: scale(1.08);
+    }
 
     .corp-dest-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(13,46,82,0.8) 0%, transparent 60%);
+      background: linear-gradient(to top, rgba(13, 46, 82, 0.8) 0%, transparent 60%);
     }
 
-    .corp-dest-content { position: absolute; bottom: 0; left: 0; padding: 16px; color: white; }
-    .corp-dest-content h4 { font-family: 'Fraunces', Georgia, serif; font-size: 1rem; font-weight: 700; margin-bottom: 3px; }
-    .corp-dest-content p { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; opacity: 0.8; line-height: 1.3; }
+    .corp-dest-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 16px;
+      color: white;
+    }
 
-    @media(max-width:1100px) { .corp-dest-grid { grid-template-columns: repeat(3, 1fr); } }
+    .corp-dest-content h4 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .corp-dest-content p {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 12px;
+      opacity: 0.8;
+      line-height: 1.3;
+    }
+
+    @media(max-width:1100px) {
+      .corp-dest-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
     @media(max-width:900px) {
-      .corp-services-grid { grid-template-columns: repeat(2, 1fr) !important; }
-      .corp-svc-card { grid-column: span 1 !important; }
-      .corp-dest-grid { grid-template-columns: repeat(2, 1fr); }
+      .corp-services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .corp-svc-card {
+        grid-column: span 1 !important;
+      }
+
+      .corp-dest-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
+
     @media(max-width:600px) {
-      .corp-services-grid { grid-template-columns: 1fr !important; }
-      .corp-dest-grid { grid-template-columns: 1fr; }
+      .corp-services-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .corp-dest-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Travel Styles ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
-    .travel-styles { background: #FFFFFF; padding: 3rem 0; }
+    .travel-styles {
+      background: #FFFFFF;
+      padding: 3rem 0;
+    }
 
     .styles-grid {
       display: grid;
@@ -916,17 +1218,28 @@
       text-align: center;
       text-decoration: none;
     }
-    .style-item:hover { border-color: var(--primary); transform: translateY(-4px); background: var(--primary-bg); }
+
+    .style-item:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+      background: var(--primary-bg);
+    }
 
     .style-icon-wrapper {
-      width: 68px; height: 68px;
+      width: 68px;
+      height: 68px;
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 2.2rem;
       margin-bottom: 4px;
       transition: transform 0.25s;
     }
-    .style-item:hover .style-icon-wrapper { transform: scale(1.12) rotate(5deg); }
+
+    .style-item:hover .style-icon-wrapper {
+      transform: scale(1.12) rotate(5deg);
+    }
 
     .style-item span {
       font-family: 'Nunito', system-ui, sans-serif;
@@ -935,19 +1248,53 @@
       font-size: 14px;
     }
 
-    .style-item.family   .style-icon-wrapper { background: var(--primary-bg); }
-    .style-item.india    .style-icon-wrapper { background: var(--accent-bg); }
-    .style-item.honeymoon .style-icon-wrapper { background: var(--accent-bg); }
-    .style-item.visa     .style-icon-wrapper { background: var(--primary-bg); }
-    .style-item.corporate .style-icon-wrapper { background: var(--primary-bg); }
-    .style-item.groups   .style-icon-wrapper { background: var(--primary-bg); }
+    .style-item.family .style-icon-wrapper {
+      background: var(--primary-bg);
+    }
 
-    @media(max-width:1100px) { .styles-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media(max-width:600px)  { .styles-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
+    .style-item.india .style-icon-wrapper {
+      background: var(--accent-bg);
+    }
+
+    .style-item.honeymoon .style-icon-wrapper {
+      background: var(--accent-bg);
+    }
+
+    .style-item.visa .style-icon-wrapper {
+      background: var(--primary-bg);
+    }
+
+    .style-item.corporate .style-icon-wrapper {
+      background: var(--primary-bg);
+    }
+
+    .style-item.groups .style-icon-wrapper {
+      background: var(--primary-bg);
+    }
+
+    @media(max-width:1100px) {
+      .styles-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media(max-width:600px) {
+      .styles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Group feature section ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
-    .group-feature { background: #FFFFFF; position: relative; overflow: hidden; }
-    .group-feature::before { display: none; }
+    .group-feature {
+      background: #FFFFFF;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .group-feature::before {
+      display: none;
+    }
 
     .group-feature-inner {
       display: grid;
@@ -956,28 +1303,67 @@
       align-items: center;
     }
 
-    .group-feature-left .section-label { color: var(--accent); }
-    .group-feature-left .section-title { color: var(--primary-dark); }
-    .group-feature-left p { font-family: 'Nunito', system-ui, sans-serif; color: var(--text-primary); font-size: 15px; line-height: 1.7; margin-bottom: 28px; }
+    .group-feature-left .section-label {
+      color: var(--accent);
+    }
 
-    .group-perks { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+    .group-feature-left .section-title {
+      color: var(--primary-dark);
+    }
 
-    .perk-item { display: flex; align-items: center; gap: 14px; }
+    .group-feature-left p {
+      font-family: 'Nunito', system-ui, sans-serif;
+      color: var(--text-primary);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .group-perks {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .perk-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
     .perk-icon {
-      width: 44px; height: 44px;
+      width: 44px;
+      height: 44px;
       background: var(--primary-bg);
       border: 1.5px solid var(--primary-light);
       border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1.2rem;
       flex-shrink: 0;
     }
 
-    .perk-text h4 { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; font-weight: 700; color: var(--primary-dark); margin-bottom: 2px; }
-    .perk-text p  { font-family: 'Nunito', system-ui, sans-serif; font-size: 13px; color: var(--text-primary); }
+    .perk-text h4 {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 2px;
+    }
 
-    .group-cards-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .perk-text p {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 13px;
+      color: var(--text-primary);
+    }
+
+    .group-cards-mini {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
 
     .gcm {
       background: #FFFFFF;
@@ -986,12 +1372,45 @@
       overflow: hidden;
       transition: border-color 0.2s, transform 0.2s;
     }
-    .gcm:hover { border-color: var(--primary); transform: translateY(-4px); }
-    .gcm img { width: 100%; height: 140px; object-fit: cover; }
-    .gcm-body { padding: 14px; }
-    .gcm-body h4 { font-family: 'Fraunces', Georgia, serif; font-size: 1rem; color: var(--primary-dark); margin-bottom: 4px; font-weight: 700; }
-    .gcm-dur  { font-family: var(--font-body); font-size: 12px; color: var(--primary); font-weight: 700; margin-bottom: 4px; }
-    .gcm-dest { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: var(--text-primary); line-height: 1.4; }
+
+    .gcm:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+    }
+
+    .gcm img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .gcm-body {
+      padding: 14px;
+    }
+
+    .gcm-body h4 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1rem;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .gcm-dur {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .gcm-dest {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 12px;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
     .gcm-badge {
       display: inline-block;
       background: var(--accent-bg);
@@ -1007,10 +1426,20 @@
       margin-top: 8px;
     }
 
-    @media(max-width:900px) { .group-feature-inner { grid-template-columns: 1fr; } .group-cards-mini { display: none; } }
+    @media(max-width:900px) {
+      .group-feature-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .group-cards-mini {
+        display: none;
+      }
+    }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ How It Works ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
-    .how-it-works { background: var(--primary-bg); }
+    .how-it-works {
+      background: var(--primary-bg);
+    }
 
     .steps-grid {
       display: grid;
@@ -1022,7 +1451,9 @@
     .steps-grid::before {
       content: '';
       position: absolute;
-      top: 44px; left: 16.67%; width: 66.66%;
+      top: 44px;
+      left: 16.67%;
+      width: 66.66%;
       height: 2px;
       background: linear-gradient(90deg, var(--primary), var(--primary-light));
       z-index: 0;
@@ -1040,18 +1471,22 @@
     }
 
     .step-num {
-      width: 80px; height: 80px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       background: var(--primary);
       color: white;
       font-family: 'Fraunces', Georgia, serif;
       font-size: 1.7rem;
       font-weight: 900;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0 auto 20px;
       position: relative;
       box-shadow: none;
     }
+
     .step-num::after {
       content: '';
       position: absolute;
@@ -1060,11 +1495,25 @@
       border: 2px dashed rgba(74, 127, 181, 0.3);
     }
 
-    .step-item h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.05rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 10px; }
-    .step-item p  { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; color: var(--text-primary); line-height: 1.65; }
+    .step-item h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    .step-item p {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
+      color: var(--text-primary);
+      line-height: 1.65;
+    }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Enquiry Section ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
-    .enquiry-section { background: var(--primary-bg); }
+    .enquiry-section {
+      background: var(--primary-bg);
+    }
 
     .enquiry-wrapper {
       display: grid;
@@ -1082,10 +1531,24 @@
       margin-bottom: 18px;
     }
 
-    .enquiry-left h2 .ac { color: var(--accent); font-style: italic; }
-    .enquiry-left > p { font-family: 'Nunito', system-ui, sans-serif; color: var(--text-primary); line-height: 1.7; margin-bottom: 28px; font-size: 15px; }
+    .enquiry-left h2 .ac {
+      color: var(--accent);
+      font-style: italic;
+    }
 
-    .enquiry-benefits { display: flex; flex-direction: column; gap: 12px; }
+    .enquiry-left>p {
+      font-family: 'Nunito', system-ui, sans-serif;
+      color: var(--text-primary);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      font-size: 15px;
+    }
+
+    .enquiry-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
     .benefit-item {
       display: flex;
@@ -1098,10 +1561,13 @@
     }
 
     .benefit-item .check {
-      width: 24px; height: 24px;
+      width: 24px;
+      height: 24px;
       background: var(--primary);
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 12px;
       color: white;
       flex-shrink: 0;
@@ -1115,11 +1581,30 @@
       box-shadow: none;
     }
 
-    .enquiry-form-box h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.35rem; color: var(--primary-dark); margin-bottom: 6px; font-weight: 700; }
-    .enquiry-form-box .sub { font-family: 'Nunito', system-ui, sans-serif; font-size: 14px; color: var(--text-primary); margin-bottom: 24px; }
+    .enquiry-form-box h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
 
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .form-group { margin-bottom: 12px; }
+    .enquiry-form-box .sub {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 14px;
+      color: var(--text-primary);
+      margin-bottom: 24px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
 
     .form-group label {
       display: block;
@@ -1144,6 +1629,7 @@
       transition: border-color 0.2s;
       resize: vertical;
     }
+
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
@@ -1167,15 +1653,28 @@
       margin-top: 6px;
       box-shadow: none;
     }
-    .form-submit:hover { background: var(--accent-dark) !important; color: var(--primary-dark) !important; transform: translateY(-1px); }
+
+    .form-submit:hover {
+      background: var(--accent-dark) !important;
+      color: var(--primary-dark) !important;
+      transform: translateY(-1px);
+    }
 
     @media(max-width:900px) {
-      .enquiry-wrapper { grid-template-columns: 1fr; gap: 36px; }
-      .form-row { grid-template-columns: 1fr; }
+      .enquiry-wrapper {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Testimonials ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
-    .testimonials-section { background: #FFFFFF; }
+    .testimonials-section {
+      background: #FFFFFF;
+    }
 
     .testi-card {
       background: #FFFFFF;
@@ -1186,7 +1685,12 @@
       box-shadow: none;
     }
 
-    .testi-stars { color: var(--accent); font-size: 0.95rem; margin-bottom: 12px; letter-spacing: 2px; }
+    .testi-stars {
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
 
     .testi-card p {
       font-family: 'Nunito', system-ui, sans-serif;
@@ -1197,13 +1701,20 @@
       font-style: italic;
     }
 
-    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
     .testi-avatar {
-      width: 44px; height: 44px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: var(--primary);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: white;
       font-family: var(--font-display);
       font-weight: 700;
@@ -1211,13 +1722,29 @@
       flex-shrink: 0;
     }
 
-    .testi-name { font-family: 'Nunito', system-ui, sans-serif; font-weight: 700; font-size: 14px; color: var(--primary-dark); }
-    .testi-trip { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: var(--text-secondary); }
+    .testi-name {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--primary-dark);
+    }
+
+    .testi-trip {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Blog ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
-    .blog-section { background: var(--primary-bg); }
+    .blog-section {
+      background: var(--primary-bg);
+    }
 
-    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
 
     .blog-card {
       background: #FFFFFF;
@@ -1227,13 +1754,31 @@
       transition: border-color 0.2s, transform 0.2s;
       box-shadow: none;
     }
-    .blog-card:hover { transform: translateY(-4px); border-color: var(--primary); }
 
-    .blog-img { height: 190px; overflow: hidden; }
-    .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .blog-card:hover .blog-img img { transform: scale(1.06); }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+    }
 
-    .blog-body { padding: 20px; }
+    .blog-img {
+      height: 190px;
+      overflow: hidden;
+    }
+
+    .blog-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .blog-card:hover .blog-img img {
+      transform: scale(1.06);
+    }
+
+    .blog-body {
+      padding: 20px;
+    }
 
     .blog-tag {
       display: inline-block;
@@ -1279,23 +1824,45 @@
       border-top: 1px solid var(--primary-light);
     }
 
-    .blog-meta .date { font-family: 'Nunito', system-ui, sans-serif; font-size: 12px; color: var(--text-secondary); font-weight: 500; }
+    .blog-meta .date {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 12px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
 
     .blog-meta .read-more {
       font-family: var(--font-body);
       font-size: 13px;
       font-weight: 700;
       color: var(--primary);
-      display: flex; align-items: center; gap: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
       transition: gap 0.2s;
     }
-    .blog-card:hover .read-more { gap: 8px; }
 
-    @media(max-width:900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
-    @media(max-width:600px) { .blog-grid { grid-template-columns: 1fr; } }
+    .blog-card:hover .read-more {
+      gap: 8px;
+    }
+
+    @media(max-width:900px) {
+      .blog-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width:600px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Partners ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
-    .partners-section { background: #FFFFFF; overflow: hidden; }
+    .partners-section {
+      background: #FFFFFF;
+      overflow: hidden;
+    }
 
     .partners-scroll {
       overflow: hidden;
@@ -1310,17 +1877,34 @@
       width: max-content;
       animation: marquee 28s linear infinite;
     }
-    .partners-track:hover { animation-play-state: paused; }
 
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .partners-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
 
     .partner-item {
-      display: flex; align-items: center; justify-content: center;
-      height: 55px; min-width: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 55px;
+      min-width: 130px;
       filter: grayscale(1) opacity(.4);
       transition: filter 0.3s;
     }
-    .partner-item:hover { filter: grayscale(0) opacity(1); }
+
+    .partner-item:hover {
+      filter: grayscale(0) opacity(1);
+    }
 
     .partner-item span {
       font-family: var(--font-display);
@@ -1329,25 +1913,63 @@
       color: var(--primary-dark);
       white-space: nowrap;
     }
-    .testi-name { color: var(--primary-dark); font-family: var(--font-body); font-weight: 500; }
-    .testi-trip { color: var(--text-secondary); font-family: var(--font-body); }
-    .testi-avatar { background: var(--primary); font-family: var(--font-display); }
+
+    .testi-name {
+      color: var(--primary-dark);
+      font-family: var(--font-body);
+      font-weight: 500;
+    }
+
+    .testi-trip {
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+    }
+
+    .testi-avatar {
+      background: var(--primary);
+      font-family: var(--font-display);
+    }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Footer ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
-    footer, .footer {
+    footer,
+    .footer {
       background: var(--primary-dark) !important;
       border-top: none !important;
     }
-    footer *, .footer * { font-family: var(--font-body); }
-    footer h3, footer h4, footer .footer-logo, .footer h3, .footer h4, .footer .footer-logo {
+
+    footer *,
+    .footer * {
+      font-family: var(--font-body);
+    }
+
+    footer h3,
+    footer h4,
+    footer .footer-logo,
+    .footer h3,
+    .footer h4,
+    .footer .footer-logo {
       color: #fff;
       font-family: var(--font-display);
     }
-    footer p, footer li, footer span, .footer p, .footer li, .footer span {
+
+    footer p,
+    footer li,
+    footer span,
+    .footer p,
+    .footer li,
+    .footer span {
       color: var(--text-on-dark);
     }
-    footer a, .footer a { color: var(--primary-light); }
-    footer a:hover, .footer a:hover { color: var(--accent); }
+
+    footer a,
+    .footer a {
+      color: var(--primary-light);
+    }
+
+    footer a:hover,
+    .footer a:hover {
+      color: var(--accent);
+    }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Global btn-outline-navy override ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
     .btn-outline-navy {
@@ -1357,31 +1979,52 @@
       font-family: var(--font-body);
       background: transparent;
     }
-    .btn-outline-navy:hover { background: rgba(74, 127, 181, 0.1); color: var(--primary); }
+
+    .btn-outline-navy:hover {
+      background: rgba(74, 127, 181, 0.1);
+      color: var(--primary);
+    }
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Navbar & Button Specific Theme Overrides ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
-    .navbar-enquire, #navbar .navbar-enquire, nav .navbar-enquire {
+    .navbar-enquire,
+    #navbar .navbar-enquire,
+    nav .navbar-enquire {
       background: var(--accent) !important;
       color: var(--primary-dark) !important;
       border-color: var(--accent) !important;
     }
-    .navbar-enquire:hover, #navbar .navbar-enquire:hover, nav .navbar-enquire:hover {
+
+    .navbar-enquire:hover,
+    #navbar .navbar-enquire:hover,
+    nav .navbar-enquire:hover {
       background: var(--accent-dark) !important;
       border-color: var(--accent-dark) !important;
       color: var(--primary-dark) !important;
     }
-    .navbar-phone, #navbar .navbar-phone, nav .navbar-phone {
+
+    .navbar-phone,
+    #navbar .navbar-phone,
+    nav .navbar-phone {
       color: var(--primary-dark) !important;
     }
-    .navbar-phone:hover, #navbar .navbar-phone:hover, nav .navbar-phone:hover {
+
+    .navbar-phone:hover,
+    #navbar .navbar-phone:hover,
+    nav .navbar-phone:hover {
       color: var(--primary) !important;
     }
-    .btn-primary, button.btn-primary, a.btn-primary {
+
+    .btn-primary,
+    button.btn-primary,
+    a.btn-primary {
       background: var(--accent) !important;
       color: var(--primary-dark) !important;
       border-color: var(--accent) !important;
     }
-    .btn-primary:hover, button.btn-primary:hover, a.btn-primary:hover {
+
+    .btn-primary:hover,
+    button.btn-primary:hover,
+    a.btn-primary:hover {
       background: var(--accent-dark) !important;
       border-color: var(--accent-dark) !important;
       color: var(--primary-dark) !important;
@@ -1390,235 +2033,745 @@
 
     /* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ Mobile responsive ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */
     @media (max-width: 375px) {
-      .hero h1 { font-size: 2rem; }
-      .hero-stats { gap: 20px; }
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-stats {
+        gap: 20px;
+      }
     }
+
     @media (max-width: 640px) {
-      .hero { padding: 64px 0 40px; }
-      section.section, .section { padding: 64px 0; }
+      .hero {
+        padding: 64px 0 40px;
+      }
+
+      section.section,
+      .section {
+        padding: 64px 0;
+      }
     }
 
     /* ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â
        TRAVEL WIZARD MODAL
     ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
     #twOverlay {
-      position: fixed; inset: 0; z-index: 9999;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
       background: rgba(180, 200, 225, 0.55);
       backdrop-filter: blur(6px);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 16px;
       animation: twFadeIn 0.35s ease;
     }
-    #twOverlay.tw-hidden { display: none; }
-    @keyframes twFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    #twOverlay.tw-hidden {
+      display: none;
+    }
+
+    @keyframes twFadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
 
     .tw-modal {
       display: flex;
-      width: 100%; max-width: 820px;
+      width: 100%;
+      max-width: 820px;
       background: #f5f8fc;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 20px 60px rgba(100,140,190,0.18), 0 2px 8px rgba(0,0,0,0.06);
-      animation: twSlideUp 0.4s cubic-bezier(0.16,1,0.3,1);
+      box-shadow: 0 20px 60px rgba(100, 140, 190, 0.18), 0 2px 8px rgba(0, 0, 0, 0.06);
+      animation: twSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       max-height: 95vh;
       border: 1px solid #d4e2f0;
     }
-    @keyframes twSlideUp { from { opacity:0; transform: translateY(30px); } to { opacity:1; transform: translateY(0); } }
+
+    @keyframes twSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     /* LEFT PANEL */
     .tw-left {
-      width: 240px; flex-shrink: 0;
+      width: 240px;
+      flex-shrink: 0;
       background: linear-gradient(160deg, #e8f0fa 0%, #dceaf7 100%);
       padding: 32px 24px;
-      display: flex; flex-direction: column;
+      display: flex;
+      flex-direction: column;
       color: #1a4a7a;
       border-right: 1px solid #c8d8ea;
     }
-    .tw-brand { font-family: 'Fraunces', Georgia, serif; font-size: 1.4rem; font-weight: 900; margin-bottom: 28px; color: #0d2e52; }
-    .tw-brand span { color: #3a7fc1; }
-    .tw-how-label { font-family: 'Nunito', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6a92b8; margin-bottom: 16px; }
-    .tw-steps { display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px; }
-    .tw-step { display: flex; align-items: flex-start; gap: 12px; }
+
+    .tw-brand {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin-bottom: 28px;
+      color: #0d2e52;
+    }
+
+    .tw-brand span {
+      color: #3a7fc1;
+    }
+
+    .tw-how-label {
+      font-family: 'Nunito', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6a92b8;
+      margin-bottom: 16px;
+    }
+
+    .tw-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .tw-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
     .tw-step-num {
-      width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      flex-shrink: 0;
       border: 2px solid #b8cfe8;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 700;
-      color: #8aaec8; transition: all 0.3s; background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #8aaec8;
+      transition: all 0.3s;
+      background: #fff;
     }
-    .tw-step.active .tw-step-num, .tw-step.done .tw-step-num {
-      background: #2ecc71; border-color: #2ecc71; color: #fff;
+
+    .tw-step.active .tw-step-num,
+    .tw-step.done .tw-step-num {
+      background: #2ecc71;
+      border-color: #2ecc71;
+      color: #fff;
     }
-    .tw-step.done .tw-step-num::before { content: '\2713'; font-size: 13px; }
-    .tw-step.done .tw-step-num span { display: none; }
-    .tw-step-info h4 { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; color: #0d2e52; margin: 0 0 2px; }
-    .tw-step-info p { font-family: 'Nunito', sans-serif; font-size: 11px; color: #6a92b8; margin: 0; }
-    .tw-step:not(.active):not(.done) .tw-step-info h4 { color: #8aaec8; }
-    .tw-badges { margin-top: auto; border-top: 1px solid #c8d8ea; padding-top: 20px; display: flex; flex-direction: column; gap: 9px; }
-    .tw-badge { display: flex; align-items: center; gap: 8px; font-family: 'Nunito', sans-serif; font-size: 12px; color: #2d5f8a; }
-    .tw-badge .tw-badge-icon { font-size: 14px; }
-    .tw-phone-label { font-family: 'Nunito', sans-serif; font-size: 10px; color: #8aaec8; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 16px; }
-    .tw-phone { font-family: 'Fraunces', Georgia, serif; font-size: 1rem; font-weight: 700; color: #1a7a4a; margin-top: 4px; }
+
+    .tw-step.done .tw-step-num::before {
+      content: '\2713';
+      font-size: 13px;
+    }
+
+    .tw-step.done .tw-step-num span {
+      display: none;
+    }
+
+    .tw-step-info h4 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0d2e52;
+      margin: 0 0 2px;
+    }
+
+    .tw-step-info p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 11px;
+      color: #6a92b8;
+      margin: 0;
+    }
+
+    .tw-step:not(.active):not(.done) .tw-step-info h4 {
+      color: #8aaec8;
+    }
+
+    .tw-badges {
+      margin-top: auto;
+      border-top: 1px solid #c8d8ea;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .tw-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+      color: #2d5f8a;
+    }
+
+    .tw-badge .tw-badge-icon {
+      font-size: 14px;
+    }
+
+    .tw-phone-label {
+      font-family: 'Nunito', sans-serif;
+      font-size: 10px;
+      color: #8aaec8;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 16px;
+    }
+
+    .tw-phone {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a7a4a;
+      margin-top: 4px;
+    }
 
     /* RIGHT PANEL */
     .tw-right {
-      flex: 1; padding: 32px 36px; overflow-y: auto;
-      position: relative; background: #ffffff;
+      flex: 1;
+      padding: 32px 36px;
+      overflow-y: auto;
+      position: relative;
+      background: #ffffff;
     }
+
     .tw-close {
-      position: absolute; top: 16px; right: 18px;
-      background: none; border: none; font-size: 1.3rem; color: #94afc8;
-      cursor: pointer; line-height: 1; padding: 4px; border-radius: 50%;
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      color: #94afc8;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+      border-radius: 50%;
       transition: color 0.2s, background 0.2s;
     }
-    .tw-close:hover { color: #1a4a7a; background: #eaf2fb; }
-    .tw-step-indicator { font-family: 'Nunito', sans-serif; font-size: 12px; color: #aaa; margin-bottom: 20px; text-align: right; }
-    .tw-panel { display: none; }
-    .tw-panel.tw-active { display: block; }
+
+    .tw-close:hover {
+      color: #1a4a7a;
+      background: #eaf2fb;
+    }
+
+    .tw-step-indicator {
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 20px;
+      text-align: right;
+    }
+
+    .tw-panel {
+      display: none;
+    }
+
+    .tw-panel.tw-active {
+      display: block;
+    }
 
     /* progress bar */
     .tw-progress-bar {
-      height: 4px; background: #d4e6f5; border-radius: 2px;
-      margin-bottom: 28px; overflow: hidden;
-    }
-    .tw-progress-fill {
-      height: 100%; background: linear-gradient(90deg, #5aaae8, #2ecc71);
-      border-radius: 2px; transition: width 0.4s ease;
+      height: 4px;
+      background: #d4e6f5;
+      border-radius: 2px;
+      margin-bottom: 28px;
+      overflow: hidden;
     }
 
-    .tw-icon-big { font-size: 2.4rem; margin-bottom: 10px; display: block; }
-    .tw-panel h2 { font-family: 'Fraunces', Georgia, serif; font-size: 1.5rem; font-weight: 900; color: #0d2e52; margin-bottom: 6px; }
-    .tw-panel .tw-sub { font-family: 'Nunito', sans-serif; font-size: 13px; color: #5a7a9a; margin-bottom: 22px; }
+    .tw-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #5aaae8, #2ecc71);
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+
+    .tw-icon-big {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .tw-panel h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #0d2e52;
+      margin-bottom: 6px;
+    }
+
+    .tw-panel .tw-sub {
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      color: #5a7a9a;
+      margin-bottom: 22px;
+    }
 
     /* Destination grid */
-    .tw-dest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
-    .tw-dest-btn {
-      display: flex; align-items: center; gap: 10px;
-      padding: 10px 14px; border-radius: 10px;
-      border: 1.5px solid #c8dff0; background: #f0f7fd;
-      font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 600; color: #2d5f8a;
-      cursor: pointer; transition: all 0.2s; text-align: left;
+    .tw-dest-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
     }
-    .tw-dest-btn:hover { border-color: #5aaae8; background: #e0f0fb; }
-    .tw-dest-btn.selected { border-color: #3a7fc1; background: #d6eaf8; color: #0d2e52; box-shadow: 0 0 0 3px rgba(90,170,232,0.15); }
-    .tw-dest-btn .tw-flag { font-size: 1.1rem; flex-shrink: 0; }
 
-    .tw-or-type { font-family: 'Nunito', sans-serif; font-size: 12px; color: #9ca3af; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-    .tw-or-type::before, .tw-or-type::after { content: ''; flex: 1; height: 1px; background: #e5e7eb; }
+    .tw-dest-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1.5px solid #c8dff0;
+      background: #f0f7fd;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2d5f8a;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+    }
+
+    .tw-dest-btn:hover {
+      border-color: #5aaae8;
+      background: #e0f0fb;
+    }
+
+    .tw-dest-btn.selected {
+      border-color: #3a7fc1;
+      background: #d6eaf8;
+      color: #0d2e52;
+      box-shadow: 0 0 0 3px rgba(90, 170, 232, 0.15);
+    }
+
+    .tw-dest-btn .tw-flag {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .tw-or-type {
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tw-or-type::before,
+    .tw-or-type::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #e5e7eb;
+    }
 
     /* Custom Dropdown for Destinations */
-    .tw-custom-dropdown { position: relative; margin-bottom: 20px; width: 100%; }
-    .tw-dd-group { padding: 8px 14px; font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 800; color: #6b7280; text-transform: uppercase; letter-spacing: 0.1em; background: #f0f7fd; border-bottom: 1px solid #e1eef8; }
-    .tw-dd-item { padding: 12px 14px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #1a3a5c; cursor: pointer; border-bottom: 1px solid #f0f7fd; transition: background 0.2s; }
-    .tw-dd-item:last-child { border-bottom: none; }
-    .tw-dd-item:hover { background: #e0f0fb; }
-    #twDestList { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border: 1.5px solid #c8dff0; border-top: none; border-radius: 0 0 10px 10px; z-index: 10; max-height: 240px; overflow-y: auto; display: none; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-    .tw-custom-dropdown.open #twDestList { display: block; }
-    .tw-custom-dropdown.open input { border-radius: 10px 10px 0 0; border-color: #5aaae8; }
+    .tw-custom-dropdown {
+      position: relative;
+      margin-bottom: 20px;
+      width: 100%;
+    }
 
-    .tw-input-row { display: flex; gap: 10px; align-items: flex-end; margin-bottom: 20px; }
-    .tw-input-group { flex: 1; }
-    .tw-input-group label { display: block; font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
-    .tw-input-group input, .tw-input-group select {
-      width: 100%; padding: 10px 14px;
-      border: 1.5px solid #c8dff0; border-radius: 10px;
-      font-family: 'Nunito', sans-serif; font-size: 14px; color: #1a3a5c;
-      background: #f7fbff; outline: none; transition: border-color 0.2s; box-sizing: border-box;
+    .tw-dd-group {
+      padding: 8px 14px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: #f0f7fd;
+      border-bottom: 1px solid #e1eef8;
     }
-    .tw-input-group input:focus, .tw-input-group select:focus { border-color: #5aaae8; box-shadow: 0 0 0 3px rgba(90,170,232,0.1); }
-    .tw-days-ctrl { display: flex; align-items: center; gap: 8px; }
+
+    .tw-dd-item {
+      padding: 12px 14px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      color: #1a3a5c;
+      cursor: pointer;
+      border-bottom: 1px solid #f0f7fd;
+      transition: background 0.2s;
+    }
+
+    .tw-dd-item:last-child {
+      border-bottom: none;
+    }
+
+    .tw-dd-item:hover {
+      background: #e0f0fb;
+    }
+
+    #twDestList {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1.5px solid #c8dff0;
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      z-index: 10;
+      max-height: 240px;
+      overflow-y: auto;
+      display: none;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .tw-custom-dropdown.open #twDestList {
+      display: block;
+    }
+
+    .tw-custom-dropdown.open input {
+      border-radius: 10px 10px 0 0;
+      border-color: #5aaae8;
+    }
+
+    .tw-input-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+
+    .tw-input-group {
+      flex: 1;
+    }
+
+    .tw-input-group label {
+      display: block;
+      font-family: 'Nunito', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .tw-input-group input,
+    .tw-input-group select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid #c8dff0;
+      border-radius: 10px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      color: #1a3a5c;
+      background: #f7fbff;
+      outline: none;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+
+    .tw-input-group input:focus,
+    .tw-input-group select:focus {
+      border-color: #5aaae8;
+      box-shadow: 0 0 0 3px rgba(90, 170, 232, 0.1);
+    }
+
+    .tw-days-ctrl {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .tw-days-ctrl button {
-      width: 32px; height: 32px; border-radius: 8px;
-      border: 1.5px solid #c8dff0; background: #f0f7fd;
-      font-size: 1.1rem; font-weight: 700; color: #2d5f8a;
-      cursor: pointer; transition: all 0.2s;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1.5px solid #c8dff0;
+      background: #f0f7fd;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2d5f8a;
+      cursor: pointer;
+      transition: all 0.2s;
     }
-    .tw-days-ctrl button:hover { background: #3a7fc1; color: #fff; border-color: #3a7fc1; }
-    .tw-days-ctrl span { font-family: 'Fraunces', Georgia, serif; font-size: 1.2rem; font-weight: 700; color: #0d2e52; min-width: 28px; text-align: center; }
+
+    .tw-days-ctrl button:hover {
+      background: #3a7fc1;
+      color: #fff;
+      border-color: #3a7fc1;
+    }
+
+    .tw-days-ctrl span {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0d2e52;
+      min-width: 28px;
+      text-align: center;
+    }
 
     /* Step 2 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Trip details */
-    .tw-option-group { margin-bottom: 20px; }
-    .tw-option-group label { display: block; font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
-    .tw-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tw-chip {
-      padding: 8px 18px; border-radius: 50px;
-      border: 1.5px solid #c8dff0; background: #f0f7fd;
-      font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 600; color: #2d5f8a;
-      cursor: pointer; transition: all 0.2s;
+    .tw-option-group {
+      margin-bottom: 20px;
     }
-    .tw-chip:hover { border-color: #5aaae8; color: #0d2e52; background: #e0f0fb; }
-    .tw-chip.selected { background: #3a7fc1; border-color: #3a7fc1; color: #fff; box-shadow: 0 2px 8px rgba(58,127,193,0.25); }
+
+    .tw-option-group label {
+      display: block;
+      font-family: 'Nunito', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .tw-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tw-chip {
+      padding: 8px 18px;
+      border-radius: 50px;
+      border: 1.5px solid #c8dff0;
+      background: #f0f7fd;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2d5f8a;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tw-chip:hover {
+      border-color: #5aaae8;
+      color: #0d2e52;
+      background: #e0f0fb;
+    }
+
+    .tw-chip.selected {
+      background: #3a7fc1;
+      border-color: #3a7fc1;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(58, 127, 193, 0.25);
+    }
 
     /* Step 3 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Success */
-    .tw-success-wrap { text-align: center; padding: 10px 0 20px; }
+    .tw-success-wrap {
+      text-align: center;
+      padding: 10px 0 20px;
+    }
+
     .tw-checkmark {
-      width: 72px; height: 72px; border-radius: 50%;
-      background: #2ecc71; display: flex; align-items: center; justify-content: center;
-      font-size: 2rem; color: #fff; margin: 0 auto 20px;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: #2ecc71;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #fff;
+      margin: 0 auto 20px;
     }
-    .tw-success-wrap h2 { font-family: 'Fraunces', Georgia, serif; font-size: 1.5rem; font-weight: 900; color: #0d2e52; margin-bottom: 10px; }
-    .tw-success-wrap p { font-family: 'Nunito', sans-serif; font-size: 14px; color: #4b5563; line-height: 1.7; margin-bottom: 22px; }
-    .tw-success-wrap strong { color: #0d2e52; }
-    .tw-phone-highlight { color: #1a4a7a; font-weight: 700; }
+
+    .tw-success-wrap h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #0d2e52;
+      margin-bottom: 10px;
+    }
+
+    .tw-success-wrap p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .tw-success-wrap strong {
+      color: #0d2e52;
+    }
+
+    .tw-phone-highlight {
+      color: #1a4a7a;
+      font-weight: 700;
+    }
+
     .tw-summary-box {
-      background: #edf6ff; border: 1px solid #b8d9f5; border-radius: 12px;
-      padding: 18px 20px; margin-bottom: 24px; text-align: left;
+      background: #edf6ff;
+      border: 1px solid #b8d9f5;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      text-align: left;
     }
-    .tw-summary-box h4 { font-family: 'Nunito', sans-serif; font-size: 10px; font-weight: 700; color: #3a7fc1; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
-    .tw-summary-row { display: flex; align-items: center; gap: 10px; font-family: 'Nunito', sans-serif; font-size: 13px; color: #2d5f8a; margin-bottom: 8px; }
-    .tw-summary-row:last-child { margin-bottom: 0; }
-    .tw-summary-row span:first-child { font-size: 1rem; }
-    .tw-summary-row .tw-s-label { color: #6a92b8; margin-right: 4px; }
-    .tw-summary-row .tw-s-val { font-weight: 700; color: #0d2e52; }
-    .tw-cta-row { display: flex; gap: 12px; justify-content: center; }
-    .tw-cta-call, .tw-cta-wa {
-      display: flex; align-items: center; gap: 8px;
-      padding: 13px 22px; border-radius: 12px;
-      font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 700;
-      cursor: pointer; border: none; transition: transform 0.2s, box-shadow 0.2s;
+
+    .tw-summary-box h4 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: #3a7fc1;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .tw-summary-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      color: #2d5f8a;
+      margin-bottom: 8px;
+    }
+
+    .tw-summary-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .tw-summary-row span:first-child {
+      font-size: 1rem;
+    }
+
+    .tw-summary-row .tw-s-label {
+      color: #6a92b8;
+      margin-right: 4px;
+    }
+
+    .tw-summary-row .tw-s-val {
+      font-weight: 700;
+      color: #0d2e52;
+    }
+
+    .tw-cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .tw-cta-call,
+    .tw-cta-wa {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s;
       text-decoration: none;
     }
-    .tw-cta-call { background: #1a4a7a; color: #fff; }
-    .tw-cta-call:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,74,122,0.25); }
-    .tw-cta-wa { background: #25d366; color: #fff; }
-    .tw-cta-wa:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
+
+    .tw-cta-call {
+      background: #1a4a7a;
+      color: #fff;
+    }
+
+    .tw-cta-call:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(26, 74, 122, 0.25);
+    }
+
+    .tw-cta-wa {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .tw-cta-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    }
 
     /* Next Button */
     .tw-next-btn {
-      width: 100%; padding: 14px;
+      width: 100%;
+      padding: 14px;
       background: linear-gradient(135deg, #5aaae8, #3a7fc1);
-      color: #fff; border: none; border-radius: 12px;
-      font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 700;
-      cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
       margin-top: 8px;
     }
-    .tw-next-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(58,127,193,0.35); }
+
+    .tw-next-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(58, 127, 193, 0.35);
+    }
 
     @media (max-width: 680px) {
-      .tw-left { display: none; }
-      .tw-right { padding: 24px 20px; }
-      .tw-dest-grid { grid-template-columns: 1fr 1fr; }
-      .tw-cta-row { flex-direction: column; }
-      .tw-cta-call, .tw-cta-wa { justify-content: center; }
+      .tw-left {
+        display: none;
+      }
+
+      .tw-right {
+        padding: 24px 20px;
+      }
+
+      .tw-dest-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .tw-cta-row {
+        flex-direction: column;
+      }
+
+      .tw-cta-call,
+      .tw-cta-wa {
+        justify-content: center;
+      }
     }
 
     /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        SMART HERO SEARCH BAR
     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
-    .hero-search-wrap { margin-bottom: 8px; }
+    .hero-search-wrap {
+      margin-bottom: 8px;
+    }
 
     .hero-search-box {
       display: flex;
       align-items: stretch;
       background: #FFFFFF;
       border-radius: 14px;
-      box-shadow: 0 8px 32px rgba(13,46,82,0.18), 0 2px 8px rgba(13,46,82,0.08);
+      box-shadow: 0 8px 32px rgba(13, 46, 82, 0.18), 0 2px 8px rgba(13, 46, 82, 0.08);
       padding: 6px 6px 6px 0;
-      border: 1.5px solid rgba(200,216,234,0.6);
+      border: 1.5px solid rgba(200, 216, 234, 0.6);
       transition: box-shadow 0.25s, border-color 0.25s;
     }
+
     .hero-search-box:focus-within {
-      box-shadow: 0 12px 40px rgba(13,46,82,0.22);
+      box-shadow: 0 12px 40px rgba(13, 46, 82, 0.22);
       border-color: var(--primary);
     }
 
@@ -1639,8 +2792,16 @@
       margin-bottom: 4px;
     }
 
-    .hs-input-row { display: flex; align-items: center; gap: 8px; }
-    .hs-icon { font-size: 1rem; flex-shrink: 0; }
+    .hs-input-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hs-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
 
     .hs-input {
       border: none;
@@ -1652,7 +2813,10 @@
       color: var(--primary-dark);
       width: 100%;
     }
-    .hs-input::placeholder { color: #9db3c8; }
+
+    .hs-input::placeholder {
+      color: #9db3c8;
+    }
 
     .hs-search-btn {
       display: flex;
@@ -1671,9 +2835,15 @@
       margin: 4px 4px 4px 8px;
       white-space: nowrap;
     }
-    .hs-search-btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    .hs-search-btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
     .hs-btn-dot {
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--primary-dark);
       display: inline-block;
@@ -1685,18 +2855,34 @@
       display: none;
       position: absolute;
       top: calc(100% + 6px);
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       background: #fff;
-      border: 1.5px solid rgba(200,216,234,0.8);
+      border: 1.5px solid rgba(200, 216, 234, 0.8);
       border-radius: 12px;
-      box-shadow: 0 16px 40px rgba(13,46,82,0.14);
+      box-shadow: 0 16px 40px rgba(13, 46, 82, 0.14);
       z-index: 200;
       max-height: 280px;
       overflow-y: auto;
       scrollbar-width: thin;
     }
-    .hs-dropdown.open { display: block; animation: hsDrop 0.18s cubic-bezier(0.2,0.8,0.2,1); }
-    @keyframes hsDrop { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+
+    .hs-dropdown.open {
+      display: block;
+      animation: hsDrop 0.18s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @keyframes hsDrop {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     .hs-dd-group {
       padding: 8px 14px 4px;
@@ -1706,8 +2892,8 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--primary);
-      background: rgba(74,127,181,0.05);
-      border-bottom: 1px solid rgba(200,216,234,0.4);
+      background: rgba(74, 127, 181, 0.05);
+      border-bottom: 1px solid rgba(200, 216, 234, 0.4);
     }
 
     .hs-dd-item {
@@ -1719,12 +2905,25 @@
       font-size: 13.5px;
       color: var(--primary-dark);
       cursor: pointer;
-      border-bottom: 1px solid rgba(200,216,234,0.2);
+      border-bottom: 1px solid rgba(200, 216, 234, 0.2);
       transition: background 0.15s;
     }
-    .hs-dd-item:last-child { border-bottom: none; }
-    .hs-dd-item:hover, .hs-dd-item.hs-active { background: rgba(74,127,181,0.07); color: var(--primary); }
-    .hs-dd-item .hs-dd-flag { font-size: 1.15rem; flex-shrink: 0; }
+
+    .hs-dd-item:last-child {
+      border-bottom: none;
+    }
+
+    .hs-dd-item:hover,
+    .hs-dd-item.hs-active {
+      background: rgba(74, 127, 181, 0.07);
+      color: var(--primary);
+    }
+
+    .hs-dd-item .hs-dd-flag {
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
     .hs-dd-item .hs-dd-type {
       margin-left: auto;
       font-size: 10px;
@@ -1732,8 +2931,17 @@
       padding: 2px 8px;
       border-radius: 50px;
     }
-    .hs-dd-item .hs-dd-type.type-intl { background: #e3f2fd; color: #1565c0; }
-    .hs-dd-item .hs-dd-type.type-dom  { background: #e8f5e9; color: #2e7d32; }
+
+    .hs-dd-item .hs-dd-type.type-intl {
+      background: #e3f2fd;
+      color: #1565c0;
+    }
+
+    .hs-dd-item .hs-dd-type.type-dom {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
     .hs-dd-no-results {
       padding: 18px 16px;
       text-align: center;
@@ -1747,21 +2955,41 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      background: rgba(13,46,82,0.92);
+      background: rgba(13, 46, 82, 0.92);
       backdrop-filter: blur(10px);
       border-radius: 12px;
       padding: 16px 18px;
       margin-top: 10px;
       cursor: pointer;
-      border: 1.5px solid rgba(200,216,234,0.25);
-      animation: hsCardIn 0.3s cubic-bezier(0.2,0.8,0.2,1);
+      border: 1.5px solid rgba(200, 216, 234, 0.25);
+      animation: hsCardIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
       position: relative;
     }
-    @keyframes hsCardIn { from { opacity:0; transform:translateY(10px) scale(0.97); } to { opacity:1; transform:none; } }
-    .hs-selected-card:hover { background: rgba(13,46,82,0.97); }
 
-    .hs-card-flag { font-size: 2.4rem; flex-shrink: 0; }
-    .hs-card-info { flex: 1; }
+    @keyframes hsCardIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .hs-selected-card:hover {
+      background: rgba(13, 46, 82, 0.97);
+    }
+
+    .hs-card-flag {
+      font-size: 2.4rem;
+      flex-shrink: 0;
+    }
+
+    .hs-card-info {
+      flex: 1;
+    }
 
     .hs-card-label {
       font-family: 'Nunito', system-ui, sans-serif;
@@ -1784,7 +3012,7 @@
     .hs-card-tagline {
       font-family: 'Nunito', system-ui, sans-serif;
       font-size: 12px;
-      color: rgba(200,216,234,0.7);
+      color: rgba(200, 216, 234, 0.7);
       margin-top: 2px;
     }
 
@@ -1802,14 +3030,19 @@
       white-space: nowrap;
       flex-shrink: 0;
     }
-    .hs-card-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    .hs-card-cta:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
 
     .hs-card-close {
       position: absolute;
-      top: 8px; right: 10px;
+      top: 8px;
+      right: 10px;
       background: none;
       border: none;
-      color: rgba(200,216,234,0.5);
+      color: rgba(200, 216, 234, 0.5);
       font-size: 1.1rem;
       cursor: pointer;
       line-height: 1;
@@ -1817,13 +3050,35 @@
       border-radius: 50%;
       transition: color 0.2s, background 0.2s;
     }
-    .hs-card-close:hover { color: #fff; background: rgba(255,255,255,0.1); }
+
+    .hs-card-close:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
 
     @media (max-width: 600px) {
-      .hero-search-box { flex-direction: column; padding: 8px; gap: 4px; }
-      .hs-search-btn { margin: 4px 0 0 0; padding: 14px; justify-content: center; border-radius: 10px; }
-      .hs-selected-card { flex-wrap: wrap; }
-      .hs-card-cta { width: 100%; text-align: center; margin-top: 8px; }
+      .hero-search-box {
+        flex-direction: column;
+        padding: 8px;
+        gap: 4px;
+      }
+
+      .hs-search-btn {
+        margin: 4px 0 0 0;
+        padding: 14px;
+        justify-content: center;
+        border-radius: 10px;
+      }
+
+      .hs-selected-card {
+        flex-wrap: wrap;
+      }
+
+      .hs-card-cta {
+        width: 100%;
+        text-align: center;
+        margin-top: 8px;
+      }
     }
   </style>
 </head>
@@ -1836,7 +3091,8 @@
 
       <!-- LEFT PANEL -->
       <div class="tw-left">
-        <div class="tw-brand"><img src="assets/images/Logo-TTS.png" alt="The Travel Spark" style="height:80px;width:auto;display:block;" /></div>
+        <div class="tw-brand"><img src="assets/images/Logo-TTS.png" alt="The Travel Spark"
+            style="height:80px;width:auto;display:block;" /></div>
         <div class="tw-how-label">How It Works</div>
         <div class="tw-steps">
           <div class="tw-step active" id="twSideStep1">
@@ -1875,7 +3131,9 @@
       <div class="tw-right">
         <button class="tw-close" id="twClose" aria-label="Close">&times;</button>
         <div class="tw-step-indicator" id="twStepIndicator">Step 1 / 2</div>
-        <div class="tw-progress-bar"><div class="tw-progress-fill" id="twProgressFill" style="width:50%"></div></div>
+        <div class="tw-progress-bar">
+          <div class="tw-progress-fill" id="twProgressFill" style="width:50%"></div>
+        </div>
 
         <!-- STEP 1: Destination -->
         <div class="tw-panel tw-active" id="twPanel1">
@@ -1884,16 +3142,19 @@
           <p class="tw-sub">Pick a destination or tell us what excites you</p>
           <div class="tw-dest-grid">
             <button class="tw-dest-btn" data-dest="Dubai"><span class="tw-flag">&#127462;&#127466;</span> Dubai</button>
-            <button class="tw-dest-btn" data-dest="Maldives"><span class="tw-flag">&#127474;&#127483;</span> Maldives</button>
+            <button class="tw-dest-btn" data-dest="Maldives"><span class="tw-flag">&#127474;&#127483;</span>
+              Maldives</button>
             <button class="tw-dest-btn" data-dest="Europe"><span class="tw-flag">&#127756;</span> Europe</button>
             <button class="tw-dest-btn" data-dest="Goa"><span class="tw-flag">&#127584;</span> Goa</button>
-            <button class="tw-dest-btn" data-dest="Thailand"><span class="tw-flag">&#127481;&#127469;</span> Thailand</button>
+            <button class="tw-dest-btn" data-dest="Thailand"><span class="tw-flag">&#127481;&#127469;</span>
+              Thailand</button>
             <button class="tw-dest-btn" data-dest="Kashmir"><span class="tw-flag">&#127956;</span> Kashmir</button>
           </div>
           <div class="tw-or-type">Or type any destination</div>
           <div class="tw-custom-dropdown" id="twCustomDropdown">
             <div class="tw-input-group">
-              <input type="text" id="twDestOther" placeholder="&#128205; Type or select a destination..." autocomplete="off" />
+              <input type="text" id="twDestOther" placeholder="&#128205; Type or select a destination..."
+                autocomplete="off" />
             </div>
             <div id="twDestList">
               <div class="tw-dd-group">Domestic (India)</div>
@@ -2029,14 +3290,20 @@
           <div class="tw-success-wrap">
             <div class="tw-checkmark">&#10003;</div>
             <h2>Your trip is being planned!</h2>
-            <p>Our travel expert will call <span class="tw-phone-highlight" id="twConfPhone">you</span><br />within <strong>30 minutes</strong> with a personalised<br />package tailored just for you.</p>
+            <p>Our travel expert will call <span class="tw-phone-highlight" id="twConfPhone">you</span><br />within
+              <strong>30 minutes</strong> with a personalised<br />package tailored just for you.</p>
             <div class="tw-summary-box">
               <h4>Your Request Summary</h4>
-              <div class="tw-summary-row"><span>&#128506;</span><span><span class="tw-s-label">Destination</span><span class="tw-s-val" id="twSumDest">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></span></div>
-              <div class="tw-summary-row"><span>&#128197;</span><span><span class="tw-s-label">When</span><span class="tw-s-val" id="twSumWhen">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></span></div>
-              <div class="tw-summary-row"><span>&#128101;</span><span><span class="tw-s-label">Travellers</span><span class="tw-s-val" id="twSumTravellers">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></span></div>
-              <div class="tw-summary-row"><span>&#127774;</span><span><span class="tw-s-label">Trip Type</span><span class="tw-s-val" id="twSumType">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></span></div>
-              <div class="tw-summary-row"><span>&#128176;</span><span><span class="tw-s-label">Budget</span><span class="tw-s-val" id="twSumBudget">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></span></div>
+              <div class="tw-summary-row"><span>&#128506;</span><span><span class="tw-s-label">Destination</span><span
+                    class="tw-s-val" id="twSumDest">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></span></div>
+              <div class="tw-summary-row"><span>&#128197;</span><span><span class="tw-s-label">When</span><span
+                    class="tw-s-val" id="twSumWhen">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></span></div>
+              <div class="tw-summary-row"><span>&#128101;</span><span><span class="tw-s-label">Travellers</span><span
+                    class="tw-s-val" id="twSumTravellers">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></span></div>
+              <div class="tw-summary-row"><span>&#127774;</span><span><span class="tw-s-label">Trip Type</span><span
+                    class="tw-s-val" id="twSumType">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></span></div>
+              <div class="tw-summary-row"><span>&#128176;</span><span><span class="tw-s-label">Budget</span><span
+                    class="tw-s-val" id="twSumBudget">ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></span></div>
             </div>
             <div class="tw-cta-row">
               <a href="tel:+919876543210" class="tw-cta-call">&#128222; Call Us Now</a>
@@ -2059,9 +3326,10 @@
     <div class="hero-spark2"></div>
     <div class="container">
       <div class="hero-content" style="max-width:700px;">
-        <div class="hero-badge"><span class="dot"></span> India's Most Trusted Travel Company</div>
-        <h1>Your Tour,<br /><span class="accent">Perfectly Personalised!</span></h1>
-        <p class="hero-sub">Handcrafted holidays for every dream &mdash; Domestic escapes &amp; International adventures</p>
+        <div class="hero-badge"><span class="dot"></span> Exclusive Travel Experiences</div>
+        <h1>Ignite Your<br /><span class="accent">Journey</span> with Us</h1>
+        <p class="hero-sub">Handcrafted holidays for every dream &mdash; Domestic escapes &amp; International adventures
+        </p>
 
         <!-- ===== SMART DESTINATION SEARCH BAR ===== -->
         <div class="hero-search-wrap" id="heroSearchWrap">
@@ -2070,17 +3338,9 @@
               <label class="hs-label">DESTINATION</label>
               <div class="hs-input-row">
                 <span class="hs-icon">&#128205;</span>
-                <input
-                  type="text"
-                  id="hsDestInput"
-                  class="hs-input"
-                  placeholder="Where do you want to go? eg: Bali"
-                  autocomplete="off"
-                  aria-label="Search destination"
-                  aria-autocomplete="list"
-                  aria-expanded="false"
-                  aria-controls="hsDropdown"
-                />
+                <input type="text" id="hsDestInput" class="hs-input" placeholder="Where do you want to go? eg: Bali"
+                  autocomplete="off" aria-label="Search destination" aria-autocomplete="list" aria-expanded="false"
+                  aria-controls="hsDropdown" />
               </div>
               <!-- Dropdown -->
               <div class="hs-dropdown" id="hsDropdown" role="listbox" aria-label="Destination suggestions">
@@ -2112,68 +3372,114 @@
   </section>
 
   <style>
-    .explore-top-section { padding: 60px 0; background: var(--off-white, #f9fbfd); }
-    .explore-top-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-    .explore-top-header h2 { font-family: var(--font-display); font-size: 2rem; color: var(--color-forest, #1a365d); margin: 0; }
-    .explore-top-view-all { 
-      background: rgba(46, 204, 113, 0.15); 
-      color: #2ecc71; 
-      padding: 8px 16px; 
-      border-radius: 20px; 
-      font-weight: 600; 
-      font-size: 0.9rem; 
-      text-decoration: none; 
+    .explore-top-section {
+      padding: 60px 0;
+      background: var(--off-white, #f9fbfd);
+    }
+
+    .explore-top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .explore-top-header h2 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--color-forest, #1a365d);
+      margin: 0;
+    }
+
+    .explore-top-view-all {
+      background: rgba(46, 204, 113, 0.15);
+      color: #2ecc71;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
       transition: background 0.3s;
       border: 1px solid rgba(46, 204, 113, 0.3);
     }
-    .explore-top-view-all:hover { background: rgba(46, 204, 113, 0.25); }
-    
-    .explore-grid { 
-      display: grid; 
-      grid-template-columns: repeat(4, 1fr); 
-      gap: 20px; 
+
+    .explore-top-view-all:hover {
+      background: rgba(46, 204, 113, 0.25);
     }
-    
-    .explore-card { 
-      position: relative; 
-      border-radius: 12px; 
-      overflow: hidden; 
-      aspect-ratio: 4/3; 
-      display: block; 
-      text-decoration: none; 
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+    .explore-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .explore-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .explore-card:hover { 
-      transform: translateY(-5px); 
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+
+    .explore-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
-    .explore-card img { 
-      width: 100%; 
-      height: 100%; 
-      object-fit: cover; 
+
+    .explore-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       transition: transform 0.5s;
     }
-    .explore-card:hover img { transform: scale(1.05); }
-    
-    .explore-card-overlay { 
-      position: absolute; 
-      inset: 0; 
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%); 
+
+    .explore-card:hover img {
+      transform: scale(1.05);
     }
-    
-    .explore-card-content { 
-      position: absolute; 
-      bottom: 0; 
-      left: 0; 
-      right: 0; 
-      padding: 16px; 
-      color: white !important; 
+
+    .explore-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
     }
-    .explore-label { font-size: 0.75rem; opacity: 0.9; margin-bottom: 2px; display: block; color: white !important; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
-    .explore-title { font-family: var(--font-display); font-size: 1.3rem; margin: 0 0 4px 0; font-weight: 700; color: white !important; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
-    .explore-price { font-size: 0.85rem; color: #2ecc71 !important; font-weight: 800; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
-    
+
+    .explore-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px;
+      color: white !important;
+    }
+
+    .explore-label {
+      font-size: 0.75rem;
+      opacity: 0.9;
+      margin-bottom: 2px;
+      display: block;
+      color: white !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .explore-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      margin: 0 0 4px 0;
+      font-weight: 700;
+      color: white !important;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .explore-price {
+      font-size: 0.85rem;
+      color: #2ecc71 !important;
+      font-weight: 800;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
     .explore-trending {
       position: absolute;
       top: 12px;
@@ -2187,9 +3493,23 @@
       z-index: 2;
     }
 
-    @media (max-width: 1024px) { .explore-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 768px) { .explore-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 480px) { .explore-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 1024px) {
+      .explore-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .explore-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .explore-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
   <section class="explore-top-section section">
@@ -2198,7 +3518,7 @@
         <h2>Explore Top Destinations</h2>
         <a href="packages/domestic.html" class="explore-top-view-all">View All &rarr;</a>
       </div>
-      
+
       <div class="explore-grid" data-aos="fade-up" data-aos-delay="100">
         <div class="explore-card" style="cursor: pointer;" onclick="openQuickEnquiry('Kashmir')">
           <img src="assets/images/kashmir.png" alt="Kashmir" loading="lazy">
@@ -2209,7 +3529,8 @@
           </div>
         </div>
         <div class="explore-card" style="cursor: pointer;" onclick="openQuickEnquiry('Rajasthan')">
-          <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=600&q=80" alt="Rajasthan" loading="lazy">
+          <img src="assets/images/rajasthan.png" alt="Rajasthan"
+            loading="lazy">
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-label">Explore</span>
@@ -2217,7 +3538,8 @@
           </div>
         </div>
         <div class="explore-card" style="cursor: pointer;" onclick="openQuickEnquiry('Goa')">
-          <img src="assets/images/goa.png" alt="Goa" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80'">
+          <img src="assets/images/goa.png" alt="Goa" loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80'">
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-label">Explore</span>
@@ -2226,7 +3548,8 @@
         </div>
         <div class="explore-card" style="cursor: pointer;" onclick="openQuickEnquiry('Singapore')">
           <div class="explore-trending">Trending</div>
-          <img src="assets/images/singapore.png" alt="Singapore" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=80'">
+          <img src="assets/images/singapore.png" alt="Singapore" loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=80'">
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-label">Explore</span>
@@ -2289,7 +3612,8 @@
         </div>
         <div class="explore-card" style="cursor: pointer;" onclick="openQuickEnquiry('Maldives')">
           <div class="explore-trending">Trending</div>
-          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80" alt="Maldives" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80" alt="Maldives"
+            loading="lazy">
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-label">Explore</span>
@@ -2297,7 +3621,8 @@
           </div>
         </div>
         <div class="explore-card" style="cursor: pointer;" onclick="openQuickEnquiry('Thailand')">
-          <img src="assets/images/thailand.png" alt="Thailand" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80'">
+          <img src="assets/images/thailand.png" alt="Thailand" loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80'">
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-label">Explore</span>
@@ -2324,188 +3649,194 @@
       </div>
       <div class="tours-scroll-track" id="trackTours">
 
-          <div class="tour-card">
-              <div class="tour-img">
-                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Europe"
-                  loading="lazy" />
-                <div class="tour-img-overlay"></div>
-                <span class="tour-duration">13N / 14D</span>
-                <span class="tour-inclusive">All Inclusive</span>
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Europe"
+              loading="lazy" />
+            <div class="tour-img-overlay"></div>
+            <span class="tour-duration">13N / 14D</span>
+            <span class="tour-inclusive">All Inclusive</span>
+          </div>
+          <div class="tour-body">
+            <h3>Magical Europe</h3>
+            <p class="tour-destinations">France &middot; Belgium &middot; Netherlands &middot; Luxembourg &middot;
+              Germany &middot; Switzerland &middot;
+              Austria &middot; Italy &middot; Vatican</p>
+            <div class="tour-footer">
+              <div>
+                <div class="tour-price-label">Starting from</div>
+                <div class="tour-price">&#8377;3,85,874</div>
               </div>
-              <div class="tour-body">
-                <h3>Magical Europe</h3>
-                <p class="tour-destinations">France &middot; Belgium &middot; Netherlands &middot; Luxembourg &middot; Germany &middot; Switzerland &middot;
-                  Austria &middot; Italy &middot; Vatican</p>
-                <div class="tour-footer">
-                  <div>
-                    <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">&#8377;3,85,874</div>
-                  </div>
-                  <a href="packages/europe.html" class="tour-book-btn">Book Now</a>
-                </div>
-              </div>
+              <a href="packages/europe.html" class="tour-book-btn">Book Now</a>
             </div>
-          
-
-          <div class="tour-card">
-              <div class="tour-img">
-                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan"
-                  loading="lazy" />
-                <div class="tour-img-overlay"></div>
-                <span class="tour-duration">07N / 08D</span>
-                <span class="tour-inclusive">All Inclusive</span>
-              </div>
-              <div class="tour-body">
-                <h3>Blooming Japan</h3>
-                <p class="tour-destinations">Narita &middot; Tokyo &middot; Hakone &middot; Hiroshima &middot; Kyoto &middot; Nara &middot; Osaka</p>
-                <div class="tour-footer">
-                  <div>
-                    <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">&#8377;2,60,578</div>
-                  </div>
-                  <a href="packages/japan.html" class="tour-book-btn">Book Now</a>
-                </div>
-              </div>
-            </div>
-          
-
-          <div class="tour-card">
-              <div class="tour-img">
-                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai"
-                  loading="lazy" />
-                <div class="tour-img-overlay"></div>
-                <span class="tour-duration">05N / 06D</span>
-                <span class="tour-inclusive">All Inclusive</span>
-              </div>
-              <div class="tour-body">
-                <h3>Spectacular Dubai</h3>
-                <p class="tour-destinations">Dubai City &middot; Desert Safari &middot; Burj Khalifa &middot; Dhow Cruise &middot; Abu Dhabi</p>
-                <div class="tour-footer">
-                  <div>
-                    <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">&#8377;49,000</div>
-                  </div>
-                  <a href="packages/dubai.html" class="tour-book-btn">Book Now</a>
-                </div>
-              </div>
-            </div>
-          
-
-          <div class="tour-card">
-              <div class="tour-img">
-                <img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?w=600&q=80" alt="Maldives"
-                  loading="lazy" />
-                <div class="tour-img-overlay"></div>
-                <span class="tour-duration">04N / 05D</span>
-                <span class="tour-inclusive">All Inclusive</span>
-              </div>
-              <div class="tour-body">
-                <h3>Mesmerising Maldives</h3>
-                <p class="tour-destinations">Holiday Inn Kandooma &middot; Water Villa &middot; Snorkelling &middot; Dolphin Cruise</p>
-                <div class="tour-footer">
-                  <div>
-                    <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">&#8377;1,63,404</div>
-                  </div>
-                  <a href="packages/maldives.html" class="tour-book-btn">Book Now</a>
-                </div>
-              </div>
-            </div>
-          
-
-          <div class="tour-card">
-              <div class="tour-img">
-                <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=600&q=80" alt="Georgia"
-                  loading="lazy" />
-                <div class="tour-img-overlay"></div>
-                <span class="tour-duration">06N / 07D</span>
-                <span class="tour-inclusive">All Inclusive</span>
-              </div>
-              <div class="tour-body">
-                <h3>Highlights of Georgia</h3>
-                <p class="tour-destinations">Tbilisi &middot; Mtskheta &middot; Kazbegi &middot; Batumi &middot; Borjomi &middot; Kutaisi</p>
-                <div class="tour-footer">
-                  <div>
-                    <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">&#8377;30,676</div>
-                  </div>
-                  <a href="packages/georgia.html" class="tour-book-btn">Book Now</a>
-                </div>
-              </div>
-            </div>
-          
-
-          <div class="tour-card">
-              <div class="tour-img">
-                <img src="assets/images/singapore.png" alt="Singapore"
-                  loading="lazy" />
-                <div class="tour-img-overlay"></div>
-                <span class="tour-duration">05N / 06D</span>
-                <span class="tour-inclusive">All Inclusive</span>
-              </div>
-              <div class="tour-body">
-                <h3>Charming Singapore + Malaysia</h3>
-                <p class="tour-destinations">Singapore &middot; Marina Bay &middot; Sentosa &middot; Kuala Lumpur &middot; Genting Highlands</p>
-                <div class="tour-footer">
-                  <div>
-                    <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">&#8377;66,986</div>
-                  </div>
-                  <a href="packages/charming-singapore-with-malaysia.html" class="tour-book-btn">Book Now</a>
-                </div>
-              </div>
-            </div>
-          
-
-          <div class="tour-card">
-              <div class="tour-img">
-                <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Vietnam"
-                  loading="lazy" />
-                <div class="tour-img-overlay"></div>
-                <span class="tour-duration">07N / 08D</span>
-                <span class="tour-inclusive">All Inclusive</span>
-              </div>
-              <div class="tour-body">
-                <h3>Classic Vietnam</h3>
-                <p class="tour-destinations">Hanoi &middot; Halong Bay &middot; Da Nang &middot; Ho Chi Minh City</p>
-                <div class="tour-footer">
-                  <div>
-                    <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">&#8377;54,879</div>
-                  </div>
-                  <a href="packages/vietnam.html" class="tour-book-btn">Book Now</a>
-                </div>
-              </div>
-            </div>
-          
-
-          <div class="tour-card">
-              <div class="tour-img">
-                <img src="assets/images/philippines-featured.png" alt="Philippines"
-                  loading="lazy" />
-                <div class="tour-img-overlay"></div>
-                <span class="tour-duration">06N / 07D</span>
-                <span class="tour-inclusive">All Inclusive</span>
-              </div>
-              <div class="tour-body">
-                <h3>Vibrant Philippines</h3>
-                <p class="tour-destinations">Manila &middot; Boracay &middot; White Beach &middot; Island Hopping</p>
-                <div class="tour-footer">
-                  <div>
-                    <div class="tour-price-label">Starting from</div>
-                    <div class="tour-price">&#8377;68,409</div>
-                  </div>
-                  <a href="packages/philippines.html" class="tour-book-btn">Book Now</a>
-                </div>
-              </div>
-            </div>
-
+          </div>
         </div>
-        <div class="yr-dots" id="toursDots" style="display:flex;justify-content:center;margin-top:28px;"></div>
+
+
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan"
+              loading="lazy" />
+            <div class="tour-img-overlay"></div>
+            <span class="tour-duration">07N / 08D</span>
+            <span class="tour-inclusive">All Inclusive</span>
+          </div>
+          <div class="tour-body">
+            <h3>Blooming Japan</h3>
+            <p class="tour-destinations">Narita &middot; Tokyo &middot; Hakone &middot; Hiroshima &middot; Kyoto
+              &middot; Nara &middot; Osaka</p>
+            <div class="tour-footer">
+              <div>
+                <div class="tour-price-label">Starting from</div>
+                <div class="tour-price">&#8377;2,60,578</div>
+              </div>
+              <a href="packages/japan.html" class="tour-book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai"
+              loading="lazy" />
+            <div class="tour-img-overlay"></div>
+            <span class="tour-duration">05N / 06D</span>
+            <span class="tour-inclusive">All Inclusive</span>
+          </div>
+          <div class="tour-body">
+            <h3>Spectacular Dubai</h3>
+            <p class="tour-destinations">Dubai City &middot; Desert Safari &middot; Burj Khalifa &middot; Dhow Cruise
+              &middot; Abu Dhabi</p>
+            <div class="tour-footer">
+              <div>
+                <div class="tour-price-label">Starting from</div>
+                <div class="tour-price">&#8377;49,000</div>
+              </div>
+              <a href="packages/dubai.html" class="tour-book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?w=600&q=80" alt="Maldives"
+              loading="lazy" />
+            <div class="tour-img-overlay"></div>
+            <span class="tour-duration">04N / 05D</span>
+            <span class="tour-inclusive">All Inclusive</span>
+          </div>
+          <div class="tour-body">
+            <h3>Mesmerising Maldives</h3>
+            <p class="tour-destinations">Holiday Inn Kandooma &middot; Water Villa &middot; Snorkelling &middot; Dolphin
+              Cruise</p>
+            <div class="tour-footer">
+              <div>
+                <div class="tour-price-label">Starting from</div>
+                <div class="tour-price">&#8377;1,63,404</div>
+              </div>
+              <a href="packages/maldives.html" class="tour-book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=600&q=80" alt="Georgia"
+              loading="lazy" />
+            <div class="tour-img-overlay"></div>
+            <span class="tour-duration">06N / 07D</span>
+            <span class="tour-inclusive">All Inclusive</span>
+          </div>
+          <div class="tour-body">
+            <h3>Highlights of Georgia</h3>
+            <p class="tour-destinations">Tbilisi &middot; Mtskheta &middot; Kazbegi &middot; Batumi &middot; Borjomi
+              &middot; Kutaisi</p>
+            <div class="tour-footer">
+              <div>
+                <div class="tour-price-label">Starting from</div>
+                <div class="tour-price">&#8377;30,676</div>
+              </div>
+              <a href="packages/georgia.html" class="tour-book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="assets/images/singapore.png" alt="Singapore" loading="lazy" />
+            <div class="tour-img-overlay"></div>
+            <span class="tour-duration">05N / 06D</span>
+            <span class="tour-inclusive">All Inclusive</span>
+          </div>
+          <div class="tour-body">
+            <h3>Charming Singapore + Malaysia</h3>
+            <p class="tour-destinations">Singapore &middot; Marina Bay &middot; Sentosa &middot; Kuala Lumpur &middot;
+              Genting Highlands</p>
+            <div class="tour-footer">
+              <div>
+                <div class="tour-price-label">Starting from</div>
+                <div class="tour-price">&#8377;66,986</div>
+              </div>
+              <a href="packages/charming-singapore-with-malaysia.html" class="tour-book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Vietnam"
+              loading="lazy" />
+            <div class="tour-img-overlay"></div>
+            <span class="tour-duration">07N / 08D</span>
+            <span class="tour-inclusive">All Inclusive</span>
+          </div>
+          <div class="tour-body">
+            <h3>Classic Vietnam</h3>
+            <p class="tour-destinations">Hanoi &middot; Halong Bay &middot; Da Nang &middot; Ho Chi Minh City</p>
+            <div class="tour-footer">
+              <div>
+                <div class="tour-price-label">Starting from</div>
+                <div class="tour-price">&#8377;54,879</div>
+              </div>
+              <a href="packages/vietnam.html" class="tour-book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="assets/images/philippines-featured.png" alt="Philippines" loading="lazy" />
+            <div class="tour-img-overlay"></div>
+            <span class="tour-duration">06N / 07D</span>
+            <span class="tour-inclusive">All Inclusive</span>
+          </div>
+          <div class="tour-body">
+            <h3>Vibrant Philippines</h3>
+            <p class="tour-destinations">Manila &middot; Boracay &middot; White Beach &middot; Island Hopping</p>
+            <div class="tour-footer">
+              <div>
+                <div class="tour-price-label">Starting from</div>
+                <div class="tour-price">&#8377;68,409</div>
+              </div>
+              <a href="packages/philippines.html" class="tour-book-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div style="text-align:center;margin-top:36px;">
-        <a href="packages/international.html" class="btn" style="background:transparent;color:var(--primary-light);border:2px solid rgba(200,216,234,0.5);border-radius:var(--radius-md);padding:13px 32px;font-family:var(--font-body);font-weight:700;font-size:14px;transition:all 0.2s;display:inline-block;">View All International Packages &#8594;</a>
-      </div>
+      <div class="yr-dots" id="toursDots" style="display:flex;justify-content:center;margin-top:28px;"></div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="packages/international.html" class="btn"
+        style="background:transparent;color:var(--primary-light);border:2px solid rgba(200,216,234,0.5);border-radius:var(--radius-md);padding:13px 32px;font-family:var(--font-body);font-weight:700;font-size:14px;transition:all 0.2s;display:inline-block;">View
+        All International Packages &#8594;</a>
+    </div>
     </div>
   </section>
 
@@ -2517,7 +3848,8 @@
           <span class="summer-tag">&#9728;&#65039; Seasonal Special</span>
           <h2 style="color: var(--primary-dark) !important;">Europe Group Tours<br />Booking Now Open</h2>
           <div class="summer-badge">&#127881; GST Included &middot; All Inclusive Package</div>
-          <p style="color: var(--text-primary) !important;">Experience the best of Europe with our fully curated group departures. Flights, hotels, sightseeing, meals
+          <p style="color: var(--text-primary) !important;">Experience the best of Europe with our fully curated group
+            departures. Flights, hotels, sightseeing, meals
             &rdquo; all covered. T&C apply.</p>
           <a href="packages/group-tours.html" class="btn btn-primary">Join Group Tour &#8594;</a>
         </div>
@@ -2570,19 +3902,22 @@
       <!-- Header -->
       <div style="text-align:center;margin-bottom:40px;" data-aos="fade-up">
         <div class="yr-section-eyebrow">&#127758; Popular Destinations</div>
-        <h2 class="section-title" style="color:var(--primary-dark);">Year Round <span class="accent">Destinations</span></h2>
+        <h2 class="section-title" style="color:var(--primary-dark);">Year Round <span class="accent">Destinations</span>
+        </h2>
         <p class="section-sub" style="margin:0 auto;">Dream destinations &mdash; hand-crafted packages ready to go.</p>
       </div>
 
       <!-- INTERNATIONAL PANEL -->
-      <h3 style="margin-bottom: 20px; color: var(--primary-dark); font-family: var(--font-display); font-size: 1.5rem;">&#127757; International Destinations</h3>
+      <h3 style="margin-bottom: 0px; color: var(--primary); font-family: var(--font-body); font-size: 2.2rem; font-weight: 500; letter-spacing: 0.02em;">
+        &#127757; International Destinations</h3>
       <div class="dest-panel active" data-panel="intl">
         <div class="yr-scroll-track" id="trackIntl">
 
           <a href="packages/international.html" class="dest-card">
             <div class="dest-card-img">
               <span class="dest-badge badge-popular">Popular</span>
-              <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=600&q=80" alt="USA" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=600&q=80" alt="USA"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>USA</h3>
@@ -2597,7 +3932,8 @@
           <a href="packages/international.html" class="dest-card">
             <div class="dest-card-img">
               <span class="dest-badge badge-trend">Trending</span>
-              <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80" alt="Australia" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80" alt="Australia"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Australia</h3>
@@ -2611,7 +3947,8 @@
 
           <a href="destinations/europe.html" class="dest-card">
             <div class="dest-card-img">
-              <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Europe" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Europe"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Europe</h3>
@@ -2625,7 +3962,8 @@
 
           <a href="destinations/japan.html" class="dest-card">
             <div class="dest-card-img">
-              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Japan</h3>
@@ -2639,7 +3977,8 @@
 
           <a href="packages/international.html" class="dest-card">
             <div class="dest-card-img">
-              <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80" alt="Germany" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80" alt="Germany"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Germany</h3>
@@ -2654,7 +3993,8 @@
           <a href="packages/international.html" class="dest-card">
             <div class="dest-card-img">
               <span class="dest-badge badge-scenic">Scenic</span>
-              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80" alt="New Zealand" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80" alt="New Zealand"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>New Zealand</h3>
@@ -2668,7 +4008,8 @@
 
           <a href="destinations/dubai.html" class="dest-card">
             <div class="dest-card-img">
-              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Dubai</h3>
@@ -2697,7 +4038,8 @@
 
           <a href="packages/vietnam.html" class="dest-card">
             <div class="dest-card-img">
-              <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Vietnam" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Vietnam"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Vietnam</h3>
@@ -2728,7 +4070,8 @@
 
       <!-- INDIA PANEL -->
       <div class="dest-panel active" data-panel="india" style="margin-top: 40px;">
-        <h3 style="margin-bottom: 20px; color: var(--primary-dark); font-family: var(--font-display); font-size: 1.5rem;">&#127470;&#127475; Explore India</h3>
+        <h3 style="margin-bottom: 0px; color: var(--primary); font-family: var(--font-body); font-size: 2.2rem; font-weight: 500; letter-spacing: 0.02em;">
+          &#127470;&#127475; Explore India</h3>
         <div class="yr-scroll-track" id="trackIndia">
 
           <a href="packages/domestic.html" class="dest-card">
@@ -2746,9 +4089,10 @@
             </div>
           </a>
 
-          <a href="packages/domestic.html" class="dest-card">
+          <a href="packages/domestic.html#meghalaya" class="dest-card">
             <div class="dest-card-img">
-              <img src="https://images.unsplash.com/photo-1505438183184-ef066497f6c3?w=600&q=80" alt="Meghalaya" loading="lazy" />
+              <img src="assets/images/meghalaya.png" alt="Meghalaya"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Meghalaya</h3>
@@ -2762,7 +4106,8 @@
 
           <a href="packages/domestic.html" class="dest-card">
             <div class="dest-card-img">
-              <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=600&q=80" alt="Rajasthan" loading="lazy" />
+              <img src="assets/images/rajasthan.png" alt="Rajasthan"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Rajasthan</h3>
@@ -2776,7 +4121,8 @@
 
           <a href="packages/domestic.html" class="dest-card">
             <div class="dest-card-img">
-              <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Kerala</h3>
@@ -2791,7 +4137,8 @@
           <a href="packages/domestic.html" class="dest-card">
             <div class="dest-card-img">
               <span class="dest-badge badge-new">Newly Added</span>
-              <img src="https://images.unsplash.com/photo-1616843413587-9e3a37f7bbd8?w=600&q=80" alt="Sikkim" loading="lazy" />
+              <img src="assets/images/sikkim.png" alt="Sikkim"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Sikkim</h3>
@@ -2817,10 +4164,11 @@
             </div>
           </a>
 
-          <a href="packages/domestic.html" class="dest-card">
+          <a href="packages/domestic.html#ladakh" class="dest-card">
             <div class="dest-card-img">
               <span class="dest-badge badge-adv">Adventure</span>
-              <img src="https://images.unsplash.com/photo-1614092239169-959883584820?w=600&q=80" alt="Ladakh" loading="lazy" />
+              <img src="assets/images/ladakh.png" alt="Ladakh"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Ladakh</h3>
@@ -2835,7 +4183,8 @@
           <a href="packages/domestic.html" class="dest-card">
             <div class="dest-card-img">
               <span class="dest-badge badge-cult">Cultural</span>
-              <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=600&q=80" alt="Varanasi" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=600&q=80" alt="Varanasi"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Varanasi</h3>
@@ -2847,10 +4196,11 @@
             </div>
           </a>
 
-          <a href="packages/domestic.html" class="dest-card">
+          <a href="packages/domestic.html#himachal" class="dest-card">
             <div class="dest-card-img">
               <span class="dest-badge badge-nature">Nature</span>
-              <img src="https://images.unsplash.com/photo-1596895111956-627e7db6b81a?w=600&q=80" alt="Himachal" loading="lazy" />
+              <img src="assets/images/himachal.png" alt="Himachal"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Himachal</h3>
@@ -2864,7 +4214,8 @@
 
           <a href="packages/domestic.html" class="dest-card">
             <div class="dest-card-img">
-              <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=600&q=80" alt="Andaman" loading="lazy" />
+              <img src="assets/images/andaman.png" alt="Andaman"
+                loading="lazy" />
             </div>
             <div class="dest-card-body">
               <h3>Andaman</h3>
@@ -2892,7 +4243,9 @@
       <div style="text-align:center;margin-bottom:60px;" data-aos="fade-up">
         <div class="section-label" style="justify-content:center;">Business & MICE</div>
         <h2 class="section-title">Corporate <span class="accent">Travel Solutions</span></h2>
-        <p class="section-sub" style="margin:0 auto; max-width: 800px;">From large-scale MICE events to seamless executive travel, we provide end-to-end management for your company&rsquo;s business movement. Focus on your goals &rdquo; we&rsquo;ll handle the planning, logistics, and coordination.</p>
+        <p class="section-sub" style="margin:0 auto; max-width: 800px;">From large-scale MICE events to seamless
+          executive travel, we provide end-to-end management for your company&rsquo;s business movement. Focus on your
+          goals &rdquo; we&rsquo;ll handle the planning, logistics, and coordination.</p>
       </div>
 
       <!-- Part 1: Service Cards -->
@@ -2901,13 +4254,15 @@
         <div class="corp-svc-card">
           <span class="corp-svc-icon">&#127970;</span>
           <h3>MICE & Events</h3>
-          <p>Meetings, Incentives, Conferences, and Exhibitions managed with complete travel, stay, venue, and logistics support.</p>
+          <p>Meetings, Incentives, Conferences, and Exhibitions managed with complete travel, stay, venue, and logistics
+            support.</p>
         </div>
         <!-- 2. Team Offsites -->
         <div class="corp-svc-card">
           <span class="corp-svc-icon">&#129309;</span>
           <h3>Team Offsites & Retreats</h3>
-          <p>Thoughtfully planned offsites for team bonding, leadership meets, strategy sessions, and company retreats.</p>
+          <p>Thoughtfully planned offsites for team bonding, leadership meets, strategy sessions, and company retreats.
+          </p>
         </div>
         <!-- 3. Executive Business Travel -->
         <div class="corp-svc-card">
@@ -2997,7 +4352,8 @@
       <div style="text-align:center; margin-bottom: 50px;" data-aos="fade-up">
         <div class="section-label" style="justify-content:center;">Tailored For You</div>
         <h2 class="section-title">Own Your <span class="accent">Travel Style</span></h2>
-        <p class="section-sub" style="margin:0 auto; max-width: 600px;">Whatever kind of traveller you are, we have the perfect package tailored just for your needs.
+        <p class="section-sub" style="margin:0 auto; max-width: 600px;">Whatever kind of traveller you are, we have the
+          perfect package tailored just for your needs.
         </p>
       </div>
       <div class="styles-grid" data-aos="fade-up">
@@ -3129,7 +4485,8 @@
           <div class="swiper-slide">
             <div class="testi-card">
               <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>"Japan was on our bucket list for years. The Travel Spark made it a reality &rdquo; cherry blossoms, temples,
+              <p>"Japan was on our bucket list for years. The Travel Spark made it a reality &rdquo; cherry blossoms,
+                temples,
                 food tours. Literally picture-perfect!"</p>
               <div class="testi-author">
                 <div class="testi-avatar">RK</div>
@@ -3143,7 +4500,8 @@
           <div class="swiper-slide">
             <div class="testi-card">
               <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>"Maldives overwater villa was our honeymoon dream. The package included everything &rdquo; transfers, water
+              <p>"Maldives overwater villa was our honeymoon dream. The package included everything &rdquo; transfers,
+                water
                 activities, and beautiful candlelight dinners!"</p>
               <div class="testi-author">
                 <div class="testi-avatar">AM</div>
@@ -3171,7 +4529,8 @@
           <div class="swiper-slide">
             <div class="testi-card">
               <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>"Corporate offsite to Singapore was seamless. From flights to team dinners &rdquo; everything was handled
+              <p>"Corporate offsite to Singapore was seamless. From flights to team dinners &rdquo; everything was
+                handled
                 professionally. Highly recommend for corporate travel!"</p>
               <div class="testi-author">
                 <div class="testi-avatar">SJ</div>
@@ -3205,7 +4564,8 @@
           <div class="blog-body">
             <span class="blog-tag">Europe</span>
             <h3>Top 10 Things to Do in Paris</h3>
-            <p>From the Eiffel Tower to hidden bistros in Montmartre &rdquo; our local guide reveals Paris beyond the tourist
+            <p>From the Eiffel Tower to hidden bistros in Montmartre &rdquo; our local guide reveals Paris beyond the
+              tourist
               trail.</p>
             <div class="blog-meta"><span class="date">Mar 10</span><a href="blog.html" class="read-more">Read More
                 &#8594;</a></div>
@@ -3229,7 +4589,8 @@
           <div class="blog-body">
             <span class="blog-tag">Georgia</span>
             <h3>Top 10 Places to Visit in Georgia</h3>
-            <p>Georgia is Europe's best-kept secret. Tbilisi's old town, Kazbegi's mountains and Batumi's beaches &rdquo; our
+            <p>Georgia is Europe's best-kept secret. Tbilisi's old town, Kazbegi's mountains and Batumi's beaches
+              &rdquo; our
               complete travel guide.</p>
             <div class="blog-meta"><span class="date">Feb 5</span><a href="blog.html" class="read-more">Read More
                 &#8594;</a></div>
@@ -3242,19 +4603,28 @@
 
 
   <!-- Quick Enquiry Modal -->
-  <div id="quickEnquiryOverlay" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9999; backdrop-filter: blur(4px); align-items: center; justify-content: center;">
-    <div style="background: white; width: 90%; max-width: 500px; border-radius: 20px; padding: 30px; position: relative; animation: slideUp 0.3s ease-out;">
-      <button onclick="closeQuickEnquiry()" style="position: absolute; top: 20px; right: 20px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-light);">&times;</button>
+  <div id="quickEnquiryOverlay"
+    style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9999; backdrop-filter: blur(4px); align-items: center; justify-content: center;">
+    <div
+      style="background: white; width: 90%; max-width: 500px; border-radius: 20px; padding: 30px; position: relative; animation: slideUp 0.3s ease-out;">
+      <button onclick="closeQuickEnquiry()"
+        style="position: absolute; top: 20px; right: 20px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-light);">&times;</button>
       <h2 style="font-family: var(--font-display); color: var(--primary-dark); margin-bottom: 10px;">Quick Enquiry</h2>
-      <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95rem;">Interested in <strong id="qeDestinationText" style="color: var(--accent);">this destination</strong>? Let us craft a tailored package for you.</p>
-      
-      <form action="https://formsubmit.co/thetravelspark2@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 16px;">
+      <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95rem;">Interested in <strong
+          id="qeDestinationText" style="color: var(--accent);">this destination</strong>? Let us craft a tailored
+        package for you.</p>
+
+      <form action="https://formsubmit.co/thetravelspark2@gmail.com" method="POST"
+        style="display: flex; flex-direction: column; gap: 16px;">
         <input type="hidden" name="_subject" value="New Quick Enquiry from Travel Spark!">
         <input type="hidden" name="_captcha" value="false">
-        
+
         <div>
-          <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;">Destination</label>
-          <select name="destination" id="qeDestinationSelect" required style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit; background: white; cursor: pointer;" onchange="toggleOtherDestination()">
+          <label
+            style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;">Destination</label>
+          <select name="destination" id="qeDestinationSelect" required
+            style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit; background: white; cursor: pointer;"
+            onchange="toggleOtherDestination()">
             <option value="" disabled selected>Select Destination</option>
             <option value="Kashmir">Kashmir</option>
             <option value="Rajasthan">Rajasthan</option>
@@ -3270,39 +4640,61 @@
             <option value="Thailand">Thailand</option>
             <option value="Other">Other...</option>
           </select>
-          <input type="text" name="other_destination" id="qeOtherDestination" placeholder="Type your destination here..." style="display: none; width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit; margin-top: 12px;">
+          <input type="text" name="other_destination" id="qeOtherDestination"
+            placeholder="Type your destination here..."
+            style="display: none; width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit; margin-top: 12px;">
         </div>
 
         <div>
-          <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;">Full Name</label>
-          <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit;">
+          <label
+            style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;">Full
+            Name</label>
+          <input type="text" name="name" required
+            style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit;">
         </div>
-        
+
         <div style="display: flex; gap: 16px;">
           <div style="flex: 1;">
-            <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;">Contact No.</label>
-            <input type="tel" name="phone" required style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit;">
+            <label
+              style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;">Contact
+              No.</label>
+            <input type="tel" name="phone" required
+              style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit;">
           </div>
           <div style="flex: 1;">
-            <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;">Duration (Days)</label>
-            <input type="number" name="days" placeholder="e.g. 5" required style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit;">
+            <label
+              style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;">Duration
+              (Days)</label>
+            <input type="number" name="days" placeholder="e.g. 5" required
+              style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit;">
           </div>
         </div>
-        
+
         <div>
-          <label style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;">Message</label>
-          <textarea name="message" rows="3" placeholder="Tell us more about your trip..." required style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit; resize: none;"></textarea>
+          <label
+            style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 6px;">Message</label>
+          <textarea name="message" rows="3" placeholder="Tell us more about your trip..." required
+            style="width: 100%; padding: 12px; border: 1px solid var(--gray-300); border-radius: 8px; font-family: inherit; resize: none;"></textarea>
         </div>
-        
-        <button type="submit" style="background: var(--accent); color: white; padding: 14px; border: none; border-radius: 8px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.3s; margin-top: 10px;">Get Free Quote</button>
+
+        <button type="submit"
+          style="background: var(--accent); color: white; padding: 14px; border: none; border-radius: 8px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.3s; margin-top: 10px;">Get
+          Free Quote</button>
       </form>
     </div>
   </div>
 
   <style>
     @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 
@@ -3311,7 +4703,7 @@
       const select = document.getElementById('qeDestinationSelect');
       const otherInput = document.getElementById('qeOtherDestination');
       const text = document.getElementById('qeDestinationText');
-      
+
       if (select && otherInput) {
         if (select.value === 'Other') {
           otherInput.style.display = 'block';
@@ -3329,17 +4721,17 @@
       const modal = document.getElementById('quickEnquiryOverlay');
       const text = document.getElementById('qeDestinationText');
       const select = document.getElementById('qeDestinationSelect');
-      
+
       text.textContent = destination;
       if (select) {
         select.value = destination;
         toggleOtherDestination();
       }
-      
+
       modal.style.display = 'flex';
       document.body.style.overflow = 'hidden';
     }
-    
+
     function closeQuickEnquiry() {
       const modal = document.getElementById('quickEnquiryOverlay');
       modal.style.display = 'none';
@@ -3347,7 +4739,7 @@
     }
 
     // Close on overlay click
-    document.getElementById('quickEnquiryOverlay').addEventListener('click', function(e) {
+    document.getElementById('quickEnquiryOverlay').addEventListener('click', function (e) {
       if (e.target === this) {
         closeQuickEnquiry();
       }
@@ -3429,13 +4821,13 @@
        TRAVEL WIZARD MODAL ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ JavaScript
     ÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚ÂÃƒÂ¢Ã¢â‚¬Â¢Ã‚Â */
     (function () {
-      const overlay   = document.getElementById('twOverlay');
-      const closeBtn  = document.getElementById('twClose');
-      const progress  = document.getElementById('twProgressFill');
+      const overlay = document.getElementById('twOverlay');
+      const closeBtn = document.getElementById('twClose');
+      const progress = document.getElementById('twProgressFill');
       const indicator = document.getElementById('twStepIndicator');
 
       // Panels & side steps
-      const panels    = [document.getElementById('twPanel1'), document.getElementById('twPanel2'), document.getElementById('twPanel3')];
+      const panels = [document.getElementById('twPanel1'), document.getElementById('twPanel2'), document.getElementById('twPanel3')];
       const sideSteps = [document.getElementById('twSideStep1'), document.getElementById('twSideStep2'), document.getElementById('twSideStep3')];
 
       let currentStep = 1;
@@ -3492,7 +4884,7 @@
         selectedDest = twInput.value.trim();
         const filter = selectedDest.toLowerCase();
         let hasVisible = false;
-        
+
         twList.querySelectorAll('.tw-dd-item').forEach(el => {
           if (el.textContent.toLowerCase().includes(filter)) {
             el.style.display = 'block';
@@ -3501,7 +4893,7 @@
             el.style.display = 'none';
           }
         });
-        
+
         if (hasVisible || filter === '') {
           twDropdownWrapper.classList.add('open');
         } else {
@@ -3536,22 +4928,22 @@
 
       // Next step 2 ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ 3 (confirmation)
       document.getElementById('twNext2').addEventListener('click', () => {
-        const name  = document.getElementById('twName').value.trim();
+        const name = document.getElementById('twName').value.trim();
         const phone = document.getElementById('twPhone').value.trim();
         if (!phone) { alert('Please enter your mobile number so we can call you.'); return; }
 
         // Populate summary
         const month = document.getElementById('twMonth').value;
         const travellers = document.querySelector('.tw-chip[data-group="travellers"].selected')?.textContent || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
-        const triptype   = document.querySelector('.tw-chip[data-group="triptype"].selected')?.textContent  || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
-        const budget     = document.querySelector('.tw-chip[data-group="budget"].selected')?.textContent    || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+        const triptype = document.querySelector('.tw-chip[data-group="triptype"].selected')?.textContent || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
+        const budget = document.querySelector('.tw-chip[data-group="budget"].selected')?.textContent || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â';
 
-        document.getElementById('twSumDest').textContent      = selectedDest;
-        document.getElementById('twSumWhen').textContent      = (month || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + ' Ãƒâ€šÃ‚Â· ' + days + ' days';
+        document.getElementById('twSumDest').textContent = selectedDest;
+        document.getElementById('twSumWhen').textContent = (month || 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â') + ' Ãƒâ€šÃ‚Â· ' + days + ' days';
         document.getElementById('twSumTravellers').textContent = travellers;
-        document.getElementById('twSumType').textContent       = triptype;
-        document.getElementById('twSumBudget').textContent     = budget;
-        document.getElementById('twConfPhone').textContent     = phone ? phone : 'you';
+        document.getElementById('twSumType').textContent = triptype;
+        document.getElementById('twSumBudget').textContent = budget;
+        document.getElementById('twConfPhone').textContent = phone ? phone : 'you';
 
         goTo(3);
       });
@@ -3570,7 +4962,7 @@
   </script>
   <!-- Destinations section: tab switching + scroll nav -->
   <script>
-    (function() {
+    (function () {
       const pills = document.querySelectorAll('.dest-pill');
       const panels = document.querySelectorAll('.dest-panel');
       const prevBtn = document.getElementById('yrPrev');
@@ -3635,7 +5027,7 @@
 
       buildDots(document.getElementById('trackIntl'), dotsIntl);
       buildDots(document.getElementById('trackIndia'), dotsIndia);
-      
+
       // Initialize center classes and scroll pos for the first tab
       setTimeout(() => {
         initScroll(document.getElementById('trackIntl'));
@@ -3686,7 +5078,7 @@
   </script>
   <!-- Featured Tours section: scroll nav -->
   <script>
-    (function() {
+    (function () {
       const track = document.getElementById('trackTours');
       if (!track) return;
       const prevBtn = document.getElementById('toursPrev');
@@ -3746,7 +5138,7 @@
       }
 
       buildDots();
-      
+
       setTimeout(() => {
         initScroll();
         updateCenterCardsAndDots();
@@ -3767,204 +5159,201 @@
        SMART HERO SEARCH BAR â€” JavaScript
   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <script>
-  (function() {
-    /* â”€â”€â”€ Destination Data â”€â”€â”€ */
-    const HS_DESTINATIONS = [
-      /* Domestic */
-      { name: 'Andaman & Nicobar',     type: 'dom',  flag: 'ðŸï¸',  key: 'Andaman',       section: null },
-      { name: 'Coorg, Karnataka',       type: 'dom',  flag: 'â˜•',  key: 'Karnataka',     section: null },
-      { name: 'Goa',                    type: 'dom',  flag: 'ðŸ–ï¸',  key: 'Goa',           section: null },
-      { name: 'Gujarat',                type: 'dom',  flag: 'ðŸ¦',  key: 'Gujarat',       section: null },
-      { name: 'Himachal Pradesh',       type: 'dom',  flag: 'ðŸ”ï¸',  key: 'Himachal',      section: null },
-      { name: 'Jammu & Kashmir',        type: 'dom',  flag: 'â„ï¸',  key: 'Kashmir',       section: null },
-      { name: 'Kashmir',                type: 'dom',  flag: 'â„ï¸',  key: 'Kashmir',       section: null },
-      { name: 'Kerala',                 type: 'dom',  flag: 'ðŸŒ´',  key: 'Kerala',        section: null },
-      { name: 'Kedarnath / Do Dham',    type: 'dom',  flag: 'ðŸ›•',  key: 'Uttarakhand',   section: null },
-      { name: 'Ladakh',                 type: 'dom',  flag: 'ðŸ”ï¸',  key: 'Ladakh',        section: null },
-      { name: 'Manali, Himachal',       type: 'dom',  flag: 'ðŸŒ¨ï¸',  key: 'Himachal',      section: null },
-      { name: 'Northeast Circuit',      type: 'dom',  flag: 'ðŸŒ¿',  key: 'Northeast',     section: null },
-      { name: 'Ooty, Tamil Nadu',       type: 'dom',  flag: 'ðŸƒ',  key: 'Karnataka',     section: null },
-      { name: 'Rajasthan',              type: 'dom',  flag: 'ðŸ°',  key: 'Rajasthan',     section: null },
-      { name: 'Shimla, Himachal',       type: 'dom',  flag: 'ðŸ”ï¸',  key: 'Himachal',      section: null },
-      { name: 'Sikkim & Darjeeling',    type: 'dom',  flag: 'ðŸ”ï¸',  key: 'Sikkim',        section: null },
-      { name: 'Uttarakhand',            type: 'dom',  flag: 'â›°ï¸',  key: 'Uttarakhand',   section: null },
-      { name: 'Varanasi',              type: 'dom',  flag: 'ðŸª”',  key: 'Uttarakhand',   section: null },
-      /* International */
-      { name: 'Bali, Indonesia',        type: 'intl', flag: 'ðŸŒº',  key: 'Bali',          section: 'bali' },
-      { name: 'Dubai, UAE',             type: 'intl', flag: 'ðŸ™ï¸',  key: 'Dubai',         section: 'dubai' },
-      { name: 'Europe',                 type: 'intl', flag: 'ðŸ—¼',  key: 'Europe',        section: 'europe' },
-      { name: 'France',                 type: 'intl', flag: 'ðŸ¥',  key: 'Europe',        section: 'europe' },
-      { name: 'Georgia',                type: 'intl', flag: 'â›°ï¸',  key: 'Georgia',       section: 'georgia' },
-      { name: 'Germany',                type: 'intl', flag: 'ðŸ°',  key: 'Europe',        section: 'europe' },
-      { name: 'Greece',                 type: 'intl', flag: 'ðŸ›ï¸',  key: 'Europe',        section: 'europe' },
-      { name: 'Italy',                  type: 'intl', flag: 'ðŸ•',  key: 'Europe',        section: 'europe' },
-      { name: 'Japan',                  type: 'intl', flag: 'ðŸŒ¸',  key: 'Japan',         section: 'japan' },
-      { name: 'Kenya & Tanzania',       type: 'intl', flag: 'ðŸ¦',  key: 'Kenya & Tanzania', section: 'kenya' },
-      { name: 'Maldives',               type: 'intl', flag: 'ðŸï¸',  key: 'Maldives',      section: 'maldives' },
-      { name: 'Mauritius',              type: 'intl', flag: 'ðŸŒŠ',  key: 'Maldives',      section: 'maldives' },
-      { name: 'Nepal',                  type: 'intl', flag: 'ðŸ”ï¸',  key: 'Nepal',         section: 'nepal' },
-      { name: 'Philippines',            type: 'intl', flag: 'ðŸ–ï¸',  key: 'Philippines',   section: 'philippines' },
-      { name: 'Singapore',              type: 'intl', flag: 'ðŸ¦',  key: 'Singapore',     section: 'singapore' },
-      { name: 'Singapore & Malaysia',   type: 'intl', flag: 'ðŸŽ¡',  key: 'Singapore',     section: 'singapore' },
-      { name: 'Sri Lanka',              type: 'intl', flag: 'ðŸŒ´',  key: 'Sri Lanka',     section: 'srilanka' },
-      { name: 'Switzerland',            type: 'intl', flag: 'ðŸ”ï¸',  key: 'Europe',        section: 'europe' },
-      { name: 'Thailand',               type: 'intl', flag: 'ðŸ˜',  key: 'Thailand',      section: 'thailand' },
-      { name: 'Turkey',                 type: 'intl', flag: 'ðŸ•Œ',  key: 'Turkey',        section: 'turkey' },
-      { name: 'Vietnam',                type: 'intl', flag: 'ðŸ®',  key: 'Vietnam',       section: 'vietnam' },
-    ];
+    (function () {
+      /* â”€â”€â”€ Destination Data â”€â”€â”€ */
+      const HS_DESTINATIONS = [
+        /* Domestic */
+        { name: 'Andaman & Nicobar', type: 'dom', flag: '', key: 'Andaman', section: null },
+        { name: 'Coorg, Karnataka', type: 'dom', flag: '', key: 'Karnataka', section: null },
+        { name: 'Goa', type: 'dom', flag: '', key: 'Goa', section: null },
+        { name: 'Gujarat', type: 'dom', flag: '', key: 'Gujarat', section: null },
+        { name: 'Himachal Pradesh', type: 'dom', flag: '', key: 'Himachal', section: null },
+        { name: 'Jammu & Kashmir', type: 'dom', flag: '', key: 'Kashmir', section: null },
+        { name: 'Kashmir', type: 'dom', flag: '', key: 'Kashmir', section: null },
+        { name: 'Kerala', type: 'dom', flag: '', key: 'Kerala', section: null },
+        { name: 'Kedarnath / Do Dham', type: 'dom', flag: '', key: 'Uttarakhand', section: null },
+        { name: 'Ladakh', type: 'dom', flag: '', key: 'Ladakh', section: null },
+        { name: 'Manali, Himachal', type: 'dom', flag: '', key: 'Himachal', section: null },
+        { name: 'Northeast Circuit', type: 'dom', flag: '', key: 'Northeast', section: null },
+        { name: 'Ooty, Tamil Nadu', type: 'dom', flag: '', key: 'Karnataka', section: null },
+        { name: 'Rajasthan', type: 'dom', flag: '', key: 'Rajasthan', section: null },
+        { name: 'Shimla, Himachal', type: 'dom', flag: '', key: 'Himachal', section: null },
+        { name: 'Sikkim & Darjeeling', type: 'dom', flag: '', key: 'Sikkim', section: null },
+        { name: 'Uttarakhand', type: 'dom', flag: '', key: 'Uttarakhand', section: null },
+        { name: 'Varanasi', type: 'dom', flag: '', key: 'Uttarakhand', section: null },
+        /* International */
+        { name: 'Bali, Indonesia', type: 'intl', flag: '', key: 'Bali', section: 'bali' },
+        { name: 'Dubai, UAE', type: 'intl', flag: '', key: 'Dubai', section: 'dubai' },
+        { name: 'Europe', type: 'intl', flag: '', key: 'Europe', section: 'europe' },
+        { name: 'France', type: 'intl', flag: '', key: 'Europe', section: 'europe' },
+        { name: 'Georgia', type: 'intl', flag: '', key: 'Georgia', section: 'georgia' },
+        { name: 'Germany', type: 'intl', flag: '', key: 'Europe', section: 'europe' },
+        { name: 'Greece', type: 'intl', flag: '', key: 'Europe', section: 'europe' },
+        { name: 'Italy', type: 'intl', flag: '', key: 'Europe', section: 'europe' },
+        { name: 'Japan', type: 'intl', flag: '', key: 'Japan', section: 'japan' },
+        { name: 'Kenya & Tanzania', type: 'intl', flag: '', key: 'Kenya & Tanzania', section: 'kenya' },
+        { name: 'Maldives', type: 'intl', flag: '', key: 'Maldives', section: 'maldives' },
+        { name: 'Mauritius', type: 'intl', flag: '', key: 'Maldives', section: 'maldives' },
+        { name: 'Nepal', type: 'intl', flag: '', key: 'Nepal', section: 'nepal' },
+        { name: 'Philippines', type: 'intl', flag: '', key: 'Philippines', section: 'philippines' },
+        { name: 'Singapore', type: 'intl', flag: '', key: 'Singapore', section: 'singapore' },
+        { name: 'Singapore & Malaysia', type: 'intl', flag: '', key: 'Singapore', section: 'singapore' },
+        { name: 'Sri Lanka', type: 'intl', flag: '', key: 'Sri Lanka', section: 'srilanka' },
+        { name: 'Switzerland', type: 'intl', flag: '', key: 'Europe', section: 'europe' },
+        { name: 'Thailand', type: 'intl', flag: '', key: 'Thailand', section: 'thailand' },
+        { name: 'Turkey', type: 'intl', flag: '', key: 'Turkey', section: 'turkey' },
+        { name: 'Vietnam', type: 'intl', flag: '', key: 'Vietnam', section: 'vietnam' },
+      ];
 
-    const input    = document.getElementById('hsDestInput');
-    const dropdown = document.getElementById('hsDropdown');
-    const card     = document.getElementById('hsSelectedCard');
-    const cardFlag = document.getElementById('hsCardFlag');
-    const cardLbl  = document.getElementById('hsCardLabel');
-    const cardName = document.getElementById('hsCardName');
-    const cardTag  = document.getElementById('hsCardTagline');
-    const cardCta  = document.getElementById('hsCardCta');
-    const cardClose= document.getElementById('hsCardClose');
+      const input = document.getElementById('hsDestInput');
+      const dropdown = document.getElementById('hsDropdown');
+      const card = document.getElementById('hsSelectedCard');
+      const cardFlag = document.getElementById('hsCardFlag');
+      const cardLbl = document.getElementById('hsCardLabel');
+      const cardName = document.getElementById('hsCardName');
+      const cardTag = document.getElementById('hsCardTagline');
+      const cardCta = document.getElementById('hsCardCta');
+      const cardClose = document.getElementById('hsCardClose');
 
-    if (!input) return;
+      if (!input) return;
 
-    let selectedDest = null;
+      let selectedDest = null;
 
-    /* â”€â”€â”€ Build dropdown items â”€â”€â”€ */
-    function buildDropdown(query) {
-      const q = query.trim().toLowerCase();
-      if (!q) { dropdown.classList.remove('open'); return; }
+      /* â”€â”€â”€ Build dropdown items â”€â”€â”€ */
+      function buildDropdown(query) {
+        const q = query.trim().toLowerCase();
+        if (!q) { dropdown.classList.remove('open'); return; }
 
-      const matches = HS_DESTINATIONS.filter(d => d.name.toLowerCase().includes(q));
+        const matches = HS_DESTINATIONS.filter(d => d.name.toLowerCase().includes(q));
 
-      if (!matches.length) {
-        dropdown.innerHTML = '<div class="hs-dd-no-results">No destinations found. Try another name.</div>';
-        dropdown.classList.add('open');
-        return;
-      }
+        if (!matches.length) {
+          dropdown.innerHTML = '<div class="hs-dd-no-results">No destinations found. Try another name.</div>';
+          dropdown.classList.add('open');
+          return;
+        }
 
-      /* Group into domestic / international */
-      const dom  = matches.filter(d => d.type === 'dom');
-      const intl = matches.filter(d => d.type === 'intl');
+        /* Group into domestic / international */
+        const dom = matches.filter(d => d.type === 'dom');
+        const intl = matches.filter(d => d.type === 'intl');
 
-      let html = '';
-      if (dom.length) {
-        html += '<div class="hs-dd-group">&#127758; Domestic (India)</div>';
-        dom.forEach(d => {
-          html += `<div class="hs-dd-item" data-key="${d.key}" data-type="${d.type}" data-flag="${d.flag}" data-name="${d.name}" data-section="${d.section||''}">
+        let html = '';
+        if (dom.length) {
+          html += '<div class="hs-dd-group">&#127758; Domestic (India)</div>';
+          dom.forEach(d => {
+            html += `<div class="hs-dd-item" data-key="${d.key}" data-type="${d.type}" data-flag="${d.flag}" data-name="${d.name}" data-section="${d.section || ''}">
             <span class="hs-dd-flag">${d.flag}</span>
             ${d.name}
             <span class="hs-dd-type type-dom">India</span>
           </div>`;
-        });
-      }
-      if (intl.length) {
-        html += '<div class="hs-dd-group">&#127757; International</div>';
-        intl.forEach(d => {
-          html += `<div class="hs-dd-item" data-key="${d.key}" data-type="${d.type}" data-flag="${d.flag}" data-name="${d.name}" data-section="${d.section||''}">
+          });
+        }
+        if (intl.length) {
+          html += '<div class="hs-dd-group">&#127757; International</div>';
+          intl.forEach(d => {
+            html += `<div class="hs-dd-item" data-key="${d.key}" data-type="${d.type}" data-flag="${d.flag}" data-name="${d.name}" data-section="${d.section || ''}">
             <span class="hs-dd-flag">${d.flag}</span>
             ${d.name}
             <span class="hs-dd-type type-intl">International</span>
           </div>`;
+          });
+        }
+
+        dropdown.innerHTML = html;
+        dropdown.classList.add('open');
+        input.setAttribute('aria-expanded', 'true');
+
+        /* Attach click handlers */
+        dropdown.querySelectorAll('.hs-dd-item').forEach(item => {
+          item.addEventListener('click', () => {
+            selectDestination(item.dataset);
+          });
         });
       }
 
-      dropdown.innerHTML = html;
-      dropdown.classList.add('open');
-      input.setAttribute('aria-expanded', 'true');
-
-      /* Attach click handlers */
-      dropdown.querySelectorAll('.hs-dd-item').forEach(item => {
-        item.addEventListener('click', () => {
-          selectDestination(item.dataset);
-        });
-      });
-    }
-
-    /* â”€â”€â”€ Select a destination â”€â”€â”€ */
-    function selectDestination(data) {
-      selectedDest = data;
-      input.value = data.name;
-      dropdown.classList.remove('open');
-      input.setAttribute('aria-expanded', 'false');
-
-      /* Populate card */
-      cardFlag.textContent = data.flag;
-      cardLbl.textContent  = data.type === 'intl' ? 'International' : 'Domestic â€” India';
-      cardName.textContent = data.name;
-      cardTag.textContent  = data.type === 'intl'
-        ? 'View international packages & enquiry form \u2192'
-        : 'View domestic packages & enquiry form \u2192';
-
-      card.style.display = 'flex';
-      card.style.animation = 'none';
-      requestAnimationFrame(() => { card.style.animation = ''; });
-
-      /* CTA click â†’ navigate */
-      cardCta.onclick = () => navigateToDest(data);
-      card.onclick    = (e) => { if (!e.target.closest('.hs-card-close') && !e.target.closest('.hs-card-cta')) navigateToDest(data); };
-    }
-
-    /* â”€â”€â”€ Navigate to the correct page â”€â”€â”€ */
-    function navigateToDest(data) {
-      const dest = encodeURIComponent(data.key);
-      const section = data.section || '';
-      if (data.type === 'intl') {
-        let url = `packages/international.html?dest=${dest}`;
-        if (section) url += `&section=${section}`;
-        window.location.href = url;
-      } else {
-        window.location.href = `packages/domestic.html?dest=${dest}`;
-      }
-    }
-
-    /* â”€â”€â”€ Global search button â”€â”€â”€ */
-    window.hsDoSearch = function() {
-      if (selectedDest) { navigateToDest(selectedDest); return; }
-      const q = input.value.trim();
-      if (!q) { input.focus(); return; }
-      /* Pick first match */
-      const match = HS_DESTINATIONS.find(d => d.name.toLowerCase().includes(q.toLowerCase()));
-      if (match) {
-        const fakeData = { key: match.key, type: match.type, flag: match.flag, name: match.name, section: match.section || '' };
-        navigateToDest(fakeData);
-      } else {
-        /* No match â†’ go to international general page */
-        window.location.href = 'packages/international.html';
-      }
-    };
-
-    /* â”€â”€â”€ Input events â”€â”€â”€ */
-    input.addEventListener('input', () => {
-      selectedDest = null;
-      card.style.display = 'none';
-      buildDropdown(input.value);
-    });
-
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') { window.hsDoSearch(); }
-      if (e.key === 'Escape') { dropdown.classList.remove('open'); }
-    });
-
-    /* â”€â”€â”€ Close dropdown on outside click â”€â”€â”€ */
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('#hsDestField')) {
+      /* â”€â”€â”€ Select a destination â”€â”€â”€ */
+      function selectDestination(data) {
+        selectedDest = data;
+        input.value = data.name;
         dropdown.classList.remove('open');
         input.setAttribute('aria-expanded', 'false');
+
+        /* Populate card */
+        cardFlag.textContent = data.flag;
+        cardLbl.textContent = data.type === 'intl' ? 'International' : 'Domestic â€” India';
+        cardName.textContent = data.name;
+        cardTag.textContent = data.type === 'intl'
+          ? 'View international packages & enquiry form \u2192'
+          : 'View domestic packages & enquiry form \u2192';
+
+        card.style.display = 'flex';
+        card.style.animation = 'none';
+        requestAnimationFrame(() => { card.style.animation = ''; });
+
+        /* CTA click â†’ navigate */
+        cardCta.onclick = () => navigateToDest(data);
+        card.onclick = (e) => { if (!e.target.closest('.hs-card-close') && !e.target.closest('.hs-card-cta')) navigateToDest(data); };
       }
-    });
 
-    /* â”€â”€â”€ Clear / close card â”€â”€â”€ */
-    cardClose.addEventListener('click', (e) => {
-      e.stopPropagation();
-      selectedDest = null;
-      card.style.display = 'none';
-      input.value = '';
-      input.focus();
-    });
+      /* â”€â”€â”€ Navigate to the correct page â”€â”€â”€ */
+      function navigateToDest(data) {
+        const dest = encodeURIComponent(data.key);
+        const section = data.section || '';
+        if (data.type === 'intl') {
+          let url = `packages/international.html?dest=${dest}`;
+          if (section) url += `&section=${section}`;
+          window.location.href = url;
+        } else {
+          window.location.href = `packages/domestic.html?dest=${dest}`;
+        }
+      }
 
-  })();
+      /* â”€â”€â”€ Global search button â”€â”€â”€ */
+      window.hsDoSearch = function () {
+        if (selectedDest) { navigateToDest(selectedDest); return; }
+        const q = input.value.trim();
+        if (!q) { input.focus(); return; }
+        /* Pick first match */
+        const match = HS_DESTINATIONS.find(d => d.name.toLowerCase().includes(q.toLowerCase()));
+        if (match) {
+          const fakeData = { key: match.key, type: match.type, flag: match.flag, name: match.name, section: match.section || '' };
+          navigateToDest(fakeData);
+        } else {
+          /* No match â†’ go to international general page */
+          window.location.href = 'packages/international.html';
+        }
+      };
+
+      /* â”€â”€â”€ Input events â”€â”€â”€ */
+      input.addEventListener('input', () => {
+        selectedDest = null;
+        card.style.display = 'none';
+        buildDropdown(input.value);
+      });
+
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') { window.hsDoSearch(); }
+        if (e.key === 'Escape') { dropdown.classList.remove('open'); }
+      });
+
+      /* â”€â”€â”€ Close dropdown on outside click â”€â”€â”€ */
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('#hsDestField')) {
+          dropdown.classList.remove('open');
+          input.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      /* â”€â”€â”€ Clear / close card â”€â”€â”€ */
+      cardClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selectedDest = null;
+        card.style.display = 'none';
+        input.value = '';
+        input.focus();
+      });
+
+    })();
   </script>
 </body>
 
 </html>
-
-
-
